@@ -65,8 +65,9 @@
   <!-- Switcher Area Start -->
   <div class="switcher__area">
     <div class="switcher__icon">
-      <button id="switcher_open"><i class="fa-solid fa-gear"></i></button>
-      <button id="switcher_close"><i class="fa-solid fa-xmark"></i></button>
+    <!--  <button id="switcher_open"><i class="fa-solid fa-gear"></i></button>
+      <button id="switcher_close"><i class="fa-solid fa-xmark"></i></button> -->
+      <button id="switcher_open"><i class="fa-solid fa-robot"></i></button>
     </div>
     <div class="switcher__items">
 
@@ -208,9 +209,10 @@
               <li class="menu-item-has-children"><a href="about-2.html">A propos</a></li>
               <li class="menu-item-has-children"><a href="service-style-4.html">Services</a>
                 <ul class="dp-menu">
+                 <li><a href="{{ route('service-entreprise') }}">Services Entreprises</a></li>
                   <li><a href="{{ route('service-etudiant') }}">Services Etudiants</a></li>
                   <li><a href="{{ route('service-fonctionnaire') }}">Services Fonctionnaires</a></li>
-                  <li><a href="{{ route('service-entreprise') }}">Services Entreprises</a></li>
+                  
                   
                 </ul>
               </li>
