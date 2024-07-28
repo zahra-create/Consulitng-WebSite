@@ -1,0 +1,38 @@
+@import '../../elements/iconbox/iconbox-2';
+
+/*
+-----------------------------
+FEATURES STYLES 2
+-----------------------------
+*/
+
+.line-horizontal {
+    width: 100%;
+    background: rgba(18, 18, 18, 0.06);
+    height: 1px;
+}
+
+.feature-inner {
+    &.style-2 {
+        display: flex;
+        gap: 130px;
+
+        @media #{$lg} {
+            gap: 0;
+        }
+
+        @media #{$md} {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+.feature-wrapper {
+    &.style-2 {
+        display: flex;
+
+        @media #{$sm} {
+            flex-wrap: wrap;
+        }
+    }
+}

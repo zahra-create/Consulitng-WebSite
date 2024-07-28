@@ -1,0 +1,78 @@
+.testimonial-area{
+    &.style-3{
+        .testimonial-thumb{
+            img{
+                width: 100%;
+            }
+        }
+        .container{
+            @media #{$sm}{
+                padding: 0;
+            }
+        }
+        .testimonial-box-wrapper{
+            position: relative;
+        }
+        .testimonial-item-wrapper{
+            position: absolute;
+            bottom: 0;
+            max-width: 610px;
+            background-color: var(--primary);
+            padding: 80px;
+            @media #{$md}{
+                padding: 30px;
+            }
+            @media #{$sm}{
+                position: static;
+            }
+        }
+        .testimonial-item{
+            &.style-1{
+                .quote-icon-wrap{
+                    margin-bottom: 30px;
+                }
+                .text{
+                    margin-bottom: 28px;
+                    color: #999999;
+                }
+                .name{
+                    color: var(--white);
+                    font-family: var(--font_beatricetrial);
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 1.57;
+                }
+                .post{
+                    color: #999999;
+                    font-size: 14px;
+                    line-height: 1.57;
+                }
+            }
+        }
+        .swiper-button-prev,.swiper-button-next.style-3{
+            &::after{
+                display: none;
+            }
+            position: absolute;
+            bottom: 90px;
+            right: 128px;
+            left: unset;
+            top: unset;
+            width: unset;
+            height: unset;
+            @media #{$md}{
+                bottom: 50px;
+            }
+            @media #{$sm}{
+                display: none;
+            }
+            i{
+                color: var(--white);
+                font-size: 20px;
+            }
+        }
+        .swiper-button-next.style-3{
+            right: 80px;
+        }
+    }
+}

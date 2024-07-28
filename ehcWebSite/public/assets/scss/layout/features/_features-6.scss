@@ -1,0 +1,100 @@
+@import '../../elements/iconbox/iconbox-6';
+
+/*
+-----------------------------
+FEATURES STYLES 6
+-----------------------------
+*/
+
+::-webkit-scrollbar{
+    height: 0;
+    width: 0;
+}
+
+.feature-area {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    @media #{$lg} {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    @media #{$md} {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @media #{$sm} {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .wcf_iconbox{
+        &:nth-child(3){
+            padding-bottom: 0;
+            @media #{$md}{
+                padding-bottom: 20px;
+            }
+        }
+        &:nth-child(4){
+            padding-bottom: 0;
+            @media #{$md}{
+                padding-bottom: 20px;
+            }
+        }
+    }
+}
+
+.subtitle-radius {
+    display: inline-block;
+    border-radius: 12.5px;
+    border: 1px solid rgba(0, 81, 83, 0.10);
+    padding: 10px;
+    color: #005153;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.feature-inner {
+    &.style-6 {
+        display: flex;
+        gap: 120px;
+
+        @media #{$lg} {
+            flex-wrap: wrap;
+            gap: 50px;
+        }
+    }
+}
+
+.feature-content {
+    &.style-6 {
+        flex-basis: 21%;
+        flex-grow: 1;
+
+        @media #{$lg} {
+            flex-basis: 100%;
+        }
+    }
+}
+
+.feature-wrapper {
+    &.style-6 {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 60%;
+        flex-grow: 1;
+    }
+}
+
+.feature-content {
+    &.style-6 {
+        .text {
+            color: #4A7172;
+            font-size: 18px;
+        }
+    }
+}

@@ -1,0 +1,80 @@
+@import '../../elements/team/team-2';
+
+.team-area {
+    &.style-2 {
+        background-color: #005153;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        @media #{$lg}{
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+        @media #{$md}{
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+        .feature-section-top {
+            display: grid;
+            grid-template-columns: .5fr 1fr .5fr;
+            margin-bottom: 60px;
+            align-items: center;
+
+            @media #{$md} {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+                margin-bottom: 40px;
+            }
+
+            @media #{$sm} {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .section-subtitle {
+            color: var(--white);
+            border-color: var(--white);
+        }
+
+        .section-title {
+            color: var(--white);
+        }
+
+        .text {
+            font-size: 18px;
+            color: #9CB9BA;
+            max-width: 400px;
+            margin-inline-start: auto;
+        }
+
+        .wc-btn-underline {
+            color: var(--white);
+
+            &::before {
+                background-color: var(--white);
+            }
+        }
+
+        .btn-wrapper {
+            align-self: flex-start;
+            text-align: end;
+            margin-top: 60px;
+
+            @media #{$md} {
+                margin-top: 0;
+                text-align: start;
+            }
+        }
+    }
+}
+
+.team-wrapper {
+    &.style-2 {
+        display: flex;
+        gap: 30px;
+
+        @media #{$sm} {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}

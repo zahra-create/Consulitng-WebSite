@@ -1,0 +1,113 @@
+/*
+-----------------------------
+FEATURES STYLES 3
+-----------------------------
+*/
+
+.wcf_iconbox {
+    &.style-3 {
+        border-inline-end: 1px solid #F1F1F1;
+        border-top: 1px solid #F1F1F1;
+        padding: 50px;
+        padding-inline-end: 35px;
+        padding-bottom: 0;
+
+        @media (min-width:1800px) {
+            min-width: 300px;
+        }
+
+        @media #{$lg} {
+            padding: 30px;
+        }
+
+        @media #{$md} {
+            flex-basis: 45%;
+            border: 0;
+            padding-inline-start: 0;
+        }
+
+        @media #{$sm} {
+            padding-inline-start: 0;
+            margin-bottom: 0;
+            flex-basis: 100%;
+            padding-bottom: 20px;
+        }
+
+        &:first-child {
+            padding-inline-start: 0;
+        }
+
+        &:last-child {
+            border-inline-end: 0;
+        }
+
+        &:hover {
+            .title {
+                padding-inline-start: 15px;
+
+                &::before {
+                    inset-inline-start: 0;
+                }
+            }
+        }
+
+        .content {
+            overflow: hidden;
+        }
+
+        .count-title {
+            color: var(--primary);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1;
+            margin-bottom: 25px;
+        }
+
+        .title {
+            color: var(--primary);
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 1.25;
+            margin-bottom: 25px;
+            transition: .3s;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                inset-inline-start: -10px;
+                top: 0;
+                height: 100%;
+                width: 1px;
+                background-color: var(--primary);
+            }
+
+            &:hover {
+                color: var(--action);
+            }
+        }
+
+        .text {
+            margin-bottom: 100px;
+            color: var(--secondary);
+            font-size: 16px;
+
+            @media #{$md} {
+                margin-bottom: 50px;
+            }
+
+            @media #{$sm} {
+                margin-bottom: 20px;
+            }
+        }
+
+        .btn-underline {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0;
+            color: var(--primary);
+            text-transform: capitalize;
+        }
+    }
+}

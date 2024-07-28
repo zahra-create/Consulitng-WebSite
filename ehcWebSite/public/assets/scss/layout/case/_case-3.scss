@@ -1,0 +1,124 @@
+.strategy-area {
+    &.style-3 {
+        .strategy-inner-bg {
+            background-color: #FEF2ED;
+        }
+
+        .strategy-inner {
+            display: flex;
+            gap: 175px;
+
+            @media #{$lg} {
+                gap: 50px;
+            }
+
+            @media #{$md} {
+                flex-wrap: wrap;
+            }
+        }
+        .strategy-content {
+            flex: 1 0 50%;
+            position: relative;
+        }
+        .title-wrapper {
+            margin-bottom: 48px;
+
+            @media #{$md} {
+                margin-bottom: 25px;
+            }
+        }
+
+        .desc-text {
+            max-width: 383px;
+            margin-inline-start: 140px;
+
+            @media #{$lg} {
+                margin-inline-start: 0;
+            }
+        }
+
+        .shape-1 {
+            position: absolute;
+            left: -50px;
+            bottom: 0;
+
+            @media #{$lg} {
+                display: none;
+            }
+        }
+
+        .tags {
+            display: flex;
+            gap: 8px;
+            margin-inline-start: 140px;
+            margin-top: 123px;
+
+            @media #{$lg} {
+                margin-inline-start: 0;
+                margin-top: 50px;
+            }
+
+            li {
+                color: var(--primary);
+                text-align: center;
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 1;
+                text-transform: uppercase;
+                padding: 8px 10px;
+                border-radius: 12.5px;
+                border: 1px solid var(--primary);
+            }
+        }
+
+        .subtitle-wrapper {
+            margin-bottom: 135px;
+
+            @media #{$md} {
+                margin-bottom: 50px;
+            }
+
+            @media #{$sm} {
+                margin-bottom: 30px;
+            }
+        }
+        .strategy-thumb-wrapper {
+            flex: 1 0 50%;
+        }
+
+        .strategy-thumb {
+            position: relative;
+
+            .mask-image {
+                mask-image: url('../imgs/gallery/img-r-19.webp');
+                mask-repeat: no-repeat;
+                mask-position: center;
+
+                @media (min-width:1800px) {
+                    margin-inline-start: -50px;
+                }
+
+                @media #{$lg} {
+                    mask-size: cover;
+                }
+                @media #{$md} {
+                    max-width: 250px;
+                }
+
+                .star {
+                    position: absolute;
+                    top: 54%;
+                    left: 46%;
+                    transform: translate(-50%, -50%);
+                    z-index: 2;
+                }
+
+                .shape {
+                    position: absolute;
+                    top: 35%;
+                    right: 100px;
+                }
+            }
+        }
+    }
+}

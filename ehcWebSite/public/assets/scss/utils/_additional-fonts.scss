@@ -1,0 +1,146 @@
+// ----------------------------
+// Font Family
+// ---------------------------
+
+// hkgrotesk
+@font-face {
+    font-family: hkgrotesk;
+    src: url('../fonts/hk/hkgrotesk-Regular.otf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: hkgrotesk;
+    src: url('../fonts/hk/hkgrotesk-SemiBold.otf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: hkgrotesk;
+    src: url('../fonts/hk/hkgrotesk-Bold.otf');
+    font-weight: 700;
+}
+
+// Beatricetrial
+@font-face {
+    font-family: beatricetrial;
+    src: url('../fonts/beatricetrial/BeatriceTRIAL-Thin.ttf');
+    font-weight: 300;
+}
+@font-face {
+    font-family: beatricetrial;
+    src: url('../fonts/beatricetrial/BeatriceTRIAL-Regular.otf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: beatricetrial;
+    src: url('../fonts/beatricetrial/BeatriceTRIAL-Semibold.otf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: beatricetrial;
+    src: url('../fonts/beatricetrial/BeatriceTRIAL-Bold.otf');
+    font-weight: 700;
+}
+
+// tropline
+@font-face {
+    font-family: tropline;
+    src: url('../fonts/tropline/Tropiline-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: tropline;
+    src: url('../fonts/tropline/Tropiline-SemiBold.ttf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: tropline;
+    src: url('../fonts/tropline/Tropiline-Bold.ttf');
+    font-weight: 700;
+}
+
+// recoleta
+@font-face {
+    font-family: recoleta;
+    src: url('../fonts/recoleta/Latinotype - Recoleta Light.otf');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: recoleta;
+    src: url('../fonts/recoleta/Latinotype - Recoleta Medium.otf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: recoleta;
+    src: url('../fonts/recoleta/Latinotype - Recoleta Medium.otf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: recoleta;
+    src: url('../fonts/recoleta/Latinotype - Recoleta SemiBold.otf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: recoleta;
+    src: url('../fonts/recoleta/Latinotype - Recoleta Bold.otf');
+    font-weight: 700;
+}
+
+// PTSerif
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
+
+
+
+:root {
+    --font_hkgrotesk: 'hkgrotesk';
+    --font_beatricetrial: 'Beatricetrial';
+    --font_tropline: 'tropline';
+    --font_recoleta: 'recoleta';
+    --font_ptserif: 'PT Serif', sans-serif;
+}
+
+
+// Font Family Classes
+.font {
+    &-heading {
+        &-hkgrotesk-semibold {
+            @include heading (var(--font_hkgrotesk), 600, 1);
+        }
+
+        &-hkgrotesk-bold {
+            @include heading (var(--font_hkgrotesk), 700, 1);
+        }
+
+        &-beatricetrial-light {
+            @include heading (var(--font_beatricetrial), 300, 1.1);
+        }
+
+        &-beatricetrial-regular {
+            @include heading (var(--font_beatricetrial), 400, 1.1);
+        }
+
+        &-tropline-regular {
+            @include heading (var(--font_tropline), 400, 1);
+        }
+        &-tropline-bold {
+            @include heading (var(--font_tropline), 700, 1);
+        }
+
+        &-recoleta-medium {
+            @include heading (var(--font_recoleta), 500, 1);
+        }
+
+        &-ptserif-regular {
+            @include heading (var(--font_ptserif), 400, 1.09);
+        }
+    }
+}

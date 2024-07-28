@@ -1,0 +1,54 @@
+/*
+-----------------------------
+FEATURES STYLES 9
+-----------------------------
+*/
+
+
+
+.wcf_iconbox {
+    &.style-9 {
+        flex-basis: 45%;
+
+        @media #{$xxl} {
+            flex-basis: 35%;
+        }
+
+        @media #{$sm} {
+            flex-basis: 100%;
+        }
+
+        .thumb {
+            margin-bottom: 30px;
+            color: var(--white);
+
+            @media #{$lg} {
+                margin-bottom: 30px;
+            }
+        }
+
+        .title {
+            color: var(--white);
+            font-size: 20px;
+            margin-bottom: 15px;
+
+            &:hover {
+                color: var(--action);
+            }
+        }
+
+        .text {
+            color: var(--white);
+            font-size: 16px;
+        }
+    }
+}
+
+
+.box-layout {
+    .wcf_iconbox {
+        &.style-9 {
+            flex-basis: 44%;
+        }
+    }
+}

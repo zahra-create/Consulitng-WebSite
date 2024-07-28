@@ -1,0 +1,39 @@
+/*
+-----------------------------
+FEATURES STYLES 1
+-----------------------------
+*/
+
+.wcf_iconbox {
+    &.style-1 {
+        .thumb {
+            margin-bottom: 50px;
+
+            @media #{$xxl} {
+                margin-bottom: 30px;
+            }
+
+            img {
+                height: 75px;
+
+                @media #{$xxl} {
+                    height: 60px;
+                }
+            }
+        }
+
+        .title {
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 20px;
+
+        }
+
+        .text {
+            color: var(--primary);
+            line-height: 1.37;
+            font-size: 16px;
+        }
+    }
+}

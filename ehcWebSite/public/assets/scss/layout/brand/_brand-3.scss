@@ -1,0 +1,47 @@
+.brand-area {
+    &.style-3 {
+        .brand-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 0;
+
+            @media #{$md} {
+                flex-wrap: wrap;
+                gap: 50px;
+            }
+        }
+
+        .brand-text {
+            max-width: 200px;
+
+            @media #{$md} {
+                max-width: 100%;
+            }
+        }
+
+        .brand-logos {
+            max-width: 900px;
+
+            @media #{$lg} {
+                max-width: 700px;
+            }
+        }
+
+        .brand-logo {
+            img {
+                max-width: 140px;
+            }
+        }
+
+        .brand-text-title-wrapper {
+            padding-left: 17px;
+            border-left: 2px solid var(--primary);
+
+            .title {
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+    }
+}

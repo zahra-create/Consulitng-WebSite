@@ -1,0 +1,90 @@
+@import '../../elements/iconbox/iconbox-3';
+
+/*
+-----------------------------
+FEATURES STYLES 3
+-----------------------------
+*/
+
+.feature-section-top {
+    &.style-3 {
+        display: grid;
+        margin-bottom: 60px;
+        grid-template-columns: 1.2fr 1fr 1fr;
+        @media #{$md} {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        @media #{$sm} {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .title-top {
+            color: var(--primary);
+            font-size: 50px;
+            @media #{$lg} {
+                font-size: 38px;
+            }
+
+            @media #{$md} {
+                font-size: 28px;
+            }
+        }
+
+        .text {
+            font-size: 18px;
+        }
+
+        .btn-wrapperr {
+            text-align: end;
+
+            @media #{$md} {
+                text-align: start;
+            }
+        }
+    }
+
+    &.style-8 {
+        grid-template-columns: 2fr 1fr 1fr;
+
+        @media #{$md} {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        @media #{$sm} {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+.feature-wrapper {
+    &.style-3 {
+        display: flex;
+
+        @media #{$md} {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+}
+
+
+// style override for homepage 3 
+.feature-area.style-3{
+    .text{
+        span{
+            text-decoration: underline;
+            font-weight: 600;
+        }
+    }
+    .title-top-text{
+        padding-left: 90px;
+        @media #{$lg}{
+            padding-left: 0;
+        }
+    }
+}

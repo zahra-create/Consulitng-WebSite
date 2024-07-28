@@ -1,0 +1,84 @@
+.testimonial-item {  
+    &.style-5 {
+        position: relative;
+        .quote-icon-wrap{
+            margin-bottom: 40px;
+            @media #{$sm}{
+                margin-bottom: 30px;
+            }
+        }
+        .text{
+            color: #4A7172;
+            font-size: 20px;
+            line-height: 1.4;
+            margin-bottom: 50px;
+            max-width: 330px;
+            @media #{$lg}{
+                margin-bottom: 20px;
+            }
+            @media #{$sm}{
+                margin-bottom: 35px;
+                font-size: 18px;
+            }
+        }
+        .meta-info{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            .image-wrapper{
+                img{
+                    width: 100%;
+                    border-radius: 50px;
+                }
+            }
+        }
+        .meta{
+            position: relative;
+            border-left: 1px solid #E9EAEB;
+            padding-left: 15px;
+        }
+        .name{
+            color: #005153;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.22;
+        }
+        .post{
+            color: #4A7172;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.22;
+        }
+        .feedback-category{
+            display: inline-block;
+            padding: 8px 12px;
+            border-radius: 5px;
+            background: rgba(9, 21, 66, 0.05);
+            color: #091542;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.85;
+            margin-bottom: 20px;
+        }
+        .clients-thumb{
+            display: flex;
+            margin-top: 70px;
+            @media #{$md}{
+                margin-top: 30px;
+            }
+        }
+        .client-image{
+            max-width: 60px;
+            background-color: var(--white);
+            padding: 4px;
+            margin-left: -15px;
+            &:first-child{
+                margin-left: 0;
+            }
+            img{
+                border-radius: 50px;
+            }
+        }
+    }
+  }
+

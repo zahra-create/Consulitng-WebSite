@@ -1,0 +1,233 @@
+@import '../../elements/testimonial/testimonial-5';
+
+.testimonial-section {
+    &.style-5 {
+        .section-heading {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+    }
+}
+
+.testimonial-inner {
+    &.style-5 {
+        background-color: #F0F7F3;
+        position: relative;
+        padding: 60px;
+        display: flex;
+        border-radius: 5px;
+
+        @media #{$lg} {
+            padding: 40px;
+        }
+
+        @media #{$md} {
+            padding: 20px;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            inset-inline-end: 300px;
+            top: 0;
+            height: 100%;
+            width: 1px;
+            background-color: #DDE8E5;
+
+            @media #{$lg} {
+                display: none;
+            }
+        }
+
+        @media #{$lg} {
+            flex-wrap: wrap;
+            gap: 50px;
+        }
+
+        @media #{$sm} {
+            padding: 0;
+            background-color: transparent;
+            gap: 20px;
+        }
+    }
+}
+
+.testimonial-rating {
+    &.style-5 {
+        padding-left: 50px;
+
+        @media #{$lg} {
+            padding-left: 0;
+        }
+
+        .rating-subtitle {
+            color: #005153;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1;
+            margin-bottom: 26px;
+            text-decoration: underline;
+        }
+
+        .rating-title {
+            color: #005153;
+            font-size: 50px;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+
+        .star-icons {
+            margin-bottom: 10px;
+
+            i {
+                color: #FFC31B;
+            }
+        }
+
+        .disc {
+            color: #005153;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1;
+        }
+
+        .text {
+            @media #{$md} {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+/*
+    ---------------------------------
+    # Swiper Prev and Next Button Styles
+    # Apply custom styles using the Like "style-1" class
+    # Adjust styles for disabled icons with the "swiper-button-disabled" class
+    # Apply custom text prev-text next and prev navigation
+*/
+
+.swiper-button-prev,
+.swiper-button-next {
+    &.style-1 {
+        &::after {
+            color: var(--primary);
+        }
+
+        &.swiper-button-disabled {
+            &::after {
+                color: #E4E4E4;
+            }
+        }
+    }
+}
+
+.prev-text {
+    position: absolute;
+    left: 25px;
+}
+
+.case-upper {
+    text-transform: uppercase;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.swiper-pagination {
+    &.pagination-style-3 {
+        .swiper-pagination-bullet {
+            background-color: var(--white-2);
+            height: 8px;
+            width: 8px;
+            border-radius: 50px;
+
+            &.swiper-pagination-bullet-active {
+                background-color: #F45734;
+            }
+        }
+    }
+}
+
+.swiper-wrapper {
+    &.style-3 {
+        padding-bottom: 110px;
+    }
+}
+
+.testimonial-item {
+    &.style-5 {
+        max-width: 870px;
+        @media #{$xl}{
+            max-width: 670px;
+        }
+
+        @media #{$md} {
+            max-width: 100%;
+        }
+    }
+}
+
+.testimonial-rating {
+    &.style-5 {
+        text-align: center;
+        flex-basis: 300px;
+        position: relative;
+        margin-inline-start: 60px;
+
+        @media #{$lg} {
+            margin-left: unset;
+            text-align: start;
+        }
+    }
+}
+
+.testimonial {
+    &.navigation-6 {
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+        gap: 15px;
+
+        @media #{$lg} {
+            justify-content: flex-start;
+            margin-top: 40px;
+        }
+
+        .swiper-button-next.style-5 {
+            &::after {
+                transform: rotate(-180deg);
+            }
+        }
+
+        .swiper-button-next.style-5,
+        .swiper-button-prev.style-5 {
+            position: unset;
+            margin-top: 0;
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+            background: rgba(0, 81, 83, 0.10);
+
+            &::after {
+                content: "\e936";
+                font-family: "icomoon";
+                font-size: 18px;
+                font-weight: 600;
+                color: #005153;
+            }
+        }
+    }
+}
+
+.divide-border {
+    width: 100%;
+    height: 1px;
+    background-color: #DDE8E5;
+    margin-top: 70px;
+
+    @media #{$lg} {
+        margin-top: 40px;
+    }
+}

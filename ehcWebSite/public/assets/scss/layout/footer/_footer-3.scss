@@ -1,0 +1,123 @@
+.footer-area{
+    &.style-3{
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background-color: #FEF2ED;
+        @media #{$lg} {
+            padding-top: 80px;
+            padding-bottom: 80px;
+          }
+        
+          @media #{$md} {
+            padding-top: 60px;
+            padding-bottom: 60px;
+          }
+        
+          @media #{$sm} {
+            padding-top: 40px;
+            padding-bottom: 40px;
+          }
+        .footer-inner{
+            display: flex;
+            gap: 170px;
+        }
+        .footer-menu {
+            display: grid;
+            grid-template-columns: repeat(4,auto);
+            gap: 45px;
+            justify-content: space-between;
+            @media #{$lg}{
+                gap: 25px;
+            }
+            @media #{$md}{
+                grid-template-columns: repeat(2,auto); 
+            }
+            @media #{$sm}{
+                grid-template-columns: 1fr; 
+                gap: 30px;
+            }
+        }
+        .left-content {
+            width: 100%;
+            flex-grow: 1;
+            max-width: 130px;
+        }
+        .logo-wrapper{
+            width: 200px;
+        }
+    }
+}
+.widget-item{
+    max-width: 330px;
+    .widget-title{
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.25;
+        font-family: unset;
+    }
+    .title-2{
+        color: var(--primary);
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.11;
+        margin-bottom: 10px;
+    }
+    .header{
+        display: flex;
+        justify-content: space-between;
+        gap: 54px;
+        @media #{$lg}{
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .title-2{
+            max-width: 116px;
+            @media #{$lg}{
+                max-width: 100%;
+            }
+        }
+        p{
+            max-width: 200px;
+            font-size: 14px;
+        }
+    }
+    .subscribe-form{
+        background-color: rgba(18, 18, 18, 0.05);
+        margin-top: 20px;
+        input{
+            color: var(--primary);
+            &::placeholder{
+                color: #6A6A6A;
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+        .subscribe-btn{
+            filter: brightness(0);
+        }
+    }
+    .text{
+        max-width: 185px;
+    }
+    ul{
+        padding-top: 24px;
+        li{
+            color: var(--secondary);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.62;
+        }
+    }
+    .social-icons{
+        margin-top: 16px;
+        padding-top: 0;
+    }
+    .copyright-title{
+        color: var(--secondary);
+        font-size: 16px;
+        a{
+            font-weight: 600;
+            color: var(--primary);
+        }
+    }
+}

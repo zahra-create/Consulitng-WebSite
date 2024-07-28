@@ -1,0 +1,339 @@
+/* about page style */
+.about {
+
+    /* client area style  */
+    .client-area {
+        background-color: #F1F6F6;
+    }
+
+    /* team area style */
+    .team-area {
+        .subtitle-wrapper {
+            margin-bottom: 35px;
+        }
+    }
+}
+
+/* about intro area style */
+.about-intro-area {
+
+    padding-top: 210px;
+    background-color: #F1F6F6;
+    position: relative;
+
+    @media #{$xxl} {
+        padding-top: 180px;
+    }
+
+    @media #{$md} {
+        padding-top: 150px;
+    }
+
+    @media #{$sm} {
+        padding-top: 130px;
+    }
+
+    &:before {
+        position: absolute;
+        content: "";
+        width: 51%;
+        height: calc(100% - 210px);
+        background-color: var(--white);
+        inset-inline-end: 50px;
+        bottom: 0;
+
+        @media #{$md} {
+            display: none;
+        }
+    }
+
+    .section-symbol {
+        font-size: 560px;
+        font-weight: 800;
+        font-family: var(--font_hkgrotesk);
+        color: var(--primary);
+        opacity: .07;
+        position: absolute;
+        top: 0;
+        inset-inline-start: 0;
+        line-height: 0.7;
+        z-index: -1;
+
+        @media #{$xxl} {
+            font-size: 460px;
+        }
+
+        @media #{$lg} {
+            font-size: 350px;
+        }
+
+        @media #{$md} {
+            font-size: 330px;
+        }
+    }
+
+
+
+    .about-area-inner {
+        position: relative;
+        z-index: 1;
+
+    }
+
+    .section-heading {
+        max-width: 1070px;
+        margin-inline-start: 215px;
+        padding-top: 57px;
+        padding-bottom: 48px;
+
+        @media #{$xxl} {
+            margin-inline-start: 165px;
+        }
+
+        @media #{$lg} {
+            margin-inline-start: 125px;
+            padding-top: 17px;
+            padding-bottom: 18px;
+        }
+
+        @media #{$md} {
+            margin-inline-start: 85px;
+        }
+
+        @media #{$sm} {
+            margin-inline-start: 0;
+        }
+    }
+
+
+
+    .section-title {
+        max-width: 1070px;
+
+        @media #{$xxl} {
+            max-width: 730px;
+        }
+
+        @media #{$lg} {
+            max-width: 670px;
+        }
+    }
+
+    .subtitle-wrapper {
+        margin-bottom: 33px;
+
+        @media #{$xxl} {
+            margin-bottom: 23px;
+        }
+    }
+
+    .area-shape-1 {
+        position: absolute;
+        inset-inline-start: 43%;
+        top: calc(100% - 24px);
+        cursor: pointer;
+
+        @media #{$lg} {
+            top: calc(100% - 0px);
+        }
+    }
+
+
+
+    .social-links {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        transform: rotate(90deg);
+
+        @include rtl {
+            transform: rotate(-90deg);
+        }
+
+        .text {
+            font-size: 16px;
+            font-weight: 550;
+            text-transform: uppercase;
+        }
+
+        .social-icons {
+            gap: 20px;
+
+            li a:hover {
+                color: var(--primary);
+            }
+        }
+    }
+
+    .social-links-position {
+        position: absolute;
+        inset-inline-end: 0;
+        bottom: 130px;
+
+        @media #{$md} {
+            display: none;
+        }
+    }
+}
+
+/* about area style  */
+.about-area {
+    position: relative;
+
+    .area-shape-1 {
+        position: absolute;
+        bottom: 21%;
+        inset-inline-start: 0;
+        width: 395px;
+
+        @media #{$xxl} {
+            bottom: 30%;
+            width: 305px;
+        }
+
+        @media #{$lg} {
+            bottom: 48%;
+            width: 175px;
+        }
+
+        @include rtl {
+            transform: rotateY(180deg);
+        }
+
+    }
+
+    .section-content {
+        max-width: 630px;
+        margin-inline-start: auto;
+
+        @media #{$xxl} {
+            max-width: 530px;
+        }
+
+        @media #{$md} {
+            max-width: 100%;
+        }
+
+        .section-title {
+            line-height: 1.2;
+
+            @media #{$lg} {
+                line-height: 1.1;
+            }
+        }
+
+        .thumb-wrapper {
+            display: flex;
+            margin-bottom: 50px;
+
+            @media #{$xxl} {
+                margin-bottom: 40px;
+
+            }
+
+            @media #{$sm} {
+                margin-bottom: 30px;
+            }
+
+            .react-shape {
+                width: 120px;
+                height: 240px;
+                background-color: var(--primary);
+                border-radius: 0% 100% 100% 0% / 10% 46% 50% 10%;
+                position: relative;
+
+                @include rtl {
+                    border-radius: 100% 0% 0% 100%/46% 10% 10% 50%;
+                }
+
+                .text {
+                    position: absolute;
+                    color: var(--white);
+                    font-size: 14px;
+                    font-weight: 800;
+                    text-transform: uppercase;
+                    transform: translateY(-50%) rotate(-90deg);
+                    top: 50%;
+
+                    @media #{$sm} {
+                        inset-inline-start: -12px;
+                    }
+                }
+            }
+
+            img {
+                border-radius: 50%;
+                margin-inline-start: -50px;
+                mix-blend-mode: multiply;
+            }
+        }
+
+        .title-wrapper {
+            margin-bottom: 57px;
+
+            @media #{$xxl} {
+                margin-bottom: 47px;
+            }
+
+            @media #{$sm} {
+                margin-bottom: 37px;
+
+            }
+        }
+
+        .text-wrapper {
+            max-width: 410px;
+
+            @media #{$md} {
+                max-width: 100%;
+            }
+
+            .text {
+                margin-bottom: 28px;
+
+                span {
+                    color: var(--primary);
+                    font-weight: 500;
+                    text-decoration: underline;
+                    text-decoration-skip-ink: none;
+                }
+            }
+        }
+
+        .btn-wrapper {
+            margin-top: 53px;
+
+            @media #{$xxl} {
+                margin-top: 43px;
+            }
+
+            @media #{$sm} {
+                margin-top: 33px;
+            }
+        }
+    }
+
+
+    .area-thumb {
+        position: absolute;
+        inset-inline-start: 11%;
+        bottom: 0;
+        max-width: 415px;
+        overflow: hidden;
+        @media #{$xxl} {
+            max-width: 385px;
+        }
+
+        @media #{$lg} {
+            inset-inline-start: 2%;
+        }
+
+        @media #{$md} {
+            display: none;
+        }
+
+        @include rtl {
+            transform: rotateY(180deg);
+        }
+    }
+}

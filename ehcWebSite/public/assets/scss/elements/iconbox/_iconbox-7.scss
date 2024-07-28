@@ -1,0 +1,67 @@
+/*
+-----------------------------
+FEATURES STYLES 7
+-----------------------------
+*/
+
+.wcf_iconbox {
+    &.style-7 {
+        border-top: 1px solid #EBF1F1;
+        border-inline-end: 1px solid #EBF1F1;
+        padding: 50px;
+        text-align: center;
+        flex-grow: 1;
+
+        @media #{$lg} {
+            padding: 30px;
+        }
+
+        @media #{$md} {
+            border: 1px solid #EBF1F1;
+        }
+
+        &:first-child {
+            padding-inline-start: 0;
+            text-align: start;
+
+            @media #{$md} {
+                padding-inline-start: 30px;
+            }
+
+            @media #{$sm} {
+                text-align: center;
+            }
+        }
+
+        &:last-child {
+            padding-inline-end: 0;
+            border-inline-end: 0;
+
+            @media #{$md} {
+                padding-inline-end: 30px;
+                border-inline-end: 1px solid #EBF1F1;
+            }
+        }
+
+        .title-1 {
+            font-size: 80px;
+            color: #005153;
+            margin-bottom: 5px;
+
+            @media #{$lg} {
+                font-size: 50px;
+            }
+
+            @media #{$md} {
+                font-size: 40px;
+            }
+        }
+
+        .title-2 {
+            color: #99ABAC;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+}

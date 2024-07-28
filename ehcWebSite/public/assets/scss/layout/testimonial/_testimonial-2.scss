@@ -1,0 +1,66 @@
+@import '../../elements/testimonial/testimonial-2';
+
+
+
+.testimonial-inner {
+    &.style-2 {
+        padding-left: 90px;
+        padding-right: 90px;
+        position: relative;
+
+        @media #{$md} {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        @media #{$sm} {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .swiper-button-next.style-2 {
+            @include rtl {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+}
+
+/*
+    ---------------------------------
+    # Swiper Prev and Next Button Styles
+    # Apply custom styles using the Like "style-1" class
+    # Adjust styles for disabled icons with the "swiper-button-disabled" class
+    # Apply custom text prev-text next and prev navigation
+*/
+
+.swiper-button-prev,
+.swiper-button-next {
+    &.style-2 {
+        @media #{$md} {
+            display: none;
+        }
+
+        &::after {
+            color: var(--primary);
+        }
+
+        &.swiper-button-disabled {
+            &::after {
+                color: #E4E4E4;
+            }
+        }
+    }
+}
+
+.prev-text {
+    position: absolute;
+    left: 25px;
+}
+
+.case-upper {
+    text-transform: uppercase;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 500;
+}

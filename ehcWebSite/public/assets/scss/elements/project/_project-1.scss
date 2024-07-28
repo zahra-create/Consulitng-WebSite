@@ -1,0 +1,62 @@
+/*
+-----------------------------
+PROJECT STYLES 1
+-----------------------------
+*/
+
+.project-item {
+    &.style-1 {
+        flex-basis: 48%;
+
+        @media #{$lg} {
+            flex-basis: 45%;
+        }
+
+        @media #{$md} {
+            flex-basis: 100%;
+        }
+
+        .project-thumb {
+            margin-bottom: 10px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .title {
+            color: #202C39;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 1;
+            transition: .3s;
+            text-transform: unset;
+            gap: 10px;
+            align-items: center;
+
+            @media #{$md} {
+                font-size: 20px;
+            }
+
+            i {
+                font-size: 14px;
+                transform: rotate(-45deg);
+
+                @include rtl {
+                    transform: rotate(-135deg);
+                }
+            }
+
+            &:hover {
+                color: var(--primary);
+            }
+        }
+
+        .text {
+            color: var(--secondary);
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+    }
+}

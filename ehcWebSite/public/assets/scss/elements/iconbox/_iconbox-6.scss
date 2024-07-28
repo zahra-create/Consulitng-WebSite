@@ -1,0 +1,93 @@
+/*
+-----------------------------
+FEATURES STYLES 6
+-----------------------------
+*/
+
+.wcf_iconbox {
+    &.style-6 {
+        padding: 43px 50px;
+        border-inline-start: 1px solid #EBF1F1;
+        border-inline-end: 1px solid #EBF1F1;
+        flex-basis: 47%;
+        padding-inline-start: 50px;
+        padding-inline-end: 50px;
+        @include rtl{
+            padding-inline-start: 50px;
+        }
+        &:nth-child(1) {
+            padding-top: 0;
+
+            @media #{$md} {
+                padding-top: 20px;
+            }
+        }
+
+        &:nth-child(2) {
+            padding-top: 0;
+            
+            @media #{$md} {
+                padding-top: 20px;
+            }
+        }
+
+        &:nth-child(2n+3) {
+            border-top: 1px solid #EBF1F1;
+        }
+
+        &:nth-child(2n+4) {
+            border-top: 1px solid #EBF1F1;
+        }
+
+        &:nth-child(even) {
+            border-inline-end: 0;
+            border-inline-start: 0;
+            padding-inline-end: 0;
+            @media #{$md} {
+                border-inline-end: 1px solid #EBF1F1;
+            }
+
+            @media #{$sm} {
+                border-inline-start: 1px solid #EBF1F1;
+            }
+
+            @include rtl{
+                padding-right: 50px;
+            }
+        }
+
+        @media #{$lg} {
+            padding: 30px;
+        }
+
+        @media #{$md} {
+            padding: 20px;
+            flex-basis: 50%;
+            border: 1px solid #EBF1F1;
+        }
+
+        @media #{$sm} {
+            flex-basis: 100%;
+        }
+
+        .thumb {
+            margin-bottom: 34px;
+        }
+
+        .title {
+            color: #005153;
+            font-size: 26px;
+            margin-bottom: 17px;
+
+            &:hover {
+                color: var(--action);
+            }
+        }
+
+        .text {
+            color: #4A7172;
+            font-size: 18px;
+            width: 300px;
+        }
+    }
+}

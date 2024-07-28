@@ -1,0 +1,134 @@
+/* blog style 2 */
+.blog {
+    &.style-2 {
+        display: flex;
+        gap: 40px;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-top: 27px;
+        padding-bottom: 20px;
+
+        @media #{$md} {
+            gap: 30px;
+        }
+
+        @media #{$xs} {
+            flex-direction: column-reverse;
+            gap: 20px;
+        }
+
+        &:hover {
+            .wc-btn-icon i {
+                transform: rotate(0);
+
+                @include rtl {
+                    transform: rotate(-180deg);
+                }
+            }
+        }
+
+        .content-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 56px;
+            flex-basis: 67%;
+            justify-content: space-between;
+
+            @media #{$xs} {
+                gap: 40px;
+            }
+
+            .btn-wrapper {
+                @media #{$sm} {
+                    display: none;
+                }
+            }
+        }
+
+        .author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            .avatar {
+                img {
+                    width: 50px;
+                    height: 50px;
+                    min-width: 50px;
+                    border-radius: 50%;
+                }
+            }
+
+            .meta-title {
+                font-size: 12px;
+                display: inline-block;
+                margin-bottom: 6px;
+            }
+
+            .name {
+                font-size: 16px;
+                font-weight: 600;
+                color: var(--primary);
+                display: block;
+            }
+        }
+
+
+        .tag {
+            font-size: 12px;
+            font-weight: 600;
+            color: #091542;
+            line-height: 1;
+            background-color: rgba(9, 21, 66, 0.05);
+            padding: 4px 6px;
+            display: inline-block;
+            border-radius: 5px;
+        }
+
+        .meta {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 11px;
+        }
+
+        .date {
+            font-size: 12px;
+            line-height: 1;
+            font-weight: 500;
+        }
+
+        .has-left-line {
+            padding-inline-start: 25px;
+
+            &:before {
+                width: 15px;
+                color: var(--black);
+            }
+        }
+
+        .title {
+            font-size: 28px;
+            line-height: 1.25;
+            margin-bottom: 16px;
+
+            @media #{$xl} {
+                font-size: 24px;
+            }
+
+            @media #{$md} {
+                font-size: 22px;
+            }
+
+            span {
+                font-weight: 600;
+            }
+        }
+
+        .text {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    }
+
+}

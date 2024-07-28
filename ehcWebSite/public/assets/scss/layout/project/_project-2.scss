@@ -1,0 +1,94 @@
+@import '../../elements/project/project-2';
+
+.project-wrapper {
+    &.style-2 {
+        display: flex;
+        gap: 20px;
+
+        @media #{$md} {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @media #{$sm} {
+            gap: 20px;
+        }
+    }
+}
+
+.feature-section-top {
+    &.style-2 {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 57px;
+
+        @media #{$sm} {
+            flex-wrap: wrap;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+
+            @include rtl {
+                flex-direction: row-reverse;
+            }
+
+            @media #{$lg} {
+                justify-content: flex-start;
+            }
+
+
+
+            .swiper-button-next.style-5,
+            .swiper-button-prev.style-5 {
+                position: unset;
+                margin-top: 0;
+                height: 50px;
+                width: 50px;
+                border-radius: 50px;
+                border: 1px solid #E6E3DC;
+                background-color: #F1EDE5;
+
+                &::after {
+                    font-family: var(--font_awesome);
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: #005153;
+                }
+
+                &.swiper-button-disabled {
+                    background-color: transparent;
+                }
+            }
+
+            .swiper-button-prev.style-5 {
+                &::after {
+                    content: "\f060";
+                }
+            }
+
+            .swiper-button-next.style-5 {
+                &::after {
+                    content: "\f061";
+                }
+            }
+        }
+
+        .section-title-wrapper {
+            min-width: 468px;
+            max-width: 468px;
+            margin-right: 57px;
+
+            @media #{$lg} {
+                margin-right: 0;
+            }
+
+            @media #{$md} {
+                min-width: 300px;
+            }
+        }
+    }
+}

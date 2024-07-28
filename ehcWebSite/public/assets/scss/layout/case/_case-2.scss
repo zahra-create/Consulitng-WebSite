@@ -1,0 +1,61 @@
+@import '../../elements/case/case-2';
+
+
+.case-area {
+    &.style-2 {
+        .case-section-top {
+            display: grid;
+            gap: 25px;
+            grid-template-columns: 2fr 360px 1fr;
+            margin-bottom: 60px;
+
+            @media #{$md} {
+                grid-template-columns: repeat(2, 1fr);
+                margin-bottom: 40px;
+            }
+
+            @media #{$sm} {
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .title-top {
+                color: var(--primary);
+                font-size: 50px;
+
+                @media #{$lg} {
+                    font-size: 38px;
+                }
+
+                @media #{$md} {
+                    font-size: 28px;
+                }
+            }
+
+            .text {
+                font-size: 18px;
+            }
+
+            .btn-wrapperr {
+                text-align: end;
+
+                @media #{$md} {
+                    text-align: start;
+                }
+            }
+        }
+
+        .case-wrapper {
+            display: flex;
+            gap: 20px;
+
+            @media #{$lg} {
+                gap: 10px;
+            }
+
+            @media #{$md} {
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@import '../../elements/case/case-1';
+
+
+.case-wrapper {
+    &.style-1 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px 0;
+        justify-content: center;
+        margin: 0 -40px;
+
+        @media #{$xxl} {
+            margin: 0 -30px;
+        }
+
+        @media #{$md} {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media #{$xs} {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+
+
+        .case-item {
+            padding: 0 40px;
+            border-inline-start: 1px solid rgba(9, 21, 66, 0.08);
+
+            @media #{$xxl} {
+                padding: 0 30px;
+            }
+
+            &:first-child {
+                border: none;
+            }
+        }
+    }
+}

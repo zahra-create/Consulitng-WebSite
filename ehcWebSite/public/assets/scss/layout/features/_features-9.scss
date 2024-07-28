@@ -1,0 +1,119 @@
+@import '../../elements/iconbox/iconbox-9';
+
+/*
+-----------------------------
+FEATURES STYLES 9
+-----------------------------
+*/
+.feature-area {
+    &.style-9 {
+        .feature-inner{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+    
+            @media #{$md} {
+                grid-template-columns: 1fr;
+            }
+    
+            .section-title {
+                color: var(--white);
+            }
+    
+            .cf_image {
+                height: 100%;
+            }
+    
+            .feature-thumb {
+                img {
+                    width: 100%;
+                    border-top-left-radius: 20px;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+    
+            .content-wrap {
+                border-radius: 0 20px 20px 0px;
+                background: var(--primary);
+                padding-left: 110px;
+                padding-top: 110px;
+                padding-right: 180px;
+                padding-bottom: 110px;
+    
+                @media #{$xxl} {
+                    padding-right: 50px;
+                    padding-left: 80px;
+                }
+    
+                @media #{$lg} {
+                    padding-top: 50px;
+                    padding-left: 50px;
+                }
+    
+                @media #{$md} {
+                    padding-bottom: 50px;
+                }
+    
+                @media #{$sm} {
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+            }
+        }
+        .section-heading {
+            margin-bottom: 60px;
+            @media #{$md}{
+                margin-bottom: 40px;
+            }
+        }
+        .feature-wrapper {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 60px;
+    
+            @media #{$md} {
+                gap: 40px;
+            }
+        }
+    }
+}
+
+// style for homepage 3 
+.feature-area.style-9.style-3{
+    .feature-inner{
+        grid-template-columns: .9fr 1.123fr;
+        @media #{$md}{
+            grid-template-columns: 1fr;
+        }
+    }
+    .feature-thumb {
+        img {
+            width: unset;
+            border-top-left-radius: 0;
+        }
+    }
+    .content-wrap {
+        border-radius: 0;
+        padding-bottom: 120px;
+        @media #{$lg}{
+            padding-bottom: 50px;
+        }
+    }
+    .wcf_iconbox.style-9{
+        .text{
+            color: #999999;
+            max-width: 245px;
+        }
+    }
+}
+.feature-area{
+    &.graph-area{
+        .feature-inner{
+            grid-template-columns: .82fr 1fr;
+            @media #{$md}{
+                grid-template-columns: 1fr;
+            }    
+        }
+    }
+}

@@ -1,0 +1,101 @@
+/* faq area style  */
+.faq-area {
+    .faq-area-inner {
+        border-top: 1px solid #F1F1F1;
+        display: flex;
+        gap: 80px;
+        justify-content: space-between;
+
+        @media #{$lg} {
+            gap: 20px;
+            flex-direction: column;
+        }
+    }
+
+    .section-title {
+        max-width: 242px;
+
+        @media #{$lg} {
+            max-width: 100%;
+
+        }
+    }
+
+    .section-title-wrapper {
+        margin-top: 25px;
+    }
+
+    .accordion-wrapper {
+        max-width: 960px;
+        flex-grow: 1;
+    }
+
+    .accordion {
+        border-top: 1px solid transparent;
+
+        .accordion-button {
+            font-size: 21px;
+            font-weight: 600;
+            line-height: 1.44;
+            color: var(--primary);
+            padding-top: 25px;
+            padding-bottom: 25px;
+            padding-inline-start: 0;
+            padding-inline-end: 0;
+            background-color: rgba(0, 0, 0, 0);
+            box-shadow: none;
+
+            @media #{$sm} {
+                font-size: 18px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+
+
+            &::after {
+                content: "+";
+                color: var(--primary);
+                background-image: none;
+                line-height: 1;
+                width: auto;
+                height: auto;
+                font-size: 22px;
+                margin-inline-start: auto;
+                margin-inline-end: 0;
+            }
+
+            &:not(.collapsed) {
+                pointer-events: none;
+
+                &::after {
+                    content: "-";
+                }
+            }
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid #F1F1F1;
+            background-color: transparent;
+        }
+
+        .accordion-body {
+            font-size: 18px;
+            line-height: 1.33;
+            padding-inline-start: 0;
+            padding-inline-end: 0;
+            padding-bottom: 34px;
+            padding-top: 0;
+            color: var(--secondary);
+            max-width: 740px;
+
+            @media #{$sm} {
+                padding-bottom: 19px;
+            }
+
+            span {
+                font-weight: 600;
+                color: var(--primary);
+            }
+        }
+    }
+}

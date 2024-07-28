@@ -1,0 +1,218 @@
+/* bannner-5 area style start */
+.banner-5 {
+    &.banner-area {
+        position: relative;
+
+        @media #{$xs} {
+            background-color: #f0f7f3;
+        }
+    }
+
+    .banner-area-top {
+        background-color: #F0F7F3;
+
+    }
+
+    .banner-content {
+        display: flex;
+        gap: 30px;
+        justify-content: space-between;
+
+        @media #{$xs} {
+            flex-direction: column;
+        }
+
+    }
+
+    .title {
+        font-size: 90px;
+        font-weight: 400;
+        line-height: .94;
+        max-width: 661px;
+
+        @media #{$xxl} {
+            font-size: 80px;
+        }
+
+        @media #{$lg} {
+            font-size: 60px;
+            max-width: 531px;
+        }
+
+        @media #{$md} {
+            font-size: 46px;
+        }
+
+        @media #{$sm} {
+            font-size: 33px;
+        }
+
+        span {
+            position: relative;
+            z-index: 1;
+
+            &:before {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 17%;
+                background: #FFCD4C;
+                bottom: 25%;
+                z-index: -1;
+            }
+        }
+
+
+    }
+
+    .text-wrapper {
+        .text {
+            font-size: 24px;
+            line-height: 1.33;
+            margin-bottom: 49px;
+            max-width: 430px;
+            span{
+                color: #005153;
+            }
+            @media #{$lg} {
+                font-size: 20px;
+            }
+
+            @media #{$md} {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .scroll-btn {
+        margin-bottom: 195px;
+
+        @media #{$xxl} {
+            margin-bottom: 135px;
+        }
+
+        @media #{$md} {
+            margin-bottom: 75px;
+        }
+    }
+
+    .btn-wrapper {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .call-text p {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20px;
+        color: #005153;
+    }
+
+    .wc-btn-primary {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--white);
+        padding: 21px 33px;
+        border-radius: 5px;
+        background-color: #005153;
+    }
+
+    .text-box {
+        padding: 48px 0 80px 80px;
+        background-color: #F0F7F3;
+        position: relative;
+        padding-inline-start: 80px;
+        @media #{$lg} {
+            padding: 0 0 40px 40px;
+        }
+
+        @media #{$xs} {
+            padding: 0;
+            background-color: transparent;
+        }
+    }
+
+    .circle-text {
+        width: 160px;
+        height: 160px;
+        padding: 0;
+        background: transparent;
+
+        @media #{$md} {
+            width: 120px;
+            height: 120px;
+        }
+
+        &:before {
+            display: none;
+        }
+    }
+
+    .banner-inner {
+        position: relative;
+        z-index: 1;
+        padding-top: 240px;
+        @media #{$lg}{
+            padding-top: 100px;
+        }
+        @media #{$sm}{
+            padding-top: 150px;
+        }
+
+    }
+
+    .polygon-1 {
+        position: absolute;
+        top: 137px;
+        inset-inline-start: -280px;
+        z-index: -1;
+        width: 417px;
+    }
+
+    .polygon-2 {
+        position: absolute;
+        top: 461px;
+        inset-inline-end: -75px;
+        z-index: 1;
+        width: 152px;
+
+        @media #{$lg} {
+            margin-top: -230px;
+        }
+    }
+
+    .banner-thumb {
+        margin-top: -310px;
+        margin-inline-start: -314px;
+        position: relative;
+
+        @media #{$sm} {
+            margin-top: -390px;
+        }
+
+        @media #{$xs} {
+            margin-top: 30px;
+            margin-inline-start: 0;
+        }
+
+        &:after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: #00454720;
+            top: 0;
+            inset-inline-start: 0;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+/* bannner-5 area style end */

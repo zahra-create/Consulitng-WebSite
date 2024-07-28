@@ -1,0 +1,33 @@
+@import '../../elements/testimonial/testimonial-4';
+
+.testimonial-inner {
+    &.style-4 {
+        display: flex;
+        justify-content: space-between;
+
+        @media #{$md} {
+            flex-wrap: wrap;
+        }
+
+        .thumb {
+            margin-top: 78px;
+        }
+    }
+}
+
+.testimonial-content {
+    &.style-4 {
+        max-width: 630px;
+
+        @media #{$lg} {
+            max-width: 500px;
+        }
+
+        @media #{$md} {
+            margin-top: 50px;
+        }
+        @media #{$sm} {
+            max-width: 100%;
+        }
+    }
+}

@@ -1,0 +1,191 @@
+.consultant-agency {
+    p {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.44;
+    }
+}
+
+.about-area {
+    &.style-1 {
+        max-width: 1920px;
+        margin: auto;
+        position: relative;
+        z-index: 2;
+        &::before{
+            position: absolute;
+            content: "";
+            inset-inline-start: 0;
+            top: 0;
+            height: 250px;
+            width: 100%;
+            background-color: #F1F6F6;
+            z-index: -2;
+            @media #{$lg}{
+                display: none;
+            }
+        }
+        .about-inner {
+            display: flex;
+            justify-content: space-between;
+            background-color: #D7DDCB;
+            margin-inline-start: 200px;
+            padding-inline-start: 115px;
+            height: 100vh;
+            @media #{$lg}{
+                margin-left: 0;
+                padding-left: 0;
+            }
+            @media #{$sm}{
+                flex-wrap: wrap;
+                height: 100%;
+                padding-bottom: 50px;
+            }
+            .subtitle-wrapper {
+                margin-bottom: 164px;
+                padding-top: 38px;
+                @media #{$lg}{
+                    margin-bottom: 50px;
+                    padding-left: 15px;
+                }
+                @media #{$sm}{
+                    margin-bottom: 30px;
+                }
+            }
+
+            .title-wrapper {
+                max-width: 201px;
+            }
+
+            .section-title {
+                font-size: 36px;
+                line-height: 1.16;
+            }
+
+            .cf_text {
+                margin-top: 22px;
+                margin-bottom: 46px;
+                max-width: 390px;
+                @media #{$sm}{
+                    margin-bottom: 30px;
+                }
+            }
+
+            .list-check {
+                li {
+                    font-family: var(--font_hkgrotesk);
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 1.31;
+                    margin-bottom: 14px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            .btn-wrapper {
+                margin-top: 90px;
+                @media #{$sm}{
+                    margin-top: 45px;
+                }
+                .wc-btn-primary {
+                    background-color: transparent;
+                    border: 1px solid var(--primary);
+                    color: var(--primary);
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 1.18;
+                    &:hover{
+                        color: var(--white);
+                        background-color: var(--primary);
+                    }
+                }
+            }
+        }
+
+        .about-text-wrapper {
+            padding-left: 50px;
+            margin-bottom: 80px;
+            border-left: 1px solid rgba(18, 18, 18, 0.06);
+            @media #{$lg}{
+                border: 0;
+                padding-left: 15px;
+            }
+            @media #{$sm}{
+               margin-bottom: 0;
+            }
+        }
+        .about-thumb{
+            img{
+                height: 100%;
+                margin-inline-end: 4px;
+                max-width: 645px;
+                margin-left: auto;
+                object-fit: cover;
+                @media #{$sm}{
+                    display: none;
+                    height: 0;
+                }
+            }
+        }
+    }
+}
+
+.about-more{
+    &.style-1{
+        max-width: 850px;
+        margin: auto;
+        text-align: center;
+        .about-more-content{
+            p{
+                color: var(--primary);
+                font-size: 36px;
+                font-weight: 400;
+                line-height: 1.22;
+                @media #{$md}{
+                    font-size: 28px;
+                }
+                @media #{$sm}{
+                    font-size: 22px;
+                }
+                span{
+                    color: rgba(18, 18, 18, 0.60);
+                }
+            }
+            .wc-btn-primary{
+                background-color: transparent;
+                color: var(--primary);
+                font-size: 16px;
+                font-weight: 475;
+                line-height: 1.5;
+                border-bottom: 1px solid var(--primary);
+                padding: 0;
+                padding-bottom: 2px;
+            }
+            .btn-wrapper{
+                margin-top: 52px;
+                @media #{$sm}{
+                    margin-top: 30px;
+                }
+            }
+            .wcf_logo{
+                margin-top: 100px;
+                img{
+                    @media #{$sm}{
+                        max-width: 150px;
+                    }
+                }
+                @media #{$sm}{
+                    margin-top: 60px;
+                }
+            }
+        }
+    }
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 100px;
+}

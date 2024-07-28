@@ -1,0 +1,52 @@
+p {
+    font-size: 18px;
+    line-height: 1.33;
+}
+
+.section-subtitle {
+    font-size: 12px;
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+    color: var(--primary);
+}
+
+.section-title {
+    font-size: 50px;
+
+    @media #{$xxl} {
+        font-size: 45px;
+    }
+
+    @media #{$lg} {
+        font-size: 38px;
+    }
+
+    @media #{$sm} {
+        font-size: 35px;
+    }
+
+    @media #{$xs} {
+        font-size: 30px;
+    }
+
+    &.large {
+        font-size: 80px;
+
+        @media #{$xxl} {
+            font-size: 60px;
+        }
+
+        @media #{$lg} {
+            font-size: 50px;
+        }
+
+        @media #{$sm} {
+            font-size: 40px;
+        }
+
+        @media #{$xs} {
+            font-size: 34px;
+        }
+
+    }
+}

@@ -1,0 +1,74 @@
+/*
+-----------------------------
+FEATURES STYLES 5
+-----------------------------
+*/
+
+.wcf_iconbox {
+    &.style-5 {
+        border-top: 1px solid rgba(9, 21, 66, 0.08);
+        border-inline-end: 1px solid rgba(9, 21, 66, 0.08);
+        max-width: 340px;
+        padding: 45px;
+
+        @media #{$lg} {
+            padding: 30px;
+        }
+
+        @media #{$md} {
+            border: 1px solid rgba(9, 21, 66, 0.08);
+        }
+
+        &:first-child {
+            padding-inline-start: 0;
+
+            @media #{$md} {
+                padding-inline-start: 30px;
+            }
+        }
+
+        &:last-child {
+            padding-inline-end: 0;
+            border-inline-end: 0;
+
+            @media #{$md} {
+                padding-inline-end: 30px;
+                border-inline-end: 1px solid rgba(9, 21, 66, 0.08);
+            }
+        }
+
+        .title-1 {
+            color: #091542;
+            font-size: 100px;
+            font-weight: 600;
+            line-height: 1;
+            margin-bottom: 18px;
+
+            @media #{$xxl} {
+                font-size: 80px;
+            }
+
+            @media #{$lg} {
+                font-size: 50px;
+                margin-bottom: 15px;
+            }
+
+            @media #{$md} {
+                font-size: 40px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .title-2 {
+            color: #091542;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.33;
+            margin-bottom: 15px;
+        }
+
+        .text {
+            color: var(--secondary);
+        }
+    }
+}

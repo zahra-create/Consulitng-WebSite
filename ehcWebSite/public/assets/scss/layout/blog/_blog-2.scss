@@ -1,0 +1,99 @@
+@import '../../elements/blog/blog-1';
+
+.blog-area {
+    &.style-2 {
+        .blog-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            margin: 0 -35px;
+
+            @media #{$lg} {
+                margin: 0 -25px;
+            }
+
+            @media #{$md} {
+                margin: 0;
+                gap: 30px;
+            }
+
+        }
+
+        .blog-wrapper-area {
+            max-width: 990px;
+
+        }
+
+        .blog {
+            border-left: 1px solid #E2E2E2;
+            padding: 0 35px;
+
+            @media #{$lg} {
+                padding: 0 25px;
+            }
+
+            @media #{$md} {
+                padding: 0;
+                margin: 0;
+                border: none;
+            }
+
+            &:hover {
+                .thumb {
+                    img {
+                        transform: scale(1.02);
+                    }
+                }
+            }
+
+            .thumb {
+                img {
+                    transition: all 0.5s;
+                }
+            }
+
+            .title {
+                font-weight: 600;
+            }
+        }
+
+        .section-heading {
+            display: flex;
+            gap: 53px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            flex-direction: column;
+
+            @media #{$md} {
+                flex-direction: row;
+                align-items: flex-end;
+            }
+
+            @media #{$sm} {
+                gap: 20px;
+            }
+
+            .text {
+                font-size: 18px;
+                line-height: 1.44;
+                min-width: 290px;
+                max-width: 315px;
+            }
+        }
+
+        .section-title {
+            max-width: 291px;
+        }
+
+        .blog-area-inner {
+            display: flex;
+            gap: 40px;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            @media #{$md} {
+                flex-direction: column;
+                align-items: normal;
+            }
+        }
+    }
+}

@@ -1,0 +1,394 @@
+/*
+------------------------------
+SECTIN TITLE 1
+------------------------------
+*/
+
+.section-title-wrapper {
+    &.style-1 {
+        .subtitle-wrapper {
+            margin-bottom: 32px;
+        }
+
+        .section-subtitle {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 1;
+            padding-bottom: 2px;
+            border-bottom: 1px solid currentColor;
+            text-transform: uppercase;
+            display: inline-block;
+            letter-spacing: 3.6px;
+        }
+
+        .section-title {
+            font-size: 50px;
+
+            @media #{$md} {
+                font-size: 40px;
+            }
+
+            @media #{$sm} {
+                font-size: 25px;
+            }
+        }
+
+        .cf_text {
+            margin-top: 32px;
+        }
+
+        .btn-wrapper {
+            margin-top: 42px;
+        }
+    }
+}
+
+
+/*
+------------------------------
+SECTIN TITLE 2
+------------------------------
+*/
+
+.section-title-wrapper {
+    &.style-2 {
+        .section-title {
+            font-size: 50px;
+            text-decoration-line: underline;
+            text-underline-offset: 6px;
+            text-decoration-thickness: 2px;
+
+            @media #{$xxl} {
+                font-size: 45px;
+            }
+
+            @media #{$lg} {
+                font-size: 40px;
+            }
+
+            @media #{$sm} {
+                font-size: 35px;
+            }
+
+            @media #{$xs} {
+                font-size: 30px;
+            }
+        }
+
+        .cf_text {
+            margin-top: 32px;
+        }
+
+        .btn-wrapper {
+            margin-top: 42px;
+        }
+    }
+}
+
+/*
+------------------------------
+SECTIN TITLE 3
+------------------------------
+*/
+
+.section-title-wrapper {
+    &.style-3 {
+        .section-title {
+            font-size: 50px;
+
+            @media #{$xxl} {
+                font-size: 45px;
+            }
+
+            @media #{$md} {
+                font-size: 40px;
+            }
+
+            @media #{$sm} {
+                font-size: 35px;
+            }
+
+            @media #{$xs} {
+                font-size: 30px;
+            }
+        }
+
+        .cf_text {
+            margin-top: 32px;
+        }
+
+        .btn-wrapper {
+            margin-top: 42px;
+        }
+    }
+}
+
+/*
+------------------------------
+SECTIN TITLE 4
+------------------------------
+*/
+
+.section-title-wrapper {
+    &.style-4 {
+        .section-title {
+            font-size: 50px;
+
+            @media #{$xxl} {
+                font-size: 45px;
+            }
+
+            @media #{$lg} {
+                font-size: 40px;
+            }
+
+            @media #{$sm} {
+                font-size: 35px;
+            }
+
+            @media #{$xs} {
+                font-size: 30px;
+            }
+
+            span {
+                font-weight: 600;
+            }
+        }
+
+        .cf_text {
+            margin-top: 32px;
+        }
+
+        .btn-wrapper {
+            margin-top: 42px;
+        }
+    }
+}
+
+
+/*
+------------------------------
+SECTIN TITLE 5
+------------------------------
+*/
+
+.section-title-wrapper {
+    &.style-5 {
+        .section-subtitle {
+            display: inline-block;
+            border-radius: 12.5px;
+            border: 1px solid rgba(0, 81, 83, .1);
+            padding: 6.5px 9px;
+            color: #005153;
+            font-size: 10px;
+            font-weight: 700;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+
+        .subtitle-wrapper {
+            margin-bottom: 28px;
+        }
+
+        .section-title {
+            font-size: 50px;
+
+            @media #{$md} {
+                font-size: 40px;
+            }
+
+            @media #{$md} {
+                font-size: 30px;
+            }
+
+            @media #{$xs} {
+                font-size: 24px;
+            }
+        }
+
+        .cf_text {
+            margin-top: 28px;
+        }
+
+        .text {
+            font-size: 18px;
+        }
+
+        .button-wrapper {
+            margin-top: 35px;
+        }
+    }
+}
+
+/*
+------------------------------
+SECTIN TITLE 6
+------------------------------
+*/
+
+.section-title-wrapper {
+    &.style-6 {
+        .section-title {
+            font-size: 60px;
+            font-weight: 500;
+            line-height: 1;
+
+            @media #{$xxl} {
+                font-size: 55px;
+            }
+
+            @media #{$md} {
+                font-size: 40px;
+            }
+
+            @media #{$sm} {
+                font-size: 35px;
+            }
+
+            @media #{$xs} {
+                font-size: 30px;
+            }
+        }
+
+        .cf_text {
+            margin-top: 32px;
+        }
+
+        .btn-wrapper {
+            margin-top: 42px;
+        }
+    }
+}
+
+
+/*
+------------------------------
+SECTIN TITLE 7
+------------------------------
+*/
+
+.section-title-wrapper {
+    &.style-7 {
+        .subtitle-wrapper {
+            margin-bottom: 25px;
+        }
+
+        .section-subtitle {
+            font-size: 12px;
+            font-style: italic;
+            font-weight: 600;
+            line-height: 1;
+            text-transform: uppercase;
+            ;
+            position: relative;
+            display: inline-block;
+            padding-left: 18px;
+
+            &::before {
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 8px;
+                background-color: #F45734;
+                clip-path: polygon(75% 0%, 100% 0%, 25% 100%, 0% 100%);
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                left: 4px;
+                top: 0;
+                height: 100%;
+                width: 8px;
+                background-color: #F45734;
+                clip-path: polygon(75% 0%, 100% 0%, 25% 100%, 0% 100%);
+            }
+        }
+
+        .section-title {
+            font-size: 55px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.10;
+
+            @media #{$lg} {
+                font-size: 45px;
+            }
+
+            @media #{$md} {
+                font-size: 35px;
+            }
+
+            span {
+                color: #C5C8CC;
+                font-style: italic;
+            }
+        }
+
+        .cf_text {
+            margin-top: 32px;
+        }
+
+        .btn-wrapper {
+            margin-top: 42px;
+        }
+    }
+}
+
+
+/*
+------------------------------
+SECTIN TITLE 8
+------------------------------
+*/
+
+.section-title-wrapper {
+    &.style-8 {
+        .subtitle-wrapper {
+            margin-bottom: 25px;
+
+            @media #{$md} {
+                margin-bottom: 15px;
+
+            }
+        }
+
+        .section-subtitle {
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: var(--primary);
+        }
+
+        .section-title {
+            font-size: 70px;
+
+
+            @media #{$xxl} {
+                font-size: 55px;
+            }
+
+            @media #{$md} {
+                font-size: 40px;
+            }
+
+            @media #{$sm} {
+                font-size: 35px;
+            }
+
+            @media #{$xs} {
+                font-size: 30px;
+            }
+        }
+
+        .cf_text {
+            margin-top: 27px;
+        }
+
+        .btn-wrapper {
+            margin-top: 42px;
+        }
+    }
+}

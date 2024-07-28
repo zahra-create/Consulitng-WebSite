@@ -1,0 +1,101 @@
+p {
+    font-size: 18px;
+    line-height: 1.44;
+}
+
+.section-subtitle {
+    font-size: 12px;
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+    color: var(--primary);
+}
+
+.section-title {
+    font-size: 80px;
+    @media #{$lg} {
+        font-size: 60px;
+    }
+
+    @media #{$md} {
+        font-size: 40px;
+    }
+
+    @media #{$sm} {
+        font-size: 35px;
+    }
+}
+
+/*
+--------------------------
+Service Style 3
+--------------------------
+*/
+
+.service-area{
+    &.style-3{
+        padding-top: 190px;
+        padding-bottom: 140px;
+        @media #{$lg}{
+            padding-top: 150px;
+            padding-bottom: 100px;
+        }
+        @media #{$md}{
+            padding-top: 130px;
+            padding-bottom: 70px;
+        }
+        .title-wrapper{
+            padding-bottom: 27px;
+        }
+        .service-wrapper{
+            display: grid;
+            grid-template-columns: .53fr 1fr;
+            gap: 215px;
+            @media #{$xxl}{
+                gap: 60px;
+            }
+            @media #{$lg}{
+                grid-template-columns: 1fr;
+            }
+        }
+        .section-heading {
+            max-width: 450px;
+        }
+        .wcf_iconbox{
+            .thumb{
+                img{
+                    filter: brightness(0);
+                }
+            }
+            .title{
+                color: var(--primary);
+            }
+        }
+    }
+}
+
+
+/*
+--------------------------
+Specialization Style
+--------------------------
+*/
+
+.specialization-area{
+    margin-bottom: 150px;
+    @media #{$lg}{
+        margin-bottom: 100px;
+    }
+    @media #{$md}{
+        margin-bottom: 70px;
+    }
+}
+
+.testimonial-section{
+    padding-bottom: 140px;
+    @media #{$lg}{
+        padding-bottom: 100px;
+    }
+    @media #{$md}{
+        padding-bottom: 70px;
+    }
+}

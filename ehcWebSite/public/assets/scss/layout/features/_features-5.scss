@@ -1,0 +1,27 @@
+@import '../../elements/iconbox/iconbox-5';
+
+/*
+-----------------------------
+FEATURES STYLES 5
+-----------------------------
+*/
+
+.feature-area {
+    &.style-5 {
+        .section-heading {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+    }
+}
+
+.feature-wrapper {
+    &.style-5 {
+        display: flex;
+
+        @media #{$md} {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}

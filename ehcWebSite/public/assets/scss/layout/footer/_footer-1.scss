@@ -1,0 +1,130 @@
+.footer-area {
+    &.style-1 {
+        background-color: #121212;
+
+        .footer-inner {
+            display: flex;
+
+            @media #{$sm} {
+                flex-wrap: wrap;
+            }
+        }
+
+        .logo-wrapper {
+            width: 334px;
+            min-width: 334px;
+            padding-top: 95px;
+
+            @media #{$xxl} {
+                width: 274px;
+                min-width: 274px;
+            }
+
+            @media #{$md} {
+                padding-top: 30px;
+                width: 184px;
+                min-width: 184px;
+            }
+
+            @media #{$sm} {
+                text-align: center;
+                width: 100%;
+                margin: 20px 0;
+            }
+        }
+
+        .footer-menu-item {
+            &.subscribe-form-item {
+                width: 330px;
+
+                @media #{$xxl} {
+                    width: 290px;
+                }
+
+                .title {
+                    margin-bottom: 27px;
+                }
+            }
+
+            .title {
+                color: var(--white);
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+
+            li a {
+                &:hover {
+                    color: var(--white);
+                }
+            }
+
+        }
+
+        .social-icons li a {
+            &:hover {
+                color: var(--white);
+            }
+        }
+
+        .links-wrapper {
+            flex-grow: 1;
+            border-inline-start: 1px solid #282828;
+            padding-inline-start: 80px;
+            padding-top: 95px;
+            padding-inline-start: 60px;
+
+            @media #{$lg} {
+                padding-inline-start: 40px;
+            }
+
+
+            @media #{$md} {
+                padding-inline-start: 30px;
+                padding-top: 30px;
+            }
+
+            @media #{$sm} {
+                border-left: 0;
+                padding-left: 0;
+            }
+        }
+
+        .footer-menu {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            padding-bottom: 90px;
+
+            @media #{$lg} {
+                flex-wrap: wrap;
+                padding-bottom: 40px;
+            }
+        }
+
+        .footer-copyright {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 26px 0;
+            border-top: 1px solid #282828;
+            text-align: center;
+
+            @media #{$xs} {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .text-copy {
+            color: #999;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.25;
+
+            a {
+                font-weight: 600;
+                color: var(--white);
+            }
+        }
+    }
+}

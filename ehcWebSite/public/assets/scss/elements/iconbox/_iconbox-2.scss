@@ -1,0 +1,93 @@
+/*
+-----------------------------
+FEATURES STYLES 2
+-----------------------------
+*/
+
+.wcf_iconbox {
+    &.text-design {
+        padding: 60px;
+        padding-inline-start: 70px;
+        padding-inline-end: 0;
+        border-inline-start: 1px solid rgba(18, 18, 18, 0.06);
+
+        @media #{$lg} {
+            padding-inline-start: 30px;
+        }
+
+        @media #{$md} {
+            border: 0;
+            padding-inline-start: 0;
+        }
+
+        @media #{$sm} {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        .thumb {
+            margin-bottom: 30px;
+        }
+
+        .title-2 {
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 1.16;
+            text-decoration-line: underline;
+            margin-bottom: 40px;
+
+            @media #{$lg} {
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &.style-2 {
+        padding: 60px;
+        border-inline-end: 1px solid rgba(18, 18, 18, 0.06);
+
+        @media #{$lg} {
+            padding: 30px;
+        }
+
+        @media #{$sm} {
+            padding-inline-start: 0;
+        }
+
+        &:first-child {
+            padding-inline-start: 0;
+        }
+
+        &:last-child {
+            border-inline-end: 0;
+            padding-inline-end: 0;
+        }
+
+        .thumb {
+            margin-bottom: 50px;
+
+            @media #{$lg} {
+                margin-bottom: 30px;
+            }
+        }
+
+        .title {
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1.15;
+
+            &:hover {
+                color: var(--primary);
+            }
+        }
+
+        .cf_text {
+            margin-top: 20px;
+        }
+
+        .text {
+            color: var(--primary);
+        }
+    }
+}

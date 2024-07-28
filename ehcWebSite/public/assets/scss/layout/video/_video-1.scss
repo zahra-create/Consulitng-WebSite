@@ -1,0 +1,17 @@
+.video-area{
+    &.style-3{
+        .section-title-wrapper{
+            max-width: 691px;
+            margin: auto;
+            margin-bottom: 63px;
+            text-align: center;
+        }
+        .title-wrapper{
+            margin-bottom: 28px;
+        }
+        .desc-text{
+            max-width: unset;
+            margin-left: unset;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@import '../../elements/team/team-1';
+
+.team-area {
+    &.style-1 {
+        .section-heading {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+    }
+}
+
+.team-wrapper {
+    &.style-1 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 40px 40px;
+
+        @media #{$lg} {
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 40px 20px;
+        }
+
+        @media #{$md} {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+
+        @media #{$sm} {
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        }
+
+    }
+}

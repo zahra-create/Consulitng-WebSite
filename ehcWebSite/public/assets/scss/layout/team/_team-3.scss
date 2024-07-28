@@ -1,0 +1,13 @@
+@import '../../elements/team/team-3';
+
+.team-wrapper {
+    &.style-3 {
+        display: flex;
+        gap: 30px;
+
+        @media #{$lg} {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}

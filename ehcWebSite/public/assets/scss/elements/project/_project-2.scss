@@ -1,0 +1,75 @@
+/*
+-----------------------------
+PROJECT STYLES 2
+-----------------------------
+*/
+
+.project-item {
+    &.style-2 {
+        position: relative;
+
+        @media #{$lg} {
+            flex-basis: 45%;
+        }
+
+        @media #{$md} {
+            flex-basis: 45%;
+        }
+
+        @media #{$sm} {
+            flex-basis: 100%;
+        }
+
+        .project-thumb {
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background: linear-gradient(180deg, rgba(16, 40, 63, 0.00) 50%, #10283F 100%);
+                border-radius: 70px 0px;
+            }
+
+            img {
+                width: 100%;
+                border-radius: 70px 0px;
+            }
+        }
+
+        .project-content {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+
+        .icon {
+            margin-bottom: 10px;
+        }
+
+        .title {
+            color: #F8F3EB;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 500;
+            line-height: 1;
+
+            &:hover {
+                color: var(--action);
+            }
+        }
+
+        .text {
+            color: #F8F3EB;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.70;
+            text-transform: uppercase;
+        }
+    }
+}

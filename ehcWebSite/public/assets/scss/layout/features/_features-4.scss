@@ -1,0 +1,34 @@
+@import '../../elements/iconbox/iconbox-4';
+
+/*
+-----------------------------
+FEATURES STYLES 4
+-----------------------------
+*/
+
+.feature-area {
+    &.style-4 {
+        .section-heading {
+            text-align: center;
+            margin-bottom: 57px;
+
+            @media #{$md} {
+                margin-bottom: 37px;
+            }
+
+            @media #{$sm} {
+                margin-bottom: 27px;
+            }
+        }
+    }
+}
+
+.feature-wrapper {
+    &.style-4 {
+        display: flex;
+
+        @media #{$md} {
+            flex-wrap: wrap;
+        }
+    }
+}

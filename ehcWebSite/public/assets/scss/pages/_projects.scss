@@ -1,0 +1,120 @@
+/* project area style  */
+@import "../elements/project/project-1";
+
+.projects-area {
+    padding-top: 188px;
+
+    @media #{$xxl} {
+        padding-top: 158px;
+    }
+
+    @media #{$md} {
+        padding-top: 138px;
+    }
+
+    @media #{$sm} {
+        padding-top: 118px;
+    }
+
+    .projects-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        margin: 0 -45px;
+        gap: 60px 0;
+
+        @media #{$xl} {
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            margin: 0 -30px;
+            gap: 40px 0;
+        }
+
+        @media #{$sm} {
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            margin: 0 -20px;
+            gap: 30px 0;
+        }
+
+    }
+
+    .project-item {
+        padding: 0 45px;
+        border-left: 1px solid #E2E2E2;
+
+        @media #{$xl} {
+            padding: 0 30px;
+        }
+
+        @media #{$sm} {
+            padding: 0 20px;
+        }
+    }
+
+    .pagination {
+        margin-top: 60px;
+
+        @media #{$md} {
+            margin-top: 40px;
+
+        }
+    }
+
+    .section-heading {
+        margin-bottom: 109px;
+    }
+
+
+
+    .section-heading {
+        margin-bottom: 109px;
+
+        @media #{$xxl} {
+            margin-bottom: 69px;
+        }
+
+        @media #{$md} {
+            margin-bottom: 39px;
+        }
+    }
+
+
+
+    .section-title-wrapper {
+        display: flex;
+        gap: 80px;
+        justify-content: space-between;
+
+        @media #{$md} {
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .subtitle-wrapper {
+            margin-top: 27px;
+            width: 260px;
+
+            @media #{$md} {
+                margin-top: 0;
+                margin-bottom: 15px;
+            }
+        }
+
+        .section-title {
+            max-width: 630px;
+        }
+
+        .text-wrapper {
+            max-width: 415px;
+            margin-top: 23px;
+
+            @media #{$lg} {
+                max-width: 295px;
+
+            }
+
+            @media #{$md} {
+                max-width: 485px;
+            }
+        }
+    }
+
+}

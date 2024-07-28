@@ -1,0 +1,150 @@
+.cta-area {
+    &.style-1 {
+        position: relative;
+
+        &:before {
+            position: absolute;
+            content: "";
+            width: 50%;
+            height: 100%;
+            top: 0;
+            inset-inline-end: 0;
+            background-color: #282828;
+
+            @media #{$lg} {
+                display: none;
+            }
+        }
+
+        .container {
+            @media #{$lg} {
+                max-width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+
+        .cta-area-wrapper {
+            display: flex;
+            margin-inline-start: 334px;
+
+            @media #{$xxl} {
+                margin-inline-start: 274px;
+            }
+
+            @media #{$lg} {
+                margin-inline-start: 0px;
+            }
+
+            @media #{$sm} {
+                flex-wrap: wrap;
+            }
+        }
+
+        .cta-left {
+            background-color: #8DCF9B;
+            padding: 25px 80px;
+            position: relative;
+
+            @media #{$lg} {
+                padding: 25px 40px;
+            }
+
+
+            @media #{$sm} {
+                text-align: center;
+                width: 100%;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                inset-inline-end: 0;
+                width: 19px;
+                height: 14px;
+                background-color: inherit;
+                top: calc(100% - 1px);
+                clip-path: polygon(0 0, 100% 0, 100% 100%);
+
+                @media #{$sm} {
+                    display: none;
+                }
+
+                @include rtl {
+                    transform: rotateY(173deg);
+                }
+
+            }
+
+
+        }
+
+        .cta-right {
+            background-color: #282828;
+            padding: 25px 80px;
+            flex-grow: 1;
+            padding-inline-start: 80px;
+            padding-inline-end: 0;
+
+            @media #{$lg} {
+                padding-inline-start: 40px;
+            }
+
+            @media #{$lg} {
+                padding: 25px 40px;
+            }
+
+            .btn-wrapper {
+                max-width: 100%;
+            }
+
+            .wc-btn-underline {
+                color: var(--white);
+                display: flex;
+                justify-content: space-between;
+                text-transform: none;
+
+                &:hover {
+                    &:before {
+                        width: 0;
+                    }
+                }
+
+
+                &::before {
+                    width: 172px;
+                }
+
+                img {
+                    filter: brightness(100);
+                }
+            }
+        }
+
+        .cta-info {
+            li {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                flex-wrap: wrap;
+
+                @media #{$sm} {
+                    justify-content: center;
+                }
+
+                .title {
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 1;
+                    color: var(--primary);
+                }
+
+                span {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: var(--primary);
+                }
+            }
+        }
+    }
+}

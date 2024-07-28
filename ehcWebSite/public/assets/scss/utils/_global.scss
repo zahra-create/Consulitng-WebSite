@@ -1,0 +1,146 @@
+/*----------------------------------------*/
+/*  01. Global CSS START
+/*----------------------------------------*/
+
+// Body Overlay
+.body-overlay {
+  position: fixed;
+  z-index: 9;
+  pointer-events: none;
+  top: 0;
+  opacity: 1;
+  inset-inline-start: 0;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: repeat;
+  background-position: top left;
+  background-image: url(../imgs/writer/body-bg.webp);
+}
+
+
+.section-spacing {
+  padding-top: 130px;
+  padding-bottom: 130px;
+
+  @media #{$xxl} {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @media #{$md} {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  @media #{$sm} {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+
+.text-slider-active {
+  .swiper-slide {
+    width: auto;
+  }
+}
+
+// scrollbar 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #d6d6d6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+/*
+-----------------------
+Pagination
+-----------------------
+*/
+
+.pagination {
+  &.style-1 {
+    display: flex;
+    gap: 20px;
+
+    li {
+      &:last-child {
+        padding-inline-start: 20px;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        img {
+          @include rtl {
+            transform: rotate(180deg);
+          }
+        }
+
+        &.current {
+          color: #999;
+        }
+      }
+    }
+  }
+}
+
+.header__logo {
+  position: relative;
+  z-index: 2;
+}
+
+.header__search {
+  position: relative;
+}
+
+.header__nav {
+  position: relative;
+}
+
+.active {
+  color: rgba(141, 207, 155, 1) !important;
+}
+
+.active-circle {
+  height: 10px;
+  width: 10px;
+  margin-left: 5px;
+  background-color: rgba(141, 207, 155, 1);
+  border-radius: 50px;
+  display: inline-block;
+  animation: dot-lighting 1s infinite;
+}
+
+@keyframes dot-lighting {
+  0% {
+    background-color: rgba(0, 226, 52, 1);
+    transition: .3s ease-in;
+
+  }
+
+  50% {
+    background-color: rgba(141, 207, 155, .7);
+    transition: .3s ease-out;
+
+  }
+
+  100% {
+    background-color: rgba(141, 207, 155, 1);
+    transition: .3s ease-in;
+
+  }
+}

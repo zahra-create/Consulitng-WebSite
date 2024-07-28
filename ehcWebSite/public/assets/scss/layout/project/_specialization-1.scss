@@ -1,0 +1,70 @@
+.specialization-area {
+    &.style-1 {
+        background-color: var(--primary);
+
+        .specialization-inner {
+            display: flex;
+
+            @media #{$sm} {
+                flex-wrap: wrap;
+            }
+        }
+
+        .specialization-thumb {
+            flex: 1.2;
+
+            @media #{$sm} {
+                flex: unset;
+            }
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .specialization-content {
+            flex: 1;
+        }
+
+        .section-title-wrapper {
+            max-width: 560px;
+            margin-inline-start: 115px;
+            @media #{$xxl} {
+                margin-inline-start: 50px;
+            }
+
+            @media #{$sm} {
+                margin-inline-start: 15px;
+            }
+        }
+
+        .section-subtitle {
+            color: var(--white);
+        }
+
+        .section-title {
+            color: var(--white);
+        }
+
+        .text {
+            color: #999999;
+
+            span {
+                color: var(--white);
+            }
+        }
+
+        .list-plus {
+            margin-top: 23px;
+
+            li {
+                color: var(--white);
+
+                &::before {
+                    top: -5px;
+                }
+            }
+        }
+    }
+}

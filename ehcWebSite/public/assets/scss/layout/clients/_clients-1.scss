@@ -1,0 +1,82 @@
+/* client area style  */
+.client-area {
+
+
+
+    .section-title {
+        max-width: 401px;
+
+        @media #{$sm} {
+            max-width: 301px;
+        }
+    }
+
+    .content {
+        max-width: 490px;
+
+        @media #{$lg} {
+            max-width: 400px;
+        }
+
+        @media #{$md} {
+            max-width: 300px;
+        }
+
+        .client-logos {
+            display: flex;
+            gap: 30px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            img {
+                max-height: 39px;
+
+                @media #{$lg} {
+                    max-height: 32px;
+                }
+            }
+        }
+
+        .text {
+            font-size: 18px;
+            line-height: 1.44;
+        }
+
+        .text-wrapper {
+            margin-bottom: 53px;
+        }
+    }
+
+
+    .client-area-inner {
+        display: flex;
+        gap: 287px;
+        justify-content: space-between;
+
+        @media #{$xl} {
+            gap: 107px;
+        }
+
+        @media #{$lg} {
+            gap: 60px;
+        }
+
+        @media #{$xs} {
+            gap: 30px;
+            flex-direction: column;
+        }
+    }
+
+    .section-heading {
+        display: flex;
+        gap: 80px;
+        justify-content: space-between;
+        flex: 1;
+
+        @media #{$md} {
+            gap: 30px;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+    }
+}

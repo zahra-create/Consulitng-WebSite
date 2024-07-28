@@ -1,0 +1,52 @@
+
+/*
+-----------------------------
+FEATURES STYLES 8
+-----------------------------
+*/
+
+.wcf_iconbox {
+    &.style-8 {
+        border-radius: 20px;
+        background: #D8E7EF;
+        padding: 45px;
+        @media #{$xxl}{
+            padding: 45px 25px;
+        }
+        @media #{$lg}{
+            flex-basis: 30%;
+            padding: 25px;
+        }
+        @media #{$md}{
+            flex-basis: 48%;
+            padding: 25px;
+        }
+        @media #{$sm}{
+            flex-basis: 100%;
+        }
+        .thumb{
+            margin-bottom: 110px;
+            @media #{$xxl}{
+                margin-bottom: 45px;
+            }
+        }
+        .title{
+            color: #103142;
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 1; 
+        }
+        .text{
+            margin-bottom: 35px;
+        }
+        .wc-btn-default{
+            border: 1px solid rgba(16, 49, 66, 0.50);
+            color: #103142;
+            font-weight: 600;
+            &:hover{
+                background-color: #103142;
+                color: var(--white);
+            }
+        }
+    }
+}

@@ -1,0 +1,93 @@
+.case-item {
+    &.style-1 {
+        position: relative;
+
+        @media #{$md} {
+            flex-basis: 48%;
+        }
+
+        @media #{$sm} {
+            flex-basis: 100%;
+        }
+
+        :hover {
+            .case-thumb {
+                img {
+                    transform: scale(1.03);
+                }
+            }
+
+            .title {
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
+
+        .case-item-inner {
+            position: relative;
+
+            .case-content {
+                position: absolute;
+                bottom: 50px;
+                inset-inline-start: 50px;
+                z-index: 1;
+
+                @media #{$lg} {
+                    bottom: 30px;
+                    inset-inline-start: 30px;
+                }
+            }
+        }
+
+        .title {
+            color: #FFF;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 9px;
+            position: relative;
+            line-height: .8;
+            padding-bottom: 3px;
+
+            &:after {
+                position: absolute;
+                content: "";
+                width: 0%;
+                height: 1px;
+                inset-inline-start: 0;
+                bottom: 0;
+                background-color: currentColor;
+                transition: all 0.3s;
+            }
+        }
+
+        .disc {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1;
+        }
+
+        .case-thumb {
+            position: relative;
+            overflow: hidden;
+
+
+            &::before {
+                content: "";
+                position: absolute;
+                inset-inline-start: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                background: rgba(9, 21, 66, 0.30);
+                z-index: 1;
+            }
+
+            img {
+                transition: all 0.5s;
+                width: 100%;
+            }
+        }
+    }
+}

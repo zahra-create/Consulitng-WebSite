@@ -1,0 +1,148 @@
+@import '../layout/cta/cta-1';
+@import '../layout/testimonial/testimonial-2';
+
+p {
+    font-size: 18px;
+    line-height: 1.44;
+}
+
+.subtitle-wrapper {
+    padding-top: 15px;
+}
+
+.section-subtitle {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+}
+
+.team-details {
+    padding-top: 200px;
+
+    @media #{$lg}{
+        padding-top: 150px;
+    }
+
+    @media #{$sm}{
+        padding-top: 130px;
+    }
+
+    .title {
+        color: var(--primary);
+        font-size: 80px;
+        font-weight: 700;
+        margin-bottom: 33px;
+        @media #{$lg} {
+            font-size: 60px;
+        }
+
+        @media #{$md} {
+            font-size: 50px;
+        }
+
+        @media #{$sm} {
+            font-size: 35px;
+        }
+    }
+
+    .social-icons{
+        margin-bottom: 50px;
+        @media #{$md}{
+            margin-bottom: 30px;
+        }
+        li{
+            a{
+                font-size: 20px;
+                color: var(--primary);
+                &:hover{
+                    color: #8DCF9B;
+                }
+            }
+        }
+    }
+
+    .text{
+        margin-bottom: 30px;
+        line-height: 1.33;
+    }
+
+    .btn-wrapper{
+        margin-top: 50px;
+    }
+
+    .team-details-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 110px;
+        @media #{$md}{
+            gap: 50px;
+        }
+        @media #{$sm}{
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .team-content{
+        max-width: 550px;
+        @media #{$lg}{
+            padding-bottom: 70px;
+        }
+        @media #{$sm}{
+            padding-bottom: 30px;
+        }
+    }
+
+}
+
+/*
+----------------------------
+Newsletter
+----------------------------
+*/
+
+.newsletter-area{
+    background-color: #F1F6F6;
+    padding-top: 120px;
+    padding-bottom: 150px;
+    @media #{$lg}{
+        padding-top: 80px;
+        padding-bottom: 100px;
+    }
+    .input-field{
+        margin-bottom: 25px;
+        label{
+            color: var(--primary);
+            font-size: 16px;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 10px;
+        }
+        input{
+            width: 100%;
+            height: 55px;
+            border: 1px solid rgba(18, 18, 18, 0.15);
+            padding: 15px;
+            background-color: transparent;
+            &:focus{
+                outline: 0;
+            }
+        }
+    }
+    .newsletter-wrapper{
+        display: grid;
+        grid-template-columns: .3fr 1fr;
+        gap: 190px;
+        @media #{$md}{
+            gap: 100px;
+        }
+        @media #{$sm}{
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+    .btn-wrapper{
+        padding-top: 20px;
+    }
+}
+

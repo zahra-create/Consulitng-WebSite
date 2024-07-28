@@ -1,0 +1,40 @@
+.team {
+    &.style-1 {
+        max-width: 350px;
+
+        &:hover {
+            .team-thumb {
+                img {
+                    transform: scale(1.02);
+                }
+            }
+        }
+
+        .team-thumb {
+            margin-bottom: 25px;
+
+            img {
+                transition: all 0.5s;
+            }
+        }
+
+        .name {
+            color: var(--primary);
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 1;
+            margin-bottom: 10px;
+
+            @media #{$md} {
+                font-size: 18px;
+            }
+        }
+
+        .post {
+            color: #555;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1;
+        }
+    }
+}

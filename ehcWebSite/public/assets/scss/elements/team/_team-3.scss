@@ -1,0 +1,46 @@
+.team {
+    &.style-3 {
+        max-width: 350px;
+        @media #{$sm}{
+            width: 100%;
+        }
+        .team-thumb {
+            margin-bottom: 25px;
+            img{
+                width: 100%;
+            }
+        }
+
+        .name {
+            color: var(--primary);
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 1;
+            margin-bottom: 10px;
+            @media #{$md}{
+                font-size: 18px;
+            }
+        }
+
+        .post {
+            color: #566E7C;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1;
+        }
+        .team-content {
+            display: flex;
+            justify-content: space-between;
+        }
+        .team-social{
+            display: flex;
+            gap: 10px;
+            li{
+                a{
+                    color: #10283F;
+                    display: block;
+                }
+            }
+        }
+    }
+}
