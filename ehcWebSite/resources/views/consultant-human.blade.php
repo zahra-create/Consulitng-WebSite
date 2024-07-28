@@ -334,104 +334,91 @@
           </section>
           <!-- about area end  -->
 		  
-		  <!-- Valeurs et engagements service style 6 start  -->
-<section class="service-area style-6 section-spacing line-area">
+
+        		  <!-- Valeurs et engagements service style 6 start  -->
+       
+          <section class="service-area style-6 section-spacing line-area">
             <div class="section-lines">
               <div class="container">
                 <div class="line-area">
-                  <div class="lines"> 
+                  <div class="lines">
                     <div class="line line-1"></div>
                     <div class="line line-1"></div>
                     <div class="line line-1"></div>
                     <div class="line line-1"></div>
                   </div>
-                </div> 
-              </div>  
-            </div>  
-             <div class="container">
+                </div>
+              </div>
+            </div>
+            <div class="container">
               <div class="section-heading">
                 <div class="section-title-wrapper">
                   <div class="title-wrapper has_fade_anim">
-                    <h2 class="section-title" style="font-size: 60px;"><span>POURQUOI EHC ?</span></h2>
+                    <h2 class="section-title" style="font-size: 60px; "><span>POURQUOI EHC ?</span></h2>
                   </div>
                  <div class="subtitle-wrapper has_fade_anim" data-delay=".35">
-                    <!--<span class="section-subtitle">Au coeur de ses valeurs, EHC place la satisfaction de ses partenaires au sommet de ses priorites</span>-->
 					        <p style="font-size: 25px;">Au coeur de ses valeurs, EHC place la satisfaction de ses partenaires au sommet de ses priorites</p>
                   </div> 
-				  
                 </div>
               </div>
               
-			  <div class="feature-wrapper">
-              <div class="wcf_iconbox style-8 has_fade_anim">
-              <div class="thumb">
-            <div class="cf_image">
-                <a href="service-details.html"><img src="assets/imgs/Gall/img-r-33.webp" alt="feature image"></a>
-            </div>
-        </div>
-        <div class="content">
-            <div class="cf_title">
-                <h4 class="title"><a href="service-details.html">Engagement</a></h4>
-            </div>
-        </div>
-    </div>
-    <div class="wcf_iconbox style-8 has_fade_anim" data-delay=".5">
-        <div class="thumb">
-            <div class="cf_image">
-                <a href="service-details.html"><img src="assets/imgs/Gall/img-r-34.webp" alt="feature image"></a>
-            </div>
-        </div>
-        <div class="content">
-            <div class="cf_title">
-               <h4 class="title"><a href="service-details.html">Agilite</a></h4>
+              <div class="feature-wrapper">
+                <div class="wcf_iconbox style-8 has_fade_anim">
+                  <div class="thumb">
+                    <div class="cf_image">
+                      <a href="service-details.html"><img src="assets/imgs/gallery/img-r-33.webp"
+                          alt="feature image"></a>
                     </div>
-        </div>
-    </div>
-    <div class="wcf_iconbox style-8 has_fade_anim" data-delay=".8">
-        <div class="thumb">
-            <div class="cf_image">
-                <a href="service-details.html"><img src="assets/imgs/Gall/img-r-35.webp" alt="feature image"></a>
-            </div>
-        </div>
-        <div class="content">
-            <!--<div class="count">
-                <span>03</span>
-            </div> -->
-            <div class="cf_title">
-                <h4 class="title"><a href="service-details.html">Expertise</a></h4>
+                  </div>
+                  <div class="content">
+                    <div class="cf_title">
+                      <h4 class="title"><a href="service-details.html">ENGAGEMENT</a></h4>
                     </div>
-        </div>
-    </div>
-    <div class="wcf_iconbox style-8 has_fade_anim" data-delay=".35">
-        <div class="thumb">
-            <div class="cf_image">
-                <a href="service-details.html"><img src="assets/imgs/Gall/img-r-36.webp" alt="feature image"></a>
-            </div>
-        </div>
-        <div class="content">
-            <div class="cf_title">
-                <h4 class="title"><a href="service-details.html">Innovation</a></h4>
+                  </div>
+                </div>
+                <div class="wcf_iconbox style-8 has_fade_anim" data-delay=".35">
+                  <div class="thumb">
+                    <div class="cf_image">
+                      <a href="service-details.html"><img src="assets/imgs/gallery/img-r-34.webp"
+                          alt="feature image"></a>
                     </div>
-        </div>
-    </div>
-    <div class="wcf_iconbox style-8 has_fade_anim" data-delay=".65">
-        <div class="thumb">
-            <div class="cf_image">
-                <a href="service-details.html"><img src="assets/imgs/Gall/img-r-33.webp" alt="feature image"></a>
-            </div>
-        </div>
-        <div class="content">
-            <div class="cf_title">
-                <h4 class="title"><a href="service-details.html">Excellence</a></h4>
+                  </div>
+                  <div class="content">
+                    <div class="cf_title">
+                      <h4 class="title"><a href="service-details.html">AGILITE</a></h4>
                     </div>
-        </div>
-    </div>
-</div>
-                
+                  </div>
+                </div>
+                <div class="wcf_iconbox style-8 has_fade_anim" data-delay=".5">
+                  <div class="thumb">
+                    <div class="cf_image">
+                      <a href="service-details.html"><img src="assets/imgs/gallery/img-r-35.webp"
+                          alt="feature image"></a>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="cf_title">
+                      <h4 class="title"><a href="service-details.html">EXPERTISE</a></h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="wcf_iconbox style-8 has_fade_anim" data-delay=".65">
+                  <div class="thumb">
+                    <div class="cf_image">
+                      <a href="service-details.html"><img src="assets/imgs/gallery/img-r-36.webp"
+                          alt="feature image"></a>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="cf_title">
+                      <h4 class="title"><a href="service-details.html">INNOVATION & EXCELLENCE</a></h4>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
-		
+   
  
 <!-- Valeurs et engagement feature style 6 end  -->
 
@@ -451,7 +438,7 @@
                 <div class="section-heading">
                   <div class="section-title-wrapper"> 
                     <div class="title-wrapper">
-                      <h2 class="section-title" style="color:#005151; font-size: 80px; font-weight: 600; ">NOS BUSINESS UNITS </h2>
+                      <h2 class="section-title" style="color:#005151; font-size: 60px; font-weight: 600; ">NOS BUSINESS UNITS </h2>
                     </div>
                     <!--<div class="cf_text">
                       <p class="text">Au coeur de ses valeurs, EHC place la satisfaction de ses partenaires au sommet de ses priorités</p>
@@ -481,45 +468,45 @@
 
                 <div class="services-list">
                   <div class="services-item">
-                    <p class="count" style="color: #005151; font-size: 35px; font-weight: 500; padding-top: 15px;">01</p>
+                    <p class="count" style="color: #005151; font-size: 30px; font-weight: 500; padding-top: 15px;">01</p>
                     <a href="service-style-1.html">
-                      <h2 class="title" style="color: #005151; font-size: 40px; font-weight: 500;">EHC Consulting
+                      <h2 class="title" style="color: #005151; font-size: 30px; font-weight: 500;">EHC Consulting
                       </h2>
                     </a>
                     <p class="text">Votre partenaire stratégique pour une transformation intégrale et performance optimale, alliant expertise en management des organisation digitalisation.</p>
                     <a href="service-details.html" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
                   </div>
                   <div class="services-item">
-                    <p class="count" style="color: #005151; font-size: 35px; font-weight: 500; padding-top: 15px;">02</p>
+                    <p class="count" style="color: #005151; font-size: 30px; font-weight: 500; padding-top: 15px;">02</p>
                     <a href="service-details.html">
-                      <h2 class="title" style="color: #005151; font-size: 40px; font-weight: 500;" >EHC Recruitment</h2>
+                      <h2 class="title" style="color: #005151; font-size:30px; font-weight: 500;" >EHC Recruitment</h2>
                     </a>
                     <p class="text">Une BU dédiée pour recruter avec succès tout type de profil, avec des services sur mesure et un accompagnement intégral .</p>
                     
                     <a href="service-details.html" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
                   </div>
                   <div class="services-item">
-                    <p class="count" style="color: #005151; font-size: 35px; font-weight: 500; padding-top: 15px;">03</p>
+                    <p class="count" style="color: #005151; font-size: 30px; font-weight: 500; padding-top: 15px;">03</p>
                     <a href="service-details.html">
-                      <h2 class="title" style="color: #005151; font-size: 40px; font-weight: 500;">EHC Learning</h2>
+                      <h2 class="title" style="color: #005151; font-size: 30px; font-weight: 500;">EHC Learning</h2>
                     </a>
                     <p class="text">Spécialisée en formation sur mesure, de l'ingénierie à l'e-learning, avec un soutien complet pour maximiser vos investissements en matière de formation.</p>
                     
                     <a href="service-details.html" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
                   </div>
                   <div class="services-item">
-                    <p class="count" style="color: #005151; font-size: 35px; font-weight: 500; padding-top: 15px;">04</p>
+                    <p class="count" style="color: #005151; font-size: 30px; font-weight: 500; padding-top: 15px;">04</p>
                     <a href="service-details.html">
-                      <h2 class="title" style="color: #005151; font-size: 40px; font-weight: 500;">EHC Services & Events</h2>
+                      <h2 class="title" style="color: #005151; font-size: 30px; font-weight: 500;">EHC Services & Events</h2>
                     </a>
                     <p class="text">Votre solution tout-en-un en matière de service et d'évènementiel.</p>
                     
                     <a href="service-details.html" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
                   </div>
                   <div class="services-item">
-                    <p class="count" style="color: #005151; font-size: 35px; font-weight: 500; padding-top: 15px;">05</p>
+                    <p class="count" style="color: #005151; font-size: 30px; font-weight: 500; padding-top: 15px;">05</p>
                     <a href="service-details.html">
-                      <h2 class="title" style="color: #005151; font-size: 40px; font-weight: 500;">EHC Engineering</h2>
+                      <h2 class="title" style="color: #005151; font-size: 30px; font-weight: 500;">EHC Engineering</h2>
                     </a>
                     <p class="text">Votre partenaire pour des solutions informatiques sur mesure, de la conception de module spécifique à la mise en place d'ERP intégrés.</p>
                     
@@ -540,6 +527,8 @@
           </section>
 		  
           <!-- BU end  -->
+		  
+
 		  
 		  		           <!-- testimonial start  -->
 
