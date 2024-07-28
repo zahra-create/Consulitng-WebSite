@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('consultant-human');
 });
 
 Route::get('/service-etudiant', function () {
