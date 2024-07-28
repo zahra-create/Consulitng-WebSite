@@ -247,9 +247,9 @@
           </div>
           <div class="header__search d-none d-md-block">
             <div class="search-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-			        <i class="fa-solid fa-gear"></i> 
+			      <!--  <i class="fa-solid fa-gear"></i> -->
                <!-- <i class="fa-solid fa-magnifying-glass"></i>  -->
-              <!-- <img src="assets/imgs/icon/search.webp" alt="search"> --> 
+              <img src="assets/imgs/icon/search.webp" alt="search">  
             </div>
           </div>
           <div class="header__nav">
