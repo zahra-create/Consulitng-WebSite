@@ -8162,6 +8162,7 @@ p {
 Service area style  
 -------------------------------------
 */
+
 .service-area.style-5 {
   padding-top: 190px;
   padding-bottom: 150px;
@@ -8173,6 +8174,9 @@ Service area style
   }
 }
 .service-area.style-5 .title-wrapper {
+  margin-bottom: 31px;
+}
+.service-area.style-5 .text-wrapper {
   margin-bottom: 31px;
 }
 .service-area.style-5 .service-wrapper {
