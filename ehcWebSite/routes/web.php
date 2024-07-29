@@ -33,3 +33,8 @@ Route::get('/service-entreprise', function () {
 Route::get('/conseil', function () {
     return view('conseil-details');
 })->name('conseil');
+
+//about page routes
+Route::get('/about', function () {
+    return view('about-page');
+})->name('about');
