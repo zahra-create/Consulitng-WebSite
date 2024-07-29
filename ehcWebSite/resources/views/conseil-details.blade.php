@@ -65,7 +65,7 @@
   <!-- Switcher Area Start -->
   <div class="switcher__area">
     <div class="switcher__icon">
-      <button id="switcher_open"><i class="fa-solid fa-gear"></i></button>
+      <button id="switcher_open"><i class="fa-solid fa-robot"></i></button>
       <button id="switcher_close"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <div class="switcher__items">
