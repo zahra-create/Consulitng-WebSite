@@ -13,10 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/* Home page route */
 Route::get('/', function () {
     return view('consultant-human');
 });
 
+/* service pages routes */
 Route::get('/service-etudiant', function () {
     return view('service-etudiant');
 })->name('service-etudiant');
@@ -28,3 +30,6 @@ Route::get('/service-fonctionnaire', function () {
 Route::get('/service-entreprise', function () {
     return view('service-entreprise');
 })->name('service-entreprise');
+Route::get('/conseil', function () {
+    return view('conseil-details');
+})->name('conseil');

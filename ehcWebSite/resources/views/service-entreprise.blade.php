@@ -206,7 +206,7 @@
              <!-- <li class="menu-item-has-children"><a href="consultant-human.html">home</a>
 
               </li>-->
-              <li class="menu-item-has-children"><a href="about-2.html">A propos</a></li>
+              <li class="menu-item-has-no"><a href="about-2.html">A propos</a></li>
               <li class="menu-item-has-children"><a href="service-style-4.html">Services</a>
                 <ul class="dp-menu">
                 <li><a href="{{ route('service-entreprise') }}">Services Entreprises</a></li>
@@ -231,7 +231,7 @@
                   <li><a href="blog-style-2.html">Podcasts</a></li>
                 </ul>
               </li>
-              <li class="menu-item-has-children">
+              <li class="menu-item-has-no">
                 <a href="#">Contact</a>
               </li>
             </ul>
@@ -295,11 +295,11 @@
                 <div class="services-list has_fade_anim">
                   <div class="services-item">
                     <p class="count">01</p>
-                    <a href="service-details.html">
+                    <a href="{{ url('conseil') }}">
                       <h2 class="title">Conseil</h2>
                     </a>
                     <p class="text">Gérez efficacement vos ressources humaines et assurez une transfomation évolutive de votre entreprise.</p>
-                    <a href="service-details.html" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
+                    <a href="{{ url('conseil') }}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
                   </div>
                   <div class="services-item">
                     <p class="count">02</p>
