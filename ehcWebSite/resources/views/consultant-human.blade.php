@@ -162,8 +162,8 @@
                   <li><a href="service-details.html">Services étudiant</a></li>
                   <li><a href="service-details.html">Services Fonctionnaire</a></li> -->
                   <li><a href="{{ route('service-entreprise') }}">Services Entreprises</a></li>
-                  <li><a href="{{ route('service-etudiant') }}">Services Etudiants</a></li>
-                  <li><a href="{{ route('service-fonctionnaire') }}">Services Fonctionnaires</a></li>
+                <li><a href="{{ route('service-fonctionnaire') }}">Services Salariés</a></li>
+                <li><a href="{{ route('service-etudiant') }}">Services Etudiants</a></li>
                   
                 </ul>
               </li>

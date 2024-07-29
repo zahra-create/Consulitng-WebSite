@@ -210,8 +210,9 @@
               <li class="menu-item-has-children"><a href="service-style-4.html">Services</a>
                 <ul class="dp-menu">
                 <li><a href="{{ route('service-entreprise') }}">Services Entreprises</a></li>
-                  <li><a href="{{ route('service-etudiant') }}">Services Etudiants</a></li>
-                  <li><a href="{{ route('service-fonctionnaire') }}">Services Fonctionnaires</a></li>
+                <li><a href="{{ route('service-fonctionnaire') }}">Services Salariés</a></li>
+                <li><a href="{{ route('service-etudiant') }}">Services Etudiants</a></li>
+                
                   
                   
                 </ul>
