@@ -26,7 +26,8 @@
 
   <link rel="stylesheet" href="{{ url('assets/css/master-financial.css') }}">
       <link rel="stylesheet" href="{{ url('assets/css/master-service-style-1.css') }}">
-      <link rel="stylesheet" href="{{ url('assets/css/master-contact.css') }}">     
+      <link rel="stylesheet" href="{{ url('assets/css/master-contact.css') }}">  
+   
 </head>
 
 <body class="font-heading-beatricetrial-regular">
@@ -224,7 +225,7 @@
               </div> 
             </div> 
             <div class="location-thumb has_fade_anim" >
-              <img src="assets/imgs/gallery/img-r-17.webp" alt="location-image">
+              <img src="assets/imgs/gallery/img-r-17.webp" alt="contact">
               <div class="container">
                 <div class="location-info-wrapper has_fade_anim">
                   <div class="location-info">
@@ -233,7 +234,7 @@
                     </div>
 					<h3 class="title" style="color: #005151;">Contactez-nous pour toute information ou assistance.</h3> 
   
-					<h3 class="title" style="color: #005151;  font-weight: 900;">
+					<h3 class="title" style="color: #005151;  font-weight: 800; font-size:30px;">
 					Nous sommes là pour vous aider ! 
                     </h3>
                   </div>
@@ -252,11 +253,11 @@
 				 <div class="line-vertical"></div>
                   <div class="section-title-wrapper style-6">
                     <div class="title-wrapper has_fade_anim">
-                      <h2 class="section-title" >Nous 
-					  sommes 
-                        Là
-                        pour 
-                        Vous
+                      <h2 class="section-title" style="font-weight: 800; font-size:30px;"  >Nous 
+					    Sommes 
+                        là
+                        Pour 
+                        vous
                         Aider !
                       </h2>
                     </div>
@@ -267,13 +268,15 @@
                       <li><a href="mailto:inquiry@binox.com">LiveChat@binox.skype</a></li>
                     </ul>
                   </div> -->
-                  <div class="logo has_fade_anim">
+                  <!--<div class="logo has_fade_anim">
                     <a href="#"><img src="assets/imgs/logo/logo.webp" alt="logo"></a>
-                  </div>
+                  </div> -->
                 </div>
                 <div class="contact-wrapper has_fade_anim">
                   <form>
-                    <div class="wc-single-input">
+                    <div >
+                    </div>
+					<div class="wc-single-input">
                       <label for="name" class="wc-form-label">Nom</label>
                       <input type="text" id="name">
                     </div>
@@ -289,9 +292,10 @@
                       <label for="Objet" class="wc-form-label">Objet</label>
                       <input type="text" id="Objet">
                     </div>
+					<div></div>
                     <div class="wc-single-input">
                       <label for="message" class="wc-form-label">Message</label>
-                      <textarea id="message" placeholder="Write your message here....."></textarea>
+                      <textarea id="message" placeholder="Écrivez votre message ....."></textarea>
                     </div>
                     <div class="btn-wrapper">
                       <button type="submit" class="wc-btn-primary btn-text-flip"><span data-text="Envoyer">Envoyer
@@ -342,11 +346,10 @@
                     </div>
                     <h3 class="title">Contact info:</h3>
                     <ul class="info-list">
-                      <li><a href="#">+01-75-0660-605</a></li>
-                      <li><a href="#">hello@binox-consultant.com</a></li>
+                      <li><a href="#">+212 6 63-80-85-01</a></li>
+                      <li><a href="#">contact@expertshumancapital.com</a></li>
                     </ul>
-                    <p class="text">140 Suits, Granville, saltcake tk
-                      street, NJ 3967097</p>
+                    <p class="text">Rue du Calvon Bv Abdelmoumen- Casablanca</p>
                   </div>
                 </div>
               </div>
