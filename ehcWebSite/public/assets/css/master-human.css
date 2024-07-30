@@ -10214,4 +10214,13 @@ Blog area style
 .social-icons li a {
   color: var(--white);
   font-family: var(--font_beatricetrial);
-}/*# sourceMappingURL=master-human.css.map */
+}
+
+.justify {
+  text-align: justify;
+   text-justify: inter-word; 
+   hyphens: auto; 
+}
+
+
+/*# sourceMappingURL=master-human.css.map */

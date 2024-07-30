@@ -4957,7 +4957,7 @@ section {
   font-size: 16px;
   line-height: 1;
   color: var(--white);
-  background-color: var(--primary);
+  background-color : var(--primary);
   border: 1px solid var(--primary);
   text-transform: capitalize;
   transition: all 0.3s;
@@ -4968,6 +4968,7 @@ section {
   gap: 30px;
   white-space: nowrap;
 }
+
 .wc-btn-primary:hover {
   color: var(--white);
   background-color: var(--primary);
@@ -9035,4 +9036,14 @@ p {
 .faq-area .accordion .accordion-body span {
   font-weight: 600;
   color: var(--primary);
-}/*# sourceMappingURL=master-service-details.css.map */
+}
+
+.details-title {
+  color : #005153;
+}
+.details-text {
+  color :#4A7172 ;
+}
+
+
+/*# sourceMappingURL=master-service-details.css.map */

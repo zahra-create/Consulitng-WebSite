@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Binox HTML5 Template">
 
-  <title> service details</title>
+  <title> service de conseil</title>
 
   <!-- Fav Icon -->
   <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.webp">
@@ -290,29 +290,28 @@
                         </div>
                       </div>
                     </div>
-                    <img src="assets/imgs/shape/cross-curved.webp" alt="" class="shape-1">
+                    <img src="assets/imgs/gallery/xxx" alt="" class="shape-1">
                     <div class="details-intro-content">
                       <div class="title-box">
                         <div class="section-title-wrapper">
                           <div class="subtitle-wrapper has_fade_anim" data-fade-from="left">
-                            <span class="section-subtitle">services details</span>
+                            <span class="details-text section-subtitle">détails</span>
                           </div>
                           <div class="title-wrapper has_fade_anim">
-                            <h1 class="section-title large">Chain & Supply Advisory</h1>
+                            <h1 class="section-title details-title large">EHC CONSULTING</h1>
                           </div>
                         </div>
                       </div>
                       <div class="text-box">
                         <div class="text-wrapper">
                           <div class="cf_text has_fade_anim">
-                            <p class="text">Crafting new bright brand unique visual systems digital experience focused
-                              on wide range of original collabs.</p>
+                            <p class="justify details-text text">Votre partenaire pour une transformation complète et une performance optimale, combinant expertise en management et digitalisation.</p>
                           </div>
                         </div>
-                        <div class="btn-wrapper has_fade_anim">
-                         <a class="cf_btn wc-btn-underline btn-text-flip" href="#"><span data-text="See the plan">See
+                      <!--   <div class="btn-wrapper has_fade_anim">
+                        <a class="details-text cf_btn wc-btn-underline btn-text-flip" href="#"><span  data-text="See the plan">See
                               the plan ghan7ydo ..</span><i class="fa-solid fa-caret-right"></i></a>  
-                        </div>
+                        </div>  -->
                       </div>
                     </div>
                   </div>
@@ -321,7 +320,7 @@
               <div class="container container-large">
                 <div class="details-intro-thumb-wrapper">
                   <div class="details-intro-thumb">
-                    <img src="assets/imgs/gallery/img-s-25.webp" alt="service image">
+                    <img src="{{ url('assets/imgs/gallery/conseil1.jpeg') }}" alt="service image">
                   </div>
                 </div>
               </div>
@@ -335,51 +334,46 @@
                   <div class="details-content has_fade_anim">
                     <div class="section-title-wrapper">
                       <div class="title-wrapper">
-                        <h2 class="section-title">Lose the location limitation Seamlessly hire & manage
-                          worldwide.</h2>
+                        <h2 class=" details-title section-title">Optimisez votre transformation !</h2>
                       </div>
                     </div>
                     <div class="text-wrapper">
-                      <p class="text">You need the best person for the job, wherever they’re located. We provide
-                        support, payroll tax management, and compliance management for remote, multi-state,
-                        multi-location, and international employees.</p>
+                      <p class="justify details-text text">Optimisez votre organisation avec notre expertise en management et digitalisation.
+                         Nous vous accompagnons dans la gestion de projets, la transformation numérique, et l'optimisation de vos processus pour des performances globales améliorées.</p>
                     </div>
                     <div class="details-feature-content">
-                      <h3 class="title">Binox Offerings</h3>
+                      <h3 class="details-title title">Nos offres de conseil</h3>
                       <div class="feature-list-wrapper">
                         <ul class="feature-list">
                           <li><span class="icon"><i class="fa-solid fa-arrow-right"></i></span>
-                            <p class="text">We believe that the human essential to start any successful project and
-                              that this where splendid emotion between the re-generated company.</p>
+                            <p class="justify details-text text">Accompagnement stratégique pour la transformation numérique de votre organisation, en intégrant les meilleures pratiques et solutions innovantes.</p>
                           </li>
                           <li><span class="icon"><i class="fa-solid fa-arrow-right"></i></span>
-                            <p class="text">We believe that the human essential to start any successful project and
-                              that this where splendid emotion between the re-generated company.</p>
+                            <p class="justify details-text text">Gestion optimisée des ressources humaines, avec des solutions adaptées pour le recrutement, la gestion des talents, et le développement des compétences.</p>
                           </li>
                           <li><span class="icon"><i class="fa-solid fa-arrow-right"></i></span>
-                            <p class="text">We believe that the human essential to start any successful project and
-                              that this where splendid emotion between the re-generated company.</p>
+                            <p class="justify details-text text">Analyse et amélioration des processus opérationnels pour augmenter l'efficacité et la performance globale de votre entreprise.</p>
                           </li>
                         </ul>
                       </div>
                     </div>
                     <div class="details-feature-content">
-                      <h3 class="title">What's included binox service?</h3>
+                      <h3 class="details-title title">Que Propose EHC Consulting ?</h3>
                       <div class="feature-list-wrapper">
                         <ul class="service-feature-list list-plus">
-                          <li>Multi-state payroll processing</li>
-                          <li>National benefit products</li>
-                          <li>HR reporting</li>
+                          <li class="justify details-text">Stratégies de transformation numérique</li>
+                          <li class="justify details-text">Techniques de gestion des ressources humaines</li>
+                          <li class="justify details-text">Méthodes d'amélioration de la performance</li>
                         </ul>
                       </div>
                     </div>
-                    <div class="btn-wrapper">
+                <!--    <div class=" btn-wrapper">
                       <a href="contact.html" class="wc-btn-primary btn-text-flip"> <span data-text="Contact us">Contact
                           us</span> <i class="fa-solid fa-caret-right"></i></a>
-                    </div>
+                    </div> -->
                   </div>
                   <div class="thumb has_fade_anim" data-fade-from="right">
-                    <img src="assets/imgs/gallery/img-s-26.webp" alt="service image">
+                    <img src="{{ url('assets/imgs/gallery/conseil2.jpg') }}" alt="service image">
                   </div>
                 </div>
               </div>
@@ -433,7 +427,7 @@
               <!-- experience area start  -->
               <div class="experience-area">
                 <div class="experience-area-bg">
-                  <img src="assets/imgs/gallery/img-s-22.webp" alt="gallery">
+                  <img src="{{ url('assets/imgs/gallery/conseil3.jpg') }}" alt="gallery">
                 </div>
                 <div class="container">
                   <div class="section-content">
@@ -443,8 +437,8 @@
                       <span class="shadow shadow-3"></span>
                       <div class="counter-box">
                         <h2 class="number has_fade_anim">30<span>+</span></h2>
-                        <h3 class="text has_fade_anim">Year’s of <br>
-                          experience</h3>
+                        <h3 class="text has_fade_anim">d'expérience <br>
+                          en consulting</h3>
                       </div>
                     </div>
                   </div>
