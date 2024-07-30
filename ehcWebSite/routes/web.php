@@ -19,13 +19,30 @@ Route::get('/', function () {
 });
 
 /* service pages routes */
+
+
+/*----------------etudiant----------------------*/
 Route::get('/service-etudiant', function () {
     return view('service-etudiant');
 })->name('service-etudiant');
 
+
+/*----------------fonctionnaire----------------------*/
 Route::get('/service-fonctionnaire', function () {
     return view('service-fonctionnaire');
 })->name('service-fonctionnaire');
+Route::get('/carrière_coaching', function () {
+    return view('carrière_coaching');
+})->name('carrière_coaching');
+Route::get('/personal_coaching', function () {
+    return view('personal_coaching');
+})->name('personal_coaching');
+Route::get('/bilan_competences', function () {
+    return view('bilan_competences');
+})->name('bilan_competences');
+
+
+/*----------------Entreprise----------------------*/
 
 Route::get('/service-entreprise', function () {
     return view('service-entreprise');

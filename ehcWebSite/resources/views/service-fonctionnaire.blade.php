@@ -295,27 +295,27 @@
                 <div class="services-list has_fade_anim">
                   <div class="services-item">
                     <p class="count">01</p>
-                    <a href="service-details.html">
+                    <a href="{{ route('carrière_coaching') }}">
                       <h2 class="title">Coaching de Carrière</h2>
                     </a>
                     <p class="text">Obtenez des conseils sur les secteurs à fort potentiel, les rôles adaptés à votre profil.</p>
-                    <a href="service-details.html" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
+                    <a href="{{ route('carrière_coaching') }}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
                   </div>
                   <div class="services-item">
                     <p class="count">02</p>
-                    <a href="service-details.html">
+                    <a href="{{ route('personal_coaching') }}">
                       <h2 class="title">Coaching Personnel</h2>
                     </a>
                     <p class="text">Recevez un accompagnement pour surmonter vos défis personnels et professionnels.</p>
-                    <a href="service-details.html" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
+                    <a href="{{ route('personal_coaching') }}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
                   </div>
                   <div class="services-item">
                     <p class="count">03</p>
-                    <a href="service-details.html">
+                    <a href="{{ route('bilan_competences') }}">
                       <h2 class="title">Bilan de Compétences</h2>
                     </a>
                     <p class="text">Évaluez vos compétences par blocs pour mieux comprendre votre niveau réel.</p>
-                    <a href="service-details.html" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
+                    <a href="{{ route('bilan_competences') }}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
                   </div>
                   <div class="services-item">
                     <p class="count">04</p>
