@@ -55,6 +55,7 @@ Route::get('/service-entreprise', function () {
 Route::get('/conseil', function () {
     return view('conseil-details');
 })->name('conseil');
+<<<<<<< HEAD
 Route::get('/recruitement', function () {
     return view('recruitement-details');
 })->name('recruitement');
@@ -67,3 +68,10 @@ Route::get('/event', function () {
 Route::get('/ingenierie', function () {
     return view('ingenierie-details');
 })->name('ingenierie');
+=======
+
+//about page routes
+Route::get('/about', function () {
+    return view('about-page');
+})->name('about');
+>>>>>>> origin/zoubeir_hm

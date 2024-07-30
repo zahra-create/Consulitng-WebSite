@@ -155,7 +155,7 @@
           <nav class="main-menu">
             <ul>
  
-              <li class="menu-item-has-no"><a href="about-2.html">A propos</a></li>
+              <li class="menu-item-has-no"><a href="{{route('about')}}">A propos</a></li>
               <li class="menu-item-has-children"><a href="service-style-4.html">Services</a>
                 <ul class="dp-menu">
                  <!-- <li><a href="service-details.html">Services Entreprise</a></li>
