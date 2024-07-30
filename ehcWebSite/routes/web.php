@@ -80,3 +80,11 @@ Route::get('/ingenierie', function () {
 Route::get('/about', function () {
     return view('about-page');
 })->name('about');
+
+
+
+
+//contact page routes
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');

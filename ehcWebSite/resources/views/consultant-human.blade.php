@@ -183,7 +183,7 @@
                 </ul>
               </li>
               <li class="menu-item-has-no">
-                <a href="#">Contact</a>
+                <a href="{{ route('contact') }}">Contact</a>
               </li>
             </ul>
           </nav>
