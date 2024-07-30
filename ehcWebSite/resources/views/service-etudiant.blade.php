@@ -299,67 +299,67 @@
                 <div class="services-list has_fade_anim">
                   <div class="services-item">
                     <p class="count">01</p>
-                    <a href="service-details.html">
+                    <a href="{{ route('cv_pro') }}">
                       <h2 class="title">CV Professionnel</h2>
                     </a>
                     <p class="text">Créez un CV attractif et pertinent avec l'aide de spécialistes.</p>
-                    <a href="service-details.html" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
+                    <a href="{{ route('cv_pro') }}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
                   </div>
                   <div class="services-item">
                     <p class="count">02</p>
-                    <a href="service-details.html">
+                    <a href="{{ route('entretien_embauche') }}">
                       <h2 class="title">Entretien d'Embauche</h2>
                     </a>
                     <p class="text">Entraînez-vous pour réussir vos entretiens avec des conseils personnalisés.</p>
-                    <a href="service-details.html" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
+                    <a href="{{ route('entretien_embauche') }}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
                   </div>
                   <div class="services-item">
                     <p class="count">03</p>
-                    <a href="service-details.html">
+                    <a href="{{ route('carrière_coaching') }}">
                       <h2 class="title">Coaching de Carrière</h2>
                     </a>
                     <p class="text">Explorez les secteurs et fonctions qui correspondent à votre profil avec des experts.</p>
-                    <a href="service-details.html" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
+                    <a href="{{ route('carrière_coaching') }}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
                   </div>
                   <div class="services-item">
                     <p class="count">04</p>
-                    <a href="service-details.html">
+                    <a href="{{ route('coaching_emploi') }}" >
                       <h2 class="title">Coaching d'Emploi</h2>
                     </a>
                     <p class="text">Recevez des conseils pratiques pour la recherche d'emploi et l'adaptation en entreprise.</p>
-                    <a href="service-details.html" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
+                    <a href="{{ route('coaching_emploi') }}"  class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
                   </div>
                   <div class="services-item">
                     <p class="count">05</p>
-                    <a href="service-details.html">
+                    <a href="{{ route('personal_coaching') }}">
                       <h2 class="title">Coaching Personnel
                       </h2>
                     </a>
                     <p class="text">Surmontez vos défis personnels et professionnels avec l'aide de nos coachs.</p>
-                    <a href="service-details.html" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
+                    <a href="{{ route('personal_coaching') }}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
                   </div>
                   <div class="services-item">
                     <p class="count">06</p>
-                    <a href="service-details.html">
+                    <a href="{{ route('bilan_competences') }}">
                       <h2 class="title">Bilan de Compétences</h2>
                     </a>
                     <p class="text">Évaluez et développez vos compétences avec un bilan complet.</p>
-                    <a href="service-details.html" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
+                    <a href="{{ route('bilan_competences') }}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
                   </div>                  <div class="services-item">
                     <p class="count">07</p>
-                    <a href="service-details.html">
+                    <a href="{{ route('test_personnalite') }}">
                       <h2 class="title">Test de Personnalité
                       </h2>
                     </a>
                     <p class="text">Découvrez vos tendances et potentiels psychologiques.</p>
-                    <a href="service-details.html" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
+                    <a href="{{ route('test_personnalite') }}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
                   </div>                  <div class="services-item">
                     <p class="count">08</p>
-                    <a href="service-details.html">
+                    <a href="{{ route('formation_specifique') }}">
                       <h2 class="title">Formation Spécifique</h2>
                     </a>
                     <p class="text">Préparez-vous à une nouvelle fonction avec des séances one-to-one dirigées par des experts.</p>
-                    <a href="service-details.html" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
+                    <a href="{{ route('formation_specifique') }}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
                   </div>
                 </div>
               </div>

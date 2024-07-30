@@ -25,7 +25,15 @@ Route::get('/', function () {
 Route::get('/service-etudiant', function () {
     return view('service-etudiant');
 })->name('service-etudiant');
-
+Route::get('/cv_pro', function () {
+    return view('cv_pro');
+})->name('cv_pro');
+Route::get('/entretien_embauche', function () {
+    return view('entretien_embauche');
+})->name('entretien_embauche');
+Route::get('/coaching_emploi', function () {
+    return view('coaching_emploi');
+})->name('coaching_emploi');
 
 /*----------------fonctionnaire----------------------*/
 Route::get('/service-fonctionnaire', function () {
