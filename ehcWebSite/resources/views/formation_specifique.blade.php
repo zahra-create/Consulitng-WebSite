@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Binox HTML5 Template">
 
-  <title> Coaching Personnel</title>
+  <title> Formation spécifique</title>
 
   <!-- Fav Icon -->
   <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.webp">
@@ -298,7 +298,7 @@
                             <span class="details-text section-subtitle">détails</span>
                           </div>
                           <div class="title-wrapper has_fade_anim">
-                            <h1 class="section-title details-title large">COACHING PERSONNEL</h1>
+                            <h1 class="section-title details-title large">FORMATION SPÉCIFIQUE</h1>
                           </div>
                         </div>
                       </div>
@@ -321,7 +321,7 @@
               <div class="container container-large">
                 <div class="details-intro-thumb-wrapper">
                   <div class="details-intro-thumb">
-                    <img src="{{ url('assets/imgs/gallery/personal_coaching1.jpeg') }}" alt="service image">
+                    <img src="{{ url('assets/imgs/gallery/formation_specifique11.jpg') }}" alt="service image">
                   </div>
                 </div>
               </div>
@@ -335,7 +335,7 @@
                   <div class="details-content has_fade_anim">
                     <div class="section-title-wrapper">
                       <div class="title-wrapper">
-                        <h2 class=" details-title section-title">Surmontez vos défis personnels !</h2>
+                        <h2 class=" details-title section-title">Formation sur mesure avec un expert !</h2>
                       </div>
                     </div>
                     <div class="text-wrapper">
@@ -343,7 +343,7 @@
                          Nous vous accompagnons dans la gestion de projets, la transformation numérique, et l'optimisation de vos processus pour des performances globales améliorées.</p>
                     </div>
                     <div class="details-feature-content">
-                      <h3 class="details-title title">Nos offres en coaching personnel</h3>
+                      <h3 class="details-title title">Nos offres en formation spécifique</h3>
                       <div class="feature-list-wrapper">
                         <ul class="feature-list">
                           <li><span class="icon"><i class="fa-solid fa-arrow-right"></i></span>
@@ -359,7 +359,7 @@
                       </div>
                     </div>
                     <div class="details-feature-content">
-                      <h3 class="details-title title">Que Propose EHC en coaching personnel ?</h3>
+                      <h3 class="details-title title">Que Propose EHC en formation spécifique ?</h3>
                       <div class="feature-list-wrapper">
                         <ul class="service-feature-list list-plus">
                           <li class="justify details-text">Stratégies de transformation numérique</li>
@@ -374,7 +374,7 @@
                     </div> -->
                   </div>
                   <div class="thumb has_fade_anim" data-fade-from="right">
-                    <img src="{{ url('assets/imgs/gallery/personal_coaching2.jpeg') }}" alt="service image">
+                    <img src="{{ url('assets/imgs/gallery/formation_specifique2.jpeg') }}" alt="service image">
                   </div>
                 </div>
               </div>
@@ -428,7 +428,7 @@
               <!-- experience area start  -->
               <div class="experience-area">
                 <div class="experience-area-bg">
-                  <img src="{{ url('assets/imgs/gallery/personal_coaching3.png') }}" alt="gallery">
+                  <img src="{{ url('assets/imgs/gallery/recruitement3.jpg') }}" alt="gallery">
                 </div>
                 <div class="container">
                   <div class="section-content">

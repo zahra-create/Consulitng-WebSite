@@ -298,7 +298,7 @@
                             <span class="details-text section-subtitle">détails</span>
                           </div>
                           <div class="title-wrapper has_fade_anim">
-                            <h1 class="section-title details-title large">Bilan de compétences</h1>
+                            <h1 class="section-title details-title large">BILAN DE COMPÉTENCES</h1>
                           </div>
                         </div>
                       </div>

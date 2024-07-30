@@ -40,7 +40,12 @@ Route::get('/personal_coaching', function () {
 Route::get('/bilan_competences', function () {
     return view('bilan_competences');
 })->name('bilan_competences');
-
+Route::get('/test_personnalite', function () {
+    return view('test_personnalite');
+})->name('test_personnalite');
+Route::get('/formation_specifique', function () {
+    return view('formation_specifique');
+})->name('formation_specifique');
 
 /*----------------Entreprise----------------------*/
 

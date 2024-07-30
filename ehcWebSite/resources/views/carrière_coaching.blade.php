@@ -298,7 +298,7 @@
                             <span class="details-text section-subtitle">détails</span>
                           </div>
                           <div class="title-wrapper has_fade_anim">
-                            <h1 class="section-title details-title large">Coaching de carrière</h1>
+                            <h1 class="section-title details-title large">COACHING DE CARRIÈRE</h1>
                           </div>
                         </div>
                       </div>

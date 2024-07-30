@@ -319,20 +319,20 @@
                   </div>
                   <div class="services-item">
                     <p class="count">04</p>
-                    <a href="service-details.html">
+                    <a href="{{ route('test_personnalite') }}">
                       <h2 class="title">Test de Personnalité</h2>
                     </a>
                     <p class="text">Faites le point sur votre posture mentale, vos limites, tendances, et potentialités psychologiques.</p>
-                    <a href="service-details.html" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
+                    <a href="{{ route('test_personnalite') }}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
                   </div>
                   <div class="services-item">
                     <p class="count">05</p>
-                    <a href="service-details.html">
+                    <a href="{{ route('formation_specifique') }}">
                       <h2 class="title">Formation Spécifique
                       </h2>
                     </a>
                     <p class="text">Prenez en main votre nouvelle fonction avec des séances personnalisées avec un expert du domaine.</p>
-                    <a href="service-details.html" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
+                    <a href="{{ route('formation_specifique') }}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
                   </div>
                 </div>
               </div>
