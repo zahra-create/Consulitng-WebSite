@@ -26,7 +26,7 @@
 
   <link rel="stylesheet" href="{{ url('assets/css/master-financial.css') }}">
       <link rel="stylesheet" href="{{ url('assets/css/master-service-style-1.css') }}">
-   
+      <link rel="stylesheet" href="{{ url('assets/css/master-contact.css') }}">     
 </head>
 
 <body class="font-heading-beatricetrial-regular">
