@@ -33,3 +33,15 @@ Route::get('/service-entreprise', function () {
 Route::get('/conseil', function () {
     return view('conseil-details');
 })->name('conseil');
+Route::get('/recruitement', function () {
+    return view('recruitement-details');
+})->name('recruitement');
+Route::get('/formation', function () {
+    return view('formation-details');
+})->name('formation');
+Route::get('/event', function () {
+    return view('event-details');
+})->name('event');
+Route::get('/ingenierie', function () {
+    return view('ingenierie-details');
+})->name('ingenierie');

@@ -312,6 +312,7 @@
                         <a class="details-text cf_btn wc-btn-underline btn-text-flip" href="#"><span  data-text="See the plan">See
                               the plan ghan7ydo ..</span><i class="fa-solid fa-caret-right"></i></a>  
                         </div>  -->
+                  
                       </div>
                     </div>
                   </div>
@@ -437,8 +438,8 @@
                       <span class="shadow shadow-3"></span>
                       <div class="counter-box">
                         <h2 class="number has_fade_anim">30<span>+</span></h2>
-                        <h3 class="text has_fade_anim">d'expérience <br>
-                          en consulting</h3>
+                        <h3 class="text has_fade_anim">années d'expérience
+                      </h3>
                       </div>
                     </div>
                   </div>
