@@ -4857,7 +4857,7 @@ section {
 }
 
 .progress-wrap svg.progress-circle path {
-  stroke: rgb(227, 46, 46);
+  stroke: #fff969;
   stroke-width: 4;
   box-sizing: border-box;
   transition: all 200ms linear;
@@ -6005,8 +6005,9 @@ SECTIN TITLE 6
 */
 .section-title-wrapper.style-6 .section-title {
   font-size: 60px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1;
+  color: #005151;
 }
 @media only screen and (max-width: 1919px) {
   .section-title-wrapper.style-6 .section-title {
@@ -7646,7 +7647,7 @@ SECTIN TITLE 8
   position: relative;
   transition: all 0.5s cubic-bezier(0, 0, 0.23, 1);
   text-decoration: none;
-  /*-webkit-background-clip: text;*/
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(90deg, #fff, #ddd 50%, #666 0);
   background-size: 200% 100%;
@@ -8019,9 +8020,9 @@ p {
 }
 
 .location-info {
-  background-color: #8DCF9B;
+  background-color: rgba(208, 235, 220, 0.9);
   padding: 70px 45px;
-  max-width: 410px;
+  max-width: 450px;
   padding-bottom: 50px;
 }
 @media only screen and (max-width: 991px) {
@@ -8034,12 +8035,12 @@ p {
 }
 @media only screen and (max-width: 1199px) {
   .location-info .logo {
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
 }
 @media only screen and (max-width: 767px) {
   .location-info .logo {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 }
 .location-info .title {
@@ -8056,7 +8057,7 @@ p {
   }
 }
 .location-info .text {
-  color: var(--primary);
+  color:var(--primary);
   font-size: 21px;
   font-weight: 400;
   line-height: 1.71;
@@ -8091,8 +8092,9 @@ p {
 }
 .contact-area .line-vertical {
   width: 1px;
-  height: 120px;
-  background: var(--primary);
+  height: 150px;
+  width: 3px;
+  background: #005151;
   margin: 0 auto;
 }
 @media only screen and (max-width: 767px) {
@@ -8558,3 +8560,10 @@ p {
   font-weight: 600;
   color: var(--white);
 }/*# sourceMappingURL=master-contact.css.map */
+
+
+.justify {
+   text-align: justify; 
+   text-justify: inter-word; 
+   hyphens: auto; 
+}    
