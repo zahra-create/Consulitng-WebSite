@@ -25,7 +25,6 @@
   
 
   <link rel="stylesheet" href="{{ url('assets/css/master-financial.css') }}">
-   <link rel="stylesheet" href="{{ url('assets/css/master-management.css') }}">
       <link rel="stylesheet" href="{{ url('assets/css/master-service-style-1.css') }}">
    
 
@@ -144,13 +143,12 @@
   <!-- search modal end -->
 
   @include('partials.header')
+  
+
   <div class="has-smooth" id="has_smooth"></div>
   <div id="smooth-wrapper">
     <div id="smooth-content">
       <div class="body-wrapper consultant-human">
-
-        <!-- overlay switcher close  -->
-        <div class="overlay-switcher-close"></div>
 
         <main>
 
@@ -176,24 +174,21 @@
                 <div class="logo">
                   <a href="index.html"><img src="assets/imgs/logo/logo-vertical.webp" alt="logo"></a> <!--logo-->
                 </div>
-                <div class="social-links">
+                <!--<div class="social-links">
                   <p class="text has-right-line">Follow Us</p>
                   <ul class="social-icons">
                     <li><a href="#"><i class="icon-wcf-pinterest"></i></a></li>
                     <li><a href="#"><i class="icon-wcf-wcf-wcf-dribbble"></i></a></li>
                     <li><a href="#"><i class="icon-wcf-instragram"></i></a></li>
                   </ul>
-                </div>
+                </div> -->
               </div>
               <div class="banner-right">
                 <div class="container container-large">
-
                   <div class="banner-content-wrapper">
                     <div class="content">
-                      <!--<h2 class="title has_fade_anim">21st-Century HR & Business Solutions</h2>-->
-					  <h2 class="title has_fade_anim">Bienvenue chez EHC</h2>
+					  <h2 class="title has_fade_anim">Bienvenue chez EHC groupe</h2>
                       <div class="cf_text has_fade_anim" data-delay=".35">
-                        <!--<p class="text">Our expertise in effectively handling your HR need.</p>-->
 						<p class="text" style="font-size:30spx;">Votre Partenaire pour le Succès en Ressources Humaines.</p>
                       </div>
                       <div class="btn-wrapper has_fade_anim" data-delay=".5">
@@ -204,7 +199,7 @@
                     </div>
                     <div class="thumb-wrapper">
                       <div class="cf_thumb has_fade_anim" data-delay=".65" data-ease="slow(0.7,0.7,false)">
-                        <img src="assets/imgs/gallery/img-r-37.png" alt="gallary">
+                        <img src="assets/imgs/gallery/img-r-3.png" alt="gallary">
                       </div>
 
                     </div>
@@ -216,7 +211,7 @@
           <!-- end intro area -->
 
           <!-- about area start  -->
-          <section id="triggeredSection" class="about-area section-spacing">
+          <section id="triggeredSection" class="about-area section-spacing" >
             <div class="section-lines">
               <div class="container">
                 <div class="line-area">
@@ -234,8 +229,8 @@
               <div class="about-area-inner">
                 <div class="section-content">
                   <div class="section-title-wrapper">
-                    <div class="title-wrapper has_fade_anim">
-                      <h2 class="section-title">Ayant en moyenne plus de 20 ans<br>
+                    <div class="title-wrapper has_fade_anim" >
+                      <h2 class="section-title" >Ayant en moyenne plus de 20 ans
                         d'experience dans leurs domaines de competence</h2>
                     </div>
                   </div>
@@ -248,11 +243,6 @@
                     </div>
                   </div>
                   <div class="text-wrapper has_fade_anim">
-                    <!--<p class="text">We are dedicated to guiding you on your financial journey with expertise, integrity
-                      and a personalized approach. we’re highly dedicated to financial journey. Business we operate in
-                      is like an intricate keep score with money.</p>
-                    <p class="text">Working with <span>binox-HR</span> gives you a peace of mind in real-time, and that
-                      your taxes are filed and paid on schedule.</p>-->
 					  <p class="text">Chez EHC, nous sommes dedies à transformer la gestion des ressources humaines en un atout strategique pour votre entreprise.</p>
                     <p class="text">Avec une equipe d'experts en RH, nous offrons des solutions sur mesure pour optimiser vos processus et attirer les meilleurs talents.</p>
                   </div>
@@ -269,10 +259,9 @@
           </section>
           <!-- about area end  -->
 		  
-
-        		  <!-- Valeurs et engagements service style 6 start  -->
+		  <!-- Valeurs et engagements start  -->
        
-          <section class="service-area style-6 section-spacing line-area">
+          <section class="service-area style-6 section-spacing line-area" style="padding-top:90px;">
             <div class="section-lines">
               <div class="container">
                 <div class="line-area">
@@ -281,23 +270,23 @@
                     <div class="line line-1"></div>
                     <div class="line line-1"></div>
                     <div class="line line-1"></div>
-                  </div>
-                </div>
+                  </div> 
+                </div> 
               </div>
             </div>
-            <div class="container">
+            <div class="container" >
               <div class="section-heading">
                 <div class="section-title-wrapper">
                   <div class="title-wrapper has_fade_anim">
                     <h2 class="section-title" style="font-size: 60px; "><span>POURQUOI EHC ?</span></h2>
                   </div>
-                 <div class="subtitle-wrapper has_fade_anim" data-delay=".35">
-					        <p style="font-size: 25px;">Au coeur de ses valeurs, EHC place la satisfaction de ses partenaires au sommet de ses priorites</p>
-                  </div> 
+            	<div class="subtitle-wrapper has_fade_anim" data-delay=".35" >
+				  <p style="font-size: 25px; ">Au coeur de ses valeurs, EHC place la satisfaction de ses partenaires au sommet de ses priorites</p>
+                  </div>
                 </div>
               </div>
               
-              <div class="feature-wrapper">
+              <div class="feature-wrapper" >
                 <div class="wcf_iconbox style-8 has_fade_anim">
                   <div class="thumb">
                     <div class="cf_image">
@@ -355,107 +344,123 @@
           </section>
    
  
-<!-- Valeurs et engagement feature style 6 end  -->
+<!-- Valeurs et engagements end  -->
 
 <!-- BU start -->
 
-		         <section class="service-area pin__area">
-            <div class="container container-medium">
-              <div class="service-wrapper">
-                <div class="section-content">
-                  <div class="section-heading pin__element">
-                    <div class="section-title-wrapper style-7">
-                      <!--<div class="subtitle-wrapper has_fade_anim">
-                        <p class="section-subtitle">02 - Service</p>
-                      </div>-->
-					  
-					                <div class="feature-content">
-                <div class="section-heading">
-                  <div class="section-title-wrapper"> 
-                    <div class="title-wrapper">
-                      <h2 class="section-title" style="color:#005151; font-size: 60px; font-weight: 600; ">NOS BUSINESS UNITS </h2>
+          <section class="services-area section-spacing pin__area">			
+			<div class="container container-large">
+              <div class="services-area-inner">
+                <div class="section-heading pin__element">
+                  <div class="thumb has_fade_anim">
+                    <div class="btn-wrapper pos-center btn-move">
+                      <a class="cf_btn wc-btn-play light btn-item video-popup" href="assets/video/team-planning.mp4">
+                        <i class="fa-solid fa-play"></i>
+                      </a>
                     </div>
-                    <!--<div class="cf_text">
-                      <p class="text">Au coeur de ses valeurs, EHC place la satisfaction de ses partenaires au sommet de ses priorités</p>
-                    </div>-->
-                    <div class="btn-wrapper">
-                      <a href="about-1.html" class="cf_btn wc-btn-primary btn-text-flip"><span
-                          data-text="Demander sevices" >Demander sevices</span> <img src="assets/imgs/icon/icon-r-21.webp" alt="arrow-icon"></a>
-                    </div>
+		    <div style="margin-bottom:20px;">
+			<h2 style="font-weight:600;color:rgb(0, 81, 81); font-size:50px;">NOS BUSINESS UNITS</h2> 
+			<br>
+			<br>
+			</div>
+        <img src="assets/imgs/gallery/img-s-1.png" alt="image" style="margin-bottom:20px;">
+		
+		<div class="header__meta d-none d-md-block" style="margin-left:70px;">
+            <a href="contact.html" class="cf_btn wc-btn-primary btn-text-flip"><span data-text="Demander services">Demander services</span> <img src="assets/imgs/icon/icon-r-21.webp" alt="arrow-icon"> </a>
+          </div>
                   </div>
-                </div>
-              </div>
-					  
-                     <!-- <div class="title-wrapper has_fade_anim">
-                        <h2 class="section-title"><span>Pourquoi</span> EHC ?</h2>
-                      </div> 
-                      <div class="text-wrapper has_fade_anim">
-                        <p class="text">Au coeur de ses valeurs, EHC place la satisfaction desses partenaires au sommet de ses priorités .Pleinement conscient que les systèmes de compétences et de connaissancessont désormais au coeur des enjeux de maîtrise de l'activité productive maisaussi commerciale</p>
-                      </div>
-                      <div class="btn-wrapper has_fade_anim"">
-                        <a href="service-style-2.html" class="btn-link-arrow btn-text-flip"> <span
-                            data-text="View All Service">View All
-                            Service</span> <i class="fa-solid fa-arrow-right"></i></a>
-                      </div>-->
-                    </div>
-                  </div>
-                </div>
+				  
+                  <div class="content has_fade_anim">
+                    <div class="">
 
-                <div class="services-list">
-                  <div class="services-item">
-                    <p class="count" style="color: #005151; font-size: 30px; font-weight: 500; padding-top: 15px;">01</p>
-                    <a href="service-style-1.html">
-                      <h2 class="title" style="color: #005151; font-size: 30px; font-weight: 500;">EHC Consulting
-                      </h2>
-                    </a>
-                    <p class="text">Votre partenaire stratégique pour une transformation intégrale et performance optimale, alliant expertise en management des organisation digitalisation.</p>
-                    <a href="service-details.html" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
                   </div>
-                  <div class="services-item">
-                    <p class="count" style="color: #005151; font-size: 30px; font-weight: 500; padding-top: 15px;">02</p>
+                </div>
+                <div class="services-wrapper">
+                  <div class="has_fade_anim">
                     <a href="service-details.html">
-                      <h2 class="title" style="color: #005151; font-size:30px; font-weight: 500;" >EHC Recruitment</h2>
+                      <div class="service-item">
+                        <span class="number" style="font-weight:700;color:rgb(0, 81, 81); font-size:30px;">01</span>
+                        <div class="content-wrapper">
+                          <div class="content">
+                            <h3 class="title" style="font-weight:600;color:rgb(0, 81, 81);" data-text="EHC Consulting">EHC Consulting</h3>
+                            <p class="text">Votre partenaire stratégique pour une transformation intégrale et performance optimale, alliant expertise en management des organisation digitalisation.</p>
+                          </div>
+                          <div class="btn-wrapper">
+                            <span class="cf_btn wc-btn-normal"><i class="fa-solid fa-caret-right"></i>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
                     </a>
-                    <p class="text">Une BU dédiée pour recruter avec succès tout type de profil, avec des services sur mesure et un accompagnement intégral .</p>
-                    
-                    <a href="service-details.html" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
                   </div>
-                  <div class="services-item">
-                    <p class="count" style="color: #005151; font-size: 30px; font-weight: 500; padding-top: 15px;">03</p>
+                  <div class="has_fade_anim">
                     <a href="service-details.html">
-                      <h2 class="title" style="color: #005151; font-size: 30px; font-weight: 500;">EHC Learning</h2>
+                      <div class="service-item">
+                        <span class="number" style="font-weight:700;color:rgb(0, 81, 81); font-size:30px;">02</span>
+                        <div class="content-wrapper">
+                          <div class="content">
+                            <h3 class="title" data-text="EHC Recruitment" style="font-weight:600;color:rgb(0, 81, 81);">EHC Recruitment</h3>
+                            <p class="text">Une BU dédiée pour recruter avec succès tout type de profil, avec des services sur mesure et un accompagnement intégral .</p>
+                          </div>
+                          <div class="btn-wrapper">
+                            <span class="cf_btn wc-btn-normal"><i class="fa-solid fa-caret-right"></i>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
                     </a>
-                    <p class="text">Spécialisée en formation sur mesure, de l'ingénierie à l'e-learning, avec un soutien complet pour maximiser vos investissements en matière de formation.</p>
-                    
-                    <a href="service-details.html" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
                   </div>
-                  <div class="services-item">
-                    <p class="count" style="color: #005151; font-size: 30px; font-weight: 500; padding-top: 15px;">04</p>
+                  <div class="has_fade_anim">
                     <a href="service-details.html">
-                      <h2 class="title" style="color: #005151; font-size: 30px; font-weight: 500;">EHC Services & Events</h2>
+                      <div class="service-item">
+                        <span class="number" style="font-weight:700;color:rgb(0, 81, 81); font-size:30px;">03</span>
+                        <div class="content-wrapper">
+                          <div class="content">
+                            <h3 class="title" data-text="EHC Learning" style="font-weight:600;color:rgb(0, 81, 81);">EHC Learning</h3>
+                            <p class="text">Spécialisée en formation sur mesure, de l'ingénierie à l'e-learning, avec un soutien complet pour maximiser vos investissements en matière de formation.</p>
+                          </div>
+                          <div class="btn-wrapper">
+                            <span class="cf_btn wc-btn-normal"><i class="fa-solid fa-caret-right"></i>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
                     </a>
-                    <p class="text">Votre solution tout-en-un en matière de service et d'évènementiel.</p>
-                    
-                    <a href="service-details.html" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
                   </div>
-                  <div class="services-item">
-                    <p class="count" style="color: #005151; font-size: 30px; font-weight: 500; padding-top: 15px;">05</p>
+                  <div class="has_fade_anim">
                     <a href="service-details.html">
-                      <h2 class="title" style="color: #005151; font-size: 30px; font-weight: 500;">EHC Engineering</h2>
+                      <div class="service-item">
+                        <span class="number" style="font-weight:700;color:rgb(0, 81, 81); font-size:30px;">04</span>
+                        <div class="content-wrapper">
+                          <div class="content">
+                            <h3 class="title" data-text="EHC Services & Events" style="font-weight:600;color:rgb(0, 81, 81);">EHC Services & Events</h3>
+                            <p class="text">Votre solution tout-en-un en matière de service et d'évènementiel.</p>
+                          </div>
+                          <div class="btn-wrapper">
+                            <span class="cf_btn wc-btn-normal"><i class="fa-solid fa-caret-right"></i>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
                     </a>
-                    <p class="text">Votre partenaire pour des solutions informatiques sur mesure, de la conception de module spécifique à la mise en place d'ERP intégrés.</p>
-                    
-                    <a href="service-details.html" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
                   </div>
-                  <!--<div class="services-item">
-                    <p class="count">06</p>
-                    <a href="service-style-1.html">
-                      <h2 class="title">Image de Marque</h2>
+                  <div class="has_fade_anim" <a href="service-details.html">
+                    <div class="service-item">
+                      <span class="number" style="font-weight:700;color:rgb(0, 81, 81); font-size:30px;">05</span>
+                      <div class="content-wrapper">
+                        <div class="content">
+                          <h3 class="title" data-text="EHC Engineering" style="font-weight:600;color:rgb(0, 81, 81);">EHC Engineering</h3>
+                          <p class="text">Votre partenaire pour des solutions informatiques sur mesure, de la conception de module spécifique à la mise en place d'ERP intégrés.</p>
+                        </div>
+                        <div class="btn-wrapper">
+                          <span class="cf_btn wc-btn-normal"><i class="fa-solid fa-caret-right"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
                     </a>
-                    <!--<p class="text">We have an ambitious road ahead, and we’re looking for people to join our global
-                      team.</p>
-                    <a href="service-details.html" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
-                  </div> -->
+                  </div>
                 </div>
               </div>
             </div>
@@ -463,94 +468,30 @@
 		  
           <!-- BU end  -->
 		  
+		<!-- EHC Chiffres start  --> 
 
-		  
-		  		           <!-- testimonial start  -->
-
-            <div class="container">
-            </div>
-
-          <!-- testimonial end  -->
-          <!-- video area start  -->
-		  
-          <div class="video-area has_fade_anim">
-            <div class="section-lines">
-              <div class="container">
-                <div class="line-area">
-                  <div class="lines">
-                    <div class="line line-1"></div>
-                    <div class="line line-1"></div>
-                    <div class="line line-1"></div>
-                    <div class="line line-1"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="container">
-              <div class="strategy-area-inner">
-                <div class="thumb p-relative">
-                  <div class="btn-wrapper pos-center btn-move has_fade_anim">
-                    <a class="cf_btn wc-btn-play light btn-item video-popup" href="assets/video/video.mp4">
-                      <i class="icon-wcf-play-2"></i>
-                    </a>
-                  </div> 
-				  
-                  <img src="assets/imgs/gallery/img-r-38.png" alt="image">
-                </div>
-              </div>
-            </div>
-          </div> 
-		  
-          <!-- video area end  -->
-		  
-		  		           <!-- testimonial start  -->
-          <section class="testimonial-area">
-            <div class="container">
-              <div class="testimonial-top">
-                <div class="shape-1">
-                  <!--<img src="assets/imgs/shape/shape-r-3.webp" alt=""> -->
-                </div>
-                <div class="testimonial-review-item has_fade_anim">
-                  <!--<h2 class="title">Nos Actualités</h2>-->
-				<div class="title-wrapper has_fade_anim">
-                    <!--<h2 class="title">Restez informés avec les dernières nouvelles <span>et mises à jour de notre entreprise et de notre domaine.</span></h2>
-                  --></div>
-                <div class="testimonial-item">
-                  <div class="btn-wrapper has_fade_anim" data-fade-from="right">
-                    <!--<a href="about-1.html" class="cf_btn wc-btn-primary btn-text-flip"><span data-text="Join Today">Join
-                        Today</span> <img src="assets/imgs/icon/icon-r-21.webp" alt="arrow-icon"></a> -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section> 
-          <!-- testimonial end  -->
-		  
-		  
-		            <!-- counter area start  --> 
-          <div class="container">
+          <section class="counter-area" style="margin-top:0px; padding-top:100px;">
+		            <div class="container" >
             <div class="counter-thumb">
-              <img src="https://crowdytheme.com/wp/binox/human-resource/wp-content/uploads/sites/6/2024/04/meetingImages.webp" alt="counter-thumb">
+              <img src="https://crowdytheme.com/wp/binox/human-resource/wp-content/uploads/sites/6/2024/04/meetingImages.webp" alt="counter-thumb" >
             </div>
           </div>
-          <section class="counter-area">
             <div class="shape-1">
               <img src="assets/imgs/shape/x-shape-3.webp" alt="shape">
             </div>
             <div class="container">
               <div class="counter-item-wrapper">
-                <div class="counter-item has_fade_anim" data-fade-from="left">
-                  <h2 class="title" style="color: #005151; font-size: 35px; font-weight: 700; padding-top: 15px;">EHC En Chiffres</h2>
+                <div class="counter-item has_fade_anim" data-fade-from="left" >
+                  <h2 class="title" style="color: #005151; font-size:40px; font-weight: 700; padding-top:20px; padding-right:35px;">EHC En Chiffres</h2>
                 </div>
-                <div class="team-item">
-                  <div class="cf_text has_fade_anim">
+                <div class="team-item" style="padding-top:100px;" >
+                  <div class="cf_text has_fade_anim" style="width:300px; margin-right:15px; ">
                     <p class="text" style="color: black; font-size: 18px">EHC mobilise pour vous une équipe de haut dirigeants et cadres exerçant dans les sphères des secteurs public et privé et ayant en moyenne plus de 20 ans d'expérience dans leurs domaines de compétence.</p>
-					<br><br>
-					<div class="btn-wrapper">
+                  </div>
+				<div class="btn-wrapper" style="margin-top:50px; margin-right:15px;"  >
                       <a href="team-style-1.html" class="cf_btn wc-btn-primary btn-text-flip"><span
                           data-text="Découvrir Nos Experts">Découvrir Nos Experts</span> <img src="assets/imgs/icon/icon-r-21.webp" alt="arrow-icon"></a>
                     </div>
-                  </div>
                 </div>
                 <div class="counter-text has_fade_anim">
                   <ul class="counter-list">
@@ -575,9 +516,9 @@
               </div>
             </div>
           </section>
-          <!-- counter area end  -->
+          <!-- EHC Chiffres end  -->
 
-          <!-- blog area start  -->
+          <!-- Actualites area start  -->
           <section class="blog-area section-spacing style-1">
             <div class="section-lines">
               <div class="container">
@@ -595,10 +536,10 @@
               <div class="section-heading">
                 <div class="section-title-wrapper">
                   <div class="title-wrapper has_fade_anim">
-                    <h2 class="section-title" style="color:#005151; font-size: 40px;font-weight: 500;">NOS ACTUALITES</h2>
+                    <h2 class="section-title" style="color:#005151; font-size: 40px;font-weight:900;">NOS ACTUALITES</h2>
                   </div>
-                  <div class="subtitle-wrapper has_fade_anim" data-delay=".35">
-                    <a href="blog-style-1.html" class="section-subtitle">Voir Plus</a>
+                  <div class="subtitle-wrapper has_fade_anim" data-delay=".35" >
+                    <a href="blog-style-1.html" class="section-subtitle" style="font-weight:900;">Voir Plus</a>
                   </div>
                 </div>
               </div>
@@ -668,15 +609,15 @@
               </div>
             </div>
           </section>
-          <!-- blog area end  -->
+          <!-- Actualites area end  -->
 
-          <!-- brand area start  -->
+          <!-- References start  -->
           <div class="brand-area">
             <div class="container">
               <div class="brand-inner">
                 <div class="brand-text">
-                  <div class="brand-text-title-wrapper">
-                    <h2 class="title">Nos partenaires</h2>
+                  <div class="brand-text-title-wrapper" style="padding-top:50px;">
+                    <h2 class="title" style="font-weight:900; font-size:23px;">Nos partenaires</h2>
                   </div>
                 </div>
                 <div class="brand-logos">
@@ -724,10 +665,11 @@
             </div>
             <div class="line-horizontal"></div>
           </div>
-          <!-- /brand area end  -->
+          <!-- References area end  -->
 
 
         </main>
+ 
 
         
         @include('partials.footer')
