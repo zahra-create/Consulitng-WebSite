@@ -45,11 +45,10 @@
       <div class="animation-preloader">
         <div class="spinner"></div>
         <div class="txt-loading">
-          <span data-text="B" class="characters">B</span>
-          <span data-text="I" class="characters">I</span>
-          <span data-text="N" class="characters">N</span>
-          <span data-text="O" class="characters">O</span>
-          <span data-text="X" class="characters">X</span>
+          <span data-text="E" class="characters">E</span>
+          <span data-text="H" class="characters">H</span>
+          <span data-text="C" class="characters">C</span>
+
         </div>
       </div>
       <div class="loader-section section-left"></div>

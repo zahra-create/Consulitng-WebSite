@@ -216,7 +216,7 @@
                   <div class="section-heading pin__element">
                     <div class="section-title-wrapper">
                       <div class="title-wrapper has_fade_anim">
-                        <h1 class="section-title">Bienvenue, Cher fonctionnaire</h1>
+                        <h1 class="section-title">Bienvenue, Cher salarié</h1>
                       </div>
                       <div class="text-wrapper has_fade_anim">
                         <p class="text">Bénéficiez d'un accompagnement personnalisé pour votre développement professionnel et personnel.</p>

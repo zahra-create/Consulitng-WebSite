@@ -306,6 +306,10 @@
                       <a href="contact.html" class="wc-btn-primary btn-text-flip"> <span data-text="Contact us">Contact
                           us</span> <i class="fa-solid fa-caret-right"></i></a>
                     </div> -->
+                    <div class="btn-wrapper has_fade_anim" data-delay=".5">
+                        <a href="about-1.html" style="background-color:#005153; border:none;" class="cf_btn wc-btn-primary btn-text-flip"><span
+                            data-text="Demander services">Demander services </span> <img src="assets/imgs/icon/icon-r-21.webp" alt="arrow-icon"></a>
+                      </div>
                   </div>
                   <div class="thumb has_fade_anim" data-fade-from="right">
                     <img src="{{ url('assets/imgs/gallery/cv-pro2.jpg') }}" alt="service image">
