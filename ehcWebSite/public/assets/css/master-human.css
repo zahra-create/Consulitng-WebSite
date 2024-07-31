@@ -4859,7 +4859,7 @@ section {
 }
 
 .progress-wrap svg.progress-circle path {
-  stroke: yellow;
+  stroke: #fff969;
   stroke-width: 4;
   box-sizing: border-box;
   transition: all 200ms linear;
@@ -8403,6 +8403,7 @@ Service area style
   gap: 80px;
   position: relative;
   z-index: 2;
+  justify-content: center;
   
 }
 

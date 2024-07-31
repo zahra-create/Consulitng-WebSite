@@ -23,7 +23,6 @@
   <link rel="stylesheet" href="{{ url('assets/css/magnific-popup.css') }}">
   <link rel="stylesheet" href="{{ url('assets/css/master-human.css') }}">
   
-
   <link rel="stylesheet" href="{{ url('assets/css/master-financial.css') }}">
       <link rel="stylesheet" href="{{ url('assets/css/master-service-style-1.css') }}">
    
