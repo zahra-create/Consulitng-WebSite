@@ -80,6 +80,10 @@ Route::get('/ingenierie', function () {
 Route::get('/about', function () {
     return view('about-page');
 })->name('about');
+//team-details
+Route::get('/team-details', function () {
+    return view('team-details');
+})->name('team-details');
 
 
 

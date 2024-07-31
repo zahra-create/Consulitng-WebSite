@@ -27,6 +27,11 @@
   <link rel="stylesheet" href="assets/css/master-about-1.css">
 
 
+  <link rel="stylesheet" href="{{ url('assets/css/master-financial.css') }}">
+ 
+      
+
+
 
 
 </head>
@@ -200,7 +205,7 @@
                   <img src="assets/imgs/logo/logo.webp" alt="Site Logo">
                 </a>
               </div>
-              <div class="header__nav pos-center">
+              <div class="header__nav ">
                 <nav class="main-menu">
                   <ul>
                     <li class="menu-item-has-children"><a href="index.html">home</a>
@@ -221,50 +226,37 @@
                     </li>
                     <li class="menu-item-has-children"><a href="service-style-1.html">service</a>
                       <ul class="dp-menu">
-                        <li><a href="service-style-1.html">service Style -1</a></li>
-                        <li><a href="service-style-2.html">service Style -2</a></li>
-                        <li><a href="service-style-3.html">service Style -3</a></li>
-                        <li><a href="service-style-4.html">service Style -4</a></li>
-                        <li><a href="service-style-5.html">service Style -5</a></li>
-                        <li><a href="service-style-6.html">service Style -6</a></li>
-                        <li><a href="service-details.html">service details</a></li>
+                        <li><a href="{{ route('service-entreprise') }}">Services Entreprises</a></li>
+                        <li><a href="{{ route('service-fonctionnaire') }}">Services Salariés</a></li>
+                        <li><a href="{{ route('service-etudiant') }}">Services Etudiants</a></li>
                       </ul>
                     </li>
                     <li class="menu-item-has-children">
-                      <a href="#">Pages</a>
-                      <ul class="dp-menu">
-                        <li><a href="about-1.html">about Style -1</a></li>
-                        <li><a href="about-2.html">about Style -2</a></li>
-                        <li><a href="team-style-1.html">team-style-1</a></li>
-                        <li><a href="team-style-2.html">team-style-2</a></li>
-                        <li><a href="team-details.html">team-details</a></li>
-                        <li><a href="price-style-1.html">price-style</a></li>
-                        <li><a href="faq.html">faq</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="404.html">404</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                      <a href="#">project</a>
-                      <ul class="dp-menu">
-                        <li><a href="projects.html">project </a></li>
-                        <li><a href="project-details.html">project details</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                      <a href="#">blog</a>
-                      <ul class="dp-menu">
-                        <li><a href="blog-style-1.html">blog style -1</a></li>
-                        <li><a href="blog-style-2.html">blog style -2</a></li>
-                        <li><a href="blog-details.html">blog details</a></li>
-                      </ul>
-                    </li>
+                      <a href="#">Carrières</a>
+                <ul class="dp-menu">
+                  <li><a href="about-1.html">Offres d'Emploi</a></li>
+                  <li><a href="about-2.html">Stages</a></li>
+                  <li><a href="team-style-1.html">Candidature spontannee</a></li>
+                </ul>
+              </li>
+              <li class="menu-item-has-children"><a href="service-style-4.html">Medias</a>
+                <ul class="dp-menu">
+                  <li><a href="blog-style-1.html">Blog</a></li>
+                  <li><a href="projects.html">Videos</a></li>
+                  <li><a href="blog-style-2.html">Podcasts</a></li>
+                </ul>
+              </li>
+              <li class="menu-item-has-no">
+                <a href="{{ route('contact') }}">Contact</a>
+              </li>
                   </ul>
                 </nav>
               </div>
               <div class="header__meta">
-                <a href="contact.html" class="wc-btn-primary btn-text-flip"> <span data-text="Get in touch">Get in
-                    touch</span> <i class="fa-solid fa-caret-right"></i></a>
+                <a href="contact.html" class="wc-btn-primary btn-text-flip"> <span data-text="Payer Prestations">Payer Prestations</span> <i class="fa-solid fa-caret-right"></i></a>
+              </div>
+              <div class="header__meta">
+                <a href="contact.html" class="wc-btn-primary btn-text-flip"> <span data-text="Demander devis">Demander devis</span> <i class="fa-solid fa-caret-right"></i></a>
               </div>
               <div class="header__search">
                 <div class="search-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -418,7 +410,7 @@
               </div>
               <div class="team-wrapper style-2">
                 <div class="has_fade_anim" data-fade-from="left">
-                  <a href="team-details.html">
+                  <a href="{{route('team-details')}}">
                     <div class="team style-2">
                       <div class="team-thumb">
                         <img src="assets/imgs/team/team-1.webp" alt="team-image">
@@ -431,7 +423,7 @@
                   </a>
                 </div>
                 <div class="has_fade_anim" data-delay=".35" data-fade-from="left">
-                  <a href="team-details.html">
+                  <a href="{{route('team-details')}}">
                     <div class="team style-2">
                       <div class="team-thumb">
                         <img src="assets/imgs/team/team-2.webp" alt="team-image">
@@ -444,7 +436,7 @@
                   </a>
                 </div>
                 <div class="has_fade_anim" data-delay=".5" data-fade-from="left">
-                  <a href="team-details.html">
+                  <a href="{{route('team-details')}}">
                     <div class="team style-2">
                       <div class="team-thumb">
                         <img src="assets/imgs/team/team-3.webp" alt="team-image">
@@ -457,7 +449,7 @@
                   </a>
                 </div>
                 <div class="has_fade_anim" data-delay=".65" data-fade-from="left">
-                  <a href="team-details.html">
+                  <a href="{{route('team-details')}}">
                     <div class="team style-2">
                       <div class="team-thumb">
                         <img src="assets/imgs/team/team-4.webp" alt="team-image">
@@ -600,66 +592,7 @@
 
         </main>
 
-        <!-- footer start  -->
-        <footer class="footer-area style-1">
-          <div class="container container-large">
-            <div class="footer-inner">
-              <div class="logo-wrapper">
-                <a href="#">
-                  <img src="assets/imgs/logo/logo-text.webp" alt="site-logo">
-                </a>
-              </div>
-              <div class="links-wrapper">
-                <div class="footer-menu">
-                  <div class="footer-menu-item">
-                    <h2 class="title">Company</h2>
-                    <ul>
-                      <li><a href="#">Contact Us</a></li>
-                      <li><a href="#">Privacy Policy</a></li>
-                      <li><a href="#">Awards & Recognitions</a></li>
-                      <li><a href="#">Careers</a></li>
-                    </ul>
-                  </div>
-                  <div class="footer-menu-item">
-                    <h2 class="title">Explore</h2>
-                    <ul>
-                      <li><a href="#">Marketplace</a></li>
-                      <li><a href="#">Campaigns</a></li>
-                      <li><a href="#">Risk Management</a></li>
-                      <li><a href="#">Pricing</a></li>
-                    </ul>
-                  </div>
-                  <div class="footer-menu-item">
-                    <h2 class="title">Industries </h2>
-                    <ul>
-                      <li><a href="#">Economy</a></li>
-                      <li><a href="#">Financial Planning</a></li>
-                      <li><a href="#">Tax Return</a></li>
-                      <li><a href="#">Management</a></li>
-                    </ul>
-                  </div>
-                  <div class="footer-menu-item subscribe-form-item">
-                    <h2 class="title">Newsletter</h2>
-                    <form action="#" class="subscribe-form">
-                      <input type="email" placeholder="Enter your email">
-                      <button type="submit" class="subscribe-btn"> <i class="icon-wcf-paper-plane"></i> </button>
-                    </form>
-                  </div>
-                </div>
-                <div class="footer-copyright">
-                  <ul class="social-icons">
-                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-                  </ul>
-                  <p class="text-copy"> &copy; 2022 <a href="https://crowdyflow.com/">Crowdyflow</a> Agency</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
-        <!-- footer end  -->
+        @include('partials.footer')
 
       </div>
     </div>
