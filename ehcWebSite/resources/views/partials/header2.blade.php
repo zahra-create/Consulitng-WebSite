@@ -57,7 +57,7 @@
           <a href="contact.html" class="wc-btn-primary btn-text-flip"> <span data-text="Payer Prestations">Payer Prestations</span> <i class="fa-solid fa-caret-right"></i></a>
         </div>
         <div class="header__meta">
-          <a href="contact.html" class="wc-btn-primary btn-text-flip"> <span data-text="Demander devis">Demander devis</span> <i class="fa-solid fa-caret-right"></i></a>
+          <a href="{{ route('demande-devis') }}" class="wc-btn-primary btn-text-flip"> <span data-text="Demander devis">Demander devis</span> <i class="fa-solid fa-caret-right"></i></a>
         </div>
         <div class="header__search">
           <div class="search-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
