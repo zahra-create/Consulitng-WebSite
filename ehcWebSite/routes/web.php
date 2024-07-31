@@ -92,3 +92,8 @@ Route::get('/team-details', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
+
+//demande devis
+Route::get('/demande-devis', function () {
+    return view('demande-devis');
+})->name('demande-devis');
