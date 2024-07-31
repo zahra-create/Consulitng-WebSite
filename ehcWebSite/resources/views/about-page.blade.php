@@ -404,7 +404,7 @@
                     par la technologie, elle crée des solutions efficaces et robustes.</p>
                 </div>
                 <div class="btn-wrapper has_fade_anim" data-fade-from="right">
-                  <a href="team-style-1.html" class="wc-btn-underline btn-text-flip"><span
+                  <a href="{{route('contact')}}" class="wc-btn-underline btn-text-flip"><span
                       data-text="Join Our Team">Rejoindre notre équipe</span></a>
                 </div>
               </div>

@@ -192,73 +192,7 @@
 
   <!-- Header area start -->
   
-  <header class="header-area ">
-    <div class="container container-large">
-      <div class="header-area__inner">
-        <div class="header__logo d-block d-lg-none">
-          <a href="index.html">
-            <img src="assets/imgs/logo/logo-horizontal.webp" alt="Site Logo">  
-          </a>
-        </div>
-        <div class="header__nav">
-          <nav class="main-menu">
-            <ul>
-             <!-- <li class="menu-item-has-children"><a href="consultant-human.html">home</a>
-
-              </li>-->
-              <li class="menu-item-has-no"><a href="about-2.html">A propos</a></li>
-              <li class="menu-item-has-children"><a href="service-style-4.html">Services</a>
-                <ul class="dp-menu">
-                <li><a href="{{ route('service-entreprise') }}">Services Entreprises</a></li>
-                <li><a href="{{ route('service-fonctionnaire') }}">Services Salariés</a></li>
-                <li><a href="{{ route('service-etudiant') }}">Services Etudiants</a></li>
-                </ul>
-              </li>
-              <li class="menu-item-has-children">
-                <a href="#">Carrières</a>
-                <ul class="dp-menu">
-                  <li><a href="about-1.html">Offres d'Emploi</a></li>
-                  <li><a href="about-2.html">Stages</a></li>
-                  <li><a href="team-style-1.html">Candidature spontannée</a></li>
-                </ul>
-              </li>
-              <li class="menu-item-has-children"><a href="service-style-4.html">Médias</a>
-                <ul class="dp-menu">
-                  <li><a href="blog-style-1.html">Blog</a></li>
-                  <li><a href="projects.html">Vidéos</a></li>
-                  <li><a href="blog-style-2.html">Podcasts</a></li>
-                </ul>
-              </li>
-              <li class="menu-item-has-no">
-                <a href="#">Contact</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="header-right">
-          <div class="header__meta d-none d-md-block">
-            <a href="contact.html" class="cf_btn wc-btn-primary btn-text-flip"><span data-text="Let’s
-              Talk">Payer Prestations</span> <img src="assets/imgs/icon/icon-r-21.webp" alt="arrow-icon"> </a>
-            <a href="contact.html" class="cf_btn wc-btn-primary btn-text-flip"><span data-text="Let’s
-              Talk">Demander devis
-                  </span> <img src="assets/imgs/icon/icon-r-21.webp" alt="arrow-icon"> </a>
-          </div>
-          <div class="header__search d-none d-md-block">
-            <div class="search-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-			        <i class="fa-solid fa-gear"></i> 
-               <!-- <i class="fa-solid fa-magnifying-glass"></i>  -->
-              <!-- <img src="assets/imgs/icon/search.webp" alt="search"> --> 
-            </div>
-          </div>
-          <div class="header__nav">
-            <button onclick="showCanvas3()" class="open-offcanvas">
-              <img src="assets/imgs/icon/bar-dot.webp" alt="menu bar"></button>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-  </header>
+  @include('partials.header')
   <!-- Header area end -->
 
   <div class="has-smooth" id="has_smooth"></div>
@@ -615,75 +549,7 @@
         </main>
 
         <!-- footer area start  -->
-        <footer class="footer-area style-5">
-          <div class="shape">
-            <img src="assets/imgs/shape/polygon.webp" alt="polygon">
-          </div>
-          <div class="container">
-            <div class="footer-menu">
-              <div class="logo-wrapper">
-                <a href="#"><img src="assets/imgs/logo/logo-text-white.webp" alt="site-logo"></a>
-                <a href="#" class="scroll-up-btn"> <i class="icon-wcf-arrow-up-5"></i> <span>Go up</span> </a>
-              </div>
-              <!--<div class="widget-item">
-                <h3 class="widget-title">Liens rapides</h3>
-                <ul>
-                  <li><a href="#"></a></li>
-                  <li><a href="#">Privacy Policy</a></li>
-                  <li><a href="#">Awards & Recognitions</a></li>
-                  <li><a href="#">Careers</a></li>
-                </ul>
-              </div> -->
-              <div class="widget-item">
-                <h3 class="widget-title">Contact</h3>
-                <ul>
-                  <li><a href="#">Email</a></li>
-                  <li><a href="#">LinkedIn</a></li>
-                  <li><a href="#">WhatsApp</a></li>    
- 
-                   <!--<li><a href="#">Pricing</a></li>-->
-                  </ul>
-                </div>
-          <div class="widget-item">
-                  <h3 class="widget-title">Localisation</h3>
-                  <ul>
-                    <li class="text">3 Rue du Calvon Bv Abdelmoumen- Casablanca</li>
-                  </ul>
-                </div>
-                <div class="widget-item subscribe-form-item">
-                  <div class="header">
-                    <h3 class="title-2">Newsletter</h3>
-                    <p>Inscrivez-vous à notre newsletter pour recevoir nos dernières actualités.</p>
-                  </div>
-                  <form action="#" class="subscribe-form">
-                    <input type="email" placeholder="Enter votre email">
-                    <button type="submit" class="subscribe-btn">
-                      <i class="icon-wcf-paper-plane"></i></button>
-                  </form>
-                </div>
-                
-                <!--<div class="widget-item">
-                  <h3 class="widget-title">Inquiry</h3>
-                  <ul>
-                    <li><a href="#">Contact for appointment</a></li>
-                    <li class="title-2"><a href="mailto:inquiry@binox.com">inquiry@binox.com</a></li>
-                  </ul>
-                </div> -->
-              </div>
-              <div class="footer-copy-wrapper">
-                <div class="widget-item">
-                  <ul class="social-icons">
-                    <li><a href="#"><i class="icon-wcf-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i></a></li>
-                    <li><a href="#"><i class="icon-wcf-instragram"></i></a></li>
-                    <li><a href="#"><i class="icon-wcf-linkdin-fill"></i></a></li>
-                    <li><a href="#"><i class="icon-wcf-youtube"></i></a></li>				  
-                  </ul>
-                </div>
-                <p class="copy-text"> &copy; 2024 <a href="#">Expert Humain Capital</a></p>
-              </div>
-            </div>
-          </footer>    
+        @include('partials.footer') 
         <!-- footer area end  -->
 
       </div>
