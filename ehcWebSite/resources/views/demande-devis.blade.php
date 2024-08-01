@@ -364,7 +364,7 @@
           </section>
           <!-- contact intro end  -->
 		
-
+          @include('partials.disponibility')
         </main>
         
         @include('partials.footer')

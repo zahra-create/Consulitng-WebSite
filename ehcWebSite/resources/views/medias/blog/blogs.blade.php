@@ -322,27 +322,7 @@
           <!-- blog area end  -->
 
           <!-- cta area start  -->
-          <div class="cta-area style-1">
-            <div class="container container-large">
-              <div class="cta-area-wrapper">
-                <div class="cta-left">
-                  <ul class="cta-info">
-                    <li>
-                      <p class="title">Saturday - Thursday :</p>
-                      <span>8:30 am - 17:45 pm</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="cta-right">
-                  <div class="btn-wrapper">
-                    <a class="cf_btn wc-btn-underline btn-text-flip" href="contact.html"><span
-                        data-text="Call for an appointment">Call for an appointment</span><img
-                        src="assets/imgs/icon/arrow-triangle.webp" alt=""></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          @include('partials.disponibility')
           <!-- cta area end  -->
 
         </main>
