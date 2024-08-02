@@ -102,6 +102,15 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
+
+//video pages routes 
+Route::get('/playlists', function () {
+    return view('media.video.playlists');
+})->name('playlists');
+
+Route::get('/playlist_details', function () {
+    return view('media.video.playlist_details');
+})->name('playlist_details');
 //demande devis
 Route::get('/demande-devis', function () {
     return view('demande-devis');
