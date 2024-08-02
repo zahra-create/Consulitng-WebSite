@@ -531,27 +531,7 @@
           <!-- service details area end  -->
 
           <!-- cta area start  -->
-          <div class="cta-area style-1">
-            <div class="container container-large">
-              <div class="cta-area-wrapper">
-                <div class="cta-left">
-                  <ul class="cta-info">
-                    <li>
-                      <p class="title"></p>
-                      <span>Ouvert tous les jours de 8h30 à 22h45</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="cta-right">
-                  <div class="btn-wrapper">
-                    <a class="cf_btn wc-btn-underline btn-text-flip" href="contact.html"><span
-                        data-text="Planifier un rendez-vous">Planifier un rendez-vous</span><img
-                        src="assets/imgs/icon/arrow-triangle.webp" alt=""></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          @include('partials.disponibility')
           <!-- cta area end  -->
 
         </main>

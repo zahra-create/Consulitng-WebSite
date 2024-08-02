@@ -666,7 +666,7 @@
           </div>
           <!-- References area end  -->
 
-
+          @include('partials.disponibility')
         </main>
  
 

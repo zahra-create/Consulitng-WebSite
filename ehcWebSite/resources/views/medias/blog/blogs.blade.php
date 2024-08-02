@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Binox HTML5 Template">
 
-  <title>services fonctionnaires</title>
+  <title>Binox Blog</title>
 
   <!-- Fav Icon -->
   <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.webp">
@@ -17,16 +17,15 @@
 
 
   <!-- All CSS files -->
-  <link rel="stylesheet" href="{{ url('assets/css/bootstrap.min.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/css/all.min.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/css/icomon.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/css/swiper-bundle.min.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/css/progressbar.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/css/meanmenu.min.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/css/magnific-popup.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/css/master-service-style-5.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/css/master-human.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/css/master-financial.css') }}">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/icomon.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/progressbar.css">
+  <link rel="stylesheet" href="assets/css/meanmenu.min.css">
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/master-blog.css">
+
 
 
 
@@ -41,10 +40,11 @@
       <div class="animation-preloader">
         <div class="spinner"></div>
         <div class="txt-loading">
-          <span data-text="E" class="characters">E</span>
-          <span data-text="H" class="characters">H</span>
-          <span data-text="C" class="characters">C</span>
-
+          <span data-text="B" class="characters">B</span>
+          <span data-text="I" class="characters">I</span>
+          <span data-text="N" class="characters">N</span>
+          <span data-text="O" class="characters">O</span>
+          <span data-text="X" class="characters">X</span>
         </div>
       </div>
       <div class="loader-section section-left"></div>
@@ -65,9 +65,8 @@
   <!-- Switcher Area Start -->
   <div class="switcher__area">
     <div class="switcher__icon">
-    <!--  <button id="switcher_open"><i class="fa-solid fa-gear"></i></button>
-      <button id="switcher_close"><i class="fa-solid fa-xmark"></i></button> -->
-      <button id="switcher_open"><i class="fa-solid fa-robot"></i></button>
+      <button id="switcher_open"><i class="fa-solid fa-gear"></i></button>
+      <button id="switcher_close"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <div class="switcher__items">
 
@@ -174,8 +173,8 @@
   </div>
   <!-- offcanvas end  -->
 
-  <!-- search modal start -->
-  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    <!-- search modal start -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     <div class="modal-dialog modal-dialog-centered">
@@ -191,9 +190,9 @@
   </div>
   <!-- search modal end -->
 
-  <!-- Header area start -->
-  @include('partials.header')
-  <!-- Header area end -->
+          <!-- Header area start -->
+          @include('partials.header2')
+          <!-- Header area end -->
 
   <div class="has-smooth" id="has_smooth"></div>
   <div id="smooth-wrapper">
@@ -204,119 +203,123 @@
         <div class="overlay-switcher-close"></div>
 
 
-
         <main>
 
-
-          <!-- service start  -->
-          <section class="service-area style-5 pin__area">
-            <div class="container container-medium">
-              <div class="service-wrapper">
-                <div class="section-content">
-                  <div class="section-heading pin__element">
-                    <div class="section-title-wrapper">
-                      <div class="title-wrapper has_fade_anim">
-                        <h1 class="section-title">Bienvenue, Cher salarié</h1>
-                      </div>
-                      <div class="text-wrapper has_fade_anim">
-                        <p class="text">Bénéficiez d'un accompagnement personnalisé pour votre développement professionnel et personnel.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="services-list has_fade_anim">
-                  <div class="services-item">
-                    <p class="count">01</p>
-                    <a href="{{ route('carrière_coaching') }}">
-                      <h2 class="title">Coaching de Carrière</h2>
-                    </a>
-                    <p class="text">Obtenez des conseils sur les secteurs à fort potentiel, les rôles adaptés à votre profil.</p>
-                    <a href="{{ route('carrière_coaching') }}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
-                  </div>
-                  <div class="services-item">
-                    <p class="count">02</p>
-                    <a href="{{ route('personal_coaching') }}">
-                      <h2 class="title">Coaching Personnel</h2>
-                    </a>
-                    <p class="text">Recevez un accompagnement pour surmonter vos défis personnels et professionnels.</p>
-                    <a href="{{ route('personal_coaching') }}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
-                  </div>
-                  <div class="services-item">
-                    <p class="count">03</p>
-                    <a href="{{ route('bilan_competences') }}">
-                      <h2 class="title">Bilan de Compétences</h2>
-                    </a>
-                    <p class="text">Évaluez vos compétences par blocs pour mieux comprendre votre niveau réel.</p>
-                    <a href="{{ route('bilan_competences') }}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
-                  </div>
-                  <div class="services-item">
-                    <p class="count">04</p>
-                    <a href="{{ route('test_personnalite') }}">
-                      <h2 class="title">Test de Personnalité</h2>
-                    </a>
-                    <p class="text">Faites le point sur votre posture mentale, vos limites, tendances, et potentialités psychologiques.</p>
-                    <a href="{{ route('test_personnalite') }}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
-                  </div>
-                  <div class="services-item">
-                    <p class="count">05</p>
-                    <a href="{{ route('formation_specifique') }}">
-                      <h2 class="title">Formation Spécifique
-                      </h2>
-                    </a>
-                    <p class="text">Prenez en main votre nouvelle fonction avec des séances personnalisées avec un expert du domaine.</p>
-                    <a href="{{ route('formation_specifique') }}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- service end  -->
-
-          <!-- specialization area start  -->
-          <section class="specialization-area style-1">
-            <div class="specialization-inner">
-              <div class="specialization-thumb">
-                <img src="{{ url('assets/imgs/gallery/service-fonctionnaire.jpg') }}" alt="faq-image">
-              </div>
-              <div class="specialization-content section-spacing">
-                <div class="section-title-wrapper style-1 has_fade_anim">
-                  <div class="subtitle-wrapper">
-                    <span class="section-subtitle">Notre mission</span>
-                  </div>
-                  <div class="title-wrapper">
-                    <h1 class="section-title">EHC accompagne les professionnels dans leur évolution de carrière</h1>
-                  </div>
-                  <div class="cf_text">
-                    <p class="text">Nous clarifions les défis professionnels exigeants grâce à notre savoir-faire. Notre <span>accompagnement total</span> aide les fonctionnaires, salariés et professions libérales à atteindre leurs objectifs de carrière.</p>
-                  </div>
-                  <ul class="list-plus">
-                    <li>Recherche d'emploi ciblée sur votre profil</li>
-                    <li>Evaluation précise de vos compétences</li>
-                    <li>Développement personnel et professionnel</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- specialization area end  -->
-
-          <section class="plan-area">
-            <div class="container">
-              <div class="plan-area-inner ">
-                <div class="section-heading">
+          <!-- blog area start  -->
+          <section class="blog-area section-spacing style-1 inner-style-1">
+            <div class="container container-large">
+              <div class="section-heading">
+                <div class="section-title-wrapper style-1">
                   <div class="subtitle-wrapper has_fade_anim">
-                    <span class="section-subtitle">Votre évolution professionnelle commence ici</span>
+                    <span class="section-subtitle">EHC blog</span>
                   </div>
                   <div class="title-wrapper has_fade_anim">
-                    <h2 class="section-title">Optimisez votre parcours professionnel grâce à notre expertise</h2>
-                  </div>
-                  <div class="btn-wrapper has_fade_anim">
-                    <a href="contact.html" class="wc-btn-primary btn-text-flip"><span data-text="Contactez-nous">Contactez-nous</span><i class="fa-solid fa-play"></i></a>
+                    <h2 class="section-title">Regard sur le journal de Groupe EHC</h2>
                   </div>
                 </div>
               </div>
+              <div class="blog-wrapper-area fix">
+                <div class="blog-wrapper">
+                  <article class="blog style-1 has_fade_anim">
+                    <div class="thumb">
+                      <a href="{{route('blog-details')}}"><img src="assets/imgs/blog/blog3.webp" alt="blog image"></a>
+                    </div>
+                    <div class="content">
+                      <div class="meta">
+                        <a href="blog-style-1.html"><span class="tag">Business</span></a>
+                        <span class="date has-left-line">January 29, 2020</span>
+                      </div>
+                      <h3 class="title"><a href="{{route('blog-details')}}">How to create your purpose-filled career comfortable
+                          clothes</a></h3>
+                      <p class="text">Over the past three years, marketers have faced an arduous journey due to the
+                        rapid shifts in consumer sentiment and the rising costs associated....</p>
+                    </div>
+                  </article>
+                  <article class="blog style-1 has_fade_anim" data-delay=".35">
+                    <div class="thumb">
+                      <a href="{{route('blog-details')}}"><img src="assets/imgs/blog/blog2.webp" alt="blog image"></a>
+                    </div>
+                    <div class="content">
+                      <div class="meta">
+                        <a href="blog-style-1.html"><span class="tag">Business</span></a>
+                        <span class="date has-left-line">January 29, 2020</span>
+                      </div>
+                      <h3 class="title"><a href="{{route('blog-details')}}">How to create your purpose-filled career comfortable
+                          clothes</a></h3>
+                      <p class="text">Over the past three years, marketers have faced an arduous journey due to the
+                        rapid shifts in consumer sentiment and the rising costs associated....</p>
+                    </div>
+                  </article>
+                  <article class="blog style-1 has_fade_anim" data-delay=".5">
+                    <div class="thumb">
+                      <a href="{{route('blog-details')}}"><img src="assets/imgs/blog/blog1.webp" alt="blog image"></a>
+                    </div>
+                    <div class="content">
+                      <div class="meta">
+                        <a href="blog-style-1.html"><span class="tag">Business</span></a>
+                        <span class="date has-left-line">January 29, 2020</span>
+                      </div>
+                      <h3 class="title"><a href="{{route('blog-details')}}">Sitting with your basic goodness
+                          top signs that time.</a></h3>
+                      <p class="text">Over the past three years, marketers have faced an arduous journey due to the
+                        rapid shifts in consumer sentiment and the rising costs associated....</p>
+                    </div>
+                  </article>
+                  <article class="blog style-1 has_fade_anim">
+                    <div class="thumb">
+                      <a href="{{route('blog-details')}}"><img src="assets/imgs/blog/blog2.webp" alt="blog image"></a>
+                    </div>
+                    <div class="content">
+                      <div class="meta">
+                        <a href="blog-style-1.html"><span class="tag">Business</span></a>
+                        <span class="date has-left-line">January 29, 2020</span>
+                      </div>
+                      <h3 class="title"><a href="{{route('blog-details')}}">How to create your purpose-filled career comfortable
+                          clothes</a></h3>
+                      <p class="text">Over the past three years, marketers have faced an arduous journey due to the
+                        rapid shifts in consumer sentiment and the rising costs associated....</p>
+                    </div>
+                  </article>
+                  <article class="blog style-1 has_fade_anim" data-delay=".35">
+                    <div class="thumb">
+                      <a href="{{route('blog-details')}}"><img src="assets/imgs/blog/blog3.webp" alt="blog image"></a>
+                    </div>
+                    <div class="content">
+                      <div class="meta">
+                        <a href="blog-style-1.html"><span class="tag">Business</span></a>
+                        <span class="date has-left-line">January 29, 2020</span>
+                      </div>
+                      <h3 class="title"><a href="{{route('blog-details')}}">How to create your purpose-filled career comfortable
+                          clothes</a></h3>
+                      <p class="text">Over the past three years, marketers have faced an arduous journey due to the
+                        rapid shifts in consumer sentiment and the rising costs associated....</p>
+                    </div>
+                  </article>
+                  <article class="blog style-1 has_fade_anim" data-delay=".5">
+                    <div class="thumb">
+                      <a href="{{route('blog-details')}}"><img src="assets/imgs/blog/blog4.webp" alt="blog image"></a>
+                    </div>
+                    <div class="content">
+                      <div class="meta">
+                        <a href="blog-style-1.html"><span class="tag">Business</span></a>
+                        <span class="date has-left-line">January 29, 2020</span>
+                      </div>
+                      <h3 class="title"><a href="{{route('blog-details')}}">Sitting with your basic goodness
+                          top signs that time.</a></h3>
+                      <p class="text">Over the past three years, marketers have faced an arduous journey due to the
+                        rapid shifts in consumer sentiment and the rising costs associated....</p>
+                    </div>
+                  </article>
+                </div>
+                <ul class="pagination style-1 has_fade_anim">
+                  <li><a href="#">1</a></li>
+                  <li><a class="current" href="#">2</a></li>
+                  <li><a href="#">Next <img src="assets/imgs/icon/arrow-next-icon.webp" alt="arrow-icon"></a></li>
+                </ul>
+              </div>
             </div>
           </section>
+          <!-- blog area end  -->
 
           <!-- cta area start  -->
           @include('partials.disponibility')
