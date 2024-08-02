@@ -137,7 +137,7 @@
   </div>
   <!-- search modal end -->
 
-  @include('partials.header')
+  @include('partials.navbar')
 
 
   <div class="has-smooth" id="has_smooth"></div>
@@ -228,7 +228,7 @@
                       <a href="blog-details.html">
                         <article class="blog style-2">
                           <div class="author">
-                            <div class="avatar"><img src="assets/imgs/podcasts/formation.png" alt=""></div>
+                            <div class="avatar"><img src="assets/imgs/podcasts/evolution.png" alt=""></div>
                             <div class="">
                               <span class="meta-title">Présenté par</span>
                               <span class="name">EHC</span>

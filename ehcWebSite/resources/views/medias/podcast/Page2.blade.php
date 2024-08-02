@@ -138,7 +138,7 @@
   </div>
   <!-- search modal end -->
 
-  @include('partials.header')
+  @include('partials.navbar')
   
   <div class="has-smooth" id="has_smooth"></div>
   <div id="smooth-wrapper">
