@@ -141,7 +141,7 @@
   </div>
   <!-- search modal end -->
 
-  @include('partials.header')
+  @include('partials.navbar')
   
 
   <div class="has-smooth" id="has_smooth"></div>
@@ -168,21 +168,21 @@
             <div class="intro-shape-1">
               <img src="assets/imgs/shape/shape-r-1.webp" alt="">    <!--Background-->
             </div>
-            <div class="banner-wrapper">
-              <div class="banner-left">
-                <div class="logo">
-                  <a href="index.html"><img src="assets/imgs/logo/logo-vertical.webp" alt="logo"></a> <!--logo-->
-                </div>
+            <!--<div class="banner-wrapper">
+              <div class="banner-left"> 
+                <!--<div class="logo"> 
+                  <a href="index.html"><img src="assets/imgs/logo/logo-vertical.webp" alt="logo"></a> 
+                </div> -->
                 <!--<div class="social-links">
                   <p class="text has-right-line">Follow Us</p>
                   <ul class="social-icons">
                     <li><a href="#"><i class="icon-wcf-pinterest"></i></a></li>
                     <li><a href="#"><i class="icon-wcf-wcf-wcf-dribbble"></i></a></li>
                     <li><a href="#"><i class="icon-wcf-instragram"></i></a></li>
-                  </ul>
-                </div> -->
-              </div>
-              <div class="banner-right">
+                  </ul>-->
+                <!--</div> 
+              </div> -->
+              <div class="banner-right" style="justify-content: center; padding-left:200px;">
                 <div class="container container-large">
                   <div class="banner-content-wrapper">
                     <div class="content">
@@ -194,7 +194,7 @@
                         <a href="{{ route('demande-devis') }}" class="cf_btn wc-btn-primary btn-text-flip"><span
                             data-text="Demander services">Demander services </span> <img src="assets/imgs/icon/icon-r-21.webp" alt="arrow-icon"></a>
                       </div>
-                      <a href="#" class="scroll-up-btn"> <span>Scroll</span> <i class="icon-wcf-arrow-down-1"></i> </a>
+                      <!--<a href="#" class="scroll-up-btn"> <span>Scroll</span> <i class="icon-wcf-arrow-down-1"></i> </a> -->
                     </div>
                     <div class="thumb-wrapper">
                       <div class="cf_thumb has_fade_anim" data-delay=".65" data-ease="slow(0.7,0.7,false)">
@@ -229,12 +229,12 @@
                 <div class="section-content">
                   <div class="section-title-wrapper">
                     <div class="title-wrapper has_fade_anim" >
-                      <h2 class="section-title" >Ayant en moyenne plus de 20 ans
+                      <h2 class="section-title" style="color:rgb(0, 81, 81);" >Ayant en moyenne plus de 20 ans
                         d'experience dans leurs domaines de competence</h2>
                     </div>
                   </div>
                   <div class="thumb-wrapper has_fade_anim" data-fade-from="left">
-                    <div class="react-shape">
+                    <div class="react-shape"  style="background-color:rgb(0, 81, 81);">
                       <span class="text" > </span>
                     </div>
                     <div class="react-thumb">
@@ -246,7 +246,7 @@
                     <p class="text">Avec une equipe d'experts en RH, nous offrons des solutions sur mesure pour optimiser vos processus et attirer les meilleurs talents.</p>
                   </div>
                   <div class="btn-wrapper has_fade_anim">
-                    <a href="contact.html" class="wc-btn-primary btn-text-flip"> <span data-text="Qui sommes-nous">Qui sommes-nous
+                    <a href="{{ route('about')}}" class="wc-btn-primary btn-text-flip" style="background-color:rgb(0, 81, 81); border:rgb(0, 81, 81);" > <span data-text="Qui sommes-nous">Qui sommes-nous
                      </span> <img src="assets/imgs/icon/icon-r-21.webp" alt="arrow-icon"></a>
                   </div>
                 </div>
@@ -277,7 +277,7 @@
               <div class="section-heading">
                 <div class="section-title-wrapper">
                   <div class="title-wrapper has_fade_anim">
-                    <h2 class="section-title" style="font-size: 60px; "><span>POURQUOI EHC ?</span></h2>
+                    <h2 class="section-title" style="font-size: 60px; color:rgb(0, 81, 81); "><span>POURQUOI EHC ?</span></h2>
                   </div>
             	<div class="subtitle-wrapper has_fade_anim" data-delay=".35" >
 				  <p style="font-size: 25px; ">Au coeur de ses valeurs, EHC place la satisfaction de ses partenaires au sommet de ses priorites</p>
@@ -295,7 +295,7 @@
                   </div>
                   <div class="content">
                     <div class="cf_title">
-                      <h4 class="title"><a href="service-details.html">ENGAGEMENT</a></h4>
+                      <h4 class="title" style="color:rgb(0, 81, 81);">ENGAGEMENT</a></h4>
                     </div>
                   </div>
                 </div>
@@ -308,7 +308,7 @@
                   </div>
                   <div class="content">
                     <div class="cf_title">
-                      <h4 class="title"><a href="service-details.html">AGILITE</a></h4>
+                      <h4 class="title" style="color:rgb(0, 81, 81);">AGILITE</a></h4>
                     </div>
                   </div>
                 </div>
@@ -321,7 +321,7 @@
                   </div>
                   <div class="content">
                     <div class="cf_title">
-                      <h4 class="title"><a href="service-details.html">EXPERTISE</a></h4>
+                      <h4 class="title" style="color:rgb(0, 81, 81);">EXPERTISE</a></h4>
                     </div>
                   </div>
                 </div>
@@ -334,7 +334,7 @@
                   </div>
                   <div class="content">
                     <div class="cf_title">
-                      <h4 class="title"><a href="service-details.html">INNOVATION & EXCELLENCE</a></h4>
+                      <h4 class="title" style="color:rgb(0, 81, 81);">INNOVATION & EXCELLENCE</h4>
                     </div>
                   </div>
                 </div>
@@ -347,7 +347,7 @@
 
 <!-- BU start -->
 
-          <section class="services-area section-spacing pin__area">			
+          <section class="services-area section-spacing pin__area" style="padding-top:0px;">			
 			<div class="container container-large">
               <div class="services-area-inner">
                 <div class="section-heading pin__element">
@@ -365,7 +365,7 @@
         <img src="assets/imgs/gallery/img-s-1.png" alt="image" style="margin-bottom:20px;">
 		
 		<div class="header__meta d-none d-md-block" style="margin-left:70px;">
-            <a href="{{ route('demande-devis') }}" class="cf_btn wc-btn-primary btn-text-flip"><span data-text="Demander services">Demander services</span> <img src="assets/imgs/icon/icon-r-21.webp" alt="arrow-icon"> </a>
+            <a href="{{ route('demande-devis') }}" class="cf_btn wc-btn-primary btn-text-flip" style="background-color:rgb(0, 81, 81); border:rgb(0, 81, 81);"><span data-text="Demander services">Demander services</span> <img src="assets/imgs/icon/icon-r-21.webp" alt="arrow-icon"> </a>
           </div>
                   </div>
 				  
@@ -488,7 +488,7 @@
                     <p class="text" style="color: black; font-size: 18px">EHC mobilise pour vous une équipe de haut dirigeants et cadres exerçant dans les sphères des secteurs public et privé et ayant en moyenne plus de 20 ans d'expérience dans leurs domaines de compétence.</p>
                   </div>
 				<div class="btn-wrapper" style="margin-top:50px; margin-right:15px;"  >
-                      <a href="team-style-1.html" class="cf_btn wc-btn-primary btn-text-flip"><span
+                      <a href="{{ route('about')}}" class="cf_btn wc-btn-primary btn-text-flip" style="background-color:rgb(0, 81, 81); border:rgb(0, 81, 81);"><span
                           data-text="Découvrir Nos Experts">Découvrir Nos Experts</span> <img src="assets/imgs/icon/icon-r-21.webp" alt="arrow-icon"></a>
                     </div>
                 </div>
@@ -616,7 +616,7 @@
               <div class="brand-inner">
                 <div class="brand-text">
                   <div class="brand-text-title-wrapper" style="padding-top:50px;">
-                    <h2 class="title" style="font-weight:900; font-size:23px;">Nos partenaires</h2>
+                    <h2 class="title" style="font-weight:900; font-size:23px; color:rgb(0, 81, 81);">Nos partenaires</h2>
                   </div>
                 </div>
                 <div class="brand-logos">

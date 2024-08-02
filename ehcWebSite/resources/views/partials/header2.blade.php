@@ -3,7 +3,7 @@
       <div class="header-area__inner">
         <div class="header__logo">
           <a href="index.html">
-            <img src="assets/imgs/logo/logo.webp" alt="Site Logo">
+            <img src="{{ url('assets/imgs/logo/logoEHC.png') }}" alt="Site Logo">
           </a>
         </div>
         <div class="header__nav ">

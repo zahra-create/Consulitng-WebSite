@@ -1,15 +1,14 @@
 <header class="header-area">
     <div class="container container-large">
       <div class="header-area__inner">
-        <div class="header__logo d-block d-lg-none">
+      <div class="header__logo d-block d-lg-none">
           <a href="index.html">
-            <img src="assets/imgs/logo/logo-horizontal.webp" alt="Site Logo">  
+            <img src="{{ url('assets/imgs/logo/logoEHC.png') }}" alt="Site Logo">  
           </a>
         </div>
         <div class="header__nav">
           <nav class="main-menu">
             <ul>
- 
               <li class="menu-item-has-no"><a href="{{route('about')}}">A propos</a></li>
               <li class="menu-item-has-children"><a href="service-style-4.html">Services</a>
                 <ul class="dp-menu">
