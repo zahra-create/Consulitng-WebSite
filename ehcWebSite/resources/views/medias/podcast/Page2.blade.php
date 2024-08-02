@@ -161,7 +161,7 @@
             <h3 class="title-2" style="margin-bottom:10px; color:#005151;" >Newsletter</h3>
             <p>Inscrivez-vous à notre newsletter pour recevoir nos dernières actualités.</p>
           </div>
-          <form action="#" class="subscribe-form" style="margin-top:40px; border-radius:10px; background-color:#00515114;">
+          <form action="#" class="subscribe-form" style="margin-top:40px; border-radius:10px; background-color: #00515130; margin-top:5px;">
             <input type="email" placeholder="Entrer votre email">
             <button type="submit" class="subscribe-btn">
               <i class="icon-wcf-paper-plane" style="color:rgb(85, 85, 85); font-size:20px;"></i></button>
@@ -301,9 +301,9 @@
                     </div>
                   </div>
                   <ul class="pagination style-1 has_fade_anim">
-                    <li><a href="blog-style-2.html">1</a></li>
-                    <li><a class="current" href="page-2.html">2</a></li>
-                    <li><a href="page-2.html">Next <img src="assets/imgs/icon/arrow-next-icon.webp" alt="arrow-icon"></a></li>
+                  <li><a href="{{ route('Podcasts') }}">1</a></li>
+                  <li><a class="current" href="{{ route('Page2') }}">2</a></li>
+
                   </ul>
                 </div>
               </div>

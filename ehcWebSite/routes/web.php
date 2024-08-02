@@ -97,3 +97,18 @@ Route::get('/contact', function () {
 Route::get('/demande-devis', function () {
     return view('demande-devis');
 })->name('demande-devis');
+
+//Podcasts
+Route::get('/podcasts', function () {
+    return view('medias.podcast.Podcasts');
+})->name('Podcasts');
+
+//Page 2 Podcasts
+Route::get('/podcasts2', function () {
+    return view('medias.podcast.Page2');
+})->name('Page2');
+
+//Détails Podcasts
+Route::get('/detail-podcast', function () {
+    return view('medias.podcast.detail-podcast');
+})->name('detail-podcast');

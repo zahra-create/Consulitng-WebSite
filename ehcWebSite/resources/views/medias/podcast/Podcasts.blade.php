@@ -22,7 +22,6 @@
   <link rel="stylesheet" href="{{ url('assets/css/meanmenu.min.css') }}">
   <link rel="stylesheet" href="{{ url('assets/css/magnific-popup.css') }}">
   <link rel="stylesheet" href="{{ url('assets/css/master-human.css') }}">
-  
   <link rel="stylesheet" href="{{ url('assets/css/master-financial.css') }}">
     <link rel="stylesheet" href="{{ url('assets/css/podcasts.css') }}">
 
@@ -139,7 +138,8 @@
   <!-- search modal end -->
 
   @include('partials.header')
-  
+
+
   <div class="has-smooth" id="has_smooth"></div>
   <div id="smooth-wrapper">
     <div id="smooth-content">
@@ -156,12 +156,12 @@
           <section class="blog-area section-spacing pin__area">
             <div class="container" style="margin-top:50px;">
               <div class="blog-area-inner">
-			   <div class="btn-wrapper has_fade_anim pin__element" data-fade-from="left" style="width:350px;">
+		   <div class="btn-wrapper has_fade_anim pin__element" data-fade-from="left" style="width:350px;">
           <div class="header">
-            <h3 class="title-2" style="margin-bottom:10px; color:#005151;" >Newsletter</h3>
+            <h3 class="title-2" style="margin-bottom:10px; color:#005151;">Newsletter</h3>
             <p>Inscrivez-vous à notre newsletter pour recevoir nos dernières actualités.</p>
           </div>
-          <form action="#" class="subscribe-form" style="margin-top:40px; border-radius:10px; background-color:#00515114;">
+          <form action="#" class="subscribe-form" style="margin-top:40px; border-radius:10px; background-color: #00515130; margin-top:5px;">
             <input type="email" placeholder="Entrer votre email">
             <button type="submit" class="subscribe-btn">
               <i class="icon-wcf-paper-plane" style="color:rgb(85, 85, 85); font-size:20px;"></i></button>
@@ -177,23 +177,23 @@
                   </div>
                   <div class="blog-wrapper-area fix has_fade_anim" data-delay=".35">
                     <div class="blog-wrapper">
-                      <a href="blog-details.html">
+                      <a href="{{ route('detail-podcast')}}">
                         <article class="blog style-2">
                           <div class="author">
-                            <div class="avatar"><img src="assets/imgs/podcasts/innovation.png" alt=""></div>
+                            <div class="avatar"><img src="{{url('assets/imgs/podcasts/femme.png')}}" alt=""></div>
                             <div class="">
                               <span class="meta-title">Présenté par</span>
-                              <span class="name">EHC expert</span>
+                              <span class="name">EHC</span>
                             </div>
                           </div>
                           <div class="content-wrapper">
                             <div class="content">
                               <div class="meta">
-                                <span class="tag">RH</span>
-                                <span class="date has-left-line">Juillet 29, 2024</span>
+                                <span class="tag">Succès</span>
+                                <span class="date has-left-line">January 29, 2020</span>
                               </div>
-                              <h2 class="title">Tendances et Innovations en RH</h2>
-                              <p class="text">Les nouvelles tendances en gestion des talents pour 2024.....</p>
+                              <h2 class="title">Histoires de Réussite</h2>
+                              <p class="text">Voyage professionnel : Témoignages de femmes qui ont réussi dans notre entreprise.....</p>
                             </div>
                             <div class="btn-wrapper">
                               <span class="cf_btn wc-btn-icon"><i class="fa-solid fa-arrow-right-long"></i></span>
@@ -201,7 +201,30 @@
                           </div>
                         </article>
                       </a>
-
+					<a href="blog-details.html">
+                        <article class="blog style-2">
+                          <div class="author">
+                            <div class="avatar"><img src="assets/imgs/podcasts/bien.png" alt=""></div>
+                            <div class="">
+                              <span class="meta-title">Présenté par</span>
+                              <span class="name">EHC</span>
+                            </div>
+                          </div>
+                          <div class="content-wrapper">
+                            <div class="content">
+                              <div class="meta">
+                                <span class="tag">Coaching</span>
+                                <span class="date has-left-line">January 29, 2020</span>
+                              </div>
+                              <h2 class="title">Bien-Être au Travail</h2>
+                              <p class="text">Stratégies pour promouvoir le bien-être au travail : Idées de nos expertes.....</p>
+                            </div>
+                            <div class="btn-wrapper">
+                              <span class="cf_btn wc-btn-icon"><i class="fa-solid fa-arrow-right-long"></i></span>
+                            </div>
+                          </div>
+                        </article>
+                      </a>
                       <a href="blog-details.html">
                         <article class="blog style-2">
                           <div class="author">
@@ -214,11 +237,11 @@
                           <div class="content-wrapper">
                             <div class="content">
                               <div class="meta">
-                                <span class="tag">Coaching</span>
-                                <span class="date has-left-line">Juillet 29, 2024</span>
+                                <span class="tag">Actualités</span>
+                                <span class="date has-left-line">January 29, 2020</span>
                               </div>
-                              <h2 class="title">Développement Professionnel et Formation</h2>
-                              <p class="text">L'importance de la formation continue pour le développement des compétences.....</p>
+                              <h2 class="title">Évolution du Marché du Travail</h2>
+                              <p class="text">Comment les changements économiques influencent le marché du travail.....</p>
                             </div>
                             <div class="btn-wrapper">
                               <span class="cf_btn wc-btn-icon"><i class="fa-solid fa-arrow-right-long"></i></span>
@@ -229,7 +252,31 @@
                       <a href="blog-details.html">
                         <article class="blog style-2">
                           <div class="author">
-                            <div class="avatar"><img src="assets/imgs/podcasts/recrutement.png" alt=""></div>
+                            <div class="avatar"><img src="assets/imgs/podcasts/confor.png" alt=""></div>
+                            <div class="">
+                              <span class="meta-title">Présenté par</span>
+                              <span class="name">EHC</span>
+                            </div>
+                          </div>
+                          <div class="content-wrapper">
+                            <div class="content">
+                              <div class="meta">
+                                <span class="tag">Loi</span>
+                                <span class="date has-left-line">January 29, 2020</span>
+                              </div>
+                              <h2 class="title">Conformité et Réglementations</h2>
+                              <p class="text">Comprendre les nouvelles réglementations en matière de droit du travail.....</p>
+                            </div>
+                            <div class="btn-wrapper">
+                              <span class="cf_btn wc-btn-icon"><i class="fa-solid fa-arrow-right-long"></i></span>
+                            </div>
+                          </div>
+                        </article>
+                      </a>
+                      <a href="blog-details.html">
+                        <article class="blog style-2">
+                          <div class="author">
+                            <div class="avatar"><img src="assets/imgs/podcasts/tech.png" alt=""></div>
                             <div class="">
                               <span class="meta-title">Présenté par</span>
                               <span class="name">EHC</span>
@@ -239,10 +286,10 @@
                             <div class="content">
                               <div class="meta">
                                 <span class="tag">RH</span>
-                                <span class="date has-left-line">January 29, 2024</span>
+                                <span class="date has-left-line">January 29, 2020</span>
                               </div>
-                              <h2 class="title">Recrutement et Talent Acquisition</h2>
-                              <p class="text">Comment attirer et retenir les meilleurs talents dans un marché concurrentiel.....</p>
+                              <h2 class="title">Technologie et Outils RH</h2>
+                              <p class="text">L'impact des nouvelles technologies sur la gestion des ressources humaines.....</p>
                             </div>
                             <div class="btn-wrapper">
                               <span class="cf_btn wc-btn-icon"><i class="fa-solid fa-arrow-right-long"></i></span>
@@ -253,7 +300,7 @@
                       <a href="blog-details.html">
                         <article class="blog style-2">
                           <div class="author">
-                            <div class="avatar"><img src="assets/imgs/podcasts/culture.png" alt=""></div>
+                            <div class="avatar"><img src="assets/imgs/podcasts/leader.png" alt=""></div>
                             <div class="">
                               <span class="meta-title">Présenté par</span>
                               <span class="name">EHC</span>
@@ -265,32 +312,8 @@
                                 <span class="tag">Coaching</span>
                                 <span class="date has-left-line">January 29, 2020</span>
                               </div>
-                              <h2 class="title">Culture d'Entreprise et Engagement des Employés</h2>
-                              <p class="text">Construire une culture d'entreprise positive et engageante.....</p>
-                            </div>
-                            <div class="btn-wrapper">
-                              <span class="cf_btn wc-btn-icon"><i class="fa-solid fa-arrow-right-long"></i></span>
-                            </div>
-                          </div>
-                        </article>
-                      </a>
-                      <a href="blog-details.html">
-                        <article class="blog style-2">
-                          <div class="author">
-                            <div class="avatar"><img src="assets/imgs/podcasts/performance.png" alt=""></div>
-                            <div class="">
-                              <span class="meta-title">Présenté par</span>
-                              <span class="name">EHC</span>
-                            </div>
-                          </div>
-                          <div class="content-wrapper">
-                            <div class="content">
-                              <div class="meta">
-                                <span class="tag">Coaching</span>
-                                <span class="date has-left-line">January 29, 2020</span>
-                              </div>
-                              <h2 class="title">Gestion des Performances et Évaluations</h2>
-                              <p class="text">Meilleures pratiques pour évaluer et améliorer les performances des employés.....</p>
+                              <h2 class="title">Leadership et Gestion</h2>
+                              <p class="text">Compétences essentielles pour devenir un leader efficace.....</p>
                             </div>
                             <div class="btn-wrapper">
                               <span class="cf_btn wc-btn-icon"><i class="fa-solid fa-arrow-right-long"></i></span>
@@ -301,15 +324,17 @@
                     </div>
                   </div>
                   <ul class="pagination style-1 has_fade_anim">
-                    <li><a href="blog-style-2.html">1</a></li>
-                    <li><a class="current" href="page-2.html">2</a></li>
-                    <li><a href="page-2.html">Next <img src="assets/imgs/icon/arrow-next-icon.webp" alt="arrow-icon"></a></li>
+                    <li><a href="{{ route('Podcasts') }}">1</a></li>
+                    <li><a class="current" href="{{ route('Page2') }}">2</a></li>
+                    <li><a href="{{ route('Page2') }}">Next <img src="assets/imgs/icon/arrow-next-icon.webp" alt="arrow-icon"></a></li>
                   </ul>
                 </div>
               </div>
             </div>
           </section>
           <!-- blog area end  -->
+
+
 
         </main>
 

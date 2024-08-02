@@ -21,10 +21,9 @@
   <link rel="stylesheet" href="{{ url('assets/css/progressbar.css') }}">
   <link rel="stylesheet" href="{{ url('assets/css/meanmenu.min.css') }}">
   <link rel="stylesheet" href="{{ url('assets/css/magnific-popup.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/css/master-human.css') }}">
-  
-  <link rel="stylesheet" href="{{ url('assets/css/master-financial.css') }}">
-    <link rel="stylesheet" href="{{ url('assets/css/podcasts.css') }}">
+ <link rel="stylesheet" href="{{ url('assets/css/master-human.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/master-financial.css') }}"> 
+    <link rel="stylesheet" href="{{ url('assets/css/detail-podcast.css') }}">
 
 
    
@@ -139,7 +138,7 @@
   <!-- search modal end -->
 
   @include('partials.header')
-  
+
   <div class="has-smooth" id="has_smooth"></div>
   <div id="smooth-wrapper">
     <div id="smooth-content">
@@ -156,17 +155,56 @@
           <section class="blog-area section-spacing pin__area">
             <div class="container" style="margin-top:50px;">
               <div class="blog-area-inner">
-			   <div class="btn-wrapper has_fade_anim pin__element" data-fade-from="left" style="width:350px;">
-          <div class="header">
-            <h3 class="title-2" style="margin-bottom:10px; color:#005151;" >Newsletter</h3>
-            <p>Inscrivez-vous à notre newsletter pour recevoir nos dernières actualités.</p>
-          </div>
-          <form action="#" class="subscribe-form" style="margin-top:40px; border-radius:10px; background-color:#00515114;">
-            <input type="email" placeholder="Entrer votre email">
-            <button type="submit" class="subscribe-btn">
-              <i class="icon-wcf-paper-plane" style="color:rgb(85, 85, 85); font-size:20px;"></i></button>
-          </form>
+			   <div class="btn-wrapper has_fade_anim pin__element" data-fade-from="left" >
+
+       <!--<div class="player" style="height:300px; width:200;">-->
+       <div class="wrapper" style=" height:450px; margin-right:70px; background-color:#00515114;">  <!--style="width:250; height:400px; "-->
+           <div class="details">
+               <div class="now-playing">PLAYING x OF y</div>
+               <!--<div class="track-art>--> <img class="track-art src="assets/imgs/podcasts/femme.png" alt="podcast"> <!--</div>-->
+               <div class="track-name">Track Name</div>
+               <div class="track-artist">Track Artist</div>
+           </div>
+
+           <div class="slider_container">
+               <div class="current-time">00:00</div>
+                <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+                <div class="total-duration">00:00</div>
+           </div>
+
+           <div class="slider_container">
+               <i class="fa fa-volume-down"></i>
+                <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+                <i class="fa fa-volume-up"></i>
+           </div>
+
+           <div class="buttons" style="font-size:0.75rem; ">
+
+               <div class="prev-track" onclick="prevTrack()">
+                    <i class="fa fa-step-backward fa-2x"></i>
                 </div>
+                <div class="playpause-track" onclick="playpauseTrack()" >
+                    <i class="fa fa-play-circle fa-5x"></i>
+                </div>
+                <div class="next-track" onclick="nextTrack()">
+                    <i class="fa fa-step-forward fa-2x"></i>
+                </div>
+
+           </div>
+
+        <!--    <div id="wave">
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+                <span class="stroke"></span>
+            </div>   -->
+       </div>
+   <!-- </div> -->
+   </div>
+      
                 <div class="blog-main-wrapper">
                   <div class="section-heading">
                     <div class="section-title-wrapper">
@@ -179,137 +217,96 @@
                     <div class="blog-wrapper">
                       <a href="blog-details.html">
                         <article class="blog style-2">
-                          <div class="author">
-                            <div class="avatar"><img src="assets/imgs/podcasts/innovation.png" alt=""></div>
-                            <div class="">
-                              <span class="meta-title">Présenté par</span>
-                              <span class="name">EHC expert</span>
-                            </div>
-                          </div>
+                          <!-- <div class="author"> 
+                            <div class="avatar"><i class="fa-regular fa-circle-play" style="color:#005151;"></i></div>
+                          </div> -->
                           <div class="content-wrapper">
-                            <div class="content">
-                              <div class="meta">
-                                <span class="tag">RH</span>
-                                <span class="date has-left-line">Juillet 29, 2024</span>
-                              </div>
-                              <h2 class="title">Tendances et Innovations en RH</h2>
-                              <p class="text">Les nouvelles tendances en gestion des talents pour 2024.....</p>
+						  <div class="btn-wrapper">
+                              <span class="cf_btn wc-btn-icon"><i class="fa-regular fa-circle-play" style="color:#005151; font-size:50px; transform: rotate(0deg);"></i></span>
                             </div>
-                            <div class="btn-wrapper">
-                              <span class="cf_btn wc-btn-icon"><i class="fa-solid fa-arrow-right-long"></i></span>
+                            <div class="content">
+                              <h2 class="title">Épisode 1:Histoires de Réussite</h2>
+                              <p class="text">Voyage professionnel : Témoignages de femmes qui ont réussi dans notre entreprise.....</p>
                             </div>
                           </div>
                         </article>
                       </a>
+					<a href="blog-details.html">
+                        <article class="blog style-2">
+                          <div class="content-wrapper">
+						  <div class="btn-wrapper">
+                              <span class="cf_btn wc-btn-icon"><i class="fa-regular fa-circle-play" style="color:#005151; font-size:50px; transform: rotate(0deg);"></i></span>
+                            </div>
+                            <div class="content">
+                              <h2 class="title">Épisode 2:Histoires de Réussite</h2>
+                              <p class="text">Voyage professionnel : Témoignages de femmes qui ont réussi dans notre entreprise.....</p>
+                            </div>
+                          </div>
+                        </article>
+                      </a>
+                      <a href="blog-details.html">
+                        <article class="blog style-2">
+                          <div class="content-wrapper">
+						  <div class="btn-wrapper">
+                              <span class="cf_btn wc-btn-icon"><i class="fa-regular fa-circle-play" style="color:#005151; font-size:50px; transform: rotate(0deg);"></i></span>
+                            </div>
+                            <div class="content">
+                              <h2 class="title">Épisode 3:Histoires de Réussite</h2>
+                              <p class="text">Voyage professionnel : Témoignages de femmes qui ont réussi dans notre entreprise.....</p>
+                            </div>
+                          </div>
 
+                        </article>
+                      </a>
                       <a href="blog-details.html">
                         <article class="blog style-2">
-                          <div class="author">
-                            <div class="avatar"><img src="assets/imgs/podcasts/formation.png" alt=""></div>
-                            <div class="">
-                              <span class="meta-title">Présenté par</span>
-                              <span class="name">EHC</span>
-                            </div>
-                          </div>
                           <div class="content-wrapper">
-                            <div class="content">
-                              <div class="meta">
-                                <span class="tag">Coaching</span>
-                                <span class="date has-left-line">Juillet 29, 2024</span>
-                              </div>
-                              <h2 class="title">Développement Professionnel et Formation</h2>
-                              <p class="text">L'importance de la formation continue pour le développement des compétences.....</p>
+						  <div class="btn-wrapper">
+                              <span class="cf_btn wc-btn-icon"><i class="fa-regular fa-circle-play" style="color:#005151; font-size:50px; transform: rotate(0deg);"></i></span>
                             </div>
-                            <div class="btn-wrapper">
-                              <span class="cf_btn wc-btn-icon"><i class="fa-solid fa-arrow-right-long"></i></span>
+                            <div class="content">
+                              <h2 class="title">Épisode 4:Histoires de Réussite</h2>
+                              <p class="text">Voyage professionnel : Témoignages de femmes qui ont réussi dans notre entreprise.....</p>
                             </div>
                           </div>
                         </article>
                       </a>
                       <a href="blog-details.html">
                         <article class="blog style-2">
-                          <div class="author">
-                            <div class="avatar"><img src="assets/imgs/podcasts/recrutement.png" alt=""></div>
-                            <div class="">
-                              <span class="meta-title">Présenté par</span>
-                              <span class="name">EHC</span>
-                            </div>
-                          </div>
                           <div class="content-wrapper">
-                            <div class="content">
-                              <div class="meta">
-                                <span class="tag">RH</span>
-                                <span class="date has-left-line">January 29, 2024</span>
-                              </div>
-                              <h2 class="title">Recrutement et Talent Acquisition</h2>
-                              <p class="text">Comment attirer et retenir les meilleurs talents dans un marché concurrentiel.....</p>
+						  <div class="btn-wrapper">
+                              <span class="cf_btn wc-btn-icon"><i class="fa-regular fa-circle-play" style="color:#005151; font-size:50px; transform: rotate(0deg);"></i></span>
                             </div>
-                            <div class="btn-wrapper">
-                              <span class="cf_btn wc-btn-icon"><i class="fa-solid fa-arrow-right-long"></i></span>
+                            <div class="content">
+                              <h2 class="title">Épisode 5:Histoires de Réussite</h2>
+                              <p class="text">Voyage professionnel : Témoignages de femmes qui ont réussi dans notre entreprise.....</p>
                             </div>
                           </div>
                         </article>
                       </a>
                       <a href="blog-details.html">
                         <article class="blog style-2">
-                          <div class="author">
-                            <div class="avatar"><img src="assets/imgs/podcasts/culture.png" alt=""></div>
-                            <div class="">
-                              <span class="meta-title">Présenté par</span>
-                              <span class="name">EHC</span>
-                            </div>
-                          </div>
                           <div class="content-wrapper">
+						  <div class="btn-wrapper">
+                              <span class="cf_btn wc-btn-icon"><i class="fa-regular fa-circle-play" style="color:#005151; font-size:50px; transform: rotate(0deg);"></i></span>
+                            </div>
                             <div class="content">
-                              <div class="meta">
-                                <span class="tag">Coaching</span>
-                                <span class="date has-left-line">January 29, 2020</span>
-                              </div>
-                              <h2 class="title">Culture d'Entreprise et Engagement des Employés</h2>
-                              <p class="text">Construire une culture d'entreprise positive et engageante.....</p>
-                            </div>
-                            <div class="btn-wrapper">
-                              <span class="cf_btn wc-btn-icon"><i class="fa-solid fa-arrow-right-long"></i></span>
-                            </div>
-                          </div>
-                        </article>
-                      </a>
-                      <a href="blog-details.html">
-                        <article class="blog style-2">
-                          <div class="author">
-                            <div class="avatar"><img src="assets/imgs/podcasts/performance.png" alt=""></div>
-                            <div class="">
-                              <span class="meta-title">Présenté par</span>
-                              <span class="name">EHC</span>
-                            </div>
-                          </div>
-                          <div class="content-wrapper">
-                            <div class="content">
-                              <div class="meta">
-                                <span class="tag">Coaching</span>
-                                <span class="date has-left-line">January 29, 2020</span>
-                              </div>
-                              <h2 class="title">Gestion des Performances et Évaluations</h2>
-                              <p class="text">Meilleures pratiques pour évaluer et améliorer les performances des employés.....</p>
-                            </div>
-                            <div class="btn-wrapper">
-                              <span class="cf_btn wc-btn-icon"><i class="fa-solid fa-arrow-right-long"></i></span>
+
+                              <h2 class="title">Épisode 6:Histoires de Réussite</h2>
+                              <p class="text">Voyage professionnel : Témoignages de femmes qui ont réussi dans notre entreprise.....</p>
                             </div>
                           </div>
                         </article>
                       </a>
                     </div>
                   </div>
-                  <ul class="pagination style-1 has_fade_anim">
-                    <li><a href="blog-style-2.html">1</a></li>
-                    <li><a class="current" href="page-2.html">2</a></li>
-                    <li><a href="page-2.html">Next <img src="assets/imgs/icon/arrow-next-icon.webp" alt="arrow-icon"></a></li>
-                  </ul>
+
                 </div>
               </div>
             </div>
           </section>
           <!-- blog area end  -->
+
 
         </main>
 

@@ -44,7 +44,7 @@
           <ul class="dp-menu">
             <li><a href="blog-style-1.html">Blog</a></li>
             <li><a href="projects.html">Videos</a></li>
-            <li><a href="blog-style-2.html">Podcasts</a></li>
+            <li><a href="{{ route('Podcasts') }}">Podcasts</a></li>
           </ul>
         </li>
         <li class="menu-item-has-no">

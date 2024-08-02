@@ -191,7 +191,7 @@
 						<p class="text" style="font-size:30spx;">Votre Partenaire pour le Succès en Ressources Humaines.</p>
                       </div>
                       <div class="btn-wrapper has_fade_anim" data-delay=".5">
-                        <a href="about-1.html" class="cf_btn wc-btn-primary btn-text-flip"><span
+                        <a href="{{ route('demande-devis') }}" class="cf_btn wc-btn-primary btn-text-flip"><span
                             data-text="Demander services">Demander services </span> <img src="assets/imgs/icon/icon-r-21.webp" alt="arrow-icon"></a>
                       </div>
                       <a href="#" class="scroll-up-btn"> <span>Scroll</span> <i class="icon-wcf-arrow-down-1"></i> </a>
@@ -365,7 +365,7 @@
         <img src="assets/imgs/gallery/img-s-1.png" alt="image" style="margin-bottom:20px;">
 		
 		<div class="header__meta d-none d-md-block" style="margin-left:70px;">
-            <a href="contact.html" class="cf_btn wc-btn-primary btn-text-flip"><span data-text="Demander services">Demander services</span> <img src="assets/imgs/icon/icon-r-21.webp" alt="arrow-icon"> </a>
+            <a href="{{ route('demande-devis') }}" class="cf_btn wc-btn-primary btn-text-flip"><span data-text="Demander services">Demander services</span> <img src="assets/imgs/icon/icon-r-21.webp" alt="arrow-icon"> </a>
           </div>
                   </div>
 				  
