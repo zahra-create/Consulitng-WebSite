@@ -341,26 +341,26 @@ let updateTimer;
 const music_list = [
     {
         img : 'images/stay.png',
-        name : 'Stay',
-        artist : 'The Kid LAROI, Justin Bieber',
-        music : 'music/stay.mp3'
+        name : 'Épisode 1',
+        artist : 'EHC',
+        music : 'music/Épisode 1.mp3'
     },
     {
         img : 'images/fallingdown.jpg',
-        name : 'Falling Down',
-        artist : 'Wid Cards',
+        name : 'Épisode 2',
+        artist : 'EHC',
         music : 'music/fallingdown.mp3'
     },
     {
         img : 'images/faded.png',
-        name : 'Faded',
-        artist : 'Alan Walker',
+        name : 'Épisode 3',
+        artist : 'EHC',
         music : 'music/Faded.mp3'
     },
     {
         img : 'images/ratherbe.jpg',
-        name : 'Rather Be',
-        artist : 'Clean Bandit',
+        name : 'Épisode 4',
+        artist : 'EHC',
         music : 'music/Rather Be.mp3'
     }
 ];
