@@ -161,7 +161,7 @@
        <div class="wrapper" style=" height:450px; margin-right:70px; background-color:#00515114;">  <!--style="width:250; height:400px; "-->
            <div class="details">
                <div class="now-playing">PLAYING x OF y</div>
-               <!--<div class="track-art>--> <img class="track-art src="assets/imgs/podcasts/femme.png" alt="podcast"> <!--</div>-->
+               <!--<div class="track-art>--> <img class="track-art" src="assets/imgs/podcasts/femme.png" alt="podcast"><!-- </div>-->
                <div class="track-name">Track Name</div>
                <div class="track-artist">Track Artist</div>
            </div>

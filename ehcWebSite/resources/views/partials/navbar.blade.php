@@ -2,7 +2,7 @@
           <div class="container container-large">
             <div class="header-area__inner" style="margin-left:-90px ">     <!--style="margin-left:-55px"-->
             <div class="header__logo" style="  margin-left:20px; width:100%;  height:100%;">              <!--margin-top:10px;-->
-                <a href="index.html">
+                <a href="{{ route('home') }}">
                   <img src="{{ url('assets/imgs/logo/logoEHC.png') }}" alt="Site Logo"  >
                 </a>
               </div> 

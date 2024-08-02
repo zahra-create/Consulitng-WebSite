@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 /* Home page route */
 Route::get('/', function () {
     return view('consultant-human');
-});
+})->name('home');;
 
 /* service pages routes */
 
