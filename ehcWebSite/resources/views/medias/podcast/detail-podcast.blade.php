@@ -137,7 +137,7 @@
   </div>
   <!-- search modal end -->
 
-  @include('partials.navbar')
+  @include('partials.header')
 
   <div class="has-smooth" id="has_smooth"></div>
   <div id="smooth-wrapper">
@@ -321,6 +321,7 @@ let track_art = document.querySelector('.track-art');
 let track_name = document.querySelector('.track-name');
 let track_artist = document.querySelector('.track-artist');
 
+let play_btn = document.querySelector('.cf_btn wc-btn-icon');
 let playpause_btn = document.querySelector('.playpause-track');
 let next_btn = document.querySelector('.next-track');
 let prev_btn = document.querySelector('.prev-track');
@@ -490,6 +491,7 @@ function setUpdate(){
         total_duration.textContent = durationMinutes + ":" + durationSeconds;
     }
 }
+
 
 
 </script>
