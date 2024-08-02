@@ -31,7 +31,7 @@
               </li>
               <li class="menu-item-has-children"><a href="service-style-4.html">Medias</a>
                 <ul class="dp-menu">
-                  <li><a href="blog-style-1.html">Blog</a></li>
+                  <li><a href="{{ route('blogs') }}">Blog</a></li>
                   <li><a href="{{ route('playlists') }}">Videos</a></li>
                   <li><a href="{{ route('Podcasts') }}">Podcasts</a></li>
                 </ul>
