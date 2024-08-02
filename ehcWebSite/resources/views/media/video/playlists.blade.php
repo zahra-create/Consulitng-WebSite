@@ -218,7 +218,7 @@
                       <span style="color:#004E50;" class="section-subtitle">EHC playlists</span>
                     </div>
                     <div class="title-wrapper has_fade_anim">
-                      <h1 style="color:#004E50;" class="section-title large"> Nos Playlists recommandées</h1>
+                      <h2 style="color:#004E50; " class="section-title large"> PLAYLISTS RECOMMANDÉE</h2>
                     </div>
                     <div class="text-wrapper has_fade_anim">
                       <p style="color:#4A7172;" class="text">Every decision make need answer the million dollar question how will this benefit
@@ -230,7 +230,7 @@
                   <div class="projects-wrapper">
                     <div class="project-item style-1 has_fade_anim" data-fade-from="left">
                       <div class="project-thumb">
-                        <a href="project-details.html"><img src="assets/imgs/project/img-r-1.webp"
+                        <a href="project-details.html"><img src="assets/imgs/gallery/HRM.webp"
                             alt="project-image"></a>
                       </div>
                       <div class="project-content">
@@ -241,7 +241,7 @@
                     </div>
                     <div class="project-item style-1 has_fade_anim" data-fade-from="left" data-delay=".35">
                       <div class="project-thumb">
-                        <a href="project-details.html"><img src="assets/imgs/project/img-r-2.webp"
+                        <a href="project-details.html"><img src="assets/imgs/gallery/strategy.jpg"
                             alt="project-image"></a>
                       </div>
                       <div class="project-content">
@@ -252,7 +252,7 @@
                     </div>
                     <div class="project-item style-1 has_fade_anim" data-fade-from="left" data-delay=".5">
                       <div class="project-thumb">
-                        <a href="project-details.html"><img src="assets/imgs/project/img-r-3.webp"
+                        <a href="project-details.html"><img src="assets/imgs/gallery/leadership.jpg"
                             alt="project-image"></a>
                       </div>
                       <div class="project-content">
@@ -263,7 +263,7 @@
                     </div>
                     <div class="project-item style-1 has_fade_anim" data-fade-from="left">
                       <div class="project-thumb">
-                        <a href="project-details.html"><img src="assets/imgs/project/img-r-4.webp"
+                        <a href="project-details.html"><img src="assets/imgs/gallery/employmenet.jpeg"
                             alt="project-image"></a>
                       </div>
                       <div class="project-content">
@@ -274,7 +274,7 @@
                     </div>
                     <div class="project-item style-1 has_fade_anim" data-fade-from="left" data-delay=".35">
                       <div class="project-thumb">
-                        <a href="project-details.html"><img src="assets/imgs/project/img-s-1.webp"
+                        <a href="project-details.html"><img src="assets/imgs/gallery/market strategy.jpg"
                             alt="project-image"></a>
                       </div>
                       <div class="project-content">
@@ -286,7 +286,7 @@
                     </div>
                     <div class="project-item style-1 has_fade_anim" data-fade-from="left" data-delay=".5">
                       <div class="project-thumb">
-                        <a href="project-details.html"><img src="assets/imgs/project/img-s-2.webp"
+                        <a href="project-details.html"><img src="assets/imgs/gallery/market research.jpg"
                             alt="project-image"></a>
                       </div>
                       <div class="project-content">
@@ -331,7 +331,7 @@
             </div>
           </div> -->
           <!-- cta area end  -->
-
+          @include('partials.disponibility')
         </main>
 
         <!-- footer area start  -->

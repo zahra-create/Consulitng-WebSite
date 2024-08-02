@@ -1,7 +1,7 @@
 <header class="header-area style-1 pos-abs zi-9">
           <div class="container container-large">
             <div class="header-area__inner" style="margin-left:-90px ">     <!--style="margin-left:-55px"-->
-            <div class="header__logo" style="  margin-left:20px; width:100%;  height:100%;">              <!--margin-top:10px;-->
+            <div class="header__logo" >              <!--margin-top:10px;-->
                 <a href="{{ route('home') }}">
                   <img src="{{ url('assets/imgs/logo/logoEHC.png') }}" alt="Site Logo"  >
                 </a>
@@ -28,7 +28,7 @@
               <li class="menu-item-has-children"><a href="service-style-4.html">Medias</a>
                 <ul class="dp-menu">
                   <li><a href="blog-style-1.html">Blog</a></li>
-                  <li><a href="projects.html">Videos</a></li>
+                  <li><a href="{{ route('playlists') }}">Videos</a></li>
                   <li><a href="{{ route('Podcasts') }}">Podcasts</a></li>
                 </ul>
               </li>

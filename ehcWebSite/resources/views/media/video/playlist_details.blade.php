@@ -258,8 +258,8 @@
          
          
           
-        <section class="client-area section-spacing">
-            <div class="container container-large">
+        <section  class="client-area section-spacing">
+            <div  class="container container-large">
               <div class="client-area-inner">
                 <div class="section-heading">
                   <span style="color:#004E50;"  class="justify section-subtitle has_fade_anim" data-fade-from="left">contributeurs</span>
@@ -286,7 +286,7 @@
               </div>
             </div>
           </section> 
-
+         
          
         </main>
 
