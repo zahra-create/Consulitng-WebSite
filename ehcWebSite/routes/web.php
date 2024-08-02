@@ -76,6 +76,7 @@ Route::get('/ingenierie', function () {
     return view('ingenierie-details');
 })->name('ingenierie');
 
+
 //about page routes
 Route::get('/about', function () {
     return view('about-page');
@@ -84,6 +85,14 @@ Route::get('/about', function () {
 Route::get('/team-details', function () {
     return view('team-details');
 })->name('team-details');
+//blogs
+Route::get('/blogs', function () {
+    return view('medias.blog.blogs');
+})->name('blogs');
+//blog details
+Route::get('/blog-details', function () {
+    return view('medias.blog.blog-details');
+})->name('blog-details');
 
 
 
