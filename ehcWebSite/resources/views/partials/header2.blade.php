@@ -3,7 +3,7 @@
       <div class="header-area__inner">
         <div class="header__logo">
           <a href="index.html">
-            <img src="assets/imgs/logo/logo.webp" alt="Site Logo">
+            <img src="{{ url('assets/imgs/logo/logoEHC.png') }}" alt="Site Logo">
           </a>
         </div>
         <div class="header__nav ">
@@ -44,7 +44,7 @@
           <ul class="dp-menu">
             <li><a href="blog-style-1.html">Blog</a></li>
             <li><a href="projects.html">Videos</a></li>
-            <li><a href="blog-style-2.html">Podcasts</a></li>
+            <li><a href="{{ route('Podcasts') }}">Podcasts</a></li>
           </ul>
         </li>
         <li class="menu-item-has-no">
@@ -57,7 +57,7 @@
           <a href="contact.html" class="wc-btn-primary btn-text-flip"> <span data-text="Payer Prestations">Payer Prestations</span> <i class="fa-solid fa-caret-right"></i></a>
         </div>
         <div class="header__meta">
-          <a href="contact.html" class="wc-btn-primary btn-text-flip"> <span data-text="Demander devis">Demander devis</span> <i class="fa-solid fa-caret-right"></i></a>
+          <a href="{{ route('demande-devis') }}" class="wc-btn-primary btn-text-flip"> <span data-text="Demander devis">Demander devis</span> <i class="fa-solid fa-caret-right"></i></a>
         </div>
         <div class="header__search">
           <div class="search-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
