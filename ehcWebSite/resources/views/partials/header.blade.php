@@ -33,7 +33,7 @@
                 <ul class="dp-menu">
                   <li><a href="blog-style-1.html">Blog</a></li>
                   <li><a href="{{ route('playlists') }}">Videos</a></li>
-                  <li><a href="blog-style-2.html">Podcasts</a></li>
+                  <li><a href="{{ route('Podcasts') }}">Podcasts</a></li>
                 </ul>
               </li>
               <li class="menu-item-has-no">
@@ -45,7 +45,7 @@
         <div class="header-right">
           <div class="header__meta d-none d-md-block">
             <a href="contact.html" class="cf_btn wc-btn-primary btn-text-flip"><span data-text="Payer Prestations">Payer Prestations</span> <img src="assets/imgs/icon/icon-r-21.webp" alt="arrow-icon"> </a>
-            <a href="contact.html" class="cf_btn wc-btn-primary btn-text-flip"><span data-text="Demander devis">Demander devis
+            <a href="{{ route('demande-devis') }}" class="cf_btn wc-btn-primary btn-text-flip"><span data-text="Demander devis">Demander devis
             </span> <img src="assets/imgs/icon/icon-r-21.webp" alt="arrow-icon"> </a>
           </div>
           <div class="header__search d-none d-md-block">
