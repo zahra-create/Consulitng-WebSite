@@ -165,6 +165,8 @@
                <div class="track-name">Track Name</div>
                <div class="track-artist">Track Artist</div>
            </div>
+		   
+		   <audio></audio>
 
            <div class="slider_container">
                <div class="current-time">00:00</div>
@@ -215,14 +217,14 @@
                   </div>
                   <div class="blog-wrapper-area fix has_fade_anim" data-delay=".35">
                     <div class="blog-wrapper">
-                      <a href="blog-details.html">
+
                         <article class="blog style-2">
                           <!-- <div class="author"> 
                             <div class="avatar"><i class="fa-regular fa-circle-play" style="color:#005151;"></i></div>
                           </div> -->
-                          <div class="content-wrapper">
-						  <div class="btn-wrapper">
-                              <span class="cf_btn wc-btn-icon"><i class="fa-regular fa-circle-play" style="color:#005151; font-size:50px; transform: rotate(0deg);"></i></span>
+                          <div class="content-wrapper" data-src="Épisode1.mp3">
+						  <div class="btn-wrapper" >
+                              <span class="cf_btn wc-btn-icon" id="btn-play" onclick="playpauseTrack()"><i class="fa-regular fa-circle-play" style="color:#005151; font-size:50px; transform: rotate(0deg);"></i></span>
                             </div>
                             <div class="content">
                               <h2 class="title">Épisode 1:Histoires de Réussite</h2>
@@ -230,12 +232,11 @@
                             </div>
                           </div>
                         </article>
-                      </a>
-					<a href="blog-details.html">
+
                         <article class="blog style-2">
                           <div class="content-wrapper">
-						  <div class="btn-wrapper">
-                              <span class="cf_btn wc-btn-icon"><i class="fa-regular fa-circle-play" style="color:#005151; font-size:50px; transform: rotate(0deg);"></i></span>
+						  <div class="btn-wrapper"  >
+                              <span class="cf_btn wc-btn-icon" id="btn-play" onclick="playpauseTrack()"><i class="fa-regular fa-circle-play" style="color:#005151; font-size:50px; transform: rotate(0deg);"></i></span>
                             </div>
                             <div class="content">
                               <h2 class="title">Épisode 2:Histoires de Réussite</h2>
@@ -243,12 +244,11 @@
                             </div>
                           </div>
                         </article>
-                      </a>
-                      <a href="blog-details.html">
+
                         <article class="blog style-2">
                           <div class="content-wrapper">
 						  <div class="btn-wrapper">
-                              <span class="cf_btn wc-btn-icon"><i class="fa-regular fa-circle-play" style="color:#005151; font-size:50px; transform: rotate(0deg);"></i></span>
+                              <span class="cf_btn wc-btn-icon" id="btn-play" onclick="playpauseTrack()"><i class="fa-regular fa-circle-play" style="color:#005151; font-size:50px; transform: rotate(0deg);"></i></span>
                             </div>
                             <div class="content">
                               <h2 class="title">Épisode 3:Histoires de Réussite</h2>
@@ -257,8 +257,8 @@
                           </div>
 
                         </article>
-                      </a>
-                      <a href="blog-details.html">
+
+
                         <article class="blog style-2">
                           <div class="content-wrapper">
 						  <div class="btn-wrapper">
@@ -270,8 +270,7 @@
                             </div>
                           </div>
                         </article>
-                      </a>
-                      <a href="blog-details.html">
+
                         <article class="blog style-2">
                           <div class="content-wrapper">
 						  <div class="btn-wrapper">
@@ -283,8 +282,7 @@
                             </div>
                           </div>
                         </article>
-                      </a>
-                      <a href="blog-details.html">
+
                         <article class="blog style-2">
                           <div class="content-wrapper">
 						  <div class="btn-wrapper">
@@ -297,7 +295,7 @@
                             </div>
                           </div>
                         </article>
-                      </a>
+
                     </div>
                   </div>
 
@@ -316,12 +314,14 @@
 
 
 
+
+
 let now_playing = document.querySelector('.now-playing');
 let track_art = document.querySelector('.track-art');
 let track_name = document.querySelector('.track-name');
 let track_artist = document.querySelector('.track-artist');
 
-let play_btn = document.querySelector('.cf_btn wc-btn-icon');
+let play_btn = document.getElementById('btn-play');
 let playpause_btn = document.querySelector('.playpause-track');
 let next_btn = document.querySelector('.next-track');
 let prev_btn = document.querySelector('.prev-track');
@@ -330,14 +330,16 @@ let seek_slider = document.querySelector('.seek_slider');
 let volume_slider = document.querySelector('.volume_slider');
 let curr_time = document.querySelector('.current-time');
 let total_duration = document.querySelector('.total-duration');
-let wave = document.getElementById('wave');
-let randomIcon = document.querySelector('.fa-random');
+//let wave = document.getElementById('wave');
+//let randomIcon = document.querySelector('.fa-random');
 let curr_track = document.createElement('audio');
 
 let track_index = 0;
 let isPlaying = false;
-let isRandom = false;
+//let isRandom = false;
 let updateTimer;
+
+
 
 const music_list = [
     {
@@ -367,6 +369,8 @@ const music_list = [
 ];
 
 loadTrack(track_index);
+
+
 
 function loadTrack(track_index){
     clearInterval(updateTimer);
@@ -426,35 +430,44 @@ function repeatTrack(){
     loadTrack(current_index);
     playTrack();
 }
+
+
 function playpauseTrack(){
     isPlaying ? pauseTrack() : playTrack();
 }
+
 function playTrack(){
     curr_track.play();
     isPlaying = true;
     track_art.classList.add('rotate');
-    wave.classList.add('loader');
+//    wave.classList.add('loader');
     playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>';
+	play_btn.innerHTML = '<i class="fa-regular fa-circle-pause" style="color:#005151; font-size:50px; transform: rotate(0deg);"></i>';
+ 
 }
 function pauseTrack(){
     curr_track.pause();
     isPlaying = false;
     track_art.classList.remove('rotate');
-    wave.classList.remove('loader');
+//    wave.classList.remove('loader');
     playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';
+	play_btn.innerHTML = '<i class="fa-regular fa-circle-play" style="color:#005151; font-size:50px; transform: rotate(0deg);"></i>';
+
 }
-function nextTrack(){
-    if(track_index < music_list.length - 1 && isRandom === false){
-        track_index += 1;
-    }else if(track_index < music_list.length - 1 && isRandom === true){
-        let random_index = Number.parseInt(Math.random() * music_list.length);
-        track_index = random_index;
-    }else{
-        track_index = 0;
-    }
-    loadTrack(track_index);
-    playTrack();
-}
+
+
+//function nextTrack(){
+ //   if(track_index < music_list.length - 1 && isRandom === false){
+  //      track_index += 1;
+  //  }else if(track_index < music_list.length - 1 && isRandom === true){
+   //     let random_index = Number.parseInt(Math.random() * music_list.length);
+   //     track_index = random_index;
+  //  }else{
+ //       track_index = 0;
+ //   }
+ //   loadTrack(track_index);
+ //   playTrack();
+//}
 function prevTrack(){
     if(track_index > 0){
         track_index -= 1;
@@ -464,6 +477,17 @@ function prevTrack(){
     loadTrack(track_index);
     playTrack();
 }
+
+function nextTrack(){
+    if(track_index < music_list.length){
+        track_index += 1;
+    }else{
+        track_index = music_list.length +1;
+    }
+    loadTrack(track_index);
+    playTrack();
+}
+
 function seekTo(){
     let seekto = curr_track.duration * (seek_slider.value / 100);
     curr_track.currentTime = seekto;
@@ -491,6 +515,9 @@ function setUpdate(){
         total_duration.textContent = durationMinutes + ":" + durationSeconds;
     }
 }
+
+
+    </script>
 
 
 
