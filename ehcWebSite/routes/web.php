@@ -130,3 +130,8 @@ Route::get('/podcasts2', function () {
 Route::get('/detail-podcast', function () {
     return view('medias.podcast.detail-podcast');
 })->name('detail-podcast');
+
+//Actualites
+Route::get('/Acualites', function () {
+    return view('medias.Actualites');
+})->name('Actualites');

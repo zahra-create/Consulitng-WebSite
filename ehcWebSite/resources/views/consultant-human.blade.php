@@ -538,7 +538,7 @@
                     <h2 class="section-title" style="color:#005151; font-size: 40px;font-weight:900;">NOS ACTUALITES</h2>
                   </div>
                   <div class="subtitle-wrapper has_fade_anim" data-delay=".35" >
-                    <a href="blog-style-1.html" class="section-subtitle" style="font-weight:900;">Voir Plus</a>
+                    <a href="{{ route('Actualites') }}" class="section-subtitle" style="font-weight:900;">Voir Plus</a>
                   </div>
                 </div>
               </div>
