@@ -276,7 +276,7 @@
                       </div>
                       <h3 class="title"><a href="blog-details.html">Les Tendances Actuelles en Recrutement pour 2024</a></h3>
                       <p class="text">Over the past three years, marketers have faced an arduous journey due to the
-                        rapid shifts in consumer sentiment and the rising costs associated....</p>
+                        rapid ....</p>
                     </div>
                   </article>
                   <article class="blog style-1 has_fade_anim" data-delay=".35">
@@ -290,12 +290,12 @@
                       </div>
                       <h3 class="title"><a href="blog-details.html">L'Impact de la Digitalisation sur la Gestion des Ressources Humaines</a></h3>
                       <p class="text">Over the past three years, marketers have faced an arduous journey due to the
-                        rapid shifts in consumer sentiment and the rising costs associated....</p>
+                        rapid ....</p>
                     </div>
                   </article>
                   <article class="blog style-1 has_fade_anim" data-delay=".5">
                     <div class="thumb">
-                      <a href="blog-details.html"><img src="assets/imgs/blog/img-r-3.webp" alt="blog image"></a>
+                      <a href="blog-details.html"><img src="assets/imgs/gallery/Equilibre-viepro_vieperso.jpg" alt="blog image"></a>
                     </div>
                     <div class="content">
                       <div class="meta">
@@ -304,12 +304,12 @@
                       </div>
                       <h3 class="title"><a href="blog-details.html">L'equilibre Vie Professionnelle-Vie Personnelle : Un Enjeu Cle pour la Retention des Talents</a></h3>
                       <p class="text">Over the past three years, marketers have faced an arduous journey due to the
-                        rapid shifts in consumer sentiment and the rising costs associated....</p>
+                        rapid ....</p>
                     </div>
                   </article>
                   <article class="blog style-1 has_fade_anim">
                     <div class="thumb">
-                      <a href="blog-details.html"><img src="assets/imgs/blog/img-r-4.webp" alt="blog image"></a>
+                      <a href="blog-details.html"><img src="assets/imgs/gallery/leadership.jpg" alt="blog image"></a>
                     </div>
                     <div class="content">
                       <div class="meta">
@@ -318,37 +318,34 @@
                       </div>
                       <h3 class="title"><a href="blog-details.html">Developper le Leadership au Sein de Votre Entreprise</a></h3>
                       <p class="text">Over the past three years, marketers have faced an arduous journey due to the
-                        rapid shifts in consumer sentiment and the rising costs associated....</p>
+                        rapid ....</p>
                     </div>
                   </article>
                   <article class="blog style-1 has_fade_anim" data-delay=".35">
                     <div class="thumb">
-                      <a href="blog-details.html"><img src="assets/imgs/blog/img-r-5.webp" alt="blog image"></a>
+                      <a href="blog-details.html"><img src="assets/imgs/gallery/equi.jpg" alt="blog image"></a>
                     </div>
                     <div class="content">
                       <div class="meta">
-                        <a href="blog-style-1.html"><span class="tag">Business</span></a>
-                        <span class="date has-left-line">January 29, 2020</span>
+                          <a href="blog-style-1.html"><span class="tag">Coaching</span></a>
+                          <span class="date has-left-line">Juillet 27, 2024</span>
                       </div>
-                      <h3 class="title"><a href="blog-details.html">How to create your purpose-filled career comfortable
-                          clothes</a></h3>
+                      <h3 class="title"><a href="blog-details.html">L'equilibre Vie Professionnelle-Vie Personnelle</a></h3>
                       <p class="text">Over the past three years, marketers have faced an arduous journey due to the
-                        rapid shifts in consumer sentiment and the rising costs associated....</p>
+                        rapid ....</p>
                     </div>
                   </article>
                   <article class="blog style-1 has_fade_anim" data-delay=".5">
                     <div class="thumb">
-                      <a href="blog-details.html"><img src="assets/imgs/blog/img-r-6.webp" alt="blog image"></a>
+                      <a href="blog-details.html"><img src="assets/imgs/gallery/experts_human_capital_cover.jpeg" alt="blog image"></a>
                     </div>
                     <div class="content">
                       <div class="meta">
                         <a href="blog-style-1.html"><span class="tag">Business</span></a>
                         <span class="date has-left-line">January 29, 2020</span>
                       </div>
-                      <h3 class="title"><a href="blog-details.html">Sitting with your basic goodness
-                          top signs that time.</a></h3>
-                      <p class="text">Over the past three years, marketers have faced an arduous journey due to the
-                        rapid shifts in consumer sentiment and the rising costs associated....</p>
+                      <h3 class="title"><a href="blog-details.html">EHC lance une Nouvelle Plateforme de Recrutement Innovante</a></h3>
+                      <p class="text">La plateforme utilise des technologies avancées telles que l'intelligence artificielle (IA) et l'apprentissage automatique pour offrir une expérience utilisateur fluide et efficace. ....</p>
                     </div>
                   </article>
                 </div>
