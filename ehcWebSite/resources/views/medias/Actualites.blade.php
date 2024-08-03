@@ -271,10 +271,10 @@
                     </div>
                     <div class="content">
                       <div class="meta">
-					   <a href="blog-style-1.html"><span class="tag">RH</span></a>
+					   <a href="{{ route('details-actualites') }}"><span class="tag">RH</span></a>
                         <span class="date has-left-line">January 29, 2020</span>
                       </div>
-                      <h3 class="title"><a href="blog-details.html">Les Tendances Actuelles en Recrutement pour 2024</a></h3>
+                      <h3 class="title"><a href="{{ route('details-actualites') }}">Les Tendances Actuelles en Recrutement pour 2024</a></h3>
                       <p class="text">Over the past three years, marketers have faced an arduous journey due to the
                         rapid ....</p>
                     </div>

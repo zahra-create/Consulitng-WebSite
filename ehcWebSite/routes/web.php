@@ -135,3 +135,8 @@ Route::get('/detail-podcast', function () {
 Route::get('/Acualites', function () {
     return view('medias.Actualites');
 })->name('Actualites');
+
+//details-actualites
+Route::get('/details-acualites', function () {
+    return view('medias.details-actualites');
+})->name('details-actualites');
