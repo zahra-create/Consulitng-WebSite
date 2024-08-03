@@ -25,6 +25,8 @@
   <link rel="stylesheet" href="assets/css/meanmenu.min.css">
   <link rel="stylesheet" href="assets/css/magnific-popup.css">
   <link rel="stylesheet" href="assets/css/master-team-details.css">
+  <link rel="stylesheet" href="{{ url('assets/css/master-human.css') }}">
+
 
 
 
@@ -191,7 +193,7 @@
   <!-- search modal end -->
 
   <!-- Header area start -->
-  @include('partials.header2')
+  @include('partials.header')
   <!-- Header area end -->
 
   <div class="has-smooth" id="has_smooth"></div>
