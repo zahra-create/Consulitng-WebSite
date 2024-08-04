@@ -144,3 +144,6 @@ Route::get('/details-acualites', function () {
 Route::get('/condidature', function () {
     return view('carriere.condidature spontanee.condidature');
 })->name('condidature');
+Route::get('/stages', function () {
+    return view('carriere.stages.stage');
+})->name('stages');
