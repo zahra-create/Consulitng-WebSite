@@ -311,88 +311,13 @@
           <!-- blog area end  -->
 
           <!-- cta area start  -->
-          <div class="cta-area style-1">
-            <div class="container container-large">
-              <div class="cta-area-wrapper">
-                <div class="cta-left">
-                  <ul class="cta-info">
-                    <li>
-                      <p class="title">Saturday - Thursday :</p>
-                      <span>8:30 am - 10:45 pm</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="cta-right">
-                  <div class="btn-wrapper">
-                    <a class="cf_btn wc-btn-underline btn-text-flip" href="contact.html"><span
-                        data-text="Call for an appointment">Call for an appointment</span><img
-                        src="assets/imgs/icon/arrow-triangle.webp" alt=""></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+       @include('partials.disponibility')
           <!-- cta area end  -->
 
         </main>
 
         <!-- footer start  -->
-        <footer class="footer-area style-1">
-          <div class="container container-large">
-            <div class="footer-inner">
-              <div class="logo-wrapper">
-                <a href="#"><img src="assets/imgs/logo/logo-text.webp" alt="site-logo"></a>
-              </div>
-              <div class="links-wrapper">
-                <div class="footer-menu">
-                  <div class="footer-menu-item">
-                    <h2 class="title">Company</h2>
-                    <ul>
-                      <li><a href="#">Contact Us</a></li>
-                      <li><a href="#">Privacy Policy</a></li>
-                      <li><a href="#">Awards & Recognitions</a></li>
-                      <li><a href="#">Careers</a></li>
-                    </ul>
-                  </div>
-                  <div class="footer-menu-item">
-                    <h2 class="title">Explore</h2>
-                    <ul>
-                      <li><a href="#">Marketplace</a></li>
-                      <li><a href="#">Campaigns</a></li>
-                      <li><a href="#">Risk Management</a></li>
-                      <li><a href="#">Pricing</a></li>
-                    </ul>
-                  </div>
-                  <div class="footer-menu-item">
-                    <h2 class="title">Industries </h2>
-                    <ul>
-                      <li><a href="#">Economy</a></li>
-                      <li><a href="#">Financial Planning</a></li>
-                      <li><a href="#">Tax Return</a></li>
-                      <li><a href="#">Management</a></li>
-                    </ul>
-                  </div>
-                  <div class="footer-menu-item subscribe-form-item">
-                    <h2 class="title">Newsletter</h2>
-                    <form action="#" class="subscribe-form">
-                      <input type="email" placeholder="Enter your email">
-                      <button type="submit" class="subscribe-btn"> <i class="icon-wcf-paper-plane"></i> </button>
-                    </form>
-                  </div>
-                </div>
-                <div class="footer-copyright">
-                  <ul class="social-icons">
-                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-                  </ul>
-                  <p class="text-copy"> &copy; 2022 <a href="https://crowdyflow.com/">Crowdyflow</a> Agency</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
+      @include('partials.footer')
         <!-- footer end  -->
 
       </div>
