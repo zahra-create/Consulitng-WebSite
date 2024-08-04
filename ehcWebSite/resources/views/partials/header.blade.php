@@ -24,7 +24,7 @@
               <li class="menu-item-has-children">
                 <a href="#">Carrières</a>
                 <ul class="dp-menu">
-                  <li><a href="about-1.html">Offres d'Emploi</a></li>
+                  <li><a href="{{route('emplois')}}">Offres d'emploi</a></li>
                   <li><a href="{{ route('stages') }}">Stages</a></li>
                   <li><a href="{{ route('condidature') }}">Candidature spontannee</a></li>
                 </ul>

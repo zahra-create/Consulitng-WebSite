@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Binox HTML5 Template">
 
-  <title>Stages</title>
+  <title>Emplois</title>
 
   <!-- Fav Icon -->
   <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.webp">
@@ -212,10 +212,10 @@
               <div class="section-heading">
                 <div class="section-title-wrapper style-1">
                   <div class="subtitle-wrapper has_fade_anim">
-                    <span style="color:#005151;" class="section-subtitle">Stages</span>
+                    <span style="color:#005151;" class="section-subtitle">Emplois</span>
                   </div>
                   <div class="title-wrapper has_fade_anim">
-                    <h2 style="color:#005151;" class="section-title">Découvrez nos offres de stage</h2>
+                    <h2 style="color:#005151;" class="section-title">Découvrez nos offres d'emploi</h2>
                   </div>
                 </div>
               </div>
@@ -223,14 +223,14 @@
                 <div class="blog-wrapper">
                   <article class="blog style-1 has_fade_anim">
                     <div class="thumb">
-                      <a href="blog-details.html"><img src="assets/imgs/gallery/Barid1.jpg" alt="blog image"></a>
+                      <a href="{{route('details-emploi')}}"><img src="assets/imgs/gallery/Barid1 (1).jpg" alt="blog image"></a>
                     </div>
                     <div class="content">
                       <div class="meta">
-                        <a href="blog-style-1.html"><span class="tag">Rémunéré</span></a>
-                        <span class="date has-left-line">2 mois</span>
+                        <a href="blog-style-1.html"><span class="tag">15K DH</span></a>
+                        <span class="date has-left-line">CDI</span>
                       </div>
-                      <h3 class="title"><a href="blog-details.html"> Stage chez Al Barid Bank</a></h3>
+                      <h3 class="title"><a href="blog-details.html"> emploi chez Al Barid Bank</a></h3>
                       <p class="text">A la recherche d'un profil cybersécurité</p>
                     </div> 
                   </article>
@@ -240,10 +240,10 @@
                     </div>
                     <div class="content">
                       <div class="meta">
-                        <a href="blog-style-1.html"><span class="tag">Rémunéré</span></a>
-                        <span class="date has-left-line">6 mois</span>
+                        <a href="blog-style-1.html"><span class="tag">6K DH</span></a>
+                        <span class="date has-left-line">CDD</span>
                       </div>
-                      <h3 class="title"><a href="blog-details.html">Stage chez Maroc Telecom</a></h3>
+                      <h3 class="title"><a href="blog-details.html">emploi chez Maroc Telecom</a></h3>
                       <p class="text">A la recherche d'un profil developpement web</p>
                     </div>
                   </article>
@@ -253,10 +253,10 @@
                     </div>
                     <div class="content">
                       <div class="meta">
-                        <a href="blog-style-1.html"><span class="tag">Rémunéré</span></a>
-                        <span class="date has-left-line">3 mois</span>
+                        <a href="blog-style-1.html"><span class="tag">à discuté</span></a>
+                        <span class="date has-left-line">freelance</span>
                       </div>
-                      <h3 class="title"><a href="blog-details.html">Stage chez inwi</a></h3>
+                      <h3 class="title"><a href="blog-details.html">emploi chez inwi</a></h3>
                       <p class="text">A la recherche d'un profil comptable</p>
                     </div>
                   </article>
@@ -266,36 +266,42 @@
                     </div>
                     <div class="content">
                       <div class="meta">
-                        <a href="blog-style-1.html"><span class="tag">Rémunéré</span></a>
-                        <span class="date has-left-line">6 mois</span>
+                        <a href="blog-style-1.html"><span class="tag">200 DH/h</span></a>
+                        <span class="date has-left-line">freelance</span>
                       </div>
-                      <h3 class="title"><a href="blog-details.html">Stage chez Bank Al Maghrib</a></h3>
+                      <h3 class="title"><a href="blog-details.html">emploi chez Bank Al Maghrib</a></h3>
                       <p class="text">A la recherche d'un profil sécurité système</p>
                     </div>
                   </article>
                   <article class="blog style-1 has_fade_anim" data-delay=".35">
                     <div class="thumb">
-                      <a href="blog-details.html"><img src="assets/imgs/gallery/barid2.jpg" alt="blog image"></a>
+                      <a href="blog-details.html"><img src="assets/imgs/gallery/barid2.jpg" alt="blog image" style="width: 100%; height: 100%; object-fit: cover;"></a>
                     </div>
                     <div class="content">
                       <div class="meta">
-                        <a href="blog-style-1.html"><span class="tag">Rémunéré</span></a>
-                        <span class="date has-left-line">3 mois</span>
+                        <a href="blog-style-1.html"><span class="tag">10K DH</span></a>
+                        <span class="date has-left-line">CDD</span>
                       </div>
-                      <h3 class="title"><a href="blog-details.html">Stage chez Al Barid Bank</a></h3>
+                      <h3 class="title"><a href="blog-details.html">emploi chez Al Barid Bank</a></h3>
                       <p class="text">A la recherche d'un profil développement mobile</p>
                     </div>
                   </article>
                   <article class="blog style-1 has_fade_anim" data-delay=".5">
-                    <div class="thumb">
+                    <!--<div class="thumb">
                       <a href="blog-details.html"><img src="assets/imgs/gallery/ocp2.jpg" alt="blog image"></a>
+                    </div>-->
+                    <div class="thumb" style="width: 460px; height: 320px; overflow: hidden;">
+                      <a href="blog-details.html">
+                        <img src="assets/imgs/gallery/ocp2.jpg" alt="blog image" style="width: 100%; height: 100%; object-fit: cover;">
+                      </a>
                     </div>
+                    
                     <div class="content">
                       <div class="meta">
-                        <a href="blog-style-1.html"><span class="tag">Rémunéré</span></a>
-                        <span class="date has-left-line">2 mois</span>
+                        <a href="blog-style-1.html"><span class="tag">7K-9K DH</span></a>
+                        <span class="date has-left-line">CDI</span>
                       </div>
-                      <h3 class="title"><a href="blog-details.html">Stage chez OCP</a></h3>
+                      <h3 class="title"><a href="blog-details.html">emploi chez OCP</a></h3>
                       <p class="text">A la recherche d'un profil cybersécurité</p>
                     </div>
                   </article>
@@ -346,3 +352,4 @@
 </body>
 
 </html>
+
