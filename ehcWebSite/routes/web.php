@@ -140,3 +140,4 @@ Route::get('/Acualites', function () {
 Route::get('/details-acualites', function () {
     return view('medias.details-actualites');
 })->name('details-actualites');
+

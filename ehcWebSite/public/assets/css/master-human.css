@@ -3746,7 +3746,14 @@ Pagination
 
 .header__nav {
   position: relative;
+  /*display:none;*/
 }
+
+/*0000*/
+.open-offcanvas{
+	display:none;
+}
+
 
 .active {
   color: rgb(141, 207, 155) !important;
@@ -3777,6 +3784,7 @@ Pagination
   }
 }
 @media screen and (min-width: 1550px) {
+
   .container-large {
     max-width: 1550px;
   }
@@ -3805,6 +3813,12 @@ Pagination
     width: 120px;
     height: 120px;
   }
+  
+/*0000*/
+.open-offcanvas{
+	display:block;
+}
+  
 }
 .circle-text .text {
   animation: spinner 5s infinite linear;
@@ -4208,6 +4222,7 @@ body {
 }
 
 header {
+	
   margin-bottom: -1px;
   z-index: 100;
 }
@@ -4591,6 +4606,7 @@ section {
 
 .header-area.sticky {
   transition: 0.3s;
+
 }
 .header-area.sticky .main-menu li a {
   padding: 15px 20px;
@@ -7499,11 +7515,12 @@ SECTIN TITLE 8
 .offcanvas-3__area {
   background: var(--primary);
   position: fixed;
-  width: 100%;
+  width: 200px;
   height: 100%;
   padding: 50px 50px 100px;
   z-index: 1000;
   overflow: hidden;
+  right:0;
 }
 @media only screen and (max-width: 1919px) {
   .offcanvas-3__area {
@@ -8052,12 +8069,16 @@ p {
   .header-area .header-area__inner {
     margin-left: 30px;
   }
+  
 }
 @media only screen and (max-width: 1199px) {
   .header-area .header-area__inner {
     margin-left: 0;
   }
+
 }
+
+
 .box-layout .header-area .header__nav pos-center {
   padding-left: 60px;
 }
@@ -8069,6 +8090,7 @@ p {
   .header-area .header-right {
     right: 0;
   }
+  
 }
 .header-area .search-icon {
   cursor: pointer;
@@ -8091,6 +8113,7 @@ p {
   .section-lines {
     display: none;
   }
+
 }
 .section-lines .container {
   height: 100%;

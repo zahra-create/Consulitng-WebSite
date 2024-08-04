@@ -28,9 +28,14 @@
       <link rel="stylesheet" href="{{ url('assets/css/master-service-style-1.css') }}">
       <link rel="stylesheet" href="{{ url('assets/css/master-contact.css') }}">  
    
-</head>
+  
 
-<body class="font-heading-beatricetrial-regular">
+
+
+      </head>
+
+
+<body class="font-heading-hkgrotesk-bold">
 
   <!-- Preloader -->
   <div id="preloader">
@@ -38,9 +43,9 @@
       <div class="animation-preloader">
         <div class="spinner"></div>
         <div class="txt-loading">
-          <span data-text="E" class="characters">E</span>
-          <span data-text="H" class="characters">H</span>
-          <span data-text="C" class="characters">C</span>
+        <span data-text="E" class="characters">E</span>
+        <span data-text="H" class="characters">H</span>
+        <span data-text="C" class="characters">C</span>
         </div>
       </div>
       <div class="loader-section section-left"></div>
@@ -61,10 +66,43 @@
   <!-- Switcher Area Start -->
   <div class="switcher__area">
     <div class="switcher__icon">
-      <!--<button id="switcher_open"><i class="fa-solid fa-gear"></i></button>-->
-	  <button id="switcher_open"><i class="fa-solid fa-robot"></i></button>
-      <!--<button id="switcher_close"><i class="fa-solid fa-xmark"></i></button>-->
+      <button id="switcher_open"><i class="fa-solid fa-robot"></i></button>
+      <button id="switcher_close"><i class="fa-solid fa-xmark"></i></button>
     </div>
+    <div class="switcher__items">
+
+      <div class="switcher__item">
+        <div class="switch__title-wrap">
+          <p class="switcher__title">Language Support</p>
+        </div>
+        <div class="switcher__btn lang_dir wc-col-2">
+          <button class="active" data-mode="ltr">LTR</button>
+          <button data-mode="rtl">RTL</button>
+        </div>
+      </div>
+      <div class="switcher__item">
+        <div class="switch__title-wrap">
+          <p class="switcher__title">Layout</p>
+        </div>
+        <div class="switcher__btn layout-type wc-col-2">
+          <button class="active" data-mode="full-width">Full Width</button>
+          <button data-mode="box-layout">Box Layout</button>
+        </div>
+      </div>
+      <div class="switcher__item">
+        <div class="switch__title-wrap">
+          <p class="switcher__title">Cursor</p>
+        </div>
+        <div class="switcher__btn">
+          <select name="cursor-style" id="cursor_style">
+            <option value="1">default</option>
+            <option selected value="2">animated</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Switcher Area End -->
 
   <!-- offcanvas start  -->
   <div class="offcanvas-3__area">
@@ -99,16 +137,31 @@
       <div class="offcanvas-3__menu-wrapper">
         <nav class="nav-menu offcanvas-3__menu">
           <ul>
+            <li><a href="">A propos</a></li>
+            <li><a href="consultant-bank.html">consultant-bank</a></li>
+            <li><a href="consultant-business.html">consultant-business</a></li>
+            <li><a href="consultant-corporate.html">consultant-corporate</a></li>
+            <li><a href="consultant-financial.html">consultant-financial</a></li>
             <li><a href="consultant-human.html">consultant-human</a></li>
-
+            <li><a href="consultant-insurance.html">consultant-insurance</a></li>
+            <li><a href="consultant-it.html">consultant-it</a></li>
+            <li><a href="consultant-management.html">consultant-management</a></li>
+            <li><a href="consultant-marketing.html">consultant-marketing</a></li>
+            <li><a href="consultant-tax.html">consultant-tax</a></li>
+            <li><a href="consultant-travel.html">consultant-travel</a></li>
+            <li><a href="about-1.html">about-1</a></li>
             <li><a href="about-2.html">about-2</a></li>
-
+            <li><a href="service-style-1.html">service style -1</a></li>
+            <li><a href="service-style-2.html">service style -2</a></li>
+            <li><a href="service-style-3.html">service style -3</a></li>
             <li><a href="service-style-4.html">service style -4</a></li>
-
+            <li><a href="service-style-5.html">service style -5</a></li>
+            <li><a href="service-style-6.html">service style -6</a></li>
             <li><a href="service-details.html">service details</a></li>
-
+            <li><a href="faq.html">faq</a></li>
             <li><a href="projects.html">project</a></li>
-
+            <li><a href="price-style-1.html">price-style-1</a></li>
+            <li><a href="faq.html">price-style-1</a></li>
             <li><a href="project-details.html">project details</a></li>
             <li><a href="blog-style-1.html">blog style -1</a></li>
             <li><a href="blog-details.html">blog details</a></li>
@@ -129,7 +182,7 @@
         <div class="modal-body">
           <form action="#" class="form-search">
             <input type="text" placeholder="Search">
-			<button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>   <!--Recherche-icon-->
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
           </form>
         </div>
       </div>

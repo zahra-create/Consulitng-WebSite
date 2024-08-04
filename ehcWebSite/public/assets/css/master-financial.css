@@ -4589,6 +4589,7 @@ section {
 
 .header-area.sticky {
   transition: 0.3s;
+
 }
 .header-area.sticky .main-menu li a {
   padding: 15px 20px;
@@ -4604,7 +4605,7 @@ section {
   height: 60px !important;
 }
 .header-area.sticky .header__logo img {
-  max-width: 70px;
+  max-width: 50px;
 }
 
 /* Preloader */
@@ -7488,13 +7489,14 @@ SECTIN TITLE 8
 }
 
 .offcanvas-3__area {
-  background: var(--primary);
+  background: #d8e7e3a8;
   position: fixed;
-  width: 100%;
-  height: 100%;
+  width: 300px;
+  height: 720px;
   padding: 50px 50px 100px;
   z-index: 1000;
   overflow: hidden;
+  backdrop-filter: blur(10px);
 }
 @media only screen and (max-width: 1919px) {
   .offcanvas-3__area {
@@ -7504,6 +7506,7 @@ SECTIN TITLE 8
 @media (max-height: 500px) {
   .offcanvas-3__area {
     padding: 40px;
+
   }
 }
 .offcanvas-3__inner {
@@ -7639,18 +7642,18 @@ SECTIN TITLE 8
 .offcanvas-3__menu li a {
   font-size: 120px;
   font-size: 8vh;
-  color: var(--secondary);
+  /*color: var(--secondary);*/
   text-transform: capitalize;
   font-weight: 600;
   line-height: 0.9;
   position: relative;
   transition: all 0.5s cubic-bezier(0, 0, 0.23, 1);
   text-decoration: none;
-  /*-webkit-background-clip: text;*/
-  -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(90deg, #fff, #ddd 50%, #666 0);
-  background-size: 200% 100%;
-  background-position: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #005151;
+  background-image: linear-gradient(90deg, #fff, #ddd 50%, #66666603 0);
+  /*background-size: 200% 100%;*/
+  /*background-position: 100%;*/
   transform: perspective(359px) rotateY(-18deg);
 }
 .offcanvas-3__menu li a:hover {
@@ -7670,13 +7673,16 @@ SECTIN TITLE 8
 }
 @media only screen and (max-width: 991px) {
   .offcanvas-3__menu li a {
-    font-size: 5vw;
+     font-size: 5vw;
+
+
   }
 }
 .offcanvas-3__menu-wrapper {
   display: flex;
   align-items: flex-end;
   overflow-y: hidden;
+
 }
 
 .offcanvas-3__area {
