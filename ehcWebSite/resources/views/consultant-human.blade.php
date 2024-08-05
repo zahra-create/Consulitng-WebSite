@@ -290,7 +290,7 @@
 		  
 		  <!-- Valeurs et engagements start  -->
        
-          <section class="service-area style-6 section-spacing line-area" >       <!--style="padding-top:90px;">-->
+          <section class="service-area style-6 section-spacing line-area" style="padding-top:90px;" >       <!--style="padding-top:90px;">-->
             <div class="section-lines">
               <div class="container">
                 <div class="line-area">
@@ -377,31 +377,38 @@
 
 <!-- BU start -->
 
-          <section class="services-area section-spacing pin__area" >			<!--style="padding-top:0px;"-->
-			<div class="container container-large">
+				<div class="section-title-wrapper style-2">
+				   		<div class="title-wrapper" style="text-align: center;">
+                        <h2 class="section-title" style="text-decoration-line: none; color: rgb(0, 81, 81);">NOS BUSINESS UNITS</h2>
+                      </div>
+                    </div>
+            <section class="services-area section-spacing pin__area">
+            <div class="container container-large">
               <div class="services-area-inner">
+
                 <div class="section-heading pin__element">
+
                   <div class="thumb has_fade_anim">
                     <div class="btn-wrapper pos-center btn-move">
                       <a class="cf_btn wc-btn-play light btn-item video-popup" href="assets/video/team-planning.mp4">
                         <i class="fa-solid fa-play"></i>
                       </a>
                     </div>
-		    <div >   <!--style="margin-bottom:20px;"-->
-			<h2 style="font-weight:600;color:rgb(0, 81, 81); font-size:50px;">NOS BUSINESS UNITS</h2> 
-			<br>
-			<br>
-			</div>
-        <img src="assets/imgs/gallery/img-s-1.png" alt="image" >  <!--style="margin-bottom:20px;"-->
-		
-		<div class="header__meta d-none d-md-block" >   <!--style="margin-left:70px;"-->
-            <a href="{{ route('demande-devis') }}" class="cf_btn wc-btn-primary btn-text-flip" style="background-color:rgb(0, 81, 81); border:rgb(0, 81, 81);"><span data-text="Demander services">Demander services</span> <img src="assets/imgs/icon/icon-r-21.webp" alt="arrow-icon"> </a>
-          </div>
+                    <img src="assets/imgs/gallery/img-s-1.png" alt="image">
                   </div>
-				  
                   <div class="content has_fade_anim">
+
+
                     <div class="">
 
+                     <!-- <div class="text-wrapper">
+                        <p class="text">Nanotechnology immersion along the information highway will close the loop on
+                          focusing solely on the bottom line.
+                        </p>
+                      </div> -->
+                      <div class="btn-wrapper">
+                  <a href="{{ route('demande-devis') }}" class="cf_btn wc-btn-primary btn-text-flip" style="background-color:rgb(0, 81, 81); border:rgb(0, 81, 81);"><span data-text="Demander services">Demander services</span> <img src="assets/imgs/icon/icon-r-21.webp" alt="arrow-icon"> </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -511,10 +518,10 @@
             <div class="container">
               <div class="counter-item-wrapper">
                 <div class="counter-item has_fade_anim" data-fade-from="left" >
-                  <h2 class="title" style="color: #005151; font-size:40px; font-weight: 700; padding-top:20px; padding-right:35px;">EHC En Chiffres</h2>
+                  <h2 class="title" style="color: #005151; padding-right:35px; font-size:40px; font-weight: 700;">EHC En Chiffres</h2>  <!-- padding-top:20px; padding-right:35px; font-size:40px; font-weight: 700;-->
                 </div>
-                <div class="team-item" style="padding-top:100px;" >
-                  <div class="cf_text has_fade_anim" style="width:300px; margin-right:15px; ">
+                <div class="team-item" >   <!--style="padding-top:100px;"-->
+                  <div class="cf_text has_fade_anim" >   <!--style="width:300px; margin-right:15px;"-->
                     <p class="text" style="color: black; font-size: 18px">EHC mobilise pour vous une équipe de haut dirigeants et cadres exerçant dans les sphères des secteurs public et privé et ayant en moyenne plus de 20 ans d'expérience dans leurs domaines de compétence.</p>
                   </div>
 				<div class="btn-wrapper" style="margin-top:50px; margin-right:15px;"  >
@@ -645,7 +652,7 @@
             <div class="container">
               <div class="brand-inner">
                 <div class="brand-text">
-                  <div class="brand-text-title-wrapper" style="padding-top:50px;">
+                  <div class="brand-text-title-wrapper" >  <!--style="padding-top:50px;"-->
                     <h2 class="title" style="font-weight:900; font-size:23px; color:rgb(0, 81, 81);">Nos partenaires</h2>
                   </div>
                 </div>

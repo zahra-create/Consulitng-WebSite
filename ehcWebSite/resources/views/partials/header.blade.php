@@ -2,7 +2,7 @@
     <div class="container container-large">
       <div class="header-area__inner">
       <div class="header__logo d-block d-lg-none" >
-         <a href="index.html">
+         <a href="{{ route('home')}}">
             <img src="{{ url('assets/imgs/logo/logoEHC.png') }}" alt="Site Logo" >  
           </a> 
         </div>

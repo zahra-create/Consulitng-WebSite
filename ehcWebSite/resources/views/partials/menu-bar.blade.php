@@ -1,15 +1,15 @@
   <!-- offcanvas start  -->
   <div class="offcanvas-3__area">
-    <div class="offcanvas-3__inner">
-      <div class="offcanvas-3__meta-wrapper">
+    <!--<div class="offcanvas-3__inner">
+      <div class="offcanvas-3__meta-wrapper">-->
         <div class="">
           <button id="close_offcanvas" class="close-button close-offcanvas" onclick="hideCanvas3()">
             <span></span>
             <span></span>
           </button>
         </div>
-        <div class="">
-         <!-- <div class="offcanvas-3__meta mb-145 d-none d-md-block">
+        <!--<div class="">
+          <div class="offcanvas-3__meta mb-145 d-none d-md-block">
             <ul>
               <li><a href="tel:+2-352698102" class="unnerline"><u>+2-352 698 102</u></a></li>
               <li><a href="mailto:contact@me.com">contact@me.com</a></li>
@@ -25,9 +25,9 @@
               <a href=""><i class="fa-brands fa-dribbble"></i></a>
               <a href=""><i class="fa-brands fa-instagram"></i></a>
             </div>
-          </div> -->
+          </div> 
         </div>
-      </div> 
+      </div>  -->
       <div class="offcanvas-3__menu-wrapper">
         <nav class="nav-menu offcanvas-3__menu">
           <ul>
