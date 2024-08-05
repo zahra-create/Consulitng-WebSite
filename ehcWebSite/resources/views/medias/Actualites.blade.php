@@ -139,7 +139,7 @@
 
          <!-- banner area start  -->
           <section class="banner-area p-relative fix zi-1 banner-1"  >
-            <div class="swiper baner-active-1" style=" height:100vh; ">
+            <div class="swiper baner-active-1" style=" height:60vh; ">
               <div class="swiper-wrapper">
                 <div class="swiper-slide" >
                   <div class="swiper-slide-item">
