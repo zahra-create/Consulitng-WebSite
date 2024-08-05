@@ -35,10 +35,10 @@
             <li><a href="{{ route('service-entreprise') }}"> Services Entreprises</a></li>
             <li><a href="{{ route('service-fonctionnaire') }}">Services Salariés</a></li>
             <li><a href="{{ route('service-etudiant') }}">Services Etudiants</a></li>
-            <li><a href="consultant-financial.html">Offres d'Emploi</a></li>
-            <li><a href="consultant-human.html">Stages</a></li>
-            <li><a href="consultant-insurance.html">Candidature spontannee</a></li>
-            <li><a href="consultant-it.html">Blog</a></li>
+            <li><a href="{{ route('playlists') }}">Offres d'Emploi</a></li>
+            <li><a href="{{ route('stages') }}">Stages</a></li>
+            <li><a href="{{ route('condidature') }}">Candidature spontannee</a></li>
+            <li><a href="{{ route('blogs') }}">Blog</a></li>
             <li><a href="{{ route('playlists') }}">Videos</a></li>
             <li><a href="{{ route('Podcasts') }}">Podcasts</a></li>
             <li><a href="{{ route('contact') }}">Contact</a></li>
