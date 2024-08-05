@@ -363,7 +363,7 @@
                 </div>
                 <div class="services-wrapper">
                   <div class="has_fade_anim">
-                    <a href="service-details.html">
+                    <a href="{{ route('conseil') }}">
                       <div class="service-item">
                         <span class="number" style="font-weight:700;color:rgb(0, 81, 81); font-size:30px;">01</span>
                         <div class="content-wrapper">
@@ -380,7 +380,7 @@
                     </a>
                   </div>
                   <div class="has_fade_anim">
-                    <a href="service-details.html">
+                    <a href="{{ route('recruitement') }}">
                       <div class="service-item">
                         <span class="number" style="font-weight:700;color:rgb(0, 81, 81); font-size:30px;">02</span>
                         <div class="content-wrapper">
@@ -396,7 +396,7 @@
                       </div>
                     </a>
                   </div>
-                  <div class="has_fade_anim">
+                  <div class="{{ route('formation') }}">
                     <a href="service-details.html">
                       <div class="service-item">
                         <span class="number" style="font-weight:700;color:rgb(0, 81, 81); font-size:30px;">03</span>
@@ -414,7 +414,7 @@
                     </a>
                   </div>
                   <div class="has_fade_anim">
-                    <a href="service-details.html">
+                    <a href="{{ route('event') }}">
                       <div class="service-item">
                         <span class="number" style="font-weight:700;color:rgb(0, 81, 81); font-size:30px;">04</span>
                         <div class="content-wrapper">
@@ -430,7 +430,8 @@
                       </div>
                     </a>
                   </div>
-                  <div class="has_fade_anim" href="service-details.html">
+                  <div class="has_fade_anim" >
+				  <a href="{{ route('ingenierie') }}">
                     <div class="service-item">
                       <span class="number" style="font-weight:700;color:rgb(0, 81, 81); font-size:30px;">05</span>
                       <div class="content-wrapper">

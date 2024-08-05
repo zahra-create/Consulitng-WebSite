@@ -144,6 +144,18 @@ Route::get('/details-acualites', function () {
 Route::get('/condidature', function () {
     return view('carriere.condidature spontanee.condidature');
 })->name('condidature');
+
+//offre de stage 
 Route::get('/stages', function () {
     return view('carriere.stages.stage');
 })->name('stages');
+
+// offre d'emploi 
+Route::get('/emplois', function () {
+    return view('carriere.emplois.emplois');
+})->name('emplois');
+
+//details-emploi 
+Route::get('/deatils-emploi', function () {
+    return view('carriere.emplois.details-emplois');
+})->name('details-emploi');

@@ -35,7 +35,7 @@
             <li><a href="{{ route('service-entreprise') }}"> Services Entreprises</a></li>
             <li><a href="{{ route('service-fonctionnaire') }}">Services Salariés</a></li>
             <li><a href="{{ route('service-etudiant') }}">Services Etudiants</a></li>
-            <li><a href="{{ route('playlists') }}">Offres d'Emploi</a></li>
+            <li><a href="{{ route('emplois') }}">Offres d'Emploi</a></li>
             <li><a href="{{ route('stages') }}">Stages</a></li>
             <li><a href="{{ route('condidature') }}">Candidature spontannee</a></li>
             <li><a href="{{ route('blogs') }}">Blog</a></li>

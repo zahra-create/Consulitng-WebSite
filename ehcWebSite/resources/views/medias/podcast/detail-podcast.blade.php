@@ -142,7 +142,7 @@
 			   <div class="btn-wrapper has_fade_anim pin__element" data-fade-from="left" >
 
        <!--<div class="player" style="height:300px; width:200;">-->
-       <div class="wrapper" style=" height:450px; margin-right:70px; background-color:#00515114;">  <!--style="width:250; height:400px; "-->
+       <div class="wrapper" style=" height:450px; margin:auto; margin-bottom:50px; margin-top:50px; background-color:#00515114; width:380px;">  <!--style="width:250; height:400px; "-->
            <div class="details">
                <div class="now-playing">PLAYING x OF y</div>
                <!--<div class="track-art>--> <img class="track-art" src="assets/imgs/podcasts/femme.png" alt="podcast"><!-- </div>-->

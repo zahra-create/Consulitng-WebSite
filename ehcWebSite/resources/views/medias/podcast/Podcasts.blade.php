@@ -136,9 +136,9 @@
 
           <!-- blog area start  -->
           <section class="blog-area section-spacing pin__area">
-            <div class="container" style="margin-top:50px;">
+            <div class="container" style="margin-top:100px;">
               <div class="blog-area-inner">
-		   <div class="btn-wrapper has_fade_anim pin__element" data-fade-from="left" style="width:350px;">
+		   <div class="btn-wrapper has_fade_anim pin__element" data-fade-from="left" >   <!--style="width:350px;">-->
           <div class="header">
             <h3 class="title-2" style="margin-bottom:10px; color:#005151;">Newsletter</h3>
             <p>Inscrivez-vous à notre newsletter pour recevoir nos dernières actualités.</p>
@@ -149,7 +149,7 @@
               <i class="icon-wcf-paper-plane" style="color:rgb(85, 85, 85); font-size:20px;"></i></button>
           </form>
                 </div>
-                <div class="blog-main-wrapper">
+                <div class="blog-main-wrapper" style="margin-top:50px;">
                   <div class="section-heading">
                     <div class="section-title-wrapper">
                       <div class="title-wrapper has_fade_anim">

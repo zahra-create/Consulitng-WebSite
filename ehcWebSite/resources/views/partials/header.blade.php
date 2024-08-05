@@ -9,7 +9,7 @@
         <div class="header__nav">
           <nav class="main-menu">
             <ul>
-              <li class="menu-item-has-no"><a href="{{route('about')}}">A propos</a></li>
+              <li class="menu-item-has-no" style="width:111px; "><a href="{{route('about')}}">A propos</a></li>
               <li class="menu-item-has-children"><a href="service-style-4.html">Services</a>
                 <ul class="dp-menu">
                  <!-- <li><a href="service-details.html">Services Entreprise</a></li>
@@ -24,7 +24,7 @@
               <li class="menu-item-has-children">
                 <a href="#">Carrières</a>
                 <ul class="dp-menu">
-                  <li><a href="about-1.html">Offres d'Emploi</a></li>
+                  <li><a href="{{route('emplois')}}">Offres d'emploi</a></li>
                   <li><a href="{{ route('stages') }}">Stages</a></li>
                   <li><a href="{{ route('condidature') }}">Candidature spontannee</a></li>
                 </ul>

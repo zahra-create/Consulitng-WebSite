@@ -137,64 +137,69 @@
 
 
         <main>
-		
-		          <!-- start intro area -->
-          <section class="banner-area banner-9">
-            <div class="section-lines">
-              <div class="container">
-               <!-- <div class="line-area">
-                  <div class="lines">
-                    <div class="line line-1"></div>
-                    <div class="line line-1"></div>
-                    <div class="line line-1"></div>
-                    <div class="line line-1"></div>
-                  </div> 
-                </div> -->
+         		
+
+          <!-- contact intro start  -->
+          <section class="contact-intro">
+            <div class="container">
+              <div class="section-heading">
+                <div class="section-title-wrapper">
+                  <!--<div class="subtitle-wrapper has_fade_anim">
+                    <span class="section-subtitle">Demander devis</span>
+                  </div> -->
+                  <div class="title-wrapper has_fade_anim">
+                    <h2 class="section-title" style=" color:#005153;" >Bienvenue sur notre page de demande de devis.</h2>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="banner-wrapper">
-             <div class="banner-left">
-                <!--<div class="logo">
-                  <a href="index.html"><img src="assets/imgs/logo/logo-vertical.webp" alt="logo"></a>
-                </div> -->
-              </div> 
-              <div class="banner-right">
-                <div class="container container-large">
-                  <div class="banner-content-wrapper" style="grid-template-columns: 1fr 2fr;">
-				    <div class="thumb-wrapper" >
-                      <div class="cf_thumb has_fade_anim" data-delay=".65" data-ease="slow(0.7,0.7,false)" >
-                        <img src="assets/imgs/gallery/img-r-23.webp" alt="gallary" style="height:400px;">   <!--style="height:400px;"-->
-                     </div>
-                    </div> 
-                    <div class="content" >
-					  <h2 class="title has_fade_anim" style="color:rgb(0, 81, 81); font-size:60px;">Bienvenue sur notre page de demande de devis.</h2>
-                      <div class="cf_text has_fade_anim" data-delay=".35">
-						<p class="text" style="font-size:30px;">En tant qu'experts en ressources humaines, nous sommes dédiés à vous fournir des solutions sur mesure pour répondre à vos besoins spécifiques. </p>
-                      </div>
-                    <!--  <div class="btn-wrapper has_fade_anim" data-delay=".5">
-                        <a href="about-1.html" class="cf_btn wc-btn-primary btn-text-flip"><span
-                            data-text="Demander services">Découvrir nos services </span> <img src="assets/imgs/icon/icon-r-21.webp" alt="arrow-icon"></a>
-                      </div> -->
+            <div class="location-thumb has_fade_anim">
+              <img src="assets/imgs/gallery/devis.jpg" alt="demande-devis">
+              <div class="container">
+                <div class="location-info-wrapper has_fade_anim">
+                  <div class="location-info">
+                   <!-- <div class="logo">
+                      <img src="assets/imgs/logo/logo.webp" alt="logo">
                     </div>
-
+                    <h3 class="title">Bienvenue sur notre page de demande de devis</h3> -->
+                    <!--<ul class="info-list">
+                      <li><a href="#">+01-75-0660-605</a></li>
+                      <li><a href="#">hello@binox-consultant.com</a></li>
+                    </ul> -->
+                    <p class="text">En tant qu'experts en ressources humaines, nous sommes dédiés à vous fournir des solutions sur mesure pour répondre à vos besoins spécifiques.</p>
                   </div>
                 </div>
               </div>
             </div>
           </section>
-          <!-- end intro area -->
-         		
+          <!-- contact intro end  -->
+
           <!-- contact area start  -->
-          <section class="contact-area section-spacing" style="padding-top:80px;" >
-		<div class="cf_text has_fade_anim" data-delay=".35" style="padding-left:100px; padding-bottom:80px; ">
-		<p class="text" style="font-size:30px;">Veuillez remplir le formulaire ci-dessous pour obtenir un devis personnalisé </p>
-        </div>
+          <section class="contact-area section-spacing">
             <div class="container">
-              <div class="contact-area-inner" >
-                <div class="contact-wrapper has_fade_anim" >
+              <div class="contact-area-inner">
+                <div class="section-heading">
+                  <div class="section-title-wrapper style-6">
+                    <div class="title-wrapper has_fade_anim">
+                      <h2 class="section-title">Demander
+                        <span>un</span>
+                        devis 
+                      </h2>
+                    </div>
+                  </div>
+                  <div class="line-vertical"></div>
+                 <!-- <div class="meta-list has_fade_anim">
+                    <ul>
+                      <li><a href="mailto:inquiry@binox.com">LiveChat@binox.skype</a></li>
+                    </ul>
+                  </div> -->
+                  <div class="logo has_fade_anim">
+                    <a href="#"><img src="assets/imgs/logo/logo.webp" alt="logo"></a>
+                  </div>
+                </div>
+                <div class="contact-wrapper has_fade_anim">
                   <form>
-				    <div></div>
-                    <div class="wc-single-input" >
+                    <div class="wc-single-input">
                       <label for="name" class="wc-form-label">Nom</label>
                       <input type="text" id="name">
                     </div>
@@ -217,7 +222,7 @@
                     <div class="wc-single-input">
                       <label for="website" class="wc-form-label">Service</label>
                       <select>
-                        <option value="1" selected>Conseil</option>
+                      <option value="1" selected>Conseil</option>
                         <option value="2">Recrutement</option>
                         <option value="3">Formation</option>
 						<option value="4" >Evènement et Services aux entreprises</option>
@@ -226,12 +231,12 @@
                       </select>
                     </div>
                     <div class="wc-single-input">
-                      <label for="Description" class="wc-form-label">Description</label>
-                      <textarea id="Description" placeholder="Décrire votre besoin....."></textarea>
+                      <label for="message" class="wc-form-label">Description</label>
+                      <textarea id="message" placeholder="Décrire votre besoin....."></textarea>
                     </div>
                     <div class="btn-wrapper">
-                      <button type="submit" class="wc-btn-primary btn-text-flip"><span data-text="Demander Devis">Demander
-                          Devis</span> <i class="fa fa-caret-right"></i> </button>
+                      <button type="submit" class="wc-btn-primary btn-text-flip"><span data-text="Demander Devis">Demander Devis
+                         </span> <i class="fa fa-caret-right"></i> </button>
                     </div>
                   </form>
                 </div>
@@ -240,60 +245,11 @@
           </section>
           <!-- contact area end  -->
 
-          <!-- cta area start  -->
-          <div class="cta-area style-1">
-            <div class="container container-large">
-              <div class="cta-area-wrapper">
-               <!-- <div class="cta-left">
-                  <ul class="cta-info">
-                    <li>
-                      <h3 class="title">Saturday - Thursday :</h3>
-                      <span>8:30 am - 10:45 pm</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="cta-right">
-                  <div class="btn-wrapper">
-                    <a class="cf_btn wc-btn-underline btn-text-flip" href="blog-style-1.html"><span
-                        data-text="Call for an appointment">Call for an appointment</span><img
-                        src="assets/imgs/icon/arrow-triangle.webp" alt=""></a>
-                  </div>
-                </div> -->
-              </div>
-            </div>
-          </div>
-          <!-- cta area end  -->
-
-
-        <!-- contact intro start  -->
-          <section class="contact-intro">
-
-            <div class="location-thumb has_fade_anim">
-              <img src="assets/imgs/gallery/map.webp" alt="location-image">
-              <div class="container">
-                <div class="location-info-wrapper has_fade_anim">
-                  <div class="location-info">
-                    <div class="logo">
-                      <img src="assets/imgs/logo/logo.webp" alt="logo">
-                    </div>
-                    <h3 class="title">Contact info:</h3>
-                    <ul class="info-list">
-                      <li><a href="#">+212 6 63-80-85-01</a></li>
-                      <li><a href="#">contact@expertshumancapital.com</a></li>
-                    </ul>
-                    <p class="text">Rue du Calvon Bv Abdelmoumen- Casablanca</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- contact intro end  -->
 		
           @include('partials.disponibility')
         </main>
-        
-        @include('partials.footer')
 
+        @include('partials.footer')
       </div>
     </div>
   </div>
