@@ -1,10 +1,10 @@
 <header class="header-area">
     <div class="container container-large">
       <div class="header-area__inner">
-      <div class="header__logo d-block d-lg-none">
-          <a href="index.html">
-            <img src="{{ url('assets/imgs/logo/logoEHC.png') }}" alt="Site Logo">  
-          </a>
+      <div class="header__logo d-block d-lg-none" >
+         <a href="index.html">
+            <img src="{{ url('assets/imgs/logo/logoEHC.png') }}" alt="Site Logo" >  
+          </a> 
         </div>
         <div class="header__nav">
           <nav class="main-menu">
@@ -44,20 +44,23 @@
         </div>
         <div class="header-right">
           <div class="header__meta d-none d-md-block">
-            <a href="contact.html" class="cf_btn wc-btn-primary btn-text-flip"><span data-text="Payer Prestations">Payer Prestations</span> <img src="assets/imgs/icon/icon-r-21.webp" alt="arrow-icon"> </a>
+            <a href="contact.html" class="cf_btn wc-btn-primary btn-text-flip"><span data-text="Payer Prestations">Payer prestations</span> <img src="assets/imgs/icon/icon-r-21.webp" alt="arrow-icon"> </a>
+          </div>
+          <div class="header__meta d-none d-md-block">
             <a href="{{ route('demande-devis') }}" class="cf_btn wc-btn-primary btn-text-flip"><span data-text="Demander devis">Demander devis
             </span> <img src="assets/imgs/icon/icon-r-21.webp" alt="arrow-icon"> </a>
           </div>
-          <div class="header__search d-none d-md-block">
-            <div class="search-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          <!--<div class="header__search d-none d-md-block">
+            <div class="search-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> -->
 			    <!--    <i class="fa-solid fa-gear"></i> -->
                <!-- <i class="fa-solid fa-magnifying-glass"></i>  -->
-               <img src="assets/imgs/icon/search.webp" alt="search">
+          <!--     <img src="assets/imgs/icon/search.webp" alt="search">
             </div>
-          </div>
+          </div> -->
           <div class="header__nav">
             <button onclick="showCanvas3()" class="open-offcanvas">
-              <img src="assets/imgs/icon/bar-dot.webp" alt="menu bar"></button>
+              <!--<img src="assets/imgs/icon/bar-dot.webp" alt="menu bar">-->
+              <i class="fa-solid fa-bars" style="color:rgb(0, 81, 81); font-size:50px;"></i></button>
           </div>
         </div>
       </div>
