@@ -299,8 +299,19 @@
 
 
   // 11. Pin Active
-  var pin_fixed = document.querySelector('.pin__element');
-  if (pin_fixed && device_width > 991) {
+  var device_widthh = window.innerWidth; 
+  var pinElement = document.getElementById('pinElement');
+  //var pin_fixed = document.querySelector('.pin__element');
+
+  if (device_widthh <= 991) {
+    // Si l'écran est petit, retirez la classe 'pin__element' et désactivez ScrollTrigger
+    pinElement.classList.remove('pin__element');
+    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+}
+ // if (pin_fixed && device_width > 991)
+   else  {         
+    // Si l'écran est grand, ajoutez la classe 'pin__element' et activez ScrollTrigger
+    pinElement.classList.add('pin__element');
 
     gsap.to(".pin__element", {
       scrollTrigger: {

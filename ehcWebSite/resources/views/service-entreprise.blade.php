@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="{{ url('assets/css/master-service-style-5.css') }}">
   <link rel="stylesheet" href="{{ url('assets/css/master-human.css') }}">
   <link rel="stylesheet" href="{{ url('assets/css/master-financial.css') }}">
-
+ <!-- <link rel="stylesheet" href="{{ url('assets/css/pin_to_fix.css') }}"> -->
 
 
 </head>
@@ -213,7 +213,7 @@
             <div class="container container-medium">
               <div class="service-wrapper">
                 <div class="section-content">
-                  <div class="section-heading pin__element">
+                  <div id="pinElement" class="section-heading pin__element">
                     <div class="section-title-wrapper">
                       <div class="title-wrapper has_fade_anim">
                         <h1 class="section-title">Bienvenue chez les services EHC</h1>
