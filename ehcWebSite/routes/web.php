@@ -96,7 +96,6 @@ Route::get('/blog-details', function () {
 
 
 
-
 //contact page routes
 Route::get('/contact', function () {
     return view('contact');
@@ -141,3 +140,10 @@ Route::get('/details-acualites', function () {
     return view('medias.details-actualites');
 })->name('details-actualites');
 
+// condidature 
+Route::get('/condidature', function () {
+    return view('carriere.condidature spontanee.condidature');
+})->name('condidature');
+Route::get('/stages', function () {
+    return view('carriere.stages.stage');
+})->name('stages');

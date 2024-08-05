@@ -25,8 +25,8 @@
                 <a href="#">Carrières</a>
                 <ul class="dp-menu">
                   <li><a href="about-1.html">Offres d'Emploi</a></li>
-                  <li><a href="about-2.html">Stages</a></li>
-                  <li><a href="team-style-1.html">Candidature spontannee</a></li>
+                  <li><a href="{{ route('stages') }}">Stages</a></li>
+                  <li><a href="{{ route('condidature') }}">Candidature spontannee</a></li>
                 </ul>
               </li>
               <li class="menu-item-has-children"><a href="service-style-4.html">Medias</a>
