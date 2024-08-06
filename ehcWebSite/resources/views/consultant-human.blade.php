@@ -364,12 +364,12 @@
                 <div class="services-wrapper">
                   <div class="has_fade_anim">
                     <a href="{{ route('conseil') }}">
-                      <div class="service-item">
+                      <div class="service-item " >
                         <span class="number" style="font-weight:700;color:rgb(0, 81, 81); font-size:30px;">01</span>
                         <div class="content-wrapper">
-                          <div class="content">
+                          <div class="content" style="width:100vw;" >
                             <h3 class="title" style="font-weight:600;color:rgb(0, 81, 81);" data-text="EHC Consulting">EHC Consulting</h3>
-                            <p class="text">Votre partenaire stratégique pour une transformation intégrale et performance optimale, alliant expertise en management des organisation digitalisation.</p>
+                            <p class="text" >Votre partenaire stratégique pour une transformation intégrale et performance optimale, alliant expertise en management des organisation digitalisation.</p>
                           </div>
                           <div class="btn-wrapper">
                             <span class="cf_btn wc-btn-normal"><i class="fa-solid fa-caret-right"></i>
