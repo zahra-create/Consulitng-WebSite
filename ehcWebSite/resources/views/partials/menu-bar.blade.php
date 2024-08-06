@@ -1,3 +1,10 @@
+<style>
+        .offcanvas-3__menu ul::before {
+            width: 0px;
+            height: 0px;
+        }
+    </style>
+
   <!-- offcanvas start  -->
   <div class="offcanvas-3__area">
     <!--<div class="offcanvas-3__inner">
