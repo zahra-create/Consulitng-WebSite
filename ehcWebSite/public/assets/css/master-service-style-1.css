@@ -8171,6 +8171,14 @@ Service Style 01
     font-size: 24px;
   }
 }
+
+/*00*/
+@media (max-width: 991px) {
+.services-area .services-area-inner {
+     display:inline;	
+}
+}
+
 .service-item .title:before {
   position: absolute;
   top: 100%;
