@@ -3,6 +3,8 @@
             width: 0px;
             height: 0px;
         }
+        .offcanvas-3__menu ul li{
+        padding-left:0px;}
     </style>
 
   <!-- offcanvas start  -->
@@ -10,7 +12,7 @@
     <!--<div class="offcanvas-3__inner">
       <div class="offcanvas-3__meta-wrapper">-->
         <div class="">
-          <button id="close_offcanvas" class="close-button close-offcanvas" onclick="hideCanvas3()">
+          <button id="close_offcanvas" class="close-button close-offcanvas" onclick="hideCanvas3()" style="margin-bottom:20px;" >
             <span></span>
             <span></span>
           </button>
