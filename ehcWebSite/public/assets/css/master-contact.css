@@ -3289,7 +3289,7 @@ h5,
 h6 {
   padding: 0;
   margin: 0;
-  color: var(--primary);
+  color:#005153;
   font-family: var(--font_secondary);
 }
 
@@ -3379,6 +3379,7 @@ h1 {
 
 h2 {
   font-size: 36px;
+  color:#005153;
 }
 
 h3 {
@@ -3489,6 +3490,7 @@ h6 {
   font-family: var(--font_hkgrotesk);
   font-weight: 600;
   line-height: 1;
+  color:#005153;
 }
 .font-heading-hkgrotesk-bold h1,
 .font-heading-hkgrotesk-bold h2,
@@ -5822,15 +5824,18 @@ SECTIN TITLE 1
 }
 .section-title-wrapper.style-1 .section-title {
   font-size: 50px;
+  color:#005153;
 }
 @media only screen and (max-width: 991px) {
   .section-title-wrapper.style-1 .section-title {
     font-size: 40px;
+	color:#005153;
   }
 }
 @media only screen and (max-width: 767px) {
   .section-title-wrapper.style-1 .section-title {
     font-size: 25px;
+	color:#005153;
   }
 }
 .section-title-wrapper.style-1 .cf_text {
@@ -5850,25 +5855,30 @@ SECTIN TITLE 2
   text-decoration-line: underline;
   text-underline-offset: 6px;
   text-decoration-thickness: 2px;
+  color:#005153;
 }
 @media only screen and (max-width: 1919px) {
   .section-title-wrapper.style-2 .section-title {
     font-size: 45px;
+	color:#005153;
   }
 }
 @media only screen and (max-width: 1199px) {
   .section-title-wrapper.style-2 .section-title {
     font-size: 40px;
+	color:#005153;
   }
 }
 @media only screen and (max-width: 767px) {
   .section-title-wrapper.style-2 .section-title {
     font-size: 35px;
+	color:#005153;
   }
 }
 @media (max-width: 575px) {
   .section-title-wrapper.style-2 .section-title {
     font-size: 30px;
+	color:#005153;
   }
 }
 .section-title-wrapper.style-2 .cf_text {
@@ -5885,25 +5895,30 @@ SECTIN TITLE 3
 */
 .section-title-wrapper.style-3 .section-title {
   font-size: 50px;
+  color:#005153;
 }
 @media only screen and (max-width: 1919px) {
   .section-title-wrapper.style-3 .section-title {
     font-size: 45px;
+	color:#005153;
   }
 }
 @media only screen and (max-width: 991px) {
   .section-title-wrapper.style-3 .section-title {
     font-size: 40px;
+	color:#005153;
   }
 }
 @media only screen and (max-width: 767px) {
   .section-title-wrapper.style-3 .section-title {
     font-size: 35px;
+	color:#005153;
   }
 }
 @media (max-width: 575px) {
   .section-title-wrapper.style-3 .section-title {
     font-size: 30px;
+	color:#005153;
   }
 }
 .section-title-wrapper.style-3 .cf_text {
@@ -5920,29 +5935,35 @@ SECTIN TITLE 4
 */
 .section-title-wrapper.style-4 .section-title {
   font-size: 50px;
+  color:#005153;
 }
 @media only screen and (max-width: 1919px) {
   .section-title-wrapper.style-4 .section-title {
     font-size: 45px;
+	color:#005153;
   }
 }
 @media only screen and (max-width: 1199px) {
   .section-title-wrapper.style-4 .section-title {
     font-size: 40px;
+	color:#005153;
   }
 }
 @media only screen and (max-width: 767px) {
   .section-title-wrapper.style-4 .section-title {
     font-size: 35px;
+	color:#005153;
   }
 }
 @media (max-width: 575px) {
   .section-title-wrapper.style-4 .section-title {
     font-size: 30px;
+	color:#005153;
   }
 }
 .section-title-wrapper.style-4 .section-title span {
   font-weight: 600;
+  color:#005153;
 }
 .section-title-wrapper.style-4 .cf_text {
   margin-top: 32px;
@@ -5972,20 +5993,24 @@ SECTIN TITLE 5
 }
 .section-title-wrapper.style-5 .section-title {
   font-size: 50px;
+  color:#005153;
 }
 @media only screen and (max-width: 991px) {
   .section-title-wrapper.style-5 .section-title {
     font-size: 40px;
+	color:#005153;
   }
 }
 @media only screen and (max-width: 991px) {
   .section-title-wrapper.style-5 .section-title {
     font-size: 30px;
+	color:#005153;
   }
 }
 @media (max-width: 575px) {
   .section-title-wrapper.style-5 .section-title {
     font-size: 24px;
+	color:#005153;
   }
 }
 .section-title-wrapper.style-5 .cf_text {
@@ -6012,21 +6037,25 @@ SECTIN TITLE 6
 @media only screen and (max-width: 1919px) {
   .section-title-wrapper.style-6 .section-title {
     font-size: 55px;
+	color:#005153;
   }
 }
 @media only screen and (max-width: 991px) {
   .section-title-wrapper.style-6 .section-title {
     font-size: 40px;
+	color:#005153;
   }
 }
 @media only screen and (max-width: 767px) {
   .section-title-wrapper.style-6 .section-title {
     font-size: 35px;
+	color:#005153;
   }
 }
 @media (max-width: 575px) {
   .section-title-wrapper.style-6 .section-title {
     font-size: 30px;
+	color:#005153;
   }
 }
 .section-title-wrapper.style-6 .cf_text {
@@ -6081,15 +6110,18 @@ SECTIN TITLE 7
   font-style: normal;
   font-weight: 400;
   line-height: 1.1;
+  color:#005153;
 }
 @media only screen and (max-width: 1199px) {
   .section-title-wrapper.style-7 .section-title {
     font-size: 45px;
+	color:#005153;
   }
 }
 @media only screen and (max-width: 991px) {
   .section-title-wrapper.style-7 .section-title {
     font-size: 35px;
+	color:#005153;
   }
 }
 .section-title-wrapper.style-7 .section-title span {
@@ -6124,25 +6156,30 @@ SECTIN TITLE 8
 }
 .section-title-wrapper.style-8 .section-title {
   font-size: 70px;
+  color:#005153;
 }
 @media only screen and (max-width: 1919px) {
   .section-title-wrapper.style-8 .section-title {
     font-size: 55px;
+	color:#005153;
   }
 }
 @media only screen and (max-width: 991px) {
   .section-title-wrapper.style-8 .section-title {
     font-size: 40px;
+	color:#005153;
   }
 }
 @media only screen and (max-width: 767px) {
   .section-title-wrapper.style-8 .section-title {
     font-size: 35px;
+	color:#005153;
   }
 }
 @media (max-width: 575px) {
   .section-title-wrapper.style-8 .section-title {
     font-size: 30px;
+	color:#005153;
   }
 }
 .section-title-wrapper.style-8 .cf_text {

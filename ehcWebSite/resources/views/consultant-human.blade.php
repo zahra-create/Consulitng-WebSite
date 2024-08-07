@@ -98,57 +98,6 @@
   <!-- Switcher Area End -->
 
   <!-- offcanvas start  -->
-  <!--<div class="offcanvas-3__area">
-    <div class="offcanvas-3__inner">
-      <div class="offcanvas-3__meta-wrapper">
-        <div class="">
-          <button id="close_offcanvas" class="close-button close-offcanvas" onclick="hideCanvas3()">
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-        <div class=""> -->
-         <!-- <div class="offcanvas-3__meta mb-145 d-none d-md-block">
-            <ul>
-              <li><a href="tel:+2-352698102" class="unnerline"><u>+2-352 698 102</u></a></li>
-              <li><a href="mailto:contact@me.com">contact@me.com</a></li>
-              <li><a href="">27 Division St, <br>
-                  New York, NY 10002, USA</a></li>
-            </ul>
-          </div> 
-          <div class="offcanvas-3__social d-none d-md-block">
-            <p class="title">Follow Me</p>
-            <div class="offcanvas-3__social-links">
-              <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-              <a href=""><i class="fa-brands fa-twitter"></i></a>
-              <a href=""><i class="fa-brands fa-dribbble"></i></a>
-              <a href=""><i class="fa-brands fa-instagram"></i></a>
-            </div>
-          </div> -->
-       <!-- </div>
-      </div> 
-      <div class="offcanvas-3__menu-wrapper">
-        <nav class="nav-menu offcanvas-3__menu">
-          <ul>
-          <li><a href="{{route('about')}}">A propos</a></li>
-            <li><a href="{{ route('service-entreprise') }}"> Services Entreprises</a></li>
-            <li><a href="{{ route('service-fonctionnaire') }}">Services Salariés</a></li>
-            <li><a href="{{ route('service-etudiant') }}">Services Etudiants</a></li>
-            <li><a href="consultant-financial.html">Offres d'Emploi</a></li>
-            <li><a href="consultant-human.html">Stages</a></li>
-            <li><a href="consultant-insurance.html">Candidature spontannee</a></li>
-            <li><a href="consultant-it.html">Blog</a></li>
-            <li><a href="{{ route('playlists') }}">Videos</a></li>
-            <li><a href="{{ route('Podcasts') }}">Podcasts</a></li>
-            <li><a href="{{ route('contact') }}">Contact</a></li>
-            <li><a href="{{ route('demande-devis') }}">Demander devis</a></li>
-            <li><a href="about-1.html">Payer prestation</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </div> -->
-
   @include('partials.menu-bar')
   <!-- offcanvas end  -->
 
@@ -290,7 +239,7 @@
 		  
 		  <!-- Valeurs et engagements start  -->
        
-          <section class="service-area style-6 section-spacing line-area" >       <!--style="padding-top:90px;">-->
+          <section class="service-area style-6 section-spacing line-area" style="padding-top:90px;" >       <!--style="padding-top:90px;">-->
             <div class="section-lines">
               <div class="container">
                 <div class="line-area">
@@ -377,8 +326,13 @@
 
 <!-- BU start -->
 
-          <section class="services-area section-spacing pin__area" >			<!--style="padding-top:0px;"-->
-			<div class="container container-large">
+				<div class="section-title-wrapper style-2">
+				   		<div class="title-wrapper" style="text-align: center;">
+                        <h2 class="section-title" style="text-decoration-line: none; color: rgb(0, 81, 81);">NOS BUSINESS UNITS</h2>
+                      </div>
+                    </div>
+            <section class="services-area section-spacing pin__area">
+            <div class="container container-large">
               <div class="services-area-inner">
                 <div id="pinElement" class="section-heading pin__element">
                   <div class="thumb has_fade_anim">
@@ -387,33 +341,33 @@
                         <i class="fa-solid fa-play"></i>
                       </a>
                     </div>
-		    <div >   <!--style="margin-bottom:20px;"-->
-			<h2 style="font-weight:600;color:rgb(0, 81, 81); font-size:50px;">NOS BUSINESS UNITS</h2> 
-			<br>
-			<br>
-			</div>
-        <img src="assets/imgs/gallery/img-s-1.png" alt="image" >  <!--style="margin-bottom:20px;"-->
-		
-		<div class="header__meta d-none d-md-block" >   <!--style="margin-left:70px;"-->
-            <a href="{{ route('demande-devis') }}" class="cf_btn wc-btn-primary btn-text-flip" style="background-color:rgb(0, 81, 81); border:rgb(0, 81, 81);"><span data-text="Demander services">Demander services</span> <img src="assets/imgs/icon/icon-r-21.webp" alt="arrow-icon"> </a>
-          </div>
+                    <img src="assets/imgs/gallery/img-s-1.png" alt="image">
                   </div>
-				  
                   <div class="content has_fade_anim">
+
+
                     <div class="">
 
+                     <!-- <div class="text-wrapper">
+                        <p class="text">Nanotechnology immersion along the information highway will close the loop on
+                          focusing solely on the bottom line.
+                        </p>
+                      </div> -->
+                      <div class="btn-wrapper" style="margin-bottom:20px;">
+                  <a href="{{ route('demande-devis') }}" class="cf_btn wc-btn-primary btn-text-flip" style="background-color:rgb(0, 81, 81); border:rgb(0, 81, 81);"><span data-text="Demander services">Demander services</span> <img src="assets/imgs/icon/icon-r-21.webp" alt="arrow-icon"> </a>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="services-wrapper">
                   <div class="has_fade_anim">
-                    <a href="service-details.html">
-                      <div class="service-item">
+                    <a href="{{ route('conseil') }}">
+                      <div class="service-item " >
                         <span class="number" style="font-weight:700;color:rgb(0, 81, 81); font-size:30px;">01</span>
                         <div class="content-wrapper">
-                          <div class="content">
+                          <div class="content" style="width:100vw;" >
                             <h3 class="title" style="font-weight:600;color:rgb(0, 81, 81);" data-text="EHC Consulting">EHC Consulting</h3>
-                            <p class="text">Votre partenaire stratégique pour une transformation intégrale et performance optimale, alliant expertise en management des organisation digitalisation.</p>
+                            <p class="text" >Votre partenaire stratégique pour une transformation intégrale et performance optimale, alliant expertise en management des organisation digitalisation.</p>
                           </div>
                           <div class="btn-wrapper">
                             <span class="cf_btn wc-btn-normal"><i class="fa-solid fa-caret-right"></i>
@@ -424,7 +378,7 @@
                     </a>
                   </div>
                   <div class="has_fade_anim">
-                    <a href="service-details.html">
+                    <a href="{{ route('recruitement') }}">
                       <div class="service-item">
                         <span class="number" style="font-weight:700;color:rgb(0, 81, 81); font-size:30px;">02</span>
                         <div class="content-wrapper">
@@ -440,7 +394,7 @@
                       </div>
                     </a>
                   </div>
-                  <div class="has_fade_anim">
+                  <div class="{{ route('formation') }}">
                     <a href="service-details.html">
                       <div class="service-item">
                         <span class="number" style="font-weight:700;color:rgb(0, 81, 81); font-size:30px;">03</span>
@@ -458,7 +412,7 @@
                     </a>
                   </div>
                   <div class="has_fade_anim">
-                    <a href="service-details.html">
+                    <a href="{{ route('event') }}">
                       <div class="service-item">
                         <span class="number" style="font-weight:700;color:rgb(0, 81, 81); font-size:30px;">04</span>
                         <div class="content-wrapper">
@@ -474,7 +428,8 @@
                       </div>
                     </a>
                   </div>
-                  <div class="has_fade_anim" href="service-details.html">
+                  <div class="has_fade_anim" >
+				  <a href="{{ route('ingenierie') }}">
                     <div class="service-item">
                       <span class="number" style="font-weight:700;color:rgb(0, 81, 81); font-size:30px;">05</span>
                       <div class="content-wrapper">
@@ -511,10 +466,10 @@
             <div class="container">
               <div class="counter-item-wrapper">
                 <div class="counter-item has_fade_anim" data-fade-from="left" >
-                  <h2 class="title" style="color: #005151; font-size:40px; font-weight: 700; padding-top:20px; padding-right:35px;">EHC En Chiffres</h2>
+                  <h2 class="title" style="color: #005151; padding-right:35px; font-size:40px; font-weight: 700;">EHC En Chiffres</h2>  <!-- padding-top:20px; padding-right:35px; font-size:40px; font-weight: 700;-->
                 </div>
-                <div class="team-item" style="padding-top:100px;" >
-                  <div class="cf_text has_fade_anim" style="width:300px; margin-right:15px; ">
+                <div class="team-item" >   <!--style="padding-top:100px;"-->
+                  <div class="cf_text has_fade_anim" >   <!--style="width:300px; margin-right:15px;"-->
                     <p class="text" style="color: black; font-size: 18px">EHC mobilise pour vous une équipe de haut dirigeants et cadres exerçant dans les sphères des secteurs public et privé et ayant en moyenne plus de 20 ans d'expérience dans leurs domaines de compétence.</p>
                   </div>
 				<div class="btn-wrapper" style="margin-top:50px; margin-right:15px;"  >
@@ -645,7 +600,7 @@
             <div class="container">
               <div class="brand-inner">
                 <div class="brand-text">
-                  <div class="brand-text-title-wrapper" style="padding-top:50px;">
+                  <div class="brand-text-title-wrapper" >  <!--style="padding-top:50px;"-->
                     <h2 class="title" style="font-weight:900; font-size:23px; color:rgb(0, 81, 81);">Nos partenaires</h2>
                   </div>
                 </div>

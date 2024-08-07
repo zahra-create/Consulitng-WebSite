@@ -4104,8 +4104,8 @@ html {
 }
 
 body {
-  background-color:#F5F5F5 ;
-  color: /*var(--secondary)*/ #005151;
+  background-color: #F5F5F5;
+  color: var(--secondary);
 }
 
 .body-wrapper {
@@ -4598,7 +4598,6 @@ section {
   padding: 10px 0;
 }
 .header-area.sticky .wc-btn-primary {
- background-color: rgb(0, 81, 81);
   padding: 15px 30px;
 }
 .header-area.sticky .header-area__inner {
@@ -4858,7 +4857,7 @@ section {
 }
 
 .progress-wrap svg.progress-circle path {
-  stroke: #fff969;
+  stroke: rgb(227, 46, 46);
   stroke-width: 4;
   box-sizing: border-box;
   transition: all 200ms linear;
@@ -7488,6 +7487,7 @@ SECTIN TITLE 8
   display: block;
 }
 
+/*
 .offcanvas-3__area {
   background: var(--primary);
   position: fixed;
@@ -7647,7 +7647,7 @@ SECTIN TITLE 8
   position: relative;
   transition: all 0.5s cubic-bezier(0, 0, 0.23, 1);
   text-decoration: none;
-  /*-webkit-background-clip: text;*/
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(90deg, #fff, #ddd 50%, #666 0);
   background-size: 200% 100%;
@@ -7962,7 +7962,7 @@ p {
 }
 
 .section-title {
-  font-size: 70px;
+  font-size: 80px;
   padding-top: 33px;
 }
 @media only screen and (max-width: 1199px) {
@@ -7972,7 +7972,7 @@ p {
 }
 @media only screen and (max-width: 767px) {
   .section-title {
-    font-size: 40px;
+    font-size: 35px;
   }
 }
 
@@ -8039,7 +8039,7 @@ Service Style 01
     margin-bottom: 43px;
   }
 }
-.services-area .section-heading-service {
+.services-area .section-heading {
   max-width: 775px;
 }
 @media only screen and (max-width: 1199px) {
@@ -8171,6 +8171,14 @@ Service Style 01
     font-size: 24px;
   }
 }
+
+/*00*/
+@media (max-width: 991px) {
+.services-area .services-area-inner {
+     display:inline;	
+}
+}
+
 .service-item .title:before {
   position: absolute;
   top: 100%;
@@ -8184,7 +8192,7 @@ Service Style 01
   text-align: center;
 }
 .service-item .text {
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.44;
   color: var(--black);
 }
@@ -8196,27 +8204,17 @@ Service Style 01
 }
 @media only screen and (max-width: 991px) {
   .service-item .content-wrapper {
-    gap: 40px;
+    gap: 39px;
   }
 }
 @media only screen and (max-width: 767px) {
   .service-item .content-wrapper {
-    /*gap: 69px;*/
-	gap: 50px;
+    gap: 69px;
   }
 }
 .service-item .content {
-  /*max-width: 600px;*/
-  width: 480px;
-  
+  max-width: 390px;
 }
-
-.service-item .content p {
-  margin: 0;
-  padding: 0;
-  font-size: 17.5px;
-}
-
 .service-item .wc-btn-normal img {
   width: 7px;
   min-width: 7px;
@@ -8785,24 +8783,4 @@ Ideas Style 01
 .footer-area.style-1 .text-copy a {
   font-weight: 600;
   color: var(--white);
-}
-
-
-/* .iframe-wrapper {
-  position: relative;
-  overflow: hidden;
-  padding-top: 56.25%;
-}
-
-.iframe-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-} */
-
-
-
-
-/*# sourceMappingURL=master-service-style-1.css.map */
+}/*# sourceMappingURL=master-service-style-1.css.map */

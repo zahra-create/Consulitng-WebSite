@@ -58,66 +58,50 @@
     </svg>
   </div>
 
+
   <!-- Switcher Area Start -->
   <div class="switcher__area">
     <div class="switcher__icon">
-      <!--<button id="switcher_open"><i class="fa-solid fa-gear"></i></button>-->
-	  <button id="switcher_open"><i class="fa-solid fa-robot"></i></button>
-      <!--<button id="switcher_close"><i class="fa-solid fa-xmark"></i></button>-->
+      <button id="switcher_open"><i class="fa-solid fa-robot"></i></button>
+      <button id="switcher_close"><i class="fa-solid fa-xmark"></i></button>
     </div>
+    <div class="switcher__items">
 
-  <!-- offcanvas start  -->
-  <div class="offcanvas-3__area">
-    <div class="offcanvas-3__inner">
-      <div class="offcanvas-3__meta-wrapper">
-        <div class="">
-          <button id="close_offcanvas" class="close-button close-offcanvas" onclick="hideCanvas3()">
-            <span></span>
-            <span></span>
-          </button>
+      <div class="switcher__item">
+        <div class="switch__title-wrap">
+          <p class="switcher__title">Language Support</p>
         </div>
-        <div class="">
-          <div class="offcanvas-3__meta mb-145 d-none d-md-block">
-            <ul>
-              <li><a href="tel:+2-352698102" class="unnerline"><u>+2-352 698 102</u></a></li>
-              <li><a href="mailto:contact@me.com">contact@me.com</a></li>
-              <li><a href="">27 Division St, <br>
-                  New York, NY 10002, USA</a></li>
-            </ul>
-          </div>
-          <div class="offcanvas-3__social d-none d-md-block">
-            <p class="title">Follow Me</p>
-            <div class="offcanvas-3__social-links">
-              <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-              <a href=""><i class="fa-brands fa-twitter"></i></a>
-              <a href=""><i class="fa-brands fa-dribbble"></i></a>
-              <a href=""><i class="fa-brands fa-instagram"></i></a>
-            </div>
-          </div>
+        <div class="switcher__btn lang_dir wc-col-2">
+          <button class="active" data-mode="ltr">LTR</button>
+          <button data-mode="rtl">RTL</button>
         </div>
       </div>
-      <div class="offcanvas-3__menu-wrapper">
-        <nav class="nav-menu offcanvas-3__menu">
-          <ul>
-            <li><a href="consultant-human.html">consultant-human</a></li>
-
-            <li><a href="about-2.html">about-2</a></li>
-
-            <li><a href="service-style-4.html">service style -4</a></li>
-
-            <li><a href="service-details.html">service details</a></li>
-
-            <li><a href="projects.html">project</a></li>
-
-            <li><a href="project-details.html">project details</a></li>
-            <li><a href="blog-style-1.html">blog style -1</a></li>
-            <li><a href="blog-details.html">blog details</a></li>
-            <li><a href="contact.html">contact</a></li>
-          </ul>
-        </nav>
+      <div class="switcher__item">
+        <div class="switch__title-wrap">
+          <p class="switcher__title">Layout</p>
+        </div>
+        <div class="switcher__btn layout-type wc-col-2">
+          <button class="active" data-mode="full-width">Full Width</button>
+          <button data-mode="box-layout">Box Layout</button>
+        </div>
+      </div>
+      <div class="switcher__item">
+        <div class="switch__title-wrap">
+          <p class="switcher__title">Cursor</p>
+        </div>
+        <div class="switcher__btn">
+          <select name="cursor-style" id="cursor_style">
+            <option value="1">default</option>
+            <option selected value="2">animated</option>
+          </select>
+        </div>
       </div>
     </div>
   </div>
+  <!-- Switcher Area End -->
+
+  <!-- offcanvas start  -->
+  @include('partials.menu-bar')
   <!-- offcanvas end  -->
 
   <!-- search modal start -->
@@ -158,7 +142,7 @@
 			   <div class="btn-wrapper has_fade_anim pin__element" data-fade-from="left" >
 
        <!--<div class="player" style="height:300px; width:200;">-->
-       <div class="wrapper" style=" height:450px; margin-right:70px; background-color:#00515114;">  <!--style="width:250; height:400px; "-->
+       <div class="wrapper" style=" height:450px; margin:auto; margin-bottom:50px; margin-top:50px; background-color:#00515114; width:380px;">  <!--style="width:250; height:400px; "-->
            <div class="details">
                <div class="now-playing">PLAYING x OF y</div>
                <!--<div class="track-art>--> <img class="track-art" src="assets/imgs/podcasts/femme.png" alt="podcast"><!-- </div>-->

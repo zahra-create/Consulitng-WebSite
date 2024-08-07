@@ -148,7 +148,8 @@
                   <div class="section-heading">
                     <div class="section-title-wrapper">
                       <div class="title-wrapper has_fade_anim">
-                        <h1 class="section-title large">Sitting with basic goodness top signs that time.</h1>
+                        <h1 class="section-title large">Emploi chez Al Barid Bank</h1>
+                        <h2 class="section-title large">Profile recherché : cybersécurité</h1>
                       </div>
                     </div>
                   </div>
@@ -158,8 +159,8 @@
                         <img src="assets/imgs/icon/user-green.webp" alt="">
                       </div>
                       <div class="content">
-                        <p class="title">Written by</p>
-                        <p class="text">Steven Dirkse</p>
+                        <p class="title">Entreprise</p>
+                        <p class="text">Al Barid Bank</p>
                       </div>
                     </div>
                     <div class="meta-box">
@@ -167,7 +168,7 @@
                         <img src="assets/imgs/icon/date-green.webp" alt="">
                       </div>
                       <div class="content">
-                        <p class="title">Post date</p>
+                        <p class="title">Date de publication</p>
                         <p class="text">29 Jan, 2024</p>
                       </div>
                     </div>
@@ -176,13 +177,13 @@
                         <img src="assets/imgs/icon/comment-green.webp" alt="">
                       </div>
                       <div class="content">
-                        <p class="title">Comments</p>
-                        <p class="text">4.2K</p>
+                        <p class="title">Candidature</p>
+                        <p class="text">154</p>
                       </div>
                     </div>
                   </div>
                   <div class="thumb-main has_fade_anim" data-delay=".7">
-                    <img src="assets/imgs/blog/blog-details1.webp" alt="blog image">
+                    <img src="assets/imgs/gallery/Barid1 (2).jpg" alt="blog image">
                   </div>
                   <div class="section-main-content">
                     <div class="social-meta-box has_fade_anim">
@@ -205,122 +206,95 @@
                     <div class="content-box-wrapper">
                       <div class="content-box">
                         <div class="text-wrapper has_fade_anim">
-                          <p class="text">Myriam was first trained as a sculptor in Montreal and then in Helsinki,
-                            Finland. She is now based in Quebec but works for clients all around the globe. From textile
-                            design to murals, editorial illustrations and book covers, her style is recognized by her
-                            simple and perfectly arranged shapes as well as her rich and vibrant color palette. Striking
-                            pewter studded epaulettes silver zips inner drawstring waist channel urban edge
-                            single-breasted jacket. Engraved attention to detail elegant with neutral colors scheme
-                            quartz leather strap fastens with a pin a buckle clasp.</p>
+                          <p class="text">Al Barid Bank est à la recherche d'un spécialiste en cybersécurité talentueux et motivé pour rejoindre notre équipe de 
+                            sécurité informatique. Le candidat retenu jouera un rôle crucial dans la protection des systèmes, des réseaux et des données de l'entreprise 
+                            contre les menaces et les cyberattaques. Ce poste offre l'opportunité de travailler dans un environnement dynamique et en constante évolution, 
+                            avec des défis stimulants et des projets de grande envergure.</br>
 
-                          <p class="text">However, the same reason also makes it messy. If someone is having a bad day,
-                            we might see
-                            it as a sign of tension or lack of investment in the project. For outsiders, lacking an
-                            understanding of the complex dynamics of a team can lead to the wrong conclusions.</p>
+                            En tant que spécialiste en cybersécurité chez Al Barid Bank, vous serez responsable de l'évaluation continue de nos infrastructures de sécurité, 
+                            de l'identification des vulnérabilités potentielles et de la mise en œuvre de mesures de protection avancées. Vous collaborerez avec divers 
+                            départements pour garantir la sécurité de nos opérations et pour répondre aux exigences réglementaires en matière de protection des données.</p>
+
+                          <p class="text">Votre mission principale sera de surveiller les systèmes et les réseaux en temps réel pour détecter et neutraliser toute activité suspecte. 
+                            Vous devrez également élaborer et exécuter des plans d'intervention en cas d'incident de sécurité, minimisant ainsi les impacts sur les 
+                            opérations de la banque. La sensibilisation et la formation des employés aux bonnes pratiques de sécurité seront également au cœur de vos 
+                            responsabilités, afin de renforcer la culture de sécurité au sein de l'organisation.</p>
                         </div>
                         <div class="quote-box has_fade_anim">
                           <div class="icon">
                             <img src="assets/imgs/icon/quote-dark.webp" alt="icon">
                           </div>
                           <div class="quote-text">
-                            <p class="text">Effortless comfortable full leather lining eye-catching unique detail to the
-                              toe low ‘cut-away’ sides clean and sleek harmony.</p>
-                            <span class="author has-left-line">Adamson Janny</span>
+                            <p class="text">Le succès n'est pas final, l'échec n'est pas fatal : c'est le courage de continuer qui compte.</p>
+                            <span class="author has-left-line">Winston Churchill</span>
                           </div>
                         </div>
-                        <div class="text-wrapper has_fade_anim">
-                          <p class="text">Beckoning a diverse audience of food lovers who may have never considered
-                            trying dumplings before. The unique blend of bold quirkiness and personality sets this brand
-                            apart, marking its own distinct place in the crowded world of bold font family. We love to
-                            bring designs to life as a developer, and I aim to do this using whatever front end tools
-                            are necessary.</p>
-                        </div>
-                        <div class="image-content has_fade_anim">
-                          <div class="thumb">
-                            <img src="assets/imgs/blog/blog-details2.webp" alt="">
-                            <p class="text">Official consultancy </p>
-                          </div>
-                          <div class="text-wrapper">
-                            <p class="text">Beckoning a diverse audience of food lovers who may have never considered
-                              trying dumplings before. The unique blend of bold quirkiness and personality sets this
-                              brand apart, marking its own distinct place in the crowded world of bold font family. We
-                              love to bring designs to life as a developer, and I aim to do this using whatever front
-                              end tools are necessary.</p>
-                            <p class="text">Structured gripped tape invisible moulded cups for sauppor firm hold strong
-                              powermesh
-                              front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the
-                              front full button detail cotton blend cute functional. Bodycon skirts bright primary
-                              colours punchy palette.</p>
-                          </div>
-                        </div>
+                        
+                        
                         <div class="feature-content has_fade_anim">
-                          <h2 class="section-title">Custom experience</h2>
-                          <div class="text-wrapper">
-                            <p class="text">We had observers go into the workplace and we timed people’s activities to
-                              the second. We’ve been to various workplaces, all high-tech companies. We wanted to look
-                              at information workers. We had observers shadow each person for three and a half days each
-                              and timed every activity to the second.</p>
-                          </div>
+                          <h2 class="section-title">Responsabilités</h2>
+                          
                           <div class="feature-list">
                             <ul class="list-plus">
-                              <li>Create the table lines here</li>
-                              <li>Organise everything early thoroughly</li>
-                              <li>Development</li>
-                              <li>Shopify Development</li>
+                              <li>Analyser les systèmes et réseaux pour identifier les vulnérabilités et proposer des solutions pour les corriger.</li>
+                              <li>Mettre en œuvre et maintenir des mesures de sécurité pour protéger les données sensibles et les informations confidentielles.</li>
+                              <li>Surveiller les systèmes pour détecter toute activité suspecte et répondre rapidement aux incidents de sécurité.</li>
+                              <li>Effectuer des tests de pénétration et des évaluations de risques réguliers.</li>
+                              <li>Élaborer des politiques et des procédures de sécurité, et former le personnel aux meilleures pratiques en matière de cybersécurité.</li>
+                              <li>Collaborer avec les autres départements pour assurer la conformité aux réglementations et normes de sécurité.</li>
+                              <li>Participer à l’élaboration et à la mise à jour des plans de reprise après sinistre et de continuité des activités.</li>
                             </ul>
                           </div>
-                          <div class="text-wrapper">
-                            <p class="text">Achieving deep work should be our goal in any team, but doing it in an
-                              office setting can be challenging because of so many distractions. Asynchronous
-                              communication in a remote setting is perfect for it. I’m not a fan of long reads with too
-                              many unnecessary details, so I’ll “jump” into the subject right away. My guide consists of
-                              several parts; thus, you can stop reading at any point when you understand that what you
-                              have learned so far covers your needs at the moment, and you can go back/or jump forward
-                              to any section when you want to refresh your memory or learn about the more complex
-                              workflows. Let’s go!</p>
-                            <p class="text">If they pick up a phone call, that’s the start time. When they put the phone
-                              down, that’s
-                              the stop time. When they turn to the Word application we get the start time and stop time.
-                              We found people switched these activities on average of every three minutes and five
-                              seconds.</p>
-                          </div>
+                          
                         </div>
                         <div class="tags-wrapper has_fade_anim">
                           <div class="tags">
-                            <a href="#" class="tag">Business</a>
-                            <a href="#" class="tag">Consultant</a>
-                            <a href="#" class="tag">Agency</a>
-                            <a href="#" class="tag">Resource</a>
+                            <a href="#" class="tag">réseaux</a>
+                            <a href="#" class="tag">systèmes</a>
+                            <a href="#" class="tag">vulnérabilités</a>
+                            <a href="#" class="tag">sécurité</a>
                           </div>
                         </div>
                       </div>
+                    
                       <div class="comment-box has_fade_anim">
-                        <h2 class="section-title">Leave a Comment</h2>
+                        <h2 class="section-title">Profile recherché</h2>
                         <div class="text-wrapper">
-                          <p class="text">Your email address will not be published. Required fields are marked</p>
+                          <!--<p class="text">Your email address will not be published. Required fields are marked</p>-->
                         </div>
-                        <div class="comment-form-wrapper">
-                          <form>
-                            <div class="wc-single-input">
-                              <label for="name" class="wc-form-label">Name</label>
-                              <input type="text" id="name">
-                            </div>
-                            <div class="wc-single-input">
-                              <label for="email" class="wc-form-label">Email</label>
-                              <input type="text" id="email">
-                            </div>
-                            <div class="wc-single-input">
-                              <label for="phone" class="wc-form-label">Subject</label>
-                              <input type="text" id="phone">
-                            </div>
-                            <div class="wc-single-input">
-                              <label for="message" class="wc-form-label">Message</label>
-                              <textarea id="message" placeholder="Write your message here....."></textarea>
-                            </div>
+                        <div class="feature-list">
+                            <ul class="list-plus">
+                              <li>Diplôme en informatique, en cybersécurité ou dans un domaine connexe.</li>
+                              <li>Expérience avérée en cybersécurité, avec une connaissance approfondie des menaces et des vulnérabilités courantes.</li>
+                              <li>Certifications en cybersécurité (telles que CISSP, CEH, CISM) sont un plus.</li>
+                              <li>Une expérience préalable dans le secteur bancaire ou financier serait un atout.</li>
+                              <li>Excellentes compétences en communication et en travail d'équipe.</li>
+                              
+                            </ul>
+                          </div>
+                        </br></br></br></br>
+                          <div class="feature-content has_fade_anim">
+                            <h2 class="section-title">Pourquoi Rejoindre Al Barid Bank ?</h2>
+                            
+                            <div class="text-wrapper">
+                                <p class="text">En rejoignant Al Barid Bank, vous intégrerez une entreprise qui valorise l'innovation, 
+                                    l'intégrité et l'excellence. Vous aurez l'opportunité de contribuer à la protection de nos actifs numériques dans un 
+                                    environnement de travail collaboratif et stimulant. 
+                                    Nous offrons des opportunités de développement professionnel et de croissance personnelle, ainsi que des avantages sociaux compétitifs.</p>
+                                <p class="text">Notre engagement envers la sécurité et la confidentialité de nos clients nous pousse à rechercher 
+                                    constamment les meilleures pratiques et technologies disponibles. 
+                                    En tant que membre de notre équipe de sécurité, vous jouerez un rôle clé dans la réalisation de cette mission essentielle.
+
+                                </p>
+                              </div>
+                            
+                          </div>
+                        </br></br></br></br>
+                        
                             <div class="btn-wrapper">
                               <button type="submit" class="wc-btn-primary btn-text-flip"><span
-                                  data-text="Submit Now">Submit
-                                  Now</span><i class="fa-solid fa-caret-right"></i></button>
+                                  data-text="Postuler">Postuler
+                                  </span><i class="fa-solid fa-caret-right"></i></button>
                             </div>
                           </form>
                         </div>

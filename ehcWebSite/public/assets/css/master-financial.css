@@ -6720,6 +6720,7 @@ SECTIN TITLE 8
     font-size: 20px;
   }
 }
+
 .offcanvas__menu-wrapper.mean-container .mean-nav ul li a.mean-expand {
   width: 54px;
   height: 54px;
@@ -7488,6 +7489,7 @@ SECTIN TITLE 8
   display: block;
 }
 
+
 .offcanvas-3__area {
   background: #d8e7e3a8;
   position: fixed;
@@ -7581,6 +7583,7 @@ SECTIN TITLE 8
 .offcanvas-3__menu ul {
   position: relative;
 }
+/*
 .offcanvas-3__menu ul:before {
   position: absolute;
   content: "";
@@ -7589,7 +7592,8 @@ SECTIN TITLE 8
   background: #333337;
   inset-inline-start: 8px;
   top: 0;
-}
+} */
+/*
 @media only screen and (max-width: 767px) {
   .offcanvas-3__menu ul:before {
     display: none;
@@ -7599,7 +7603,7 @@ SECTIN TITLE 8
   .offcanvas-3__menu ul:before {
     height: 100%;
   }
-}
+} */
 .offcanvas-3__menu li {
   padding-inline-start: 58px;
   position: relative;
@@ -7642,7 +7646,7 @@ SECTIN TITLE 8
 .offcanvas-3__menu li a {
   font-size: 120px;
   font-size: 8vh;
-  /*color: var(--secondary);*/
+  color: var(--secondary);
   text-transform: capitalize;
   font-weight: 600;
   line-height: 0.9;
@@ -7652,8 +7656,8 @@ SECTIN TITLE 8
   -webkit-background-clip: text;
   -webkit-text-fill-color: #005151;
   background-image: linear-gradient(90deg, #fff, #ddd 50%, #66666603 0);
-  /*background-size: 200% 100%;*/
-  /*background-position: 100%;*/
+  background-size: 200% 100%;
+  background-position: 100%;
   transform: perspective(359px) rotateY(-18deg);
 }
 .offcanvas-3__menu li a:hover {
@@ -7661,6 +7665,7 @@ SECTIN TITLE 8
   color: #fff;
   letter-spacing: 1.5px;
 }
+/*
 @media only screen and (max-width: 1399px) {
   .offcanvas-3__menu li a {
     font-size: 7vh;
@@ -7669,12 +7674,12 @@ SECTIN TITLE 8
 @media only screen and (max-width: 1199px) {
   .offcanvas-3__menu li a {
     font-size: 6vh;
+
   }
-}
+} */
 @media only screen and (max-width: 991px) {
   .offcanvas-3__menu li a {
-     font-size: 5vw;
-
+     font-size: 20px;
 
   }
 }
@@ -7754,7 +7759,7 @@ SECTIN TITLE 8
   transform: translateX(-50%) rotate(-45deg);
 }
 
-/*
+
 -----------------------------
 FEATURES STYLES 1
 -----------------------------

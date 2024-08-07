@@ -105,73 +105,7 @@
   <!-- Switcher Area End -->
 
   <!-- offcanvas start  -->
-  <div class="offcanvas-3__area">
-    <div class="offcanvas-3__inner">
-      <div class="offcanvas-3__meta-wrapper">
-        <div class="">
-          <button id="close_offcanvas" class="close-button close-offcanvas" onclick="hideCanvas3()">
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-        <div class="">
-          <div class="offcanvas-3__meta mb-145 d-none d-md-block">
-            <ul>
-              <li><a href="tel:+2-352698102" class="unnerline"><u>+2-352 698 102</u></a></li>
-              <li><a href="mailto:contact@me.com">contact@me.com</a></li>
-              <li><a href="">27 Division St, <br>
-                  New York, NY 10002, USA</a></li>
-            </ul>
-          </div>
-          <div class="offcanvas-3__social d-none d-md-block">
-            <p class="title">Follow Me</p>
-            <div class="offcanvas-3__social-links">
-              <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-              <a href=""><i class="fa-brands fa-twitter"></i></a>
-              <a href=""><i class="fa-brands fa-dribbble"></i></a>
-              <a href=""><i class="fa-brands fa-instagram"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="offcanvas-3__menu-wrapper">
-        <nav class="nav-menu offcanvas-3__menu">
-          <ul>
-            
-            <li><a href="consultant-agency.html">consultant-agency</a></li>
-            <li><a href="consultant-bank.html">consultant-bank</a></li>
-            <li><a href="consultant-business.html">consultant-business</a></li>
-            <li><a href="consultant-corporate.html">consultant-corporate</a></li>
-            <li><a href="consultant-financial.html">consultant-financial</a></li>
-            <li><a href="consultant-human.html">consultant-human</a></li>
-            <li><a href="consultant-insurance.html">consultant-insurance</a></li>
-            <li><a href="consultant-it.html">consultant-it</a></li>
-            <li><a href="consultant-management.html">consultant-management</a></li>
-            <li><a href="consultant-marketing.html">consultant-marketing</a></li>
-            <li><a href="consultant-tax.html">consultant-tax</a></li>
-            <li><a href="consultant-travel.html">consultant-travel</a></li>
-            <li><a href="about-1.html">about-1</a></li>
-            <li><a href="about-2.html">about-2</a></li>
-            <li><a href="service-style-1.html">service style -1</a></li>
-            <li><a href="service-style-2.html">service style -2</a></li>
-            <li><a href="service-style-3.html">service style -3</a></li>
-            <li><a href="service-style-4.html">service style -4</a></li>
-            <li><a href="service-style-5.html">service style -5</a></li>
-            <li><a href="service-style-6.html">service style -6</a></li>
-            <li><a href="service-details.html">service details</a></li>
-            <li><a href="faq.html">faq</a></li>
-            <li><a href="projects.html">project</a></li>
-            <li><a href="price-style-1.html">price-style-1</a></li>
-            <li><a href="faq.html">price-style-1</a></li>
-            <li><a href="project-details.html">project details</a></li>
-            <li><a href="blog-style-1.html">blog style -1</a></li>
-            <li><a href="blog-details.html">blog details</a></li>
-            <li><a href="contact.html">contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </div>
+  @include('partials.menu-bar')
   <!-- offcanvas end  -->
 
   <!-- search modal start -->
