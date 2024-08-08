@@ -1,7 +1,0 @@
-@media (max-width: 991px) {
-    .pin__element {
-        position: fixed; /* Fixed position for small screens */
-       /* top: 10px;
-        left: 10px;*/
-    }
-}

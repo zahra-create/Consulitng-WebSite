@@ -147,7 +147,7 @@
             <div class="container container-medium">
               <div class="service-wrapper">
                 <div class="section-content">
-                  <div class="section-heading pin__element">
+                  <div id="pinElement" class="section-heading pin__element">
                     <div class="section-title-wrapper ">
                       <div class="title-wrapper has_fade_anim">
                         <h1 class="section-title">Bienvenue, Cher Etudiant</h1>

@@ -334,9 +334,7 @@
             <section class="services-area section-spacing pin__area">
             <div class="container container-large">
               <div class="services-area-inner">
-
-                <div class="section-heading pin__element">
-
+                <div id="pinElement" class="section-heading pin__element">
                   <div class="thumb has_fade_anim">
                     <div class="btn-wrapper pos-center btn-move">
                       <a class="cf_btn wc-btn-play light btn-item video-popup" href="assets/video/team-planning.mp4">
