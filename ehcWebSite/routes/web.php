@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\DemandeDevisController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -100,6 +103,8 @@ Route::get('/blog-details', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
+//contact form
+Route::post('/contact/submit', [ContactController::class, 'submit'])->name('contact.submit');
 
 
 //video pages routes 
@@ -114,6 +119,10 @@ Route::get('/playlist_details', function () {
 Route::get('/demande-devis', function () {
     return view('demande-devis');
 })->name('demande-devis');
+
+//form demande devis
+Route::post('/demande-devis/submitdevis', [DemandeDevisController::class, 'submitdevis'])->name('demande-devis.submitdevis');
+
 
 //Podcasts
 Route::get('/podcasts', function () {

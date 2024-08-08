@@ -198,30 +198,31 @@
                   </div>
                 </div>
                 <div class="contact-wrapper has_fade_anim">
-                  <form>
+                  <form action="/demande-devis/submitdevis" method="POST">
+                  @csrf
                     <div class="wc-single-input">
                       <label for="name" class="wc-form-label">Nom</label>
-                      <input type="text" id="name">
+                      <input type="text" id="name" name="nom" required>
                     </div>
                     <div class="wc-single-input">
                       <label for="email" class="wc-form-label">Prénom</label>
-                      <input type="text" id="email">
+                      <input type="text" id="prenom" name="prenom" required>
                     </div>
                     <div class="wc-single-input">
                       <label for="phone" class="wc-form-label">Email</label>
-                      <input type="text" id="phone">
+                      <input type="email" id="email" name="email" required>
                     </div>
                     <div class="wc-single-input">
                       <label for="company" class="wc-form-label">Téléphone</label>
-                      <input type="text" id="company">
+                      <input type="text" id="phone" name="phone">
                     </div>
                     <div class="wc-single-input">
                       <label for="website" class="wc-form-label">Entreprise</label>
-                      <input type="text" id="website">
+                      <input type="text" id="company" name="company" required>
                     </div>
                     <div class="wc-single-input">
                       <label for="website" class="wc-form-label">Service</label>
-                      <select>
+                      <select id="service" name="service" required>
                       <option value="1" selected>Conseil</option>
                         <option value="2">Recrutement</option>
                         <option value="3">Formation</option>
@@ -232,8 +233,13 @@
                     </div>
                     <div class="wc-single-input">
                       <label for="message" class="wc-form-label">Description</label>
-                      <textarea id="message" placeholder="Décrire votre besoin....."></textarea>
+                      <textarea id="message" name="message" placeholder="Décrire votre besoin....." required></textarea>
                     </div>
+
+                    @if(Session('success_devis'))
+                        <div>{{ Session('success_devis') }}</div>
+                    @endif
+
                     <div class="btn-wrapper">
                       <button type="submit" class="wc-btn-primary btn-text-flip"><span data-text="Demander Devis">Demander Devis
                          </span> <i class="fa fa-caret-right"></i> </button>

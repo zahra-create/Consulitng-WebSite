@@ -6,7 +6,7 @@
     <div class="container">
       <div class="footer-menu">
         <div class="logo-wrapper">
-          <a href="#"><img src="assets/imgs/logo/logo-text-white.webp" alt="site-logo"></a>
+          <a href="#"><img src="assets/imgs/logo/logoEHC.png" alt="site-logo"></a>
           <a href="#" class="scroll-up-btn"> <i class="icon-wcf-arrow-up-5"></i> <span>Go up</span> </a>
         </div>
 

@@ -1,9 +1,9 @@
 <header class="header-area">
     <div class="container container-large">
       <div class="header-area__inner">
-      <div class="header__logo d-block d-lg-none" >
+      <div class="header__logo" style="width:100%;" >
          <a href="{{ route('home')}}">
-            <img src="{{ url('assets/imgs/logo/logoEHC.png') }}" alt="Site Logo" >  
+            <img src="assets/imgs/logo/logoEHC.png" alt="Site Logo" >  
           </a> 
         </div>
         <div class="header__nav">

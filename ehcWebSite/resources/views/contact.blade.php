@@ -30,7 +30,7 @@
    
   
 
-
+@livewireStyles
 
       </head>
 
@@ -198,33 +198,38 @@
                   </div> -->
                 </div>
                 <div class="contact-wrapper has_fade_anim">
-                  <form>
-                    <div >
-                    </div>
-					<div class="wc-single-input">
+                  <form action="/contact/submit" method="POST">
+                  @csrf  
+
+					        <div class="wc-single-input">
                       <label for="name" class="wc-form-label">Nom</label>
-                      <input type="text" id="name">
+                      <input type="text" id="name" name="nom" required>
                     </div>
-					<div class="wc-single-input">
+					        <div class="wc-single-input">
                       <label for="name" class="wc-form-label">Prénom</label>
-                      <input type="text" id="prenom">
+                      <input type="text" id="prenom" name="prenom" required>
                     </div>
                     <div class="wc-single-input">
                       <label for="email" class="wc-form-label">Email</label>
-                      <input type="text" id="email">
+                      <input type="email" id="email" name="email" required>
                     </div>
                     <div class="wc-single-input">
                       <label for="Objet" class="wc-form-label">Objet</label>
-                      <input type="text" id="Objet">
+                      <input type="text" id="Objet" name="objet" required>
                     </div>
-					<div></div>
+					          <div></div>
                     <div class="wc-single-input">
                       <label for="message" class="wc-form-label">Message</label>
-                      <textarea id="message" placeholder="Écrivez votre message ....."></textarea>
+                      <textarea id="message" name="message" placeholder="Écrivez votre message ....." required></textarea>
                     </div>
                     <div class="btn-wrapper">
+                      
+                    @if(Session('success'))
+                   {{ Session('success') }}
+                     @endif
+
                       <button type="submit" class="wc-btn-primary btn-text-flip"><span data-text="Envoyer">Envoyer
-                          </span> <i class="fa fa-caret-right"></i> </button>
+                      </span> <i class="fa fa-caret-right"></i> </button>
                     </div>
                   </form>
                 </div>
@@ -320,6 +325,9 @@
       });
     }
   </script>
+
+
+@livewireScripts
 
 </body>
 
