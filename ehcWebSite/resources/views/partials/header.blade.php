@@ -1,7 +1,7 @@
 <header class="header-area">
     <div class="container container-large">
       <div class="header-area__inner">
-      <div class="header__logo" style="width:100%;" >
+      <div class="header__logo">
          <a href="{{ route('home')}}">
             <img src="assets/imgs/logo/logoEHC.png" alt="Site Logo" >  
           </a> 
