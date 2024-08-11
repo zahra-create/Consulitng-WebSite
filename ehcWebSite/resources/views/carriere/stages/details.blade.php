@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Binox HTML5 Template">
 
-  <title>Candidature spontanée</title>
+  <title>Stage détails</title>
 
   <!-- Fav Icon -->
   <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.webp">
@@ -144,28 +144,33 @@
               <div class="section-heading">
                 <div class="section-title-wrapper">
                   <div class="subtitle-wrapper has_fade_anim">
-                    <span style="color:#005151;" class="section-subtitle">Condidature spontanée</span>
+                    <span style="color:#005151;" class="section-subtitle">Stage détails</span>
                   </div>
                   <div class="title-wrapper has_fade_anim">
-                    <h2 style="color:#005151;" class="section-title">Rejoignez l'équipe EHC et explorez de nouvelles opportunités professionnelles!</h2>
+                    <h2 style="color:#005151;" class="section-title">Rejoignez {{ $stage->entreprise }} et explorez de nouvelles opportunités professionnelles!</h2>
                   </div>
                 </div>
               </div>
             </div>
             <div class="location-thumb has_fade_anim">
-              <img src="assets/imgs/gallery/candidature.jpeg" alt="location-image">
-              <div class="container">
-                <div class="location-info-wrapper has_fade_anim">
+              @if($stage->image_details_path)
+              <img src="storage/{{$stage->image_details_path}}" alt="location-image">
+              @endif
+              <div  class="container">
+                <div   class="location-info-wrapper has_fade_anim">
                   <div class="location-info">
                     <div class="logo">
                       <img src="assets/imgs/logo/logo.webp" alt="logo">
                     </div>
-                    <h3 style="color:#005151;" class="title">Contact info:</h3>
+                    <h3 style="color:#005151;" class="title">Compétences :</h3>
                     <ul class="info-list">
-                      <li><a style="color:#005151;" href="#">+212 6 63-80-85-01</a></li>
-                      <li><a style="color:#005151;" href="#">contact@expertshumancapital.com</a></li>
+                    <!--  <li><a style="color:#005151;" href="#">+212 6 63-80-85-01</a></li>
+                      <li><a style="color:#005151;" href="#">contact@expertshumancapital.com</a></li> -->
+                      @foreach ($stage->skills as $skill)
+                      <li style="color:#005151;">{{ $skill }}</li> <br>
+                      @endforeach 
                     </ul>
-                    <p style="color:#005151;" class="text">Rue du Calvon Bv Abdelmoumen- Casablanca</p>
+                    <p style="color:#005151;" class="text">{{ $stage->location }}</p>
                   </div>
                 </div>
               </div>
