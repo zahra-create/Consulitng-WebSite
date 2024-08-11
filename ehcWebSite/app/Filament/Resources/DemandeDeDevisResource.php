@@ -19,6 +19,8 @@ class DemandeDeDevisResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
+    protected static ?string $navigationGroup = 'Formulaires';
+
     public static function form(Form $form): Form
     {
         return $form
@@ -44,8 +46,7 @@ class DemandeDeDevisResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('nom')->searchable(),
-                Tables\Columns\TextColumn::make('prenom')->searchable(),
+
                 Tables\Columns\TextColumn::make('email')->searchable(),
                 Tables\Columns\TextColumn::make('phone')->searchable(),
                 Tables\Columns\TextColumn::make('company')->searchable(),

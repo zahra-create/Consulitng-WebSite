@@ -10,10 +10,10 @@ class ListDemandeDeDevis extends ListRecords
 {
     protected static string $resource = DemandeDeDevisResource::class;
 
-    protected function getActions(): array
+   /* protected function getActions(): array
     {
         return [
             Actions\CreateAction::make(),
         ];
-    }
+    } */
 }

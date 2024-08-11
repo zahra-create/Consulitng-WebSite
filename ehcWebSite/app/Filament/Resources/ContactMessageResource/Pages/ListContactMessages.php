@@ -10,10 +10,10 @@ class ListContactMessages extends ListRecords
 {
     protected static string $resource = ContactMessageResource::class;
 
-    protected function getActions(): array
+    /*protected function getActions(): array
     {
         return [
-            Actions\CreateAction::make(),
+            Actions\DeleteAction::make(),
         ];
-    }
+    }*/
 }
