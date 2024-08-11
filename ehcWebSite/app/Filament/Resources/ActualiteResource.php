@@ -81,7 +81,7 @@ class ActualiteResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\ImageColumn::make('image'),
-                Tables\Columns\TextColumn::make('titre'),
+                Tables\Columns\TextColumn::make('titre')->searchable(),
                 //Tables\Columns\TextColumn::make('slug'),
             
                 //Tables\Columns\TextColumn::make('corps'),
@@ -90,7 +90,7 @@ class ActualiteResource extends Resource
                 ->boolean(),
                 Tables\Columns\TextColumn::make('date_publication')
                 ->dateTime(),
-                Tables\Columns\TextColumn::make('Auteur'),
+                Tables\Columns\TextColumn::make('Auteur')->searchable(),
                 //Tables\Columns\TextColumn::make('created_at')
                 //->dateTime(),
                 Tables\Columns\TextColumn::make('updated_at')

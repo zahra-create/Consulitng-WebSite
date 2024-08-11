@@ -42,8 +42,8 @@ class TextWidgetResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('key'),
-                Tables\Columns\TextColumn::make('title'),
+                Tables\Columns\TextColumn::make('key')->searchable(),
+                Tables\Columns\TextColumn::make('title')->searchable(),
                 Tables\Columns\IconColumn::make('active')
                     ->boolean(),
                 Tables\Columns\TextColumn::make('updated_at')
