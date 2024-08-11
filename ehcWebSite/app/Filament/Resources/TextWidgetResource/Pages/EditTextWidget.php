@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Filament\Resources\ActualiteResource\Pages;
+namespace App\Filament\Resources\TextWidgetResource\Pages;
 
-use App\Filament\Resources\ActualiteResource;
+use App\Filament\Resources\TextWidgetResource;
 use Filament\Pages\Actions;
 use Filament\Resources\Pages\EditRecord;
 
-class EditActualite extends EditRecord
+class EditTextWidget extends EditRecord
 {
-    protected static string $resource = ActualiteResource::class;
+    protected static string $resource = TextWidgetResource::class;
 
     protected function getRedirectUrl(): string
 {
