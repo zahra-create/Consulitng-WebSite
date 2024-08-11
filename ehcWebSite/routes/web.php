@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ActualiteControleer;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ContactController;
@@ -141,14 +142,14 @@ Route::get('/detail-podcast', function () {
 })->name('detail-podcast');
 
 //Actualites
-Route::get('/Acualites', function () {
-    return view('medias.Actualites');
-})->name('Actualites');
+Route::get('/Acualites',[ActualiteControleer::class, 'index'])->name('Actualites');
 
 //details-actualites
+Route::get('/{actualite:slug}',[ActualiteControleer::class, 'show'])->name('details-actualites');
+/*
 Route::get('/details-acualites', function () {
     return view('medias.details-actualites');
-})->name('details-actualites');
+})->name('details-actualites'); */
 
 // condidature 
 Route::get('/condidature', function () {

@@ -29,6 +29,7 @@
       <link rel="stylesheet" href="{{ url('assets/css/master-contact.css') }}">  
    
   
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
 
 
@@ -237,7 +238,10 @@
                     </div>
 
                     @if(Session('success_devis'))
-                        <div>{{ Session('success_devis') }}</div>
+                    <div class="alert alert-success alert-dismissible fade in">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        {{ Session('success_devis') }}
+                      </div>
                     @endif
 
                     <div class="btn-wrapper">
@@ -278,6 +282,11 @@
   <script src="assets/js/error-handling.js"></script>
   <script src="assets/js/wc-cursor.js"></script>
   <script src="assets/js/offcanvas.js"></script>
+
+<!--scripts for alert-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 
   <script>
     if ('.testimonial.style-1') {
