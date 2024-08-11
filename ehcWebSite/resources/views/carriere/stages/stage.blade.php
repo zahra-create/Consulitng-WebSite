@@ -155,90 +155,39 @@
               </div>
               <div class="blog-wrapper-area fix">
                 <div class="blog-wrapper">
-                  <article class="blog style-1 has_fade_anim">
-                    <div class="thumb">
-                      <a href="blog-details.html"><img src="assets/imgs/gallery/Barid1.jpg" alt="blog image"></a>
-                    </div>
-                    <div class="content">
-                      <div class="meta">
-                        <a href="blog-style-1.html"><span class="tag">Rémunéré</span></a>
-                        <span class="date has-left-line">2 mois</span>
-                      </div>
-                      <h3 class="title"><a href="blog-details.html"> Stage chez Al Barid Bank</a></h3>
-                      <p class="text">A la recherche d'un profil cybersécurité</p>
-                    </div> 
-                  </article>
+
+                @foreach ($stages as $stage)
+                
                   <article class="blog style-1 has_fade_anim" data-delay=".35">
                     <div class="thumb">
-                      <a href="blog-details.html"><img src="assets/imgs/gallery/Maroc_telecom.jpg" alt="blog image"></a>
+                   
+                      <a href="{{ route('stages.details' , $stage->id) }}">
+                      @if( $stage->image_offre_path )
+                        <img src="storage/{{$stage->image_offre_path }}" alt="blog image">
+                        @endif
+                      </a>
+                      
                     </div>
                     <div class="content">
                       <div class="meta">
-                        <a href="blog-style-1.html"><span class="tag">Rémunéré</span></a>
-                        <span class="date has-left-line">6 mois</span>
+                        <a href="blog-style-1.html"><span class="tag">{{ $stage->entreprise }}</span></a>
+                        <span class="date has-left-line">{{ $stage->date_debut }} - {{ $stage->date_fin }}</span>
                       </div>
-                      <h3 class="title"><a href="blog-details.html">Stage chez Maroc Telecom</a></h3>
-                      <p class="text">A la recherche d'un profil developpement web</p>
+                      <h3 class="title"><a href="{{ route('stages.details' , $stage->id) }}">{{ $stage->title }}</a></h3>
+                      <p class="text">{{ $stage->description }}</p>
                     </div>
                   </article>
-                  <article class="blog style-1 has_fade_anim" data-delay=".5">
-                    <div class="thumb">
-                      <a href="blog-details.html"><img src="assets/imgs/gallery/inwi.jpg" alt="blog image"></a>
-                    </div>
-                    <div class="content">
-                      <div class="meta">
-                        <a href="blog-style-1.html"><span class="tag">Rémunéré</span></a>
-                        <span class="date has-left-line">3 mois</span>
-                      </div>
-                      <h3 class="title"><a href="blog-details.html">Stage chez inwi</a></h3>
-                      <p class="text">A la recherche d'un profil comptable</p>
-                    </div>
-                  </article>
-                  <article class="blog style-1 has_fade_anim">
-                    <div class="thumb">
-                      <a href="blog-details.html"><img src="assets/imgs/gallery/bank al maghrib.webp" alt="blog image"></a>
-                    </div>
-                    <div class="content">
-                      <div class="meta">
-                        <a href="blog-style-1.html"><span class="tag">Rémunéré</span></a>
-                        <span class="date has-left-line">6 mois</span>
-                      </div>
-                      <h3 class="title"><a href="blog-details.html">Stage chez Bank Al Maghrib</a></h3>
-                      <p class="text">A la recherche d'un profil sécurité système</p>
-                    </div>
-                  </article>
-                  <article class="blog style-1 has_fade_anim" data-delay=".35">
-                    <div class="thumb">
-                      <a href="blog-details.html"><img src="assets/imgs/gallery/barid2.jpg" alt="blog image"></a>
-                    </div>
-                    <div class="content">
-                      <div class="meta">
-                        <a href="blog-style-1.html"><span class="tag">Rémunéré</span></a>
-                        <span class="date has-left-line">3 mois</span>
-                      </div>
-                      <h3 class="title"><a href="blog-details.html">Stage chez Al Barid Bank</a></h3>
-                      <p class="text">A la recherche d'un profil développement mobile</p>
-                    </div>
-                  </article>
-                  <article class="blog style-1 has_fade_anim" data-delay=".5">
-                    <div class="thumb">
-                      <a href="blog-details.html"><img src="assets/imgs/gallery/ocp2.jpg" alt="blog image"></a>
-                    </div>
-                    <div class="content">
-                      <div class="meta">
-                        <a href="blog-style-1.html"><span class="tag">Rémunéré</span></a>
-                        <span class="date has-left-line">2 mois</span>
-                      </div>
-                      <h3 class="title"><a href="blog-details.html">Stage chez OCP</a></h3>
-                      <p class="text">A la recherche d'un profil cybersécurité</p>
-                    </div>
-                  </article>
+
+                @endforeach 
+                 
                 </div>
-                <ul class="pagination style-1 has_fade_anim">
+                {{ $stages->links() }}
+              
+              <!--  <ul class="pagination style-1 has_fade_anim">
                   <li><a href="#">1</a></li>
                   <li><a class="current" href="#">2</a></li>
                   <li><a href="#">Next <img src="assets/imgs/icon/arrow-next-icon.webp" alt="arrow-icon"></a></li>
-                </ul>
+                </ul> -->
               </div>
             </div>
           </section>

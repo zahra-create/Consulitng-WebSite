@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DemandeDevisController;
+use App\Http\Controllers\StageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -155,9 +156,8 @@ Route::get('/condidature', function () {
 })->name('condidature');
 
 //offre de stage 
-Route::get('/stages', function () {
-    return view('carriere.stages.stage');
-})->name('stages');
+Route::get('/stages', [StageController::class, 'index'])->name('stages');
+Route::get('/{id}', [StageController::class, 'show'])->name('stages.details');
 
 // offre d'emploi 
 Route::get('/emplois', function () {
