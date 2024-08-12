@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('category_actualites', function (Blueprint $table) {
+        Schema::create('actualite_category_actualite', function (Blueprint $table) {
             $table->id();
-            $table->string('titre',2048);
-            $table->string('slug',2048);
+            $table->ForeignId('category_actualite_id')->references('id')->on('category_actualites')->onDelete('cascade');
+            $table->ForeignId('actualite_id')->references('id')->on('actualite')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('category_actualites');
+        Schema::dropIfExists('actualite_category_actualite');
     }
 };
