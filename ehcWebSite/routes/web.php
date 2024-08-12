@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\ActualiteControleer;
+use App\Http\Controllers\ActualiteController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ContactController;
@@ -142,10 +142,10 @@ Route::get('/detail-podcast', function () {
 })->name('detail-podcast');
 
 //Actualites
-Route::get('/Acualites',[ActualiteControleer::class, 'index'])->name('Actualites');
+Route::get('/Acualites',[ActualiteController::class, 'index'])->name('Actualites');
 
 //details-actualites
-Route::get('/{actualite:slug}',[ActualiteControleer::class, 'show'])->name('details-actualites');
+Route::get('/actualite/{actualite:slug}',[ActualiteController::class, 'show'])->name('details-actualites');
 /*
 Route::get('/details-acualites', function () {
     return view('medias.details-actualites');

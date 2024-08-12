@@ -10,7 +10,7 @@ use Carbon\Carbon;
 
 
 
-class ActualiteControleer extends Controller
+class ActualiteController extends Controller
 {
     /**
      * Display a listing of the resource.
