@@ -10,7 +10,7 @@ use Carbon\Carbon;
 
 
 
-class ActualiteControleer extends Controller
+class ActualiteController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,9 +21,9 @@ class ActualiteControleer extends Controller
     {
         $actualites = Actualite::query()
         ->where('active','=',1)
-        ->whereNotNull('date_publication')
+        ->whereDate('date_publication','<',Carbon::now())
         ->orderBy('date_publication','desc')
-        ->paginate(2);
+        ->paginate();
 
         return view('medias.Actualites',compact('actualites'));
     }
@@ -57,7 +57,7 @@ class ActualiteControleer extends Controller
      */
     public function show(Actualite $actualite)
     {
-       if(!$actualite->active){
+        if(!$actualite->active){
             throw new NotFoundHttpException();
         }  
 

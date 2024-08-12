@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ActualiteResource\Pages;
-use App\Filament\Resources\ActualiteResource\RelationManagers;
-use App\Models\Actualite;
+use App\Filament\Resources\EpisodeResource\Pages;
+use App\Filament\Resources\EpisodeResource\RelationManagers;
+use App\Models\Episode;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -14,29 +14,35 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 use Filament\Tables\Columns\BooleanColumn;
-
 use Closure;
 use Illuminate\Support\Str;
 
-class ActualiteResource extends Resource
+class EpisodeResource extends Resource
 {
-    protected static ?string $model = Actualite::class;
+    protected static ?string $model = Episode::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-newspaper';
+    protected static ?string $navigationIcon = 'heroicon-o-microphone';
 
-    protected static ?string $navigationGroup = 'Actualités'  ; 
+    protected static ?string $navigationGroup = 'Podcast';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
+
                 Forms\Components\Card::make()
                 ->schema([
                     Forms\Components\Grid::make(2)
                     ->  schema([
                 
-                Forms\Components\TextInput::make('titre')
-                ->required()
+                /* Forms\Components\TextInput::make('podcast_id')
+                    ->required(),*/
+
+                    Forms\Components\Select::make('podcaste')
+                    ->relationship('podcaste','titre')
+                    ->required(),
+
+                Forms\Components\TextInput::make('titre episode')
                 ->maxLength(2048)
                 ->reactive()
                 ->afterStateUpdated(function (Closure $get, Closure $set, ?string $state) {
@@ -53,48 +59,45 @@ class ActualiteResource extends Resource
                 }), ]),
 
             
-            Forms\Components\RichEditor::make('corps')
-                ->required(),
+            Forms\Components\RichEditor::make('description'),
             Forms\Components\Toggle::make('active')
                 ->required(),
-            Forms\Components\DateTimePicker::make('date_publication')
-                ->required(),
-            Forms\Components\TextInput::make('Auteur')
-                ->required(),
+            Forms\Components\DateTimePicker::make('date_publication'),
+            Forms\Components\TextInput::make('proprietaire'),
 
             ])->columnSpan(8),
     
             Forms\Components\Card::make()
             ->schema([
-                Forms\Components\FileUpload::make('image'),
-                Forms\Components\Select::make('categories')
-                ->multiple()
-                ->relationship('categories','titre')
+                Forms\Components\FileUpload::make('cover'),
+                Forms\Components\FileUpload::make('audio')
                 ->required(),
+
             ])->columnSpan(4),
 
 ])->columns(12);
     }
 
+
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('image'),
-                Tables\Columns\TextColumn::make('titre')->searchable(),
+                
+                Tables\Columns\TextColumn::make('titre'),
                 //Tables\Columns\TextColumn::make('slug'),
-            
-                //Tables\Columns\TextColumn::make('corps'),
-
+                //Tables\Columns\TextColumn::make('cover'),
+                //Tables\Columns\TextColumn::make('description'),
+                //Tables\Columns\TextColumn::make('audio'),
                 Tables\Columns\IconColumn::make('active')
-                ->boolean(),
+                    ->boolean(),
                 Tables\Columns\TextColumn::make('date_publication')
-                ->dateTime(),
-                Tables\Columns\TextColumn::make('Auteur')->searchable(),
+                    ->dateTime(),
+                Tables\Columns\TextColumn::make('proprietaire'),
                 //Tables\Columns\TextColumn::make('created_at')
-                //->dateTime(),
+                //    ->dateTime(),
                 Tables\Columns\TextColumn::make('updated_at')
-                ->dateTime(),
+                    ->dateTime(),
             ])
             ->filters([
                 //
@@ -102,7 +105,6 @@ class ActualiteResource extends Resource
             ->actions([
                 Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
@@ -119,10 +121,10 @@ class ActualiteResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListActualites::route('/'),
-            /*'create' => Pages\CreateActualite::route('/create'),
-            'view' => Pages\ViewActualite::route('/{record}'),
-            'edit' => Pages\EditActualite::route('/{record}/edit'),*/
+            'index' => Pages\ListEpisodes::route('/'),
+            'create' => Pages\CreateEpisode::route('/create'),
+            'view' => Pages\ViewEpisode::route('/{record}'),
+            'edit' => Pages\EditEpisode::route('/{record}/edit'),
         ];
     }    
 }

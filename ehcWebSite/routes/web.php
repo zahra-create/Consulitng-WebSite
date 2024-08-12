@@ -1,11 +1,12 @@
 <?php
 
-use App\Http\Controllers\ActualiteControleer;
+use App\Http\Controllers\ActualiteController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DemandeDevisController;
 use App\Http\Controllers\StageController;
+use App\Http\Controllers\PodcastController;
 
 /*
 |--------------------------------------------------------------------------
@@ -125,11 +126,14 @@ Route::get('/demande-devis', function () {
 //form demande devis
 Route::post('/demande-devis/submitdevis', [DemandeDevisController::class, 'submitdevis'])->name('demande-devis.submitdevis');
 
-
 //Podcasts
+/*
 Route::get('/podcasts', function () {
     return view('medias.podcast.Podcasts');
 })->name('Podcasts');
+*/
+Route::get('/podcasts',[PodcastController::class, 'index'])->name('Podcasts');
+
 
 //Page 2 Podcasts
 Route::get('/podcasts2', function () {
@@ -137,15 +141,14 @@ Route::get('/podcasts2', function () {
 })->name('Page2');
 
 //Détails Podcasts
-Route::get('/detail-podcast', function () {
-    return view('medias.podcast.detail-podcast');
-})->name('detail-podcast');
+
+Route::get('/{podcast:slug}',[PodcastController::class, 'show'])->name('detail-podcast');
 
 //Actualites
-Route::get('/Acualites',[ActualiteControleer::class, 'index'])->name('Actualites');
+Route::get('/Acualites',[ActualiteController::class, 'index'])->name('Actualites');
 
 //details-actualites
-Route::get('/{actualite:slug}',[ActualiteControleer::class, 'show'])->name('details-actualites');
+Route::get('/Acualites/{actualite:slug}',[ActualiteController::class, 'show'])->name('details-actualites');
 /*
 Route::get('/details-acualites', function () {
     return view('medias.details-actualites');
@@ -158,7 +161,7 @@ Route::get('/condidature', function () {
 
 //offre de stage 
 Route::get('/stages', [StageController::class, 'index'])->name('stages');
-Route::get('/{id}', [StageController::class, 'show'])->name('stages.details');
+Route::get('/stages/{id}', [StageController::class, 'show'])->name('stages.details');
 
 // offre d'emploi 
 Route::get('/emplois', function () {

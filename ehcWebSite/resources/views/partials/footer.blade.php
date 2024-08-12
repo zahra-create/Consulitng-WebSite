@@ -1,12 +1,12 @@
 <link rel="stylesheet" href="{{ url('assets/css/master-financial.css') }}">
 <footer class="footer-area style-5">
     <div class="shape">
-      <img src="assets/imgs/shape/polygon.webp" alt="polygon">
+      <img src="{{ url('assets/imgs/shape/polygon.webp') }}" alt="polygon">
     </div>
     <div class="container">
       <div class="footer-menu">
         <div class="logo-wrapper">
-          <a href="#"><img src="assets/imgs/logo/logoEHC.png" alt="site-logo"></a>
+          <a href="#"><img src="{{ url('assets/imgs/logo/logoEHC.png') }}" alt="site-logo"></a>
           <a href="#" class="scroll-up-btn"> <i class="icon-wcf-arrow-up-5"></i> <span>Go up</span> </a>
         </div>
 

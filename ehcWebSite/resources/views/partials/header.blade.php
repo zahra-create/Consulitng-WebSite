@@ -3,7 +3,7 @@
       <div class="header-area__inner">
       <div class="header__logo">
          <a href="{{ route('home')}}">
-            <img src="assets/imgs/logo/logoEHC.png" alt="Site Logo" >  
+            <img src="{{ url('assets/imgs/logo/logoEHC.png') }}" alt="Site Logo" >  
           </a> 
         </div>
         <div class="header__nav">
@@ -44,11 +44,11 @@
         </div>
         <div class="header-right">
           <div class="header__meta d-none d-md-block">
-            <a href="contact.html" class="cf_btn wc-btn-primary btn-text-flip"><span data-text="Payer Prestations">Payer prestations</span> <img src="assets/imgs/icon/icon-r-21.webp" alt="arrow-icon"> </a>
+            <a href="contact.html" class="cf_btn wc-btn-primary btn-text-flip"><span data-text="Payer Prestations">Payer prestations</span> <img src="{{ url('assets/imgs/icon/icon-r-21.webp') }}" alt="arrow-icon"> </a>
           </div>
           <div class="header__meta d-none d-md-block">
             <a href="{{ route('demande-devis') }}" class="cf_btn wc-btn-primary btn-text-flip"><span data-text="Demander devis">Demander devis
-            </span> <img src="assets/imgs/icon/icon-r-21.webp" alt="arrow-icon"> </a>
+            </span> <img src="{{ url('assets/imgs/icon/icon-r-21.webp') }}" alt="arrow-icon"> </a> 
           </div>
           <!--<div class="header__search d-none d-md-block">
             <div class="search-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> -->
