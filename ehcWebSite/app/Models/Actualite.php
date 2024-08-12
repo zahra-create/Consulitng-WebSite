@@ -13,7 +13,7 @@ class Actualite extends Model
 
     protected $table='actualite';
 
-    protected $fillable = ['titre','slug','image' ,'corps' ,'active','date_publication','Auteur'];
+    protected $fillable = ['titre','slug','image' ,'corps' ,'active','afficher_sur_accueil', 'afficher_en_banniere','date_publication','Auteur'];
 
     protected $casts =[ 'date_publication' => 'datetime'];
 

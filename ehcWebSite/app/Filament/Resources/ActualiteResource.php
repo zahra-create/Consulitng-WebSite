@@ -66,6 +66,13 @@ class ActualiteResource extends Resource
     
             Forms\Components\Card::make()
             ->schema([
+                Forms\Components\Checkbox::make('afficher_sur_accueil')
+                ->label('Affiché sur accueil')
+                ->default(false),
+                Forms\Components\Checkbox::make('afficher_en_banniere')
+                ->label('Affiché en bannière')
+                ->default(false),
+
                 Forms\Components\FileUpload::make('image'),
                 Forms\Components\Select::make('categories')
                 ->multiple()
@@ -80,7 +87,7 @@ class ActualiteResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\ImageColumn::make('image'),
+                //Tables\Columns\ImageColumn::make('image'),
                 Tables\Columns\TextColumn::make('titre')->searchable(),
                 //Tables\Columns\TextColumn::make('slug'),
             

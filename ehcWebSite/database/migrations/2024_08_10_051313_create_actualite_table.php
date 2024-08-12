@@ -22,6 +22,8 @@ return new class extends Migration
             $table->boolean('active');
             $table->datetime('date_publication');
             $table->string('Auteur');
+            $table->boolean('afficher_sur_accueil')->default(false);
+            $table->boolean('afficher_en_banniere')->default(false);
             $table->timestamps();
         });
     }

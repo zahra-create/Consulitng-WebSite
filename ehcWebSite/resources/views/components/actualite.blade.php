@@ -137,11 +137,15 @@
         <main>
 
 
-         <!-- banner area start  -->
+
+         <!-- banner area start  --> <!--
           <section class="banner-area p-relative fix zi-1 banner-1"  >
             <div class="swiper baner-active-1" style=" height:60vh; ">
               <div class="swiper-wrapper">
-                <div class="swiper-slide" >
+
+-->
+
+                <!--<div class="swiper-slide" >
                   <div class="swiper-slide-item">
                     <div class="banner-area-bg bg-full zi--1">
                       <img src="assets/imgs/gallery/Infinity_Recrutement.jpg" alt="offering consultancy">
@@ -214,7 +218,7 @@
                   <div class="pagination-style-1"></div>
                 </div>
               </div>
-            </div>
+            </div> -->
             <!-- <div class="banner-area-vision has_fade_anim" data-delay=".65" data-ease="bounce">
              <div class="btn-wrapper btn-move d-inline-block">
                 <a class="cf_btn wc-btn-play light video-popup btn-item" href="assets/video/team-planning.mp4">
@@ -229,7 +233,11 @@
               </div>
               <img src="assets/imgs/shape/shape-x.webp" alt="" class="shape-x">
             </div> -->
-          </section>
+
+            <!--
+</div>
+</div>
+          </section> -->
           <!-- banner area end  -->
 
 

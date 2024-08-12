@@ -35,10 +35,11 @@ class EpisodeResource extends Resource
                     Forms\Components\Grid::make(2)
                     ->  schema([
                 
-                /* Forms\Components\TextInput::make('podcast_id')
-                    ->required(),*/
+                   /*Forms\Components\Select::make('podcast_id')
+                   ->relationship('podcaste','id'),*/
 
                     Forms\Components\Select::make('podcaste')
+                    ->label('Titre de podcaste')
                     ->relationship('podcaste','titre')
                     ->required(),
 
@@ -49,7 +50,11 @@ class EpisodeResource extends Resource
                     if (! $get('is_slug_changed_manually') && filled($state)) {
                         $set('slug', Str::slug($state));
                     }
-                }),
+                })
+                ->required(),
+
+                Forms\Components\Select::make('podcast_id')
+                   ->relationship('podcaste','id'),
 
             Forms\Components\TextInput::make('slug')
                 ->required()
@@ -70,8 +75,8 @@ class EpisodeResource extends Resource
             Forms\Components\Card::make()
             ->schema([
                 Forms\Components\FileUpload::make('cover'),
-                Forms\Components\FileUpload::make('audio')
-                ->required(),
+                Forms\Components\FileUpload::make('audio'),
+
 
             ])->columnSpan(4),
 

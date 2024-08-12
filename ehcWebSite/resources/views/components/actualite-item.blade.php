@@ -10,6 +10,13 @@
                         <span class="date has-left-line">{{$actualite->getFormatedDate()}}</span>
                       </div>
                       <h3 class="title"><a href="{{route('details-actualites',$actualite)}}">{{$actualite->titre}}</a></h3>
+                      @if( $actualite->afficher_sur_accueil )
+                      <div class="btn-wrapper">
+                        <a href="{{route('details-actualites',$actualite)}}">Lire Plus</a>
+                      </div>
+                      @else
                       <p class="text">{{$actualite->shortBody()}}</p> 
-                    </div>
+                      @endif
+                      </div>
                   </article>
+

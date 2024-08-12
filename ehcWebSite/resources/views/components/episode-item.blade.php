@@ -7,12 +7,12 @@
                                 @if($episode->title)
                               <h2 class="title">{{$episode->title}}</h2>
                               @else
-                              <h2 class="title">{{$podcast->titre}}</h2> 
+                              <h2 class="title">{{$episode->podcaste->titre}}</h2> 
                               @endif
                               @if($episode->description)
                               <p class="text">{{$episode->description}}</p>
                               @else
-                              <p class="text">{{$podcast->description}}</p>
+                              <p class="text">{{$episode->podcaste->description}}</p>
                               @endif 
                             </div>
                           </div>
