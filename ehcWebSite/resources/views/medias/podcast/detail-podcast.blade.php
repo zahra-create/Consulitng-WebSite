@@ -10,10 +10,11 @@
   <title>EHC</title>
 
   <!-- Fav Icon -->
-  <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.webp">
+  <link rel="icon" type="image/x-icon" href="{{ url('assets/imgs/logo/favicon.webp')}}">
 
 
   <!-- All CSS files -->
+
   <link rel="stylesheet" href="{{ url('assets/css/bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ url('assets/css/all.min.css') }}">
   <link rel="stylesheet" href="{{ url('assets/css/icomon.css') }}">
@@ -26,7 +27,6 @@
     <link rel="stylesheet" href="{{ url('assets/css/detail-podcast.css') }}">
 
 
-   
 </head>
 
 
@@ -145,9 +145,9 @@
        <div class="wrapper" style=" height:450px; margin:auto; margin-bottom:50px; margin-top:50px; background-color:#00515114; width:380px;">  <!--style="width:250; height:400px; "-->
            <div class="details">
                <div class="now-playing">PLAYING x OF y</div>
-               <!--<div class="track-art>--> <img class="track-art" src="assets/imgs/podcasts/femme.png" alt="podcast"><!-- </div>-->
-               <div class="track-name">Track Name</div>
-               <div class="track-artist">Track Artist</div>
+               <!--<div class="track-art>--> <img class="track-art" src="{{ url('assets/imgs/podcasts/femme.png') }}" alt="podcast"><!-- </div>-->
+               <div class="track-name">{{$podcast->titre}}</div>
+               <div class="track-artist">{{$podcast->Proprietaire}}</div>
            </div>
 		   
 		   <audio></audio>
@@ -202,84 +202,11 @@
                   <div class="blog-wrapper-area fix has_fade_anim" data-delay=".35">
                     <div class="blog-wrapper">
 
-                        <article class="blog style-2">
-                          <!-- <div class="author"> 
-                            <div class="avatar"><i class="fa-regular fa-circle-play" style="color:#005151;"></i></div>
-                          </div> -->
-                          <div class="content-wrapper" data-src="Épisode1.mp3">
-						  <div class="btn-wrapper" >
-                              <span class="cf_btn wc-btn-icon" id="btn-play" onclick="playpauseTrack()"><i class="fa-regular fa-circle-play" style="color:#005151; font-size:50px; transform: rotate(0deg);"></i></span>
-                            </div>
-                            <div class="content">
-                              <h2 class="title">Épisode 1:Histoires de Réussite</h2>
-                              <p class="text">Voyage professionnel : Témoignages de femmes qui ont réussi dans notre entreprise.....</p>
-                            </div>
-                          </div>
-                        </article>
 
-                        <article class="blog style-2">
-                          <div class="content-wrapper">
-						  <div class="btn-wrapper"  >
-                              <span class="cf_btn wc-btn-icon" id="btn-play" onclick="playpauseTrack()"><i class="fa-regular fa-circle-play" style="color:#005151; font-size:50px; transform: rotate(0deg);"></i></span>
-                            </div>
-                            <div class="content">
-                              <h2 class="title">Épisode 2:Histoires de Réussite</h2>
-                              <p class="text">Voyage professionnel : Témoignages de femmes qui ont réussi dans notre entreprise.....</p>
-                            </div>
-                          </div>
-                        </article>
-
-                        <article class="blog style-2">
-                          <div class="content-wrapper">
-						  <div class="btn-wrapper">
-                              <span class="cf_btn wc-btn-icon" id="btn-play" onclick="playpauseTrack()"><i class="fa-regular fa-circle-play" style="color:#005151; font-size:50px; transform: rotate(0deg);"></i></span>
-                            </div>
-                            <div class="content">
-                              <h2 class="title">Épisode 3:Histoires de Réussite</h2>
-                              <p class="text">Voyage professionnel : Témoignages de femmes qui ont réussi dans notre entreprise.....</p>
-                            </div>
-                          </div>
-
-                        </article>
-
-
-                        <article class="blog style-2">
-                          <div class="content-wrapper">
-						  <div class="btn-wrapper">
-                              <span class="cf_btn wc-btn-icon"><i class="fa-regular fa-circle-play" style="color:#005151; font-size:50px; transform: rotate(0deg);"></i></span>
-                            </div>
-                            <div class="content">
-                              <h2 class="title">Épisode 4:Histoires de Réussite</h2>
-                              <p class="text">Voyage professionnel : Témoignages de femmes qui ont réussi dans notre entreprise.....</p>
-                            </div>
-                          </div>
-                        </article>
-
-                        <article class="blog style-2">
-                          <div class="content-wrapper">
-						  <div class="btn-wrapper">
-                              <span class="cf_btn wc-btn-icon"><i class="fa-regular fa-circle-play" style="color:#005151; font-size:50px; transform: rotate(0deg);"></i></span>
-                            </div>
-                            <div class="content">
-                              <h2 class="title">Épisode 5:Histoires de Réussite</h2>
-                              <p class="text">Voyage professionnel : Témoignages de femmes qui ont réussi dans notre entreprise.....</p>
-                            </div>
-                          </div>
-                        </article>
-
-                        <article class="blog style-2">
-                          <div class="content-wrapper">
-						  <div class="btn-wrapper">
-                              <span class="cf_btn wc-btn-icon"><i class="fa-regular fa-circle-play" style="color:#005151; font-size:50px; transform: rotate(0deg);"></i></span>
-                            </div>
-                            <div class="content">
-
-                              <h2 class="title">Épisode 6:Histoires de Réussite</h2>
-                              <p class="text">Voyage professionnel : Témoignages de femmes qui ont réussi dans notre entreprise.....</p>
-                            </div>
-                          </div>
-                        </article>
-
+                    @foreach($podcast->episodes as $episode)
+                    <x-episode-item :episode="$episode"></x-episode-item>
+                    @endforeach
+ 
                     </div>
                   </div>
 
@@ -294,11 +221,8 @@
 
         @include('partials.footer')
 
+<!--
 <script>
-
-
-
-
 
 let now_playing = document.querySelector('.now-playing');
 let track_art = document.querySelector('.track-art');
@@ -505,24 +429,23 @@ function setUpdate(){
 
 
 
-</script>
-
   <!-- All JS files -->
-  <script src="assets/js/jquery-3.6.0.min.js"></script>
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="assets/js/swiper-bundle.min.js"></script>
-  <script src="assets/js/counter.js"></script>
-  <script src="assets/js/progressbar.js"></script>
-  <script src="assets/js/gsap.min.js"></script>
-  <script src="assets/js/ScrollSmoother.min.js"></script>
-  <script src="assets/js/ScrollTrigger.min.js"></script>
-  <script src="assets/js/jquery.meanmenu.min.js"></script>
-  <script src="assets/js/backToTop.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/error-handling.js"></script>
-  <script src="assets/js/wc-cursor.js"></script>
-  <script src="assets/js/offcanvas.js"></script>
+   
+  <script src="{{ url('assets/js/jquery-3.6.0.min.js')}}"></script>
+  <script src="{{ url('assets/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{ url('assets/js/jquery.magnific-popup.min.js')}}"></script>
+  <script src="{{ url('assets/js/swiper-bundle.min.js')}}"></script>
+  <script src="{{ url('assets/js/counter.js')}}"></script>
+  <script src="{{ url('assets/js/progressbar.js')}}"></script>
+  <script src="{{ url('assets/js/gsap.min.js')}}"></script>
+  <script src="{{ url('assets/js/ScrollSmoother.min.js')}}"></script>
+  <script src="{{ url('assets/js/ScrollTrigger.min.js')}}"></script>
+  <script src="{{ url('assets/js/jquery.meanmenu.min.js')}}"></script>
+  <script src="{{ url('assets/js/backToTop.js')}}"></script>
+  <script src="{{ url('assets/js/main.js')}}"></script>
+  <script src="{{ url('assets/js/error-handling.js')}}"></script>
+  <script src="{{ url('assets/js/wc-cursor.js')}}"></script>
+  <script src="{{ url('assets/js/offcanvas.js')}}"></script>
 
 
 

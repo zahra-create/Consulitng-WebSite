@@ -13,13 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('actualite_category_actualite', function (Blueprint $table) {
+        Schema::create('podcasts', function (Blueprint $table) {
             $table->id();
-            $table->ForeignId('category_actualites_id')->references('id')->on('category_actualites')->onDelete('cascade');
-            $table->ForeignId('actualite_id')->references('id')->on('actualite')->onDelete('cascade');
+            $table->string('titre',2048);
+            $table->string('slug',2048);
+            $table->string('cover')->nullable();
+            $table->longText('description');
+            $table->boolean('active');
+            $table->datetime('date_publication');
+            $table->string('Proprietaire');
             $table->timestamps();
         });
-    }
+    }  
 
     /**
      * Reverse the migrations.
@@ -28,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('actualite_category_actualite');
+        Schema::dropIfExists('podcasts');
     }
 };

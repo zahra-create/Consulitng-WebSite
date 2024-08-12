@@ -2,15 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Actualite;
+use App\Models\Podcast;
 use Illuminate\Http\Request;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 use Carbon\Carbon;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
-
-
-class ActualiteController extends Controller
+class PodcastController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,13 +17,14 @@ class ActualiteController extends Controller
      */
     public function index()
     {
-        $actualites = Actualite::query()
+        $podcasts = Podcast::query()
         ->where('active','=',1)
         ->whereDate('date_publication','<',Carbon::now())
         ->orderBy('date_publication','desc')
         ->paginate();
 
-        return view('medias.Actualites',compact('actualites'));
+        return view('medias.podcast.Podcasts',compact('podcasts'));
+    
     }
 
     /**
@@ -52,41 +51,26 @@ class ActualiteController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Actualite  $actualite
+     * @param  \App\Models\Podcast  $podcast
      * @return \Illuminate\Http\Response
      */
-    public function show(Actualite $actualite)
+    public function show(Podcast $podcast)
     {
-        if(!$actualite->active){
+        if(!$podcast->active){
             throw new NotFoundHttpException();
         }  
 
-        $next = Actualite::query()
-        ->where('active', true)
-        ->whereDate('date_publication', '<=', Carbon::now())
-        ->whereDate('date_publication', '<', $actualite->date_publication)
-        ->orderBy('date_publication', 'desc')
-        ->limit(1)
-        ->first();
-
-         $prev = Actualite::query()
-        ->where('active', true)
-        ->whereDate('date_publication', '<=', Carbon::now())
-        ->whereDate('date_publication', '>', $actualite->date_publication)
-        ->orderBy('date_publication', 'asc')
-        ->limit(1)
-        ->first();
-
-        return view('medias.details-actualites',compact('actualite','prev','next'));
+        return view('medias.podcast.detail-podcast',compact('podcast'));
     }
+    
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Actualite  $actualite
+     * @param  \App\Models\Podcast  $podcast
      * @return \Illuminate\Http\Response
      */
-    public function edit(Actualite $actualite)
+    public function edit(Podcast $podcast)
     {
         //
     }
@@ -95,10 +79,10 @@ class ActualiteController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Actualite  $actualite
+     * @param  \App\Models\Podcast  $podcast
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Actualite $actualite)
+    public function update(Request $request, Podcast $podcast)
     {
         //
     }
@@ -106,10 +90,10 @@ class ActualiteController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Actualite  $actualite
+     * @param  \App\Models\Podcast  $podcast
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Actualite $actualite)
+    public function destroy(Podcast $podcast)
     {
         //
     }

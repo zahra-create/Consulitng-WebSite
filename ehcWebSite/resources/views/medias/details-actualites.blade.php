@@ -205,6 +205,8 @@
 </div>
              
                       </div>
+
+
                     <!-- <div class="comment-box has_fade_anim">
                       <h3 class="title-2" style="color:#3B6668; font-weight:700px;">Newsletter</h3>
                         <div class="text-wrapper">
@@ -234,8 +236,9 @@
     <a class="page-link" href="{{route('details-actualites',$prev)}}">
     Previous</a> 
      </li>@endif
+     @if($next)
     <li class="page-item"><a class="page-link" href="{{route('details-actualites',$next)}}">Next</a>
-    </li>
+    </li>@endif
   </ul>
 </nav>
 

@@ -13,16 +13,19 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('actualite', function (Blueprint $table) {
+        Schema::create('episodes', function (Blueprint $table) {
             $table->id();
-            $table->string('titre',2048);
+            $table->string('titre',2048)->nullable();
             $table->string('slug',2048);
-            $table->string('image')->nullable();
-            $table->longText('corps');
+            $table->string('cover')->nullable();
+            $table->longText('description')->nullable();
+            $table->string('audio');
             $table->boolean('active');
-            $table->datetime('date_publication');
-            $table->string('Auteur');
+            $table->datetime('date_publication')->nullable();
+            $table->string('proprietaire')->nullable();
             $table->timestamps();
+
+            
         });
     }
 
@@ -33,6 +36,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('actualite');
+        Schema::dropIfExists('episodes');
     }
 };

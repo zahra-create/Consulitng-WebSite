@@ -17,7 +17,6 @@
 
                 @foreach($actualites as $actualite)
                 <x-actualite-item :actualite="$actualite"></x-actualite-item>
-
                 @endforeach
 
                 

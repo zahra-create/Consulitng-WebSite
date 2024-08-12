@@ -36,4 +36,6 @@ public function getImage(){
   }
   return '/storage/'.$this->image;
 }
+
+
 }
