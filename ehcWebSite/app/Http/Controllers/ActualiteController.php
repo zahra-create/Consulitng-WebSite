@@ -23,7 +23,7 @@ class ActualiteController extends Controller
         ->where('active','=',1)
         ->whereDate('date_publication','<',Carbon::now())
         ->orderBy('date_publication','desc')
-        ->paginate();
+        ->paginate(8);
 
      // Récupérer les actualités à afficher dans la bannière
      $banniereActualites = Actualite::where('afficher_en_banniere', true)->get();

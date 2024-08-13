@@ -150,7 +150,6 @@
                <div class="track-artist">{{$podcast->Proprietaire}}</div>
            </div>
 		   
-		   <audio></audio>
 
            <div class="slider_container">
                <div class="current-time">00:00</div>
@@ -178,6 +177,7 @@
 
            </div>
 
+
         <!--    <div id="wave">
                 <span class="stroke"></span>
                 <span class="stroke"></span>
@@ -188,6 +188,10 @@
                 <span class="stroke"></span>
             </div>   -->
        </div>
+
+       <audio id="audio" hidden>
+           <source src="" />
+       </audio>
    <!-- </div> -->
    </div>
       
@@ -203,11 +207,15 @@
                     <div class="blog-wrapper">
 
 
-                    @foreach($podcast->episodes as $episode)
-                    <x-episode-item :episode="$episode"></x-episode-item>
-                    @endforeach
+                    @foreach($podcast->episodes as $index => $episode)
+                   <x-episode-item :episode="$episode" :numero="$index + 1"></x-episode-item>
+                   @endforeach
  
                     </div>
+                  </div>
+
+                  <div class="pagination-links">
+                      {{ $episodes->links() }}
                   </div>
 
                 </div>
@@ -221,9 +229,10 @@
 
         @include('partials.footer')
 
-<!--
+
 <script>
 
+const audio=document.querySelector('#audio');
 let now_playing = document.querySelector('.now-playing');
 let track_art = document.querySelector('.track-art');
 let track_name = document.querySelector('.track-name');
@@ -240,7 +249,7 @@ let curr_time = document.querySelector('.current-time');
 let total_duration = document.querySelector('.total-duration');
 //let wave = document.getElementById('wave');
 //let randomIcon = document.querySelector('.fa-random');
-let curr_track = document.createElement('audio');
+//let curr_track = document.createElement('audio');
 
 let track_index = 0;
 let isPlaying = false;
@@ -249,6 +258,7 @@ let updateTimer;
 
 
 
+/*
 const music_list = [
     {
         img : 'images/stay.png',
@@ -274,7 +284,39 @@ const music_list = [
         artist : 'EHC',
         music : 'music/Rather Be.mp3'
     }
-];
+]; */
+
+
+//test
+/*
+playpause_btn.addEventListner('click', playTroack);
+
+function playTrack(){
+
+  if(isPlaying === false){
+    audio.play();
+    playpause_btn.innerHTML = `<span class='material-symbols-outlined'>pause</span>`;
+    isPlaying = true;
+  }
+  else{
+    audio.pause();
+    playpause_btn.innerHTML = `<span class='material-symbols-outlined'>pause</span>`;
+    isPlaying = false;
+  }
+
+  }
+
+  function switchTrack(){
+    if(isPlaying === true){
+      audio.play();
+    }
+    const trackSrc = 'assets/tracks/ ' + tracks[trackId] + '.mp3';
+  }
+
+*/
+
+
+
 
 loadTrack(track_index);
 
@@ -425,9 +467,10 @@ function setUpdate(){
 }
 
 
-    </script>
 
--->
+
+</script>
+
 
   <!-- All JS files -->
    

@@ -31,11 +31,14 @@
                     @endforeach
 
                 </div>
-                  <ul class="pagination style-1 has_fade_anim">
+                 <!-- <ul class="pagination style-1 has_fade_anim">
                     <li><a href="{{ route('Podcasts') }}">1</a></li>
                     <li><a class="current" href="{{ route('Page2') }}">2</a></li>
                     <li><a href="{{ route('Page2') }}">Next <img src="assets/imgs/icon/arrow-next-icon.webp" alt="arrow-icon"></a></li>
-                  </ul>
+                  </ul> -->
+
+                  {{$podcasts->links()}}
+
                 </div>
               </div>
             </div>

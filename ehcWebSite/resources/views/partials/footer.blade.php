@@ -25,7 +25,7 @@
             <li class="text">3 Rue du Calvon Bv Abdelmoumen- Casablanca</li>
           </ul>
         </div>
-        <div class="widget-item subscribe-form-item">
+        <!--<div class="widget-item subscribe-form-item">
           <div class="header">
             <h3 class="title-2">Newsletter</h3>
             <p>Inscrivez-vous à notre newsletter pour recevoir nos dernières actualités.</p>
@@ -35,7 +35,7 @@
             <button type="submit" class="subscribe-btn">
               <i class="icon-wcf-paper-plane"></i></button>
           </form>
-        </div>
+        </div> -->
         
       </div>
       <div class="footer-copy-wrapper">

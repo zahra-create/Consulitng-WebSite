@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Podcast;
+use App\Models\Episode;
 use Illuminate\Http\Request;
 
 use Carbon\Carbon;
@@ -21,7 +22,7 @@ class PodcastController extends Controller
         ->where('active','=',1)
         ->whereDate('date_publication','<',Carbon::now())
         ->orderBy('date_publication','desc')
-        ->paginate();
+        ->paginate(8);
 
         return view('medias.podcast.Podcasts',compact('podcasts'));
     
@@ -56,12 +57,20 @@ class PodcastController extends Controller
      */
     public function show(Podcast $podcast)
     {
-        if(!$podcast->active){
+        if (!$podcast->active) {
             throw new NotFoundHttpException();
-        }  
-
-        return view('medias.podcast.detail-podcast',compact('podcast'));
+        }
+    
+        $episodes = Episode::query()
+            ->where('podcast_id', $podcast->id) 
+            ->where('active', '=', 1)
+            ->whereDate('date_publication', '<', Carbon::now())
+            ->orderBy('date_publication', 'desc')
+            ->paginate(8); 
+    
+        return view('medias.podcast.detail-podcast', compact('podcast', 'episodes'));
     }
+    
     
 
     /**
