@@ -529,69 +529,19 @@
               </div>
               <div class="blog-wrapper-area fix">
                 <div class="blog-wrapper">
-                  <article class="blog style-1 has_fade_anim">
-                    <div class="thumb">
-                      <a href="blog-details.html"><img src="assets/imgs/gallery/img-r-7.png" alt="blog image"></a>
-                    </div>
-                    <div class="content">
-                      <div class="meta">
-                        <a href="blog-style-1.html"><span class="tag">RH</span></a>
-                        <span class="date has-left-line">January 29, 2020</span>
-                        <span class="date has-left-line">By Patty Hilger</span>
-                      </div>
-                      <h3 class="title"><a href="blog-details.html">Les Tendances Actuelles en Recrutement pour 2024</a></h3>
-                      <div class="btn-wrapper">
-                        <a href="blog-details.html">Lire Plus</a>
-                      </div>
-                    </div>
-                  </article>
-                  <article class="blog style-1 has_fade_anim" data-delay=".35">
-                    <div class="thumb">
-                      <a href="blog-details.html"><img src="assets/imgs/gallery/img-r-8.png" alt="blog image"></a>
-                    </div>
-                    <div class="content">
-                      <div class="meta">
-                        <a href="blog-style-1.html"><span class="tag">RH</span></a>
-                        <span class="date has-left-line">Juillet 27, 2024</span>
-                          <span class="date has-left-line">Par Auteur</span>
-                      </div>
-                      <h3 class="title"><a href="blog-details.html">L'Impact de la Digitalisation sur la Gestion des Ressources Humaines</a></h3>
-                      <div class="btn-wrapper">
-                        <a href="blog-details.html">Lire Plus</a>
-                      </div>
-                    </div>
-                  </article>
-                  <div class="blog-no-thumb has_fade_anim" data-delay=".5">
-                    <article class="blog style-1">
-                      <div class="content">
-                        <div class="meta">
-                          <a href="blog-style-1.html"><span class="tag">Coaching</span></a>
-                          <span class="date has-left-line">Juillet 27, 2024</span>
-                          <span class="date has-left-line">Par Auteur</span>
-                        </div>
-                        <h3 class="title"><a href="blog-details.html">L'equilibre Vie Professionnelle-Vie Personnelle : Un Enjeu Cle pour la Retention des Talents</a></h3>
-                        <div class="btn-wrapper">
-                          <a href="blog-details.html">Lire Plus</a>
-                        </div>
-                      </div>
-                    </article>
-                    <article class="blog style-1">
-                      <div class="content">
-                        <div class="meta">
-                          <a href="blog-style-1.html"><span class="tag">HR</span></a>
-                          <span class="date has-left-line">Juillet 27, 2024</span>
-                          <span class="date has-left-line">Par Auteur</span>
-                        </div>
-                        <h3 class="title"><a href="blog-details.html">Developper le Leadership au Sein de Votre Entreprise</a></h3>
-                        <div class="btn-wrapper">
-                          <a href="blog-details.html">Lire Plus</a>
-                        </div>
-                      </div>
-                    </article>
+
+              
+                
+                @foreach($actualiteshome as $actualite)
+                <x-actualite-item :actualite="$actualite"></x-actualite-item>
+                @endforeach
+
+              
+
                   </div>
                 </div>
               </div>
-            </div>
+           
           </section>
           <!-- Actualites area end  -->
 

@@ -14,9 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('episodes', function (Blueprint $table) {
-            $table->id();
+            $table->id();         
+            $table->foreignId('podcast_id')->nullable()->constrained('podcasts')->onDelete('cascade');
             $table->string('titre',2048)->nullable();
-            $table->string('slug',2048);
+            $table->string('slug',2048)->nullable();
             $table->string('cover')->nullable();
             $table->longText('description')->nullable();
             $table->string('audio');

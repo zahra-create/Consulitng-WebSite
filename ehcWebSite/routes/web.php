@@ -20,9 +20,13 @@ use App\Http\Controllers\PodcastController;
 */
 
 /* Home page route */
+/*
 Route::get('/', function () {
     return view('consultant-human');
-})->name('home');;
+})->name('home');*/
+
+Route::get('/', [ActualiteController::class, 'AfficherAcceuil'])->name('home');
+
 
 /* service pages routes */
 
@@ -136,9 +140,10 @@ Route::get('/podcasts',[PodcastController::class, 'index'])->name('Podcasts');
 
 
 //Page 2 Podcasts
+
 Route::get('/podcasts2', function () {
     return view('medias.podcast.Page2');
-})->name('Page2');
+})->name('Page2'); 
 
 //Détails Podcasts
 

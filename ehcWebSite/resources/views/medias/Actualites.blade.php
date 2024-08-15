@@ -1,4 +1,20 @@
 <x-actualite>
+
+<section class="banner-area p-relative fix zi-1 banner-1"  >
+            <div class="swiper baner-active-1" style=" height:60vh; ">
+              <div class="swiper-wrapper">
+
+
+              @foreach($banniereActualites as $actualite)
+                <x-actualite-banner-item :actualite="$actualite"></x-actualite-banner-item>
+                @endforeach
+
+          </div>
+           </div>
+          </section>
+
+
+
           <!-- blog area start  -->
           <section class="blog-area section-spacing style-1 inner-style-1">
             <div class="container container-large">

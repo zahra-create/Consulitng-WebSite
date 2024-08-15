@@ -23,9 +23,12 @@ class ActualiteController extends Controller
         ->where('active','=',1)
         ->whereDate('date_publication','<',Carbon::now())
         ->orderBy('date_publication','desc')
-        ->paginate();
+        ->paginate(8);
 
-        return view('medias.Actualites',compact('actualites'));
+     // Récupérer les actualités à afficher dans la bannière
+     $banniereActualites = Actualite::where('afficher_en_banniere', true)->get();
+
+        return view('medias.Actualites',compact('actualites', 'banniereActualites'));
     }
 
     /**
@@ -77,8 +80,13 @@ class ActualiteController extends Controller
         ->limit(1)
         ->first();
 
-        return view('medias.details-actualites',compact('actualite','prev','next'));
+
+
+        return view('medias.details-actualites',compact('actualite','prev','next' ));
     }
+
+
+
 
     /**
      * Show the form for editing the specified resource.
@@ -113,4 +121,14 @@ class ActualiteController extends Controller
     {
         //
     }
+
+    public function AfficherAcceuil() 
+    {
+        // Récupérer les actualités à afficher sur la page d'accueil
+        $actualiteshome = Actualite::where('afficher_sur_accueil', true)->get();
+
+
+        return view('consultant-human', ['actualiteshome' => $actualiteshome ]);
+    }
+
 }
