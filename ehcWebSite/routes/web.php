@@ -142,7 +142,7 @@ Route::get('/podcasts2', function () {
 
 //Détails Podcasts
 
-Route::get('/{podcast:slug}',[PodcastController::class, 'show'])->name('detail-podcast');
+Route::get('/podcasts/{podcast:slug}',[PodcastController::class, 'show'])->name('detail-podcast');
 
 //Actualites
 Route::get('/Acualites',[ActualiteController::class, 'index'])->name('Actualites');
