@@ -154,7 +154,7 @@
             </div>
             <div class="location-thumb has_fade_anim">
               @if($stage->image_details_path)
-              <img src="storage/{{$stage->image_details_path}}" alt="location-image">
+              <img src="{{ asset('storage/' . $stage->image_details_path) }}"alt="location-image">
               @endif
               <div  class="container">
                 <div   class="location-info-wrapper has_fade_anim">
