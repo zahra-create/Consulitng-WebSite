@@ -155,96 +155,11 @@
               </div>
               <div class="blog-wrapper-area fix">
                 <div class="blog-wrapper">
-                  <article class="blog style-1 has_fade_anim">
-                    <div class="thumb">
-                      <a href="{{route('blog-details')}}"><img src="assets/imgs/blog/blog3.webp" alt="blog image"></a>
-                    </div>
-                    <div class="content">
-                      <div class="meta">
-                        <a href="blog-style-1.html"><span class="tag">Business</span></a>
-                        <span class="date has-left-line">January 29, 2020</span>
-                      </div>
-                      <h3 class="title"><a href="{{route('blog-details')}}">How to create your purpose-filled career comfortable
-                          clothes</a></h3>
-                      <p class="text">Over the past three years, marketers have faced an arduous journey due to the
-                        rapid shifts in consumer sentiment and the rising costs associated....</p>
-                    </div>
-                  </article>
-                  <article class="blog style-1 has_fade_anim" data-delay=".35">
-                    <div class="thumb">
-                      <a href="{{route('blog-details')}}"><img src="assets/imgs/blog/blog2.webp" alt="blog image"></a>
-                    </div>
-                    <div class="content">
-                      <div class="meta">
-                        <a href="blog-style-1.html"><span class="tag">Business</span></a>
-                        <span class="date has-left-line">January 29, 2020</span>
-                      </div>
-                      <h3 class="title"><a href="{{route('blog-details')}}">How to create your purpose-filled career comfortable
-                          clothes</a></h3>
-                      <p class="text">Over the past three years, marketers have faced an arduous journey due to the
-                        rapid shifts in consumer sentiment and the rising costs associated....</p>
-                    </div>
-                  </article>
-                  <article class="blog style-1 has_fade_anim" data-delay=".5">
-                    <div class="thumb">
-                      <a href="{{route('blog-details')}}"><img src="assets/imgs/blog/blog1.webp" alt="blog image"></a>
-                    </div>
-                    <div class="content">
-                      <div class="meta">
-                        <a href="blog-style-1.html"><span class="tag">Business</span></a>
-                        <span class="date has-left-line">January 29, 2020</span>
-                      </div>
-                      <h3 class="title"><a href="{{route('blog-details')}}">Sitting with your basic goodness
-                          top signs that time.</a></h3>
-                      <p class="text">Over the past three years, marketers have faced an arduous journey due to the
-                        rapid shifts in consumer sentiment and the rising costs associated....</p>
-                    </div>
-                  </article>
-                  <article class="blog style-1 has_fade_anim">
-                    <div class="thumb">
-                      <a href="{{route('blog-details')}}"><img src="assets/imgs/blog/blog2.webp" alt="blog image"></a>
-                    </div>
-                    <div class="content">
-                      <div class="meta">
-                        <a href="blog-style-1.html"><span class="tag">Business</span></a>
-                        <span class="date has-left-line">January 29, 2020</span>
-                      </div>
-                      <h3 class="title"><a href="{{route('blog-details')}}">How to create your purpose-filled career comfortable
-                          clothes</a></h3>
-                      <p class="text">Over the past three years, marketers have faced an arduous journey due to the
-                        rapid shifts in consumer sentiment and the rising costs associated....</p>
-                    </div>
-                  </article>
-                  <article class="blog style-1 has_fade_anim" data-delay=".35">
-                    <div class="thumb">
-                      <a href="{{route('blog-details')}}"><img src="assets/imgs/blog/blog3.webp" alt="blog image"></a>
-                    </div>
-                    <div class="content">
-                      <div class="meta">
-                        <a href="blog-style-1.html"><span class="tag">Business</span></a>
-                        <span class="date has-left-line">January 29, 2020</span>
-                      </div>
-                      <h3 class="title"><a href="{{route('blog-details')}}">How to create your purpose-filled career comfortable
-                          clothes</a></h3>
-                      <p class="text">Over the past three years, marketers have faced an arduous journey due to the
-                        rapid shifts in consumer sentiment and the rising costs associated....</p>
-                    </div>
-                  </article>
-                  <article class="blog style-1 has_fade_anim" data-delay=".5">
-                    <div class="thumb">
-                      <a href="{{route('blog-details')}}"><img src="assets/imgs/blog/blog4.webp" alt="blog image"></a>
-                    </div>
-                    <div class="content">
-                      <div class="meta">
-                        <a href="blog-style-1.html"><span class="tag">Business</span></a>
-                        <span class="date has-left-line">January 29, 2020</span>
-                      </div>
-                      <h3 class="title"><a href="{{route('blog-details')}}">Sitting with your basic goodness
-                          top signs that time.</a></h3>
-                      <p class="text">Over the past three years, marketers have faced an arduous journey due to the
-                        rapid shifts in consumer sentiment and the rising costs associated....</p>
-                    </div>
-                  </article>
+
+              @foreach($blogs as $blog)
+              <x-blog-item :blog="$blog"></x-blog-item>
+           @endforeach
+           
                 </div>
                 <ul class="pagination style-1 has_fade_anim">
                   <li><a href="#">1</a></li>

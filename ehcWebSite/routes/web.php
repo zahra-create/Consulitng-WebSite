@@ -7,6 +7,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DemandeDevisController;
 use App\Http\Controllers\StageController;
 use App\Http\Controllers\PodcastController;
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -95,14 +96,24 @@ Route::get('/about', function () {
 Route::get('/team-details', function () {
     return view('team-details');
 })->name('team-details');
+
+
 //blogs
+/*
 Route::get('/blogs', function () {
     return view('medias.blog.blogs');
 })->name('blogs');
 //blog details
 Route::get('/blog-details', function () {
     return view('medias.blog.blog-details');
-})->name('blog-details');
+})->name('blog-details'); */
+
+
+//Blogs
+Route::get('/blogs',[BlogController::class, 'index'])->name('blogs');
+
+//details-blogs
+Route::get('/blogs/{blog:slug}',[BlogController::class, 'show'])->name('blog-details');
 
 
 
