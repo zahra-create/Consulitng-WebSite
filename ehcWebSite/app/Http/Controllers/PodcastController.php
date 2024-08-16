@@ -11,6 +11,8 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class PodcastController extends Controller
 {
+
+    
     /**
      * Display a listing of the resource.
      *
@@ -67,6 +69,8 @@ class PodcastController extends Controller
             ->whereDate('date_publication', '<', Carbon::now())
             ->orderBy('date_publication', 'desc')
             ->paginate(8); 
+
+       // $currentEpisode = $episodes->first();
     
         return view('medias.podcast.detail-podcast', compact('podcast', 'episodes'));
     }

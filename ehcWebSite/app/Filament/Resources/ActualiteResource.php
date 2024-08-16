@@ -80,6 +80,7 @@ class ActualiteResource extends Resource
                 ->required(),
             ])->columnSpan(4),
 
+            
 ])->columns(12);
     }
 
@@ -90,7 +91,9 @@ class ActualiteResource extends Resource
                 //Tables\Columns\ImageColumn::make('image'),
                 Tables\Columns\TextColumn::make('titre')->searchable(),
                 //Tables\Columns\TextColumn::make('slug'),
-            
+                Tables\Columns\TextColumn::make('categories.titre')
+                ->sortable()
+                ->searchable(),
                 //Tables\Columns\TextColumn::make('corps'),
 
                 Tables\Columns\IconColumn::make('active')
