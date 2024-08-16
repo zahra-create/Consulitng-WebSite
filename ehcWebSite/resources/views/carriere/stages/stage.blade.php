@@ -163,7 +163,7 @@
                    
                       <a href="{{ route('stages.details' , $stage->id) }}">
                       @if( $stage->image_offre_path )
-                        <img src="storage/{{$stage->image_offre_path }}" alt="blog image">
+                        <img src="{{ asset('storage/' . $stage->image_offre_path) }}" alt="blog image">
                         @endif
                       </a>
                       
