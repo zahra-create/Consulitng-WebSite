@@ -4614,20 +4614,20 @@ section {
   transition: 0.3s;
 
 }
-.header-area.sticky .main-menu li a {
+.header-area .main-menu li a {
   padding: 15px 20px;
   font-size: 14px !important;
 }
-.header-area.sticky .main-menu ul.dp-menu li a {
+.header-area .main-menu ul.dp-menu li a {
   padding: 10px 0;
 }
-.header-area.sticky .wc-btn-primary {
+.header-area .wc-btn-primary {
   padding: 15px 30px;
 }
-.header-area.sticky .header-area__inner {
+.header-area .header-area__inner {
   height: 60px !important;
 }
-.header-area.sticky .header__logo img {
+.header-area .header__logo img {
   max-width: 70px;
 }
 
@@ -8107,8 +8107,9 @@ p {
 
 .header-area {
   position: absolute;
-  left: 0;
+  
   right: 0;
+  left: 0;
   z-index: 2;
   top: 20px;
 }

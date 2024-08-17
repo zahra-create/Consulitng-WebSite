@@ -1,4 +1,4 @@
-<header class="header-area">
+<header class="header-area ">
     <div class="container container-large">
       <div class="header-area__inner">
       <div class="header__logo">
@@ -36,8 +36,7 @@
                   <li><a href="{{ route('Podcasts') }}">Podcasts</a></li>
                 </ul>
               </li>
-              <li class="menu-item-has-no">
-                <a href="{{ route('contact') }}">Contact</a>
+              <li class="menu-item-has-no"><a href="{{ route('contact') }}">Contact</a>
               </li>
             </ul>
           </nav>
@@ -49,7 +48,7 @@
           <div class="header__meta d-none d-md-block">
             <a href="{{ route('demande-devis') }}" class="cf_btn wc-btn-primary btn-text-flip"><span data-text="Demander devis">Demander devis
             </span> <img src="{{ url('assets/imgs/icon/icon-r-21.webp') }}" alt="arrow-icon"> </a> 
-          </div>
+          </div> 
           <!--<div class="header__search d-none d-md-block">
             <div class="search-icon" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> -->
 			    <!--    <i class="fa-solid fa-gear"></i> -->

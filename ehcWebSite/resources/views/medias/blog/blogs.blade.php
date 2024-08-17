@@ -35,17 +35,15 @@
 
 <body class="font-heading-hkgrotesk-bold">
 
-  <!-- Preloader -->
-  <div id="preloader">
+<!-- Preloader -->
+<div id="preloader">
     <div id="container" class="container-preloader">
       <div class="animation-preloader">
         <div class="spinner"></div>
         <div class="txt-loading">
-          <span data-text="B" class="characters">B</span>
-          <span data-text="I" class="characters">I</span>
-          <span data-text="N" class="characters">N</span>
-          <span data-text="O" class="characters">O</span>
-          <span data-text="X" class="characters">X</span>
+        <span data-text="E" class="characters">E</span>
+        <span data-text="H" class="characters">H</span>
+        <span data-text="C" class="characters">C</span>
         </div>
       </div>
       <div class="loader-section section-left"></div>
@@ -66,7 +64,7 @@
   <!-- Switcher Area Start -->
   <div class="switcher__area">
     <div class="switcher__icon">
-      <button id="switcher_open"><i class="fa-solid fa-gear"></i></button>
+      <button id="switcher_open"><i class="fa-solid fa-robot"></i></button>
       <button id="switcher_close"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <div class="switcher__items">
@@ -103,6 +101,7 @@
     </div>
   </div>
   <!-- Switcher Area End -->
+
 
   <!-- offcanvas start  -->
   @include('partials.menu-bar')
