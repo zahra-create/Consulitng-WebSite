@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('blog__categories', function (Blueprint $table) {
+        Schema::create('blog_category_blog', function (Blueprint $table) {
             $table->id();
             $table->ForeignId('category_blog_id')->constrained('category_blogs')->onDelete('cascade');
             $table->ForeignId('blog_id')->constrained('blogs')->onDelete('cascade');
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('blog__categories');
+        Schema::dropIfExists('blog_category_blog');
     }
 };

@@ -66,12 +66,6 @@ class BlogResource extends Resource
     
             Forms\Components\Card::make()
             ->schema([
-                Forms\Components\Checkbox::make('afficher_sur_accueil')
-                ->label('Affiché sur accueil')
-                ->default(false),
-                Forms\Components\Checkbox::make('afficher_en_banniere')
-                ->label('Affiché en bannière')
-                ->default(false),
 
                 Forms\Components\FileUpload::make('image'),
                 Forms\Components\Select::make('categories')

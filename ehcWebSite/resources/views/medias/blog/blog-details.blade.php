@@ -148,7 +148,7 @@
                   <div class="section-heading">
                     <div class="section-title-wrapper">
                       <div class="title-wrapper has_fade_anim">
-                        <h1 class="section-title large">Sitting with basic goodness top signs that time.</h1>
+                        <h1 class="section-title large">{{$blog->titre}}</h1>
                       </div>
                     </div>
                   </div>
@@ -159,7 +159,7 @@
                       </div>
                       <div class="content">
                         <p class="title">Written by</p>
-                        <p class="text">Steven Dirkse</p>
+                        <p class="text">{{$blog->Auteur}}</p>
                       </div>
                     </div>
                     <div class="meta-box">
@@ -168,7 +168,7 @@
                       </div>
                       <div class="content">
                         <p class="title">Post date</p>
-                        <p class="text">29 Jan, 2024</p>
+                        <p class="text">{{$blog->getFormatedDate()}}</p>
                       </div>
                     </div>
                     <div class="meta-box">
@@ -205,92 +205,14 @@
                     <div class="content-box-wrapper">
                       <div class="content-box">
                         <div class="text-wrapper has_fade_anim">
-                          <p class="text">Myriam was first trained as a sculptor in Montreal and then in Helsinki,
-                            Finland. She is now based in Quebec but works for clients all around the globe. From textile
-                            design to murals, editorial illustrations and book covers, her style is recognized by her
-                            simple and perfectly arranged shapes as well as her rich and vibrant color palette. Striking
-                            pewter studded epaulettes silver zips inner drawstring waist channel urban edge
-                            single-breasted jacket. Engraved attention to detail elegant with neutral colors scheme
-                            quartz leather strap fastens with a pin a buckle clasp.</p>
+                          <p class="text">{!! $blog->corps !!}</p>
 
-                          <p class="text">However, the same reason also makes it messy. If someone is having a bad day,
-                            we might see
-                            it as a sign of tension or lack of investment in the project. For outsiders, lacking an
-                            understanding of the complex dynamics of a team can lead to the wrong conclusions.</p>
-                        </div>
-                        <div class="quote-box has_fade_anim">
-                          <div class="icon">
-                            <img src="assets/imgs/icon/quote-dark.webp" alt="icon">
-                          </div>
-                          <div class="quote-text">
-                            <p class="text">Effortless comfortable full leather lining eye-catching unique detail to the
-                              toe low ‘cut-away’ sides clean and sleek harmony.</p>
-                            <span class="author has-left-line">Adamson Janny</span>
-                          </div>
-                        </div>
-                        <div class="text-wrapper has_fade_anim">
-                          <p class="text">Beckoning a diverse audience of food lovers who may have never considered
-                            trying dumplings before. The unique blend of bold quirkiness and personality sets this brand
-                            apart, marking its own distinct place in the crowded world of bold font family. We love to
-                            bring designs to life as a developer, and I aim to do this using whatever front end tools
-                            are necessary.</p>
-                        </div>
-                        <div class="image-content has_fade_anim">
-                          <div class="thumb">
-                            <img src="assets/imgs/blog/blog-details2.webp" alt="">
-                            <p class="text">Official consultancy </p>
-                          </div>
-                          <div class="text-wrapper">
-                            <p class="text">Beckoning a diverse audience of food lovers who may have never considered
-                              trying dumplings before. The unique blend of bold quirkiness and personality sets this
-                              brand apart, marking its own distinct place in the crowded world of bold font family. We
-                              love to bring designs to life as a developer, and I aim to do this using whatever front
-                              end tools are necessary.</p>
-                            <p class="text">Structured gripped tape invisible moulded cups for sauppor firm hold strong
-                              powermesh
-                              front liner sport detail. Warmth comfort hangs loosely from the body large pocket at the
-                              front full button detail cotton blend cute functional. Bodycon skirts bright primary
-                              colours punchy palette.</p>
-                          </div>
-                        </div>
-                        <div class="feature-content has_fade_anim">
-                          <h2 class="section-title">Custom experience</h2>
-                          <div class="text-wrapper">
-                            <p class="text">We had observers go into the workplace and we timed people’s activities to
-                              the second. We’ve been to various workplaces, all high-tech companies. We wanted to look
-                              at information workers. We had observers shadow each person for three and a half days each
-                              and timed every activity to the second.</p>
-                          </div>
-                          <div class="feature-list">
-                            <ul class="list-plus">
-                              <li>Create the table lines here</li>
-                              <li>Organise everything early thoroughly</li>
-                              <li>Development</li>
-                              <li>Shopify Development</li>
-                            </ul>
-                          </div>
-                          <div class="text-wrapper">
-                            <p class="text">Achieving deep work should be our goal in any team, but doing it in an
-                              office setting can be challenging because of so many distractions. Asynchronous
-                              communication in a remote setting is perfect for it. I’m not a fan of long reads with too
-                              many unnecessary details, so I’ll “jump” into the subject right away. My guide consists of
-                              several parts; thus, you can stop reading at any point when you understand that what you
-                              have learned so far covers your needs at the moment, and you can go back/or jump forward
-                              to any section when you want to refresh your memory or learn about the more complex
-                              workflows. Let’s go!</p>
-                            <p class="text">If they pick up a phone call, that’s the start time. When they put the phone
-                              down, that’s
-                              the stop time. When they turn to the Word application we get the start time and stop time.
-                              We found people switched these activities on average of every three minutes and five
-                              seconds.</p>
-                          </div>
-                        </div>
+                    </div>
                         <div class="tags-wrapper has_fade_anim">
                           <div class="tags">
-                            <a href="#" class="tag">Business</a>
-                            <a href="#" class="tag">Consultant</a>
-                            <a href="#" class="tag">Agency</a>
-                            <a href="#" class="tag">Resource</a>
+                          @foreach($blog->categories as $category)
+                          <a href="#" class="tag">{{$category->titre}}</a>
+                        @endforeach  
                           </div>
                         </div>
                       </div>
@@ -333,9 +255,6 @@
           </section>
           <!-- blog details area end  -->
 
-          <!-- cta area start  -->
-          @include('partials.disponibility')
-          <!-- cta area end  -->
 
         </main>
 
