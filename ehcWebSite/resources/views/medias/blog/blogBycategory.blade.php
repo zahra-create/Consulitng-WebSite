@@ -170,13 +170,17 @@
   <ul class="navbar-nav d-flex justify-content-around w-100">
   <li class="nav-item active">
     <div class="meta">
-      <a class="nav-link" href="{{route('blogs') }}" style="background-color: rgb(0, 81, 81); color: white; margin-right: 20px;"><h5 class="tag">All categories</h5></a></div>
-</li>
+      <a class="nav-link badge" href="{{route('blogs') }}" ><h5 class="tag" >All categories</h5></a></div>
+  </li>
     @foreach($categories as $category)
-    <li class="nav-item active">
-    <div class="meta">
-      <a class="nav-link" href="{{route('by-category', $category) }}" ><h5 class="tag">{{$category->titre}} ({{$category->total}})</h5></a></div>
-</li>
+    <li class="nav-item active mr-3 mr-md-4">
+    <div class="meta" >
+    @if(request('category')?->slug === $category->slug)
+      <a class="nav-link" href="{{route('by-category', $category) }}" style=" background-color: rgb(0, 81, 81); color: white; "><h5 class="tag" >{{$category->titre}} ({{$category->total}})</h5></a></div>
+    @else
+    <a class="nav-link" href="{{route('by-category', $category) }}" ><h5 class="tag">{{$category->titre}} ({{$category->total}})</h5></a></div>
+   @endif
+    </li>
     @endforeach
   </ul>
   <form class="form-inline d-flex my-2 my-lg-0" method="get" action="{{route('search')}}">

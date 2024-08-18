@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\CategoryActualiteResource\Pages;
 use App\Filament\Resources\CategoryActualiteResource\RelationManagers;
+use App\Filament\Resources\CategoryActualiteResource\RelationManagers\ActualitesRelationManager;
 use App\Models\CategoryActualite;
 use Filament\Forms;
 use Filament\Resources\Form;
@@ -15,6 +16,8 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 use Closure;
 use Illuminate\Support\Str;
+
+use Awcodes\FilamentTiptapEditor\TiptapEditor;
 
 class CategoryActualiteResource extends Resource
 {
@@ -45,6 +48,7 @@ class CategoryActualiteResource extends Resource
                         $set('is_slug_changed_manually', true);
                     })
                     ->required(),
+
 
             ]);
     }
@@ -78,4 +82,8 @@ class CategoryActualiteResource extends Resource
             'index' => Pages\ManageCategoryActualites::route('/'),
         ];
     }    
+
+    public static function getRealtions(){
+        return [ActualitesRelationManager::class];
+    }
 }

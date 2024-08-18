@@ -111,9 +111,12 @@ Route::get('/blog-details', function () {
 
 //Blogs
 Route::get('/blogs',[BlogController::class, 'index'])->name('blogs');
+Route::get('/search',[BlogController::class, 'search'])->name('search');
+
 
 //details-blogs
 Route::get('/blogs/{blog:slug}',[BlogController::class, 'show'])->name('blog-details');
+Route::get('/category/{category:slug}',[BlogController::class, 'byCategory'])->name('by-category');
 
 
 

@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="{{ url('assets/css/master-human.css') }}">
 
 
-
+@livewireStyles
 
 </head>
 
@@ -179,27 +179,13 @@
                       </div>
                     </div>
                   </div>
+<!---->
                   <div class="thumb-main has_fade_anim" data-delay=".7">
                     <img src="{{ url('assets/imgs/blog/blog-details1.webp') }}"alt="blog image">
                   </div>
-                  <div class="section-main-content">
-                    <div class="social-meta-box has_fade_anim">
-                      <div class="meta-item">
-                        <img src="{{ url('assets/imgs/icon/view-graph.webp') }}"alt="icon">
-                        <p>247</p>
-                        <p>Views</p>
-                      </div>
-                      <div class="meta-item">
-                        <img src="{{ url('assets/imgs/icon/share.webp') }}"alt="icon">
-                        <p>14</p>
-                        <p>Shares</p>
-                      </div>
-                      <ul class="social-icons">
-                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                      </ul>
-                    </div>
+             
+                    <livewire:interactions />
+<!---->
                     <div class="content-box-wrapper">
                       <div class="content-box">
                         <div class="text-wrapper has_fade_anim">
@@ -284,7 +270,7 @@
   <script src="{{ url('assets/js/offcanvas.js')}}"></script>
 
 
-
+  @livewireScripts
 
 </body>
 

@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\CategoryBlogResource\Pages;
 use App\Filament\Resources\CategoryBlogResource\RelationManagers;
+use App\Filament\Resources\CategoryBlogResource\RelationManagers\BlogsRelationManager;
 use App\Models\CategoryBlog;
 use Filament\Forms;
 use Filament\Resources\Form;
@@ -74,5 +75,9 @@ class CategoryBlogResource extends Resource
         return [
             'index' => Pages\ManageCategoryBlogs::route('/'),
         ];
-    }    
+    }  
+    
+    public static function getRealtions(){
+        return [BlogsRelationManager::class];
+    }
 }

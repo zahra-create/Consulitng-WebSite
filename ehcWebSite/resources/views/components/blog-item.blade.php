@@ -5,7 +5,7 @@
                     <div class="content">
                       <div class="meta">
                         @foreach($blog->categories as $category)
-					              <a href="#"><span class="tag">{{$category->titre}}</span></a>
+					              <a href="{{route('by-category', $category) }}"><span class="tag">{{$category->titre}}</span></a>
                         @endforeach
                         <span class="date has-left-line">{{$blog->getFormatedDate()}}</span>
                       </div>

@@ -167,31 +167,34 @@
   <span class="navbar-toggler-icon"></span>
 </button>
 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-  <ul class="navbar-nav d-flex justify-content-around w-100">
-  <li class="nav-item active">
-    <div class="meta">
-      <a class="nav-link" href="{{route('blogs') }}" style="background-color: rgb(0, 81, 81); color: white; margin-right: 20px;"><h5 class="tag">All categories</h5></a></div>
-</li>
-    @foreach($categories as $category)
-    <li class="nav-item active">
-    <div class="meta">
-      <a class="nav-link" href="{{route('by-category', $category) }}" ><h5 class="tag">{{$category->titre}} ({{$category->total}})</h5></a></div>
-</li>
-    @endforeach
-  </ul>
-  <form class="form-inline d-flex my-2 my-lg-0" method="get" action="{{route('search')}}">
-    <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search" name="q" value="{{request()->get('q')}}">
+
+  <form class="form-inline d-flex my-2 my-lg-0">
+    <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
     <button class="btn btn-outline-success" type="submit">Search</button>
   </form>
 </div>
 </nav>
-
-
               <div class="blog-wrapper-area fix">
                 <div class="blog-wrapper">
 
               @foreach($blogs as $blog)
-              <x-blog-item :blog="$blog"></x-blog-item>
+              <div class="container-fluid mb-4">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+                <div class="text-center">
+                    <a href="{{ route('blogs', $blog) }}" class="text-decoration-none">
+                        <h2 class="text-primary font-weight-bold mb-2">
+                            {!! str_replace(request()->get('q'), '<span class="bg-warning text-dark">'.request()->get('q').'</span>', $blog->titre) !!}
+                        </h2>
+                    </a>
+                    <div class="text-justify">
+                        {{$blog->shortBody()}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="my-4">
+    </div>
            @endforeach
            
                 </div>
