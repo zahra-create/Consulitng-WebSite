@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Filament\Resources\CategoryPodcastResource\RelationManagers\EpisodesRelationManager;
 use App\Filament\Resources\PodcastResource\Pages;
 use App\Filament\Resources\PodcastResource\RelationManagers;
 use App\Models\Podcast;
@@ -111,7 +112,7 @@ class PodcastResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            EpisodesRelationManager::class
         ];
     }
     

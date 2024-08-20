@@ -224,12 +224,12 @@
                     <div class="wc-single-input">
                       <label for="website" class="wc-form-label">Service</label>
                       <select id="service" name="service" required>
-                      <option value="1" selected>Conseil</option>
-                        <option value="2">Recrutement</option>
-                        <option value="3">Formation</option>
-						<option value="4" >Evènement et Services aux entreprises</option>
-                        <option value="5">Management de projet clé en main</option>
-                        <option value="6">Digitalisation</option>
+                      <option value="Conseil" selected>Conseil</option>
+                        <option value="Recrutement">Recrutement</option>
+                        <option value="Formation">Formation</option>
+						<option value="Evènement et Services aux entreprises" >Evènement et Services aux entreprises</option>
+                        <option value="Management de projet clé en main">Management de projet clé en main</option>
+                        <option value="Digitalisation">Digitalisation</option>
                       </select>
                     </div>
                     <div class="wc-single-input">

@@ -8462,24 +8462,23 @@ p {
     margin-bottom: 38px;
   }
 }
-/*
+
 .blog-area .blog-area-inner {
-  display: grid;
   grid-template-columns: auto 850px;
-} */
+} 
 
 
 @media only screen and (max-width: 1399px) {
   .blog-area .blog-area-inner {
-	  display: grid;
     grid-template-columns: 40% 80%;
   }
 }
 @media only screen and (max-width: 1199px) {
   .blog-area .blog-area-inner {
-    /*grid-template-columns: auto;*/
-	display: grid;
-	grid-template-columns:40% 80%;
+	  	display: grid;
+    grid-template-columns: auto;
+
+
   }
 }
 .blog-area .blog-wrapper {

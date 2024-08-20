@@ -144,56 +144,19 @@
        <!--<div class="player" style="height:300px; width:200;">-->
        <div class="wrapper" style=" height:450px; margin:auto; margin-bottom:50px; margin-top:50px; background-color:#00515114; width:380px;">  <!--style="width:250; height:400px; "-->
            <div class="details">
-               <div class="now-playing">PLAYING x OF y</div>
-               <!--<div class="track-art>--> <img class="track-art" src="{{ url('assets/imgs/podcasts/femme.png') }}" alt="podcast"><!-- </div>-->
-               <div class="track-name">{{$podcast->titre}}</div>
-               <div class="track-artist">{{$podcast->Proprietaire}}</div>
+               <div class="now-playing"><p>Présenté par {{$podcast->Proprietaire}}</p></div>
+               <!--<div class="track-art>--> <img class="track-art" id="track-art" src="{{$podcast->getImage()}}" alt="podcast"><!-- </div>-->
+               <div class="track-name"><h3>{{$podcast->titre}}</h3></div>
+               <div class="track-artist"><p>{!! $podcast->description !!}</p></div>
            </div>
 		   
-
-           <div class="slider_container">
-               <div class="current-time">00:00</div>
-                <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
-                <div class="total-duration">00:00</div>
-           </div>
-
-           <div class="slider_container">
-               <i class="fa fa-volume-down"></i>
-                <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
-                <i class="fa fa-volume-up"></i>
-           </div>
-
-           <div class="buttons" style="font-size:0.75rem; ">
-
-               <div class="prev-track" onclick="prevTrack()">
-                    <i class="fa fa-step-backward fa-2x"></i>
-                </div>
-                <div class="playpause-track" onclick="playpauseTrack()" >
-                    <i class="fa fa-play-circle fa-5x"></i>
-                </div>
-                <div class="next-track" onclick="nextTrack()">
-                    <i class="fa fa-step-forward fa-2x"></i>
-                </div>
-
-           </div>
-
-
-        <!--    <div id="wave">
-                <span class="stroke"></span>
-                <span class="stroke"></span>
-                <span class="stroke"></span>
-                <span class="stroke"></span>
-                <span class="stroke"></span>
-                <span class="stroke"></span>
-                <span class="stroke"></span>
-            </div>   -->
        </div>
 
        <audio id="audio" hidden>
            <source src="" />
        </audio>
    <!-- </div> -->
-   </div>
+   </div> 
       
                 <div class="blog-main-wrapper">
                   <div class="section-heading">
@@ -207,9 +170,29 @@
                     <div class="blog-wrapper">
 
 
-                    @foreach($podcast->episodes as $index => $episode)
-                   <x-episode-item :episode="$episode" :numero="$index + 1"></x-episode-item>
-                   @endforeach
+                  @foreach($podcast->episodes as $index => $episode)
+                  <article class="blog style-2" >
+                          <div class="content-wrapper">
+						               <div class="btn-wrapper"  >
+                              <span class="cf_btn wc-btn-icon" id="btn-play" data-episode-id="{{ $episode->id }}" onclick="playpause(this)"><i class="fa-regular fa-circle-play" style="color:#005151; font-size:50px; transform: rotate(0deg);"></i></span> <!--onclick="playpauseTrack()"-->
+                            </div>
+                            <div class="content">
+                              @if($episode->titre)
+                              <h2 class="title">{{$episode->titre}}</h2>
+                              @else
+                              <h2 class="title">Épisode {{ $index + 1 }}: {{$episode->podcaste->titre}}</h2> 
+                              @endif
+                              @if($episode->description)
+                              <p class="text">{!! $episode->description !!}</p>
+                              @else
+                              <p class="text">{!! $episode->podcaste->description !!}</p>
+                              @endif 
+                            </div>
+                          </div>
+                          <audio src="{{ asset('storage/' . $episode->audio) }}" hidden ></audio>
+                        </article>
+
+                  @endforeach
  
                     </div>
                   </div>
@@ -231,241 +214,48 @@
 
 
 <script>
+let curr_track = null; // Variable globale pour suivre la piste en cours de lecture
+let curr_button = null; // Variable globale pour suivre le bouton en cours
 
-const audio=document.querySelector('#audio');
-let now_playing = document.querySelector('.now-playing');
 let track_art = document.querySelector('.track-art');
-let track_name = document.querySelector('.track-name');
-let track_artist = document.querySelector('.track-artist');
 
-let play_btn = document.getElementById('btn-play');
-let playpause_btn = document.querySelector('.playpause-track');
-let next_btn = document.querySelector('.next-track');
-let prev_btn = document.querySelector('.prev-track');
+function playpause(button) {
+    const article = button.closest('article');  // Trouver l'élément article parent
+    const audio = article.querySelector('audio');  // Trouver l'élément audio dans cet article
 
-let seek_slider = document.querySelector('.seek_slider');
-let volume_slider = document.querySelector('.volume_slider');
-let curr_time = document.querySelector('.current-time');
-let total_duration = document.querySelector('.total-duration');
-//let wave = document.getElementById('wave');
-//let randomIcon = document.querySelector('.fa-random');
-//let curr_track = document.createElement('audio');
-
-let track_index = 0;
-let isPlaying = false;
-//let isRandom = false;
-let updateTimer;
-
-
-
-/*
-const music_list = [
-    {
-        img : 'images/stay.png',
-        name : 'Épisode 1',
-        artist : 'EHC',
-        music : 'music/Épisode 1.mp3'
-    },
-    {
-        img : 'images/fallingdown.jpg',
-        name : 'Épisode 2',
-        artist : 'EHC',
-        music : 'music/fallingdown.mp3'
-    },
-    {
-        img : 'images/faded.png',
-        name : 'Épisode 3',
-        artist : 'EHC',
-        music : 'music/Faded.mp3'
-    },
-    {
-        img : 'images/ratherbe.jpg',
-        name : 'Épisode 4',
-        artist : 'EHC',
-        music : 'music/Rather Be.mp3'
-    }
-]; */
-
-
-//test
-/*
-playpause_btn.addEventListner('click', playTroack);
-
-function playTrack(){
-
-  if(isPlaying === false){
-    audio.play();
-    playpause_btn.innerHTML = `<span class='material-symbols-outlined'>pause</span>`;
-    isPlaying = true;
-  }
-  else{
-    audio.pause();
-    playpause_btn.innerHTML = `<span class='material-symbols-outlined'>pause</span>`;
-    isPlaying = false;
-  }
-
-  }
-
-  function switchTrack(){
-    if(isPlaying === true){
-      audio.play();
-    }
-    const trackSrc = 'assets/tracks/ ' + tracks[trackId] + '.mp3';
-  }
-
-*/
-
-
-
-
-loadTrack(track_index);
-
-
-
-function loadTrack(track_index){
-    clearInterval(updateTimer);
-    reset();
-
-    curr_track.src = music_list[track_index].music;
-    curr_track.load();
-
-    track_art.style.backgroundImage = "url(" + music_list[track_index].img + ")";
-    track_name.textContent = music_list[track_index].name;
-    track_artist.textContent = music_list[track_index].artist;
-    now_playing.textContent = "Playing music " + (track_index + 1) + " of " + music_list.length;
-
-    updateTimer = setInterval(setUpdate, 1000);
-
-    curr_track.addEventListener('ended', nextTrack);
-    random_bg_color();
-}
-
-function random_bg_color(){
-    let hex = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e'];
-    let a;
-
-    function populate(a){
-        for(let i=0; i<6; i++){
-            let x = Math.round(Math.random() * 14);
-            let y = hex[x];
-            a += y;
+    // Si une autre piste est en cours de lecture, la mettre en pause et réinitialiser son bouton
+    if (curr_track && curr_track !== audio) {
+        curr_track.pause();
+        curr_track.currentTime = 0;  // Réinitialiser l'audio à son début
+        if (curr_button) {
+            curr_button.querySelector('i').classList.replace('fa-circle-pause', 'fa-circle-play');
         }
-        return a;
     }
-    let Color1 = populate('#');
-    let Color2 = populate('#');
-    var angle = 'to right';
 
-    let gradient = 'linear-gradient(' + angle + ',' + Color1 + ', ' + Color2 + ")";
-    document.body.style.background = gradient;
-}
-function reset(){
-    curr_time.textContent = "00:00";
-    total_duration.textContent = "00:00";
-    seek_slider.value = 0;
-}
-function randomTrack(){
-    isRandom ? pauseRandom() : playRandom();
-}
-function playRandom(){
-    isRandom = true;
-    randomIcon.classList.add('randomActive');
-}
-function pauseRandom(){
-    isRandom = false;
-    randomIcon.classList.remove('randomActive');
-}
-function repeatTrack(){
-    let current_index = track_index;
-    loadTrack(current_index);
-    playTrack();
-}
+    // Si la piste actuelle est en pause, la jouer
+    if (audio.paused) {
+        audio.play();
+        button.querySelector('i').classList.replace('fa-circle-play', 'fa-circle-pause');
+        track_art.classList.add('rotate');
+        curr_track = audio;  // Mettre à jour la piste actuelle
+        curr_button = button;  // Mettre à jour le bouton actuel
 
-
-function playpauseTrack(){
-    isPlaying ? pauseTrack() : playTrack();
-}
-
-function playTrack(){
-    curr_track.play();
-    isPlaying = true;
-    track_art.classList.add('rotate');
-//    wave.classList.add('loader');
-    playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>';
-	play_btn.innerHTML = '<i class="fa-regular fa-circle-pause" style="color:#005151; font-size:50px; transform: rotate(0deg);"></i>';
- 
-}
-function pauseTrack(){
-    curr_track.pause();
-    isPlaying = false;
-    track_art.classList.remove('rotate');
-//    wave.classList.remove('loader');
-    playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';
-	play_btn.innerHTML = '<i class="fa-regular fa-circle-play" style="color:#005151; font-size:50px; transform: rotate(0deg);"></i>';
-
-}
-
-
-//function nextTrack(){
- //   if(track_index < music_list.length - 1 && isRandom === false){
-  //      track_index += 1;
-  //  }else if(track_index < music_list.length - 1 && isRandom === true){
-   //     let random_index = Number.parseInt(Math.random() * music_list.length);
-   //     track_index = random_index;
-  //  }else{
- //       track_index = 0;
- //   }
- //   loadTrack(track_index);
- //   playTrack();
-//}
-function prevTrack(){
-    if(track_index > 0){
-        track_index -= 1;
-    }else{
-        track_index = music_list.length -1;
-    }
-    loadTrack(track_index);
-    playTrack();
-}
-
-function nextTrack(){
-    if(track_index < music_list.length){
-        track_index += 1;
-    }else{
-        track_index = music_list.length +1;
-    }
-    loadTrack(track_index);
-    playTrack();
-}
-
-function seekTo(){
-    let seekto = curr_track.duration * (seek_slider.value / 100);
-    curr_track.currentTime = seekto;
-}
-function setVolume(){
-    curr_track.volume = volume_slider.value / 100;
-}
-function setUpdate(){
-    let seekPosition = 0;
-    if(!isNaN(curr_track.duration)){
-        seekPosition = curr_track.currentTime * (100 / curr_track.duration);
-        seek_slider.value = seekPosition;
-
-        let currentMinutes = Math.floor(curr_track.currentTime / 60);
-        let currentSeconds = Math.floor(curr_track.currentTime - currentMinutes * 60);
-        let durationMinutes = Math.floor(curr_track.duration / 60);
-        let durationSeconds = Math.floor(curr_track.duration - durationMinutes * 60);
-
-        if(currentSeconds < 10) {currentSeconds = "0" + currentSeconds; }
-        if(durationSeconds < 10) { durationSeconds = "0" + durationSeconds; }
-        if(currentMinutes < 10) {currentMinutes = "0" + currentMinutes; }
-        if(durationMinutes < 10) { durationMinutes = "0" + durationMinutes; }
-
-        curr_time.textContent = currentMinutes + ":" + currentSeconds;
-        total_duration.textContent = durationMinutes + ":" + durationSeconds;
+        // Ajouter un écouteur d'événement pour remettre le bouton en "play" quand la piste est terminée
+        audio.addEventListener('ended', function() {
+            button.querySelector('i').classList.replace('fa-circle-pause', 'fa-circle-play');
+            track_art.classList.remove('rotate');
+            curr_track = null;  // Réinitialiser la piste actuelle
+            curr_button = null;  // Réinitialiser le bouton actuel
+        }, { once: true });  // L'écouteur sera supprimé après avoir été déclenché une fois
+    } else {
+        // Si la piste est en lecture, la mettre en pause
+        audio.pause();
+        button.querySelector('i').classList.replace('fa-circle-pause', 'fa-circle-play');
+        track_art.classList.remove('rotate');
+        curr_track = null;  // Réinitialiser la piste actuelle
+        curr_button = null;  // Réinitialiser le bouton actuel
     }
 }
-
 
 
 
@@ -485,7 +275,7 @@ function setUpdate(){
   <script src="{{ url('assets/js/ScrollTrigger.min.js')}}"></script>
   <script src="{{ url('assets/js/jquery.meanmenu.min.js')}}"></script>
   <script src="{{ url('assets/js/backToTop.js')}}"></script>
-  <script src="{{ url('assets/js/main.js')}}"></script>
+  <script src="{{ url('assets/js/man.js')}}"></script>
   <script src="{{ url('assets/js/error-handling.js')}}"></script>
   <script src="{{ url('assets/js/wc-cursor.js')}}"></script>
   <script src="{{ url('assets/js/offcanvas.js')}}"></script>

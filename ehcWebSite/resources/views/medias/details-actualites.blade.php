@@ -17,14 +17,14 @@
 
 
   <!-- All CSS files -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/icomon.css">
-  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/progressbar.css">
-  <link rel="stylesheet" href="assets/css/meanmenu.min.css">
-  <link rel="stylesheet" href="assets/css/magnific-popup.css">
-  <link rel="stylesheet" href="assets/css/master-blog-details.css">
+  <link rel="stylesheet" href="{{ url('assets/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/all.min.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/icomon.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/swiper-bundle.min.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/progressbar.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/meanmenu.min.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/magnific-popup.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/master-blog-details.css') }}">
   <link rel="stylesheet" href="{{ url('assets/css/master-human.css') }}">
 
 
@@ -160,7 +160,7 @@
                     </div>
                     <div class="meta-box">
                       <div class="icon">
-                        <img src="assets/imgs/icon/date-green.webp" alt="">
+                        <img src="{{ url('assets/imgs/icon/date-green.webp')}}" alt="">
                       </div>
                       <div class="content">
                         <p class="title">{{$actualite->getFormatedDate()}}</p>
@@ -169,7 +169,7 @@
                     </div>
                     <div class="content">
                       <div class="icon">
-                        <img src="assets/imgs/icon/comment-green.webp" alt="">
+                        <img src="{{ url('assets/imgs/icon/comment-green.webp')}}" alt="">
                       </div> 
                         <p class="title"><a href="#">
                         @foreach($actualite->categories as $category)
@@ -183,12 +183,12 @@
                   <div class="section-main-content">
                     <div class="social-meta-box has_fade_anim">
                       <div class="meta-item">
-                        <img src="assets/imgs/icon/view-graph.webp" alt="icon">
+                        <img src="{{ url('assets/imgs/icon/view-graph.webp')}}" alt="icon">
                         <p>247</p>
                         <p>Views</p>
                       </div>
                       <div class="meta-item">
-                        <img src="assets/imgs/icon/share.webp" alt="icon">
+                        <img src="{{ url('assets/imgs/icon/share.webp')}}" alt="icon">
                         <p>14</p>
                         <p>Shares</p>
                       </div>
@@ -256,21 +256,21 @@
 
 
   <!-- All JS files -->
-  <script src="assets/js/jquery-3.6.0.min.js"></script>
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="assets/js/swiper-bundle.min.js"></script>
-  <script src="assets/js/counter.js"></script>
-  <script src="assets/js/progressbar.js"></script>
-  <script src="assets/js/gsap.min.js"></script>
-  <script src="assets/js/ScrollSmoother.min.js"></script>
-  <script src="assets/js/ScrollTrigger.min.js"></script>
-  <script src="assets/js/jquery.meanmenu.min.js"></script>
-  <script src="assets/js/backToTop.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/error-handling.js"></script>
-  <script src="assets/js/wc-cursor.js"></script>
-  <script src="assets/js/offcanvas.js"></script>
+  <script src="{{ url('assets/js/jquery-3.6.0.min.js')}}"></script>
+  <script src="{{ url('assets/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{ url('assets/js/jquery.magnific-popup.min.js')}}"></script>
+  <script src="{{ url('assets/js/swiper-bundle.min.js')}}"></script>
+  <script src="{{ url('assets/js/counter.js')}}"></script>
+  <script src="{{ url('assets/js/progressbar.js')}}"></script>
+  <script src="{{ url('assets/js/gsap.min.js')}}"></script>
+  <script src="{{ url('assets/js/ScrollSmoother.min.js')}}"></script>
+  <script src="{{ url('assets/js/ScrollTrigger.min.js')}}"></script>
+  <script src="{{ url('assets/js/jquery.meanmenu.min.js')}}"></script>
+  <script src="{{ url('assets/js/backToTop.js')}}"></script>
+  <script src="{{ url('assets/js/main.js')}}"></script>
+  <script src="{{ url('assets/js/error-handling.js')}}"></script>
+  <script src="{{ url('assets/js/wc-cursor.js')}}"></script>
+  <script src="{{ url('assets/js/offcanvas.js')}}"></script>
 
 
 

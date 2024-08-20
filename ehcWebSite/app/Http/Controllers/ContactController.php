@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ContactMessage;
+use App\Mail\Contact;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
     public function submit(Request $request)
     {
-        $request->validate([
+        $contactdata = $request->validate([
             'nom' => 'required|string|max:255',
             'prenom' => 'required|string|max:255',
             'email' => 'required|email|max:255',  //|unique:contact_messages
@@ -17,6 +19,7 @@ class ContactController extends Controller
             'message' => 'required|string',
         ]);
 
+        Mail::to('contact@expertshumancapital.com')->send(new Contact($contactdata));
 
         $contact = new ContactMessage();
         $contact->nom = $request->input('nom');

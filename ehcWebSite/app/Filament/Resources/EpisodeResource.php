@@ -35,54 +35,37 @@ class EpisodeResource extends Resource
                     Forms\Components\Grid::make(2)
                     ->  schema([
                 
-                   /*Forms\Components\Select::make('podcast_id')
-                   ->relationship('podcaste','id'),*/
-
-                   /* Forms\Components\Select::make('podcaste')
-                    ->label('Titre de podcast')
-                    ->relationship('podcaste','titre')
-                    ->afterStateUpdated(function (Closure $get, Closure $set, ?string $state) {
-                        if (! $get('is_slug_changed_manually') && filled($state) && !($titre)) {
-                            $set('slug', Str::slug($state));
+                        Forms\Components\Select::make('podcaste')
+                        ->label('Titre de podcast')
+                        ->relationship('podcaste', 'titre')
+                        ->afterStateUpdated(function (Closure $get, Closure $set, ?string $state) {
+                            
+                            if (! $get('is_slug_changed_manually') && filled($state)) {
+                                $episodeTitle = $get('titre'); 
+                                if (empty($episodeTitle)) {
+                                    $set('slug', Str::slug($state));
+                                }
+                            }
                         })
-                    ->required(),
-
-                Forms\Components\TextInput::make('titre')
-                ->label('titre épisode')
-                ->maxLength(2048)
-                ->reactive()
-                ->afterStateUpdated(function (Closure $get, Closure $set, ?string $state) {
-                    if (! $get('is_slug_changed_manually') && filled($state)) {
-                        $set('slug', Str::slug($state));
-                    }
-                })
-                , */
-
-                Forms\Components\Select::make('podcaste')
-                ->label('Titre de podcast')
-                ->relationship('podcaste','titre')
-                ->afterStateUpdated(function (Closure $get, Closure $set, ?string $state) {
-                    if (! $get('is_slug_changed_manually') && filled($state)) {
-                        $set('slug', Str::slug($state));}
-                    })
-                ->required(),
-
-            Forms\Components\TextInput::make('titre')
-            ->label('titre épisode')
-            ->maxLength(2048)
-            ->reactive()
-            ->afterStateUpdated(function (Closure $get, Closure $set, ?string $state) {
-                if (! $get('is_slug_changed_manually') && filled($state)) {
-                    $set('slug', Str::slug($state));
-                }
-            })
-            ,
-
-        Forms\Components\TextInput::make('slug')
-            ->maxLength(2048)
-            ->afterStateUpdated(function (Closure $set) {
-                $set('is_slug_changed_manually', true);
-            }), ]),
+                        ->required(),
+                    
+                        Forms\Components\TextInput::make('titre')
+                        ->label('Titre de l\'épisode')
+                        ->maxLength(2048)
+                        ->reactive()
+                        ->afterStateUpdated(function (Closure $get, Closure $set, ?string $state) {
+            
+                            if (! $get('is_slug_changed_manually') && filled($state)) {
+                                $set('slug', Str::slug($state)); 
+                            }
+                        }),
+                    
+                        Forms\Components\TextInput::make('slug')
+                        ->label('Slug')
+                        ->maxLength(2048)
+                        ->afterStateUpdated(function (Closure $set) {
+                            $set('is_slug_changed_manually', true);
+                        }), ]), 
                 
             
             Forms\Components\RichEditor::make('description'),
@@ -95,7 +78,6 @@ class EpisodeResource extends Resource
     
             Forms\Components\Card::make()
             ->schema([
-                Forms\Components\FileUpload::make('cover'),
                 Forms\Components\FileUpload::make('audio')
                 ->required(),
 

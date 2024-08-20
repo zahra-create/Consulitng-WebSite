@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ActualiteResource\Pages;
-use App\Filament\Resources\ActualiteResource\RelationManagers;
-use App\Models\Actualite;
+use App\Filament\Resources\BlogResource\Pages;
+use App\Filament\Resources\BlogResource\RelationManagers;
+use App\Models\Blog;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -18,13 +18,13 @@ use Filament\Tables\Columns\BooleanColumn;
 use Closure;
 use Illuminate\Support\Str;
 
-class ActualiteResource extends Resource
+class BlogResource extends Resource
 {
-    protected static ?string $model = Actualite::class;
+    protected static ?string $model = Blog::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-newspaper';
 
-    protected static ?string $navigationGroup = 'Actualités'  ; 
+    protected static ?string $navigationGroup = 'Blogs'  ; 
 
     public static function form(Form $form): Form
     {
@@ -66,12 +66,6 @@ class ActualiteResource extends Resource
     
             Forms\Components\Card::make()
             ->schema([
-                Forms\Components\Checkbox::make('afficher_sur_accueil')
-                ->label('Affiché sur accueil')
-                ->default(false),
-                Forms\Components\Checkbox::make('afficher_en_banniere')
-                ->label('Affiché en bannière')
-                ->default(false),
 
                 Forms\Components\FileUpload::make('image'),
                 Forms\Components\Select::make('categories')
@@ -87,38 +81,38 @@ class ActualiteResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
-            ->columns([
-                //Tables\Columns\ImageColumn::make('image'),
-                Tables\Columns\TextColumn::make('titre')->searchable(),
-                //Tables\Columns\TextColumn::make('slug'),
-                Tables\Columns\TextColumn::make('categories.titre')
-                ->sortable()
-                ->searchable(),
-                //Tables\Columns\TextColumn::make('corps'),
+        ->columns([
+            //Tables\Columns\ImageColumn::make('image'),
+            Tables\Columns\TextColumn::make('titre')->searchable(),
+            //Tables\Columns\TextColumn::make('slug'),
+            Tables\Columns\TextColumn::make('categories.titre')
+            ->sortable()
+            ->searchable(),
+            //Tables\Columns\TextColumn::make('corps'),
 
-                Tables\Columns\IconColumn::make('active')
-                ->boolean(),
-                Tables\Columns\TextColumn::make('date_publication')
-                ->dateTime(),
-                Tables\Columns\TextColumn::make('Auteur')->searchable(),
-                //Tables\Columns\TextColumn::make('created_at')
-                //->dateTime(),
-                Tables\Columns\TextColumn::make('updated_at')
-                ->dateTime(),
-            ])
-            ->filters([
-                //
-            ])
-            ->actions([
-                Tables\Actions\ViewAction::make(),
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
-            ])
-            ->bulkActions([
-                Tables\Actions\DeleteBulkAction::make(),
-            ]);
-    }
-    
+            Tables\Columns\IconColumn::make('active')
+            ->boolean(),
+            Tables\Columns\TextColumn::make('date_publication')
+            ->dateTime(),
+            Tables\Columns\TextColumn::make('Auteur')->searchable(),
+            //Tables\Columns\TextColumn::make('created_at')
+            //->dateTime(),
+            Tables\Columns\TextColumn::make('updated_at')
+            ->dateTime(),
+        ])
+        ->filters([
+            //
+        ])
+        ->actions([
+            Tables\Actions\ViewAction::make(),
+            Tables\Actions\EditAction::make(),
+            Tables\Actions\DeleteAction::make(),
+        ])
+        ->bulkActions([
+            Tables\Actions\DeleteBulkAction::make(),
+        ]);
+}
+
     public static function getRelations(): array
     {
         return [
@@ -129,10 +123,10 @@ class ActualiteResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListActualites::route('/'),
-            /*'create' => Pages\CreateActualite::route('/create'),
-            'view' => Pages\ViewActualite::route('/{record}'),
-            'edit' => Pages\EditActualite::route('/{record}/edit'),*/
+            'index' => Pages\ListBlogs::route('/'),
+            /*'create' => Pages\CreateBlog::route('/create'),
+            'view' => Pages\ViewBlog::route('/{record}'),
+            'edit' => Pages\EditBlog::route('/{record}/edit'),*/
         ];
     }    
 }

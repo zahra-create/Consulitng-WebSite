@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\CategoryPodcastResource\Pages;
 use App\Filament\Resources\CategoryPodcastResource\RelationManagers;
+use App\Filament\Resources\CategoryPodcastResource\RelationManagers\PodcastsRelationManager;
 use App\Models\CategoryPodcast;
 use Filament\Forms;
 use Filament\Resources\Form;
@@ -75,5 +76,9 @@ class CategoryPodcastResource extends Resource
         return [
             'index' => Pages\ManageCategoryPodcasts::route('/'),
         ];
-    }    
+    }  
+    
+    public static function getRealtions(){
+        return [PodcastsRelationManager::class];
+    }
 }

@@ -621,7 +621,7 @@
   <script src="assets/js/ScrollTrigger.min.js"></script>
   <script src="assets/js/jquery.meanmenu.min.js"></script>
   <script src="assets/js/backToTop.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/man.js"></script>
   <script src="assets/js/error-handling.js"></script>
   <script src="assets/js/wc-cursor.js"></script>
   <script src="assets/js/offcanvas.js"></script>
