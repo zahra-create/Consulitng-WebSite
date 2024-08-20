@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\StageResource\Pages;
-use App\Filament\Resources\StageResource\RelationManagers;
-use App\Models\Stage;
+use App\Filament\Resources\EmploiResource\Pages;
+use App\Filament\Resources\EmploiResource\RelationManagers;
+use App\Models\Emploi;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -13,10 +13,9 @@ use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-
-class StageResource extends Resource
+class EmploiResource extends Resource
 {
-    protected static ?string $model = Stage::class;
+    protected static ?string $model = Emploi::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-briefcase';
     protected static ?string $navigationGroup = 'CARRIÈRE';
@@ -39,32 +38,27 @@ class StageResource extends Resource
                 Forms\Components\TextInput::make('location')
                 ->required()
                 ->maxLength(255), 
-                Forms\Components\DatePicker::make('date_debut')
-                ->required(),
-                Forms\Components\DatePicker::make('date_fin')
-                ->required(),
-                Forms\Components\TextInput::make('lien_postuler')
-                ->nullable(),
+          //      Forms\Components\TextInput::make('lien_postuler')
+            //    ->nullable(),
                // ->url(),         mn b3d insha'allah
                 Forms\Components\FileUpload::make('image_offre_path')
                 ->nullable()
                 ->label('image_offre')
                 ->image()
                 ->disk('public') // 
-                ->directory('stages')
+                ->directory('emplois')
                 ->visibility('public'),
                 Forms\Components\FileUpload::make('image_details_path')
                 ->nullable()
                 ->label('image_detail')
                 ->image()
                 ->disk('public') //
-                ->directory('stages')
+                ->directory('emplois')
                 ->visibility('public'),
                 Forms\Components\TagsInput::make('skills') 
                 ->label('Skills')
-                ->placeholder('Entrez les compétences requises pour ce stage')
-                ->reactive(),              
-                                   
+                ->placeholder('Entrez les compétences requises pour cette offre')
+                ->reactive(),
             ]);
     }
 
@@ -83,11 +77,8 @@ class StageResource extends Resource
               //  Tables\Columns\TextColumn::make('image_offre_path')->label('image_offre'),
                    
              //   Tables\Columns\TextColumn::make('image_details_path')->label('image_details'),
-                Tables\Columns\TagsColumn::make('skills') // Display skills as text
+                Tables\Columns\TagsColumn::make('skills') 
                     ->label('Skills')
-                 
-
-                    
             ])
             ->filters([
                 //
@@ -110,9 +101,9 @@ class StageResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListStages::route('/'),
-            'create' => Pages\CreateStage::route('/create'),
-            'edit' => Pages\EditStage::route('/{record}/edit'),
+            'index' => Pages\ListEmplois::route('/'),
+            'create' => Pages\CreateEmploi::route('/create'),
+            'edit' => Pages\EditEmploi::route('/{record}/edit'),
         ];
     }    
 }

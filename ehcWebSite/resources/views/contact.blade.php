@@ -231,7 +231,7 @@
                      @if(Session('success'))
                      <div class="alert alert-success alert-dismissible fade in">
                      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-{{ Session('success') }}
+                    {{ Session('success') }}
 </div>
 @endif 
                       <button type="submit" class="wc-btn-primary btn-text-flip"><span data-text="Envoyer">Envoyer

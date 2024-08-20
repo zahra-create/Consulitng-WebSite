@@ -7,27 +7,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Binox HTML5 Template">
 
-  <title>Candidature spontanée</title>
+  <title>Offre d'emploi - détails</title>
 
   <!-- Fav Icon -->
-  <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.webp">
+  <link rel="icon" type="image/x-icon" href="{{ url('assets/imgs/logo/favicon.webp') }}">
 
 
 
 
 
   <!-- All CSS files -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/icomon.css">
-  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/progressbar.css">
-  <link rel="stylesheet" href="assets/css/meanmenu.min.css">
-  <link rel="stylesheet" href="assets/css/magnific-popup.css">
-  <link rel="stylesheet" href="assets/css/master-contact.css">
+  <link rel="stylesheet" href="{{ url('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/css/all.min.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/icomon.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/swiper-bundle.min.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/progressbar.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/meanmenu.min.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/magnific-popup.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/master-contact.css') }}">
   <link rel="stylesheet" href="{{ url('assets/css/master-human.css') }}">
   <link rel="stylesheet" href="{{ url('assets/css/master-financial.css') }}">
-
+  
+  <link rel="stylesheet" href="{{ url('assets/css/master-service-style-5.css') }}">
 
 
 </head>
@@ -144,34 +145,72 @@
               <div class="section-heading">
                 <div class="section-title-wrapper">
                   <div class="subtitle-wrapper has_fade_anim">
-                    <span style="color:#005151;" class="section-subtitle">Condidature spontanée</span>
+                    <span style="color:#005151;" class="section-subtitle">Détails de l'offre</span>
                   </div>
                   <div class="title-wrapper has_fade_anim">
-                    <h2 style="color:#005151;" class="section-title">Rejoignez l'équipe EHC et explorez de nouvelles opportunités professionnelles!</h2>
+                    <h2 style="color:#005151;" class="section-title"> {{ $emploi->title }} </h2>
                   </div>
                 </div>
               </div>
             </div>
             <div class="location-thumb has_fade_anim">
-              <img src="assets/imgs/gallery/candidature.jpeg" alt="location-image">
-              <div class="container">
-                <div class="location-info-wrapper has_fade_anim">
+              @if($emploi->image_details_path)
+              <img src="{{ asset('storage/' . $emploi->image_details_path) }}"alt="location-image">
+              @endif
+              <div  class="container">
+                <div   class="location-info-wrapper has_fade_anim">
                   <div class="location-info">
                     <div class="logo">
-                      <img src="assets/imgs/logo/logo.webp" alt="logo">
+                      <img src="{{ url('assets/imgs/logo/logo.webp') }}" alt="logo">
                     </div>
-                    <h3 style="color:#005151;" class="title">Contact info:</h3>
-                    <ul class="info-list">
-                      <li><a style="color:#005151;" href="#">+212 6 63-80-85-01</a></li>
-                      <li><a style="color:#005151;" href="#">contact@expertshumancapital.com</a></li>
-                    </ul>
-                    <p style="color:#005151;" class="text">Rue du Calvon Bv Abdelmoumen- Casablanca</p>
+            
+                    <h3 style="color:#005151;" class="title">Profil de poste </h3> 
+                   <ul class="info-list">
+                      <li><a style="color:#005151;" href="#">{{ $emploi->profil }}</a></li>
+                    </ul> 
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <p style="color:#005151;" class="text"><b>Location   </b>{{ $emploi->location }}</p>
                   </div>
                 </div>
               </div>
             </div>
           </section>
           <!-- contact intro end  -->
+
+          <!-- details start -->
+          <section class="specialization-area style-1">
+            <div class="specialization-inner">
+              <div class="specialization-thumb">
+              @if($emploi->image_offre_path)
+              <img src="{{ asset('storage/' . $emploi->image_offre_path) }}"alt="compétences-image">
+              @endif
+              </div>
+              <div class="specialization-content section-spacing">
+                <div class="section-title-wrapper style-1 has_fade_anim">
+                  <div class="subtitle-wrapper">
+                    <span class="section-subtitle">Qualifications</span>
+                  </div>
+                
+                  <div class="cf_text">
+                    <p class="text">{{ $emploi->description }}</p>
+                  </div>
+                  <div class="title-wrapper">
+                    <h1 class="section-title">Aptitudes demandées</h1>
+                  </div>
+                  <ul class="list-plus">
+                  @foreach ($emploi->skills as $skill)
+                    <li>{{ $skill }}</li>
+                  @endforeach
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- details start -->
 
           <!-- contact area start  -->
           <section class="contact-area section-spacing">
@@ -192,11 +231,11 @@
                     </ul>
                   </div>
                   <div class="logo has_fade_anim">
-                    <a href="#"><img src="assets/imgs/logo/logo.webp" alt="logo"></a>
+                    <a href="#"><img src="{{ url('assets/imgs/logo/logo.webp') }}" alt="logo"></a>
                   </div>
                 </div>
                 <div class="contact-wrapper has_fade_anim">
-                <form action="{{ route('submitCondidature') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('submitEmploi', $emploi->id) }}" method="POST" enctype="multipart/form-data">
                   @csrf  
                   @if (Session::has('success'))
                   <div class="alert alert-success alert-dismissible" role="alert">
@@ -251,7 +290,7 @@
                       <p class="text-danger">{{ $message }}</p>
                       @enderror
                     </div>
-
+                    <input type="hidden" name="emploi_id" value="{{ $emploi->id }}">
                     <div class="btn-wrapper">
                       <button name='btn' style="background-color:#005151;" type="submit" class="wc-btn-primary btn-text-flip"><span data-text="Soumettre ma candidature">Soumettre ma candidature</span> <i class="fa fa-caret-right"></i> </button>
                     </div>
@@ -279,21 +318,21 @@
 
 
   <!-- All JS files -->
-  <script src="assets/js/jquery-3.6.0.min.js"></script>
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="assets/js/swiper-bundle.min.js"></script>
-  <script src="assets/js/counter.js"></script>
-  <script src="assets/js/progressbar.js"></script>
-  <script src="assets/js/gsap.min.js"></script>
-  <script src="assets/js/ScrollSmoother.min.js"></script>
-  <script src="assets/js/ScrollTrigger.min.js"></script>
-  <script src="assets/js/jquery.meanmenu.min.js"></script>
-  <script src="assets/js/backToTop.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/error-handling.js"></script>
-  <script src="assets/js/wc-cursor.js"></script>
-  <script src="assets/js/offcanvas.js"></script>
+  <script src="{{ url('assets/js/jquery-3.6.0.min.js') }}"></script>
+  <script src="{{ url('assets/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url('assets/js/jquery.magnific-popup.min.js') }}"></script>
+  <script src="{{ url('assets/js/swiper-bundle.min.js') }}"></script>
+  <script src="{{ url('assets/js/counter.js') }}"></script>
+  <script src="{{ url('assets/js/progressbar.js') }}"></script>
+  <script src="{{ url('assets/js/gsap.min.js') }}"></script>
+  <script src="{{ url('assets/js/ScrollSmoother.min.js') }}"></script>
+  <script src="{{ url('assets/js/ScrollTrigger.min.js') }}"></script>
+  <script src="{{ url('assets/js/jquery.meanmenu.min.js') }}"></script>
+  <script src="{{ url('assets/js/backToTop.js') }}"></script>
+  <script src="{{ url('assets/js/main.js') }}"></script>
+  <script src="{{ url('assets/js/error-handling.js') }}"></script>
+  <script src="{{ url('assets/js/wc-cursor.js') }}"></script>
+  <script src="{{ url('assets/js/offcanvas.js') }}"></script>
 
   <script>
     if ('.testimonial.style-1') {

@@ -30,6 +30,35 @@
 
 
 
+  <style>
+  .project-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px; /* Set the same width for the whole blog card */
+  margin: 0 auto;
+}
+
+.project-thumb {
+  width: 100%;
+  height: 300px;
+  overflow: hidden; /* Hide any overflow */
+}
+
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the area properly */
+}
+
+/*.content {
+  padding: 10px;
+ /* text-align: center; /* Center text 
+  width: 100%; /* Ensure content takes up the full width 
+}*/
+  
+</style>
+
 
 </head>
 
@@ -162,82 +191,31 @@
                 </div>
                 <div class="projects-list fix">
                   <div class="projects-wrapper">
+                  @foreach ($categories as $categorie)  
                     <div class="project-item style-1 has_fade_anim" data-fade-from="left">
                       <div class="project-thumb">
-                        <a href="project-details.html"><img src="assets/imgs/gallery/HRM.webp"
-                            alt="project-image"></a>
+                        <a href="{{ route('video-category.show' , $categorie->id) }}">
+                        @if( $categorie->image )
+                          <img src="{{ asset('storage/' . $categorie->image) }}" alt="project-image">
+                          @endif 
+                          </a>
                       </div>
                       <div class="project-content">
-                        <h2><a  href="{{ route('playlist_details') }}" class="title wc-btn-normal btn-text-flip"><span  style="color:#004E50;"
-                              data-text="HRM">HRM </span><i class="fa-solid fa-arrow-right"></i></a> </h2>
-                        <p style="color:#4A7172;" class="text">10 vidéos</p>
+                        <h2><a  href="{{ route('video-category.show' , $categorie->id) }}" class="title wc-btn-normal btn-text-flip"><span  style="color:#004E50;"
+                              data-text="{{$categorie->name}}">{{$categorie->name}}</span><i class="fa-solid fa-arrow-right"></i></a> </h2>
+                        <p style="color:#4A7172;" class="text">{{$categorie->number_of_videos}} vidéos</p>
                       </div>
                     </div>
-                    <div class="project-item style-1 has_fade_anim" data-fade-from="left" data-delay=".35">
-                      <div class="project-thumb">
-                        <a href="project-details.html"><img src="assets/imgs/gallery/strategy.jpg"
-                            alt="project-image"></a>
-                      </div>
-                      <div class="project-content">
-                        <h2><a href="project-details.html" class="title wc-btn-normal btn-text-flip"><span style="color:#004E50;"
-                              data-text="Strategy">Strategy</span><i class="fa-solid fa-arrow-right"></i></a> </h2>
-                        <p style="color:#4A7172;" class="text">9 vidéos</p>
-                      </div>
-                    </div>
-                    <div class="project-item style-1 has_fade_anim" data-fade-from="left" data-delay=".5">
-                      <div class="project-thumb">
-                        <a href="project-details.html"><img src="assets/imgs/gallery/leadership.jpg"
-                            alt="project-image"></a>
-                      </div>
-                      <div class="project-content">
-                        <h2><a href="project-details.html" class="title wc-btn-normal btn-text-flip"><span style="color:#004E50;"
-                              data-text="Leadership">Leadership</span><i class="fa-solid fa-arrow-right"></i></a> </h2>
-                        <p style="color:#4A7172;" class="text">23 vidéos</p>
-                      </div>
-                    </div>
-                    <div class="project-item style-1 has_fade_anim" data-fade-from="left">
-                      <div class="project-thumb">
-                        <a href="project-details.html"><img src="assets/imgs/gallery/employmenet.jpeg"
-                            alt="project-image"></a>
-                      </div>
-                      <div class="project-content">
-                        <h2><a href="project-details.html" class="title wc-btn-normal btn-text-flip"><span style="color:#004E50;"
-                              data-text="Employment">Employment</span><i class="fa-solid fa-arrow-right"></i></a> </h2>
-                        <p style="color:#4A7172;" class="text">2 vidéos</p>
-                      </div>
-                    </div>
-                    <div class="project-item style-1 has_fade_anim" data-fade-from="left" data-delay=".35">
-                      <div class="project-thumb">
-                        <a href="project-details.html"><img src="assets/imgs/gallery/market strategy.jpg"
-                            alt="project-image"></a>
-                      </div>
-                      <div class="project-content">
-                        <h2><a href="project-details.html" class="title wc-btn-normal btn-text-flip"><span style="color:#004E50;"
-                              data-text="Market Strategy">Market Strategy</span><i
-                              class="fa-solid fa-arrow-right"></i></a> </h2>
-                        <p style="color:#4A7172;" class="text">12 vidéos</p>
-                      </div>
-                    </div>
-                    <div class="project-item style-1 has_fade_anim" data-fade-from="left" data-delay=".5">
-                      <div class="project-thumb">
-                        <a href="project-details.html"><img src="assets/imgs/gallery/market research.jpg"
-                            alt="project-image"></a>
-                      </div>
-                      <div class="project-content">
-                        <h2><a href="project-details.html" class="title wc-btn-normal btn-text-flip"><span style="color:#004E50;"
-                              data-text="Market Research">Market Research</span><i
-                              class="fa-solid fa-arrow-right"></i></a> </h2>
-                        <p  style="color:#4A7172;" class="text">15 vidéos</p>
-                      </div>
-                    </div>
+                    @endforeach 
                   </div>
-                </div>
+                  {{ $categories->links() }}
+                <!-- </div>
                 <ul class="pagination style-1 has_fade_anim">
                   <li><a href="#">1</a></li>
                   <li><a class="current" href="#">2</a></li>
                   <li><a href="#">Next <img src="assets/imgs/icon/arrow-next-icon.webp" alt="arrow-icon"></a></li>
                 </ul>
-              </div>
+              </div> -->
             </div>
           </section>
           <!-- projects area end  -->

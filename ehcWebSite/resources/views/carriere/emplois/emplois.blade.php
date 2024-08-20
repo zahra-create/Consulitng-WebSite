@@ -29,7 +29,34 @@
   <link rel="stylesheet" href="{{ url('assets/css/master-financial.css') }}">
 
 
+  <style>
+  .blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px; /* Set the same width for the whole blog card */
+  margin: 0 auto;
+}
 
+.thumb {
+  width: 100%;
+  height: 300px;
+  overflow: hidden; /* Hide any overflow */
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the area properly */
+}
+
+.content {
+  padding: 10px;
+ /* text-align: center; /* Center text */
+  width: 100%; /* Ensure content takes up the full width */
+}
+  
+</style>
 
 </head>
 
@@ -155,96 +182,36 @@
               </div>
               <div class="blog-wrapper-area fix">
                 <div class="blog-wrapper">
-                  <article class="blog style-1 has_fade_anim">
-                    <div class="thumb">
-                      <a href="{{route('details-emploi')}}"><img src="assets/imgs/gallery/Barid1 (1).jpg" alt="blog image"></a>
-                    </div>
-                    <div class="content">
-                      <div class="meta">
-                        <a href="blog-style-1.html"><span class="tag">15K DH</span></a>
-                        <span class="date has-left-line">CDI</span>
-                      </div>
-                      <h3 class="title"><a href="blog-details.html"> emploi chez Al Barid Bank</a></h3>
-                      <p class="text">A la recherche d'un profil cybersécurité</p>
-                    </div> 
-                  </article>
-                  <article class="blog style-1 has_fade_anim" data-delay=".35">
-                    <div class="thumb">
-                      <a href="blog-details.html"><img src="assets/imgs/gallery/Maroc_telecom.jpg" alt="blog image"></a>
-                    </div>
-                    <div class="content">
-                      <div class="meta">
-                        <a href="blog-style-1.html"><span class="tag">6K DH</span></a>
-                        <span class="date has-left-line">CDD</span>
-                      </div>
-                      <h3 class="title"><a href="blog-details.html">emploi chez Maroc Telecom</a></h3>
-                      <p class="text">A la recherche d'un profil developpement web</p>
-                    </div>
-                  </article>
-                  <article class="blog style-1 has_fade_anim" data-delay=".5">
-                    <div class="thumb">
-                      <a href="blog-details.html"><img src="assets/imgs/gallery/inwi.jpg" alt="blog image"></a>
-                    </div>
-                    <div class="content">
-                      <div class="meta">
-                        <a href="blog-style-1.html"><span class="tag">à discuté</span></a>
-                        <span class="date has-left-line">freelance</span>
-                      </div>
-                      <h3 class="title"><a href="blog-details.html">emploi chez inwi</a></h3>
-                      <p class="text">A la recherche d'un profil comptable</p>
-                    </div>
-                  </article>
-                  <article class="blog style-1 has_fade_anim">
-                    <div class="thumb">
-                      <a href="blog-details.html"><img src="assets/imgs/gallery/bank al maghrib.webp" alt="blog image"></a>
-                    </div>
-                    <div class="content">
-                      <div class="meta">
-                        <a href="blog-style-1.html"><span class="tag">200 DH/h</span></a>
-                        <span class="date has-left-line">freelance</span>
-                      </div>
-                      <h3 class="title"><a href="blog-details.html">emploi chez Bank Al Maghrib</a></h3>
-                      <p class="text">A la recherche d'un profil sécurité système</p>
-                    </div>
-                  </article>
-                  <article class="blog style-1 has_fade_anim" data-delay=".35">
-                    <div class="thumb">
-                      <a href="blog-details.html"><img src="assets/imgs/gallery/barid2.jpg" alt="blog image" style="width: 100%; height: 100%; object-fit: cover;"></a>
-                    </div>
-                    <div class="content">
-                      <div class="meta">
-                        <a href="blog-style-1.html"><span class="tag">10K DH</span></a>
-                        <span class="date has-left-line">CDD</span>
-                      </div>
-                      <h3 class="title"><a href="blog-details.html">emploi chez Al Barid Bank</a></h3>
-                      <p class="text">A la recherche d'un profil développement mobile</p>
-                    </div>
-                  </article>
-                  <article class="blog style-1 has_fade_anim" data-delay=".5">
-                    <!--<div class="thumb">
-                      <a href="blog-details.html"><img src="assets/imgs/gallery/ocp2.jpg" alt="blog image"></a>
-                    </div>-->
-                    <div class="thumb" style="width: 460px; height: 320px; overflow: hidden;">
-                      <a href="blog-details.html">
-                        <img src="assets/imgs/gallery/ocp2.jpg" alt="blog image" style="width: 100%; height: 100%; object-fit: cover;">
-                      </a>
-                    </div>
+                @foreach ($emplois as $emploi)
+                
+                <article class="blog style-1 has_fade_anim" data-delay=".35">
+                  <div class="thumb">
+                 
+                    <a href="{{ route('emplois.details' , $emploi->id) }}">
+                    @if( $emploi->image_offre_path )
+                      <img src="{{ asset('storage/' . $emploi->image_offre_path) }}" alt="blog image">
+                      @endif
+                    </a>
                     
-                    <div class="content">
-                      <div class="meta">
-                        <a href="blog-style-1.html"><span class="tag">7K-9K DH</span></a>
-                        <span class="date has-left-line">CDI</span>
-                      </div>
-                      <h3 class="title"><a href="blog-details.html">emploi chez OCP</a></h3>
-                      <p class="text">A la recherche d'un profil cybersécurité</p>
+                  </div>
+                  <div class="content">
+                    <div class="meta">
+                      <a href="blog-style-1.html"><span class="tag">{{ $emploi->entreprise }}</span></a>
+                   
                     </div>
-                  </article>
+                    <h3 class="title"><a href="{{ route('emplois.details' , $emploi->id) }}">{{ $emploi->title }}</a></h3>
+                    <p class="text">{{ $emploi->description }}</p>
+                  </div>
+                </article>
+
+              @endforeach 
                 </div>
-                <ul class="pagination style-1 has_fade_anim">
+                {{ $emplois->links() }}          
+      <!--          <ul class="pagination style-1 has_fade_anim">
                   <li><a href="#">1</a></li>
                   <li><a class="current" href="#">2</a></li>
                   <li><a href="#">Next <img src="assets/imgs/icon/arrow-next-icon.webp" alt="arrow-icon"></a></li>
-                </ul>
+                </ul> -->
               </div>
             </div>
           </section>
