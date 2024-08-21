@@ -1,6 +1,5 @@
 {
     "require": {
-        "livewire/livewire": "^2.12",
-        "filament/filament": "^2.17"
+        "livewire/livewire": "^3.5"
     }
 }

@@ -57,10 +57,7 @@ class Psr6CacheClearer implements CacheClearerInterface
         return $this->pools[$name]->clear();
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function clear(string $cacheDir)
+    public function clear(string $cacheDir): void
     {
         foreach ($this->pools as $pool) {
             $pool->clear();

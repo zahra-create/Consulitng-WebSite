@@ -46,8 +46,7 @@ class VideoCategoryResource extends Resource
                 Tables\Columns\TextColumn::make('name'),
                 Tables\Columns\TextColumn::make('updated_at')
                 ->dateTime(),
-                Tables\Columns\ImageColumn::make('image')
-                ->disk('public')
+           
                     
             ])
             ->filters([

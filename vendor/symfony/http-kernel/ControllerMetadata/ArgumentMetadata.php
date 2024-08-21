@@ -20,26 +20,20 @@ class ArgumentMetadata
 {
     public const IS_INSTANCEOF = 2;
 
-    private string $name;
-    private ?string $type;
-    private bool $isVariadic;
-    private bool $hasDefaultValue;
-    private mixed $defaultValue;
-    private bool $isNullable;
-    private array $attributes;
-
     /**
      * @param object[] $attributes
      */
-    public function __construct(string $name, ?string $type, bool $isVariadic, bool $hasDefaultValue, mixed $defaultValue, bool $isNullable = false, array $attributes = [])
-    {
-        $this->name = $name;
-        $this->type = $type;
-        $this->isVariadic = $isVariadic;
-        $this->hasDefaultValue = $hasDefaultValue;
-        $this->defaultValue = $defaultValue;
+    public function __construct(
+        private string $name,
+        private ?string $type,
+        private bool $isVariadic,
+        private bool $hasDefaultValue,
+        private mixed $defaultValue,
+        private bool $isNullable = false,
+        private array $attributes = [],
+        private string $controllerName = 'n/a',
+    ) {
         $this->isNullable = $isNullable || null === $type || ($hasDefaultValue && null === $defaultValue);
-        $this->attributes = $attributes;
     }
 
     /**
@@ -101,14 +95,30 @@ class ArgumentMetadata
     }
 
     /**
-     * @return object[]
+     * @param class-string          $name
+     * @param self::IS_INSTANCEOF|0 $flags
+     *
+     * @return array<object>
      */
-    public function getAttributes(string $name = null, int $flags = 0): array
+    public function getAttributes(?string $name = null, int $flags = 0): array
     {
         if (!$name) {
             return $this->attributes;
         }
 
+        return $this->getAttributesOfType($name, $flags);
+    }
+
+    /**
+     * @template T of object
+     *
+     * @param class-string<T>       $name
+     * @param self::IS_INSTANCEOF|0 $flags
+     *
+     * @return array<T>
+     */
+    public function getAttributesOfType(string $name, int $flags = 0): array
+    {
         $attributes = [];
         if ($flags & self::IS_INSTANCEOF) {
             foreach ($this->attributes as $attribute) {
@@ -118,12 +128,17 @@ class ArgumentMetadata
             }
         } else {
             foreach ($this->attributes as $attribute) {
-                if (\get_class($attribute) === $name) {
+                if ($attribute::class === $name) {
                     $attributes[] = $attribute;
                 }
             }
         }
 
         return $attributes;
+    }
+
+    public function getControllerName(): string
+    {
+        return $this->controllerName;
     }
 }
