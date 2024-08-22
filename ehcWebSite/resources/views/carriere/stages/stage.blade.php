@@ -28,7 +28,34 @@
   <link rel="stylesheet" href="{{ url('assets/css/master-human.css') }}">
   <link rel="stylesheet" href="{{ url('assets/css/master-financial.css') }}">
 
+<style>
+  .blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px; /* Set the same width for the whole blog card */
+  margin: 0 auto;
+}
 
+.thumb {
+  width: 100%;
+  height: 300px;
+  overflow: hidden; /* Hide any overflow */
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the area properly */
+}
+
+.content {
+  padding: 10px;
+ /* text-align: center; /* Center text */
+  width: 100%; /* Ensure content takes up the full width */
+}
+  
+</style>
 
 
 </head>

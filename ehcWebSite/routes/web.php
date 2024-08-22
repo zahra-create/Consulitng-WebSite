@@ -11,6 +11,12 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PubliciteController;
 use App\Http\Controllers\AboutController;
 
+use App\Http\Controllers\StageMailController;
+use App\Http\Controllers\CondidatureMailController;
+use App\Http\Controllers\EmploiController;
+use App\Http\Controllers\EmploiMailController;
+use App\Http\Controllers\VideoCategoryController;
+use App\Http\Controllers\VideoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -127,13 +133,10 @@ Route::post('/contact/submit', [ContactController::class, 'submit'])->name('cont
 
 
 //video pages routes 
-Route::get('/playlists', function () {
-    return view('media.video.playlists');
-})->name('playlists');
 
-Route::get('/playlist_details', function () {
-    return view('media.video.playlist_details');
-})->name('playlist_details');
+Route::get('/playlists', [VideoCategoryController::class, 'index'])->name('playlists');
+Route::get('/video-category/{id}', [VideoCategoryController::class, 'show'])->name('video-category.show');
+Route::get('/category/{id}/videos', [VideoCategoryController::class, 'getCategoryVideos']);
 //demande devis
 Route::get('/demande-devis', function () {
     return view('demande-devis');
@@ -182,17 +185,16 @@ Route::get('/details-acualites', function () {
 Route::get('/condidature', function () {
     return view('carriere.condidature spontanee.condidature');
 })->name('condidature');
+Route::post('/condidature', [CondidatureMailController::class, 'sendCondidatureEmail'])->name('submitCondidature');
 
 //offre de stage 
 Route::get('/stages', [StageController::class, 'index'])->name('stages');
 Route::get('/stages/{id}', [StageController::class, 'show'])->name('stages.details');
+Route::post('/stages/{id}', [StageMailController::class, 'sendStageEmail'])->name('submitStage');
+
 
 // offre d'emploi 
-Route::get('/emplois', function () {
-    return view('carriere.emplois.emplois');
-})->name('emplois');
+Route::get('/emplois', [EmploiController::class, 'index'])->name('emplois');
+Route::get('/emplois/{id}', [EmploiController::class, 'show'])->name('emplois.details');
+Route::post('/emplois/{id}', [EmploiMailController::class, 'sendEmploiEmail'])->name('submitEmploi');
 
-//details-emploi 
-Route::get('/deatils-emploi', function () {
-    return view('carriere.emplois.details-emplois');
-})->name('details-emploi');

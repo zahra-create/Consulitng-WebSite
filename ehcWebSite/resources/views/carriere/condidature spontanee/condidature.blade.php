@@ -196,48 +196,64 @@
                   </div>
                 </div>
                 <div class="contact-wrapper has_fade_anim">
-                  <form>
+                <form action="{{ route('submitCondidature') }}" method="POST" enctype="multipart/form-data">
+                  @csrf  
+                  @if (Session::has('success'))
+                  <div class="alert alert-success alert-dismissible" role="alert">
+                    {{ Session::get('success')}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                  </div>
+                  @elseif (Session::has('error'))
+                  <div class="alert alert-danger alert-dismissible" role="alert">
+                    {{ Session::get('error')}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                  </div>
+                  @endif
                     <div  class="wc-single-input">
                       <label style="color:#005151;"  for="name" class="wc-form-label">Nom et prénom</label>
-                      <input style="background-color:rgba(208, 235, 220, 0.9);" type="text" id="name">
+                      <input name='name' style="background-color:rgba(208, 235, 220, 0.9);" type="text" id="name" value="{{ old('name') }}">
+                      @error('name')
+                      <p class="text-danger">{{ $message }}</p>
+                      @enderror
                     </div>
                     <div class="wc-single-input">
                       <label style="color:#005151;" for="email" class="wc-form-label">Email</label>
-                      <input style="background-color:rgba(208, 235, 220, 0.9);" type="text" id="email">
+                      <input name="email" style="background-color:rgba(208, 235, 220, 0.9);" type="text" id="email" value="{{ old('email') }}">
+                      @error('email')
+                      <p class="text-danger">{{ $message }}</p>
+                      @enderror
                     </div>
                     <div class="wc-single-input">
                       <label style="color:#005151;" for="phone" class="wc-form-label">Numéro de téléphone</label>
-                      <input style="background-color:rgba(208, 235, 220, 0.9);" type="text" id="phone">
-                    </div>
-              <!--      <div class="wc-single-input">
-                      <label for="company" class="wc-form-label">Company</label>
-                      <input type="text" id="company">
-                    </div> -->
-              <!--      <div class="wc-single-input">
-                      <label for="website" class="wc-form-label">Website</label>
-                      <input type="text" id="website">
-                    </div> -->
-                    <div class="wc-single-input">
-                      <label style="color:#005151;" for="website" class="wc-form-label">Spécialité</label>
-                      <select style="background-color:rgba(208, 235, 220, 0.9);">
-                        <option style="color:#005151;"value="1" selected>Recruitement</option>
-                        <option style="color:#005151;" value="2">Formation</option>
-                        <option style="color:#005151;" value="3">Conseil</option>
-                        <option style="color:#005151;"value="4" selected>Ingénierie</option>
-                        <option style="color:#005151;"value="5" selected>Services & Events</option>
-                      </select>
-                    </div>
-                    <div class="wc-single-input">
-                      <label style="color:#005151;" for="message" class="wc-form-label">Message</label>
-                      <textarea style="background-color:rgba(208, 235, 220, 0.9);"  id="message" placeholder="Write your message here....."></textarea>
+                      <input name="phone" style="background-color:rgba(208, 235, 220, 0.9);" type="text" id="phone" value="{{ old('phone') }}">
+                      @error('phone')
+                      <p class="text-danger">{{ $message }}</p>
+                      @enderror
                     </div>
                     <div class="wc-single-input">
                       <label style="color:#005151;" for="company" class="wc-form-label">CV</label>
-                      <input style="background-color:rgba(208, 235, 220, 0.9);" type="file" id="company">
+                      <input name="cv" style="background-color:rgba(208, 235, 220, 0.9);" type="file" id="company">
+                      @error('cv')
+                      <p class="text-danger">{{ $message }}</p>
+                      @enderror
                     </div>
-                   
+                    <div class="wc-single-input">
+                      <label style="color:#005151;" for="phone" class="wc-form-label">Subject</label>
+                      <input name="subject" style="background-color:rgba(208, 235, 220, 0.9);" type="text" id="phone" value="{{ old('phone') }}">
+                      @error('subject')
+                      <p class="text-danger">{{ $message }}</p>
+                      @enderror
+                    </div>
+                    <div class="wc-single-input">
+                      <label style="color:#005151;" for="message" class="wc-form-label">Message</label>
+                      <textarea name="message" style="background-color:rgba(208, 235, 220, 0.9);"  id="message" placeholder="Write your message here....." >{{ old('message') }}</textarea>
+                      @error('message')
+                      <p class="text-danger">{{ $message }}</p>
+                      @enderror
+                    </div>
+
                     <div class="btn-wrapper">
-                      <button style="background-color:#005151;" type="submit" class="wc-btn-primary btn-text-flip"><span data-text="Soumettre ma candidature">Soumettre ma candidature</span> <i class="fa fa-caret-right"></i> </button>
+                      <button name='btn' style="background-color:#005151;" type="submit" class="wc-btn-primary btn-text-flip"><span data-text="Soumettre ma candidature">Soumettre ma candidature</span> <i class="fa fa-caret-right"></i> </button>
                     </div>
                   </form>
                 </div>

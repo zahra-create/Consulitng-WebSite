@@ -38,7 +38,7 @@ class XmlFileLoader extends FileLoader
      * @throws \InvalidArgumentException when the file cannot be loaded or when the XML cannot be
      *                                   parsed because it does not validate against the scheme
      */
-    public function load(mixed $file, string $type = null): RouteCollection
+    public function load(mixed $file, ?string $type = null): RouteCollection
     {
         $path = $this->locator->locate($file);
 
@@ -64,7 +64,7 @@ class XmlFileLoader extends FileLoader
      *
      * @throws \InvalidArgumentException When the XML is invalid
      */
-    protected function parseNode(RouteCollection $collection, \DOMElement $node, string $path, string $file)
+    protected function parseNode(RouteCollection $collection, \DOMElement $node, string $path, string $file): void
     {
         if (self::NAMESPACE_URI !== $node->namespaceURI) {
             return;
@@ -92,10 +92,7 @@ class XmlFileLoader extends FileLoader
         }
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function supports(mixed $resource, string $type = null): bool
+    public function supports(mixed $resource, ?string $type = null): bool
     {
         return \is_string($resource) && 'xml' === pathinfo($resource, \PATHINFO_EXTENSION) && (!$type || 'xml' === $type);
     }
@@ -105,7 +102,7 @@ class XmlFileLoader extends FileLoader
      *
      * @throws \InvalidArgumentException When the XML is invalid
      */
-    protected function parseRoute(RouteCollection $collection, \DOMElement $node, string $path)
+    protected function parseRoute(RouteCollection $collection, \DOMElement $node, string $path): void
     {
         if ('' === $id = $node->getAttribute('id')) {
             throw new \InvalidArgumentException(sprintf('The <route> element in file "%s" must have an "id" attribute.', $path));
@@ -152,10 +149,19 @@ class XmlFileLoader extends FileLoader
      *
      * @throws \InvalidArgumentException When the XML is invalid
      */
-    protected function parseImport(RouteCollection $collection, \DOMElement $node, string $path, string $file)
+    protected function parseImport(RouteCollection $collection, \DOMElement $node, string $path, string $file): void
     {
-        if ('' === $resource = $node->getAttribute('resource')) {
-            throw new \InvalidArgumentException(sprintf('The <import> element in file "%s" must have a "resource" attribute.', $path));
+        /** @var \DOMElement $resourceElement */
+        if (!($resource = $node->getAttribute('resource') ?: null) && $resourceElement = $node->getElementsByTagName('resource')[0] ?? null) {
+            $resource = [];
+            /** @var \DOMAttr $attribute */
+            foreach ($resourceElement->attributes as $attribute) {
+                $resource[$attribute->name] = $attribute->value;
+            }
+        }
+
+        if (!$resource) {
+            throw new \InvalidArgumentException(sprintf('The <import> element in file "%s" must have a "resource" attribute or element.', $path));
         }
 
         $type = $node->getAttribute('type');
@@ -278,6 +284,8 @@ class XmlFileLoader extends FileLoader
                     break;
                 case 'condition':
                     $condition = trim($n->textContent);
+                    break;
+                case 'resource':
                     break;
                 default:
                     throw new \InvalidArgumentException(sprintf('Unknown tag "%s" used in file "%s". Expected "default", "requirement", "option" or "condition".', $n->localName, $path));

@@ -17,23 +17,27 @@
 
 
   <!-- All CSS files -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/icomon.css">
-  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/progressbar.css">
-  <link rel="stylesheet" href="assets/css/meanmenu.min.css">
-  <link rel="stylesheet" href="assets/css/magnific-popup.css">
-  <link rel="stylesheet" href="assets/css/master-service-style-1.css">
+
+  
+  <link rel="stylesheet" href="{{ url('assets/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/all.min.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/icomon.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/swiper-bundle.min.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/progressbar.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/meanmenu.min.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/magnific-popup.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/master-service-style-1.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/master-service-style-1.css') }}">
   <link rel="stylesheet" href="{{ url('assets/css/master-human.css') }}">
-  <link rel="stylesheet" href="assets/css/playlist_section.css">
+  <link rel="stylesheet" href="{{ url('assets/css/playlist_section.css') }}">
+  
 
 
 
 </head>
 
 
-<body class="font-heading-hkgrotesk-bold">
+<body data-category-id="{{ $category->id }}" class="font-heading-hkgrotesk-bold">
 
   <!-- Preloader -->
   <div id="preloader">
@@ -172,13 +176,13 @@
            <!-- playlist section start -->
     <main class="containerv">
         <section class="main-video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=kjiXqIpPTLRGqW6R&amp;list=PLzjYQfVGYahv1hZtA_HMRhebuJXXSdEgh&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            <iframe width="560" height="315" src="{{ $firstVideo->name }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          <div class="titlev"><h3>INTRODUCTION</h3> </div> 
+          <div class="titlev"><h3>{{ $firstVideo->title }}</h3> </div> 
         </section>
         <section class="video-playlist">
       <!--      <h3 class="titlev"> title of video playlist</h3> -->
-            <p>10 lesssons &nbsp; . &nbsp; 50m 48s</p>
+            <p>{{ $category->number_of_videos }} lessons &nbsp; . &nbsp; {{ $category->total_duration }}</p>
             <div class="videos">
           
               
@@ -235,23 +239,90 @@
 
 
   <!-- All JS files -->
-  <script src="assets/js/jquery-3.6.0.min.js"></script>
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="assets/js/swiper-bundle.min.js"></script>
-  <script src="assets/js/counter.js"></script>
-  <script src="assets/js/progressbar.js"></script>
-  <script src="assets/js/gsap.min.js"></script>
-  <script src="assets/js/ScrollSmoother.min.js"></script>
-  <script src="assets/js/ScrollTrigger.min.js"></script>
-  <script src="assets/js/jquery.meanmenu.min.js"></script>
-  <script src="assets/js/backToTop.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/error-handling.js"></script>
-  <script src="assets/js/wc-cursor.js"></script>
-  <script src="assets/js/offcanvas.js"></script>
-  <script src="assets/js/script.js"></script>
+  <script src="{{ url('assets/js/jquery-3.6.0.min.js') }}"></script>
+  <script src="{{ url('assets/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url('assets/js/jquery.magnific-popup.min.js') }}"></script>
+  <script src="{{ url('assets/js/swiper-bundle.min.js') }}"></script>
+  <script src="{{ url('assets/js/counter.js') }}"></script>
+  <script src="{{ url('assets/js/progressbar.js') }}"></script>
+  <script src="{{ url('assets/js/gsap.min.js') }}"></script>
+  <script src="{{ url('assets/js/ScrollSmoother.min.js') }}"></script>
+  <script src="{{ url('assets/js/ScrollTrigger.min.js') }}"></script>
+  <script src="{{ url('assets/js/jquery.meanmenu.min.js') }}"></script>
+  <script src="{{ url('assets/js/backToTop.js') }}"></script>
+  <script src="{{ url('assets/js/main.js') }}"></script>
+  <script src="{{ url('assets/js/error-handling.js') }}"></script>
+  <script src="{{ url('assets/js/wc-cursor.js') }}"></script>
+  <script src="{{ url('assets/js/offcanvas.js') }}"></script>
+  <!-- <script src="assets/js/script.js"></script> -->
 
+ <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const video_playlist = document.querySelector('.video-playlist .videos');
+    const main_video = document.querySelector('.main-video iframe');
+    const main_video_title = document.querySelector('.main-video h3');
+
+    // Assume category ID is available, e.g., from a data attribute or variable
+    const categoryId = document.querySelector('body').dataset.categoryId;
+
+    // Fetch the JSON data from the server
+    fetch(`/category/${categoryId}/videos`)
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+            if (data.length > 0) {
+                // Use a document fragment for better performance
+                const fragment = document.createDocumentFragment();
+
+                data.forEach((video, i) => {
+                    const videoElement = document.createElement('div');
+                    videoElement.classList.add('video');
+                    videoElement.dataset.id = video.id;
+                    videoElement.innerHTML = `
+                        <img src="/assets/imgs/icon/play-button.png" alt="">
+                        <p>0${i + 1}. </p>
+                        <h3 class="titlev">${video.title}</h3>
+                        <p class="time">${video.duration}</p>
+                    `;
+                    fragment.appendChild(videoElement);
+                });
+
+                video_playlist.appendChild(fragment);
+
+                const videos = document.querySelectorAll('.video');
+                if (videos.length > 0) {
+                    videos[0].classList.add('active');
+                    videos[0].querySelector('img').src = "/assets/imgs/icon/pause-button.svg";
+
+                    videos.forEach(selected_video => {
+                        selected_video.addEventListener('click', () => {
+                            videos.forEach(video => {
+                                video.classList.remove('active');
+                                video.querySelector('img').src = "/assets/imgs/icon/play-button.png";
+                            });
+
+                            selected_video.classList.add('active');
+                            selected_video.querySelector('img').src = "/assets/imgs/icon/pause-button.svg";
+
+                            const match_video = data.find(video => video.id == selected_video.dataset.id);
+                            if (match_video) {
+                                main_video.src = match_video.name;
+                                main_video_title.innerHTML = match_video.title;
+                            }
+                        });
+                    });
+                }
+            } else {
+                console.error('No video data found.');
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching video data:', error);
+        });
+});
+
+ </script>
+  
 </body>
 
 </html>

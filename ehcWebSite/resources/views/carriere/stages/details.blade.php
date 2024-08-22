@@ -27,7 +27,8 @@
   <link rel="stylesheet" href="{{ url('assets/css/master-contact.css') }}">
   <link rel="stylesheet" href="{{ url('assets/css/master-human.css') }}">
   <link rel="stylesheet" href="{{ url('assets/css/master-financial.css') }}">
-
+  
+  <link rel="stylesheet" href="{{ url('assets/css/master-service-style-5.css') }}">
 
 
 </head>
@@ -147,7 +148,7 @@
                     <span style="color:#005151;" class="section-subtitle">Stage détails</span>
                   </div>
                   <div class="title-wrapper has_fade_anim">
-                    <h2 style="color:#005151;" class="section-title">Rejoignez {{ $stage->entreprise }} et explorez de nouvelles opportunités professionnelles!</h2>
+                    <h2 style="color:#005151;" class="section-title"> {{ $stage->title }} </h2>
                   </div>
                 </div>
               </div>
@@ -162,21 +163,54 @@
                     <div class="logo">
                       <img src="{{ url('assets/imgs/logo/logo.webp') }}" alt="logo">
                     </div>
-                    <h3 style="color:#005151;" class="title">Compétences :</h3>
-                    <ul class="info-list">
-                    <!--  <li><a style="color:#005151;" href="#">+212 6 63-80-85-01</a></li>
-                      <li><a style="color:#005151;" href="#">contact@expertshumancapital.com</a></li> -->
-                      @foreach ($stage->skills as $skill)
-                      <li style="color:#005151;">{{ $skill }}</li> <br>
-                      @endforeach 
-                    </ul>
-                    <p style="color:#005151;" class="text">{{ $stage->location }}</p>
+            
+                    <h3 style="color:#005151;" class="title">Profil de poste </h3> 
+                   <ul class="info-list">
+                      <li><a style="color:#005151;" href="#">{{ $stage->profil }}</a></li>
+                    </ul> 
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <p style="color:#005151;" class="text"><b>Location   </b>{{ $stage->location }}</p>
                   </div>
                 </div>
               </div>
             </div>
           </section>
           <!-- contact intro end  -->
+
+          <!-- details start -->
+          <section class="specialization-area style-1">
+            <div class="specialization-inner">
+              <div class="specialization-thumb">
+              @if($stage->image_offre_path)
+              <img src="{{ asset('storage/' . $stage->image_offre_path) }}"alt="compétences-image">
+              @endif
+              </div>
+              <div class="specialization-content section-spacing">
+                <div class="section-title-wrapper style-1 has_fade_anim">
+                  <div class="subtitle-wrapper">
+                    <span class="section-subtitle">Qualifications</span>
+                  </div>
+                
+                  <div class="cf_text">
+                    <p class="text">{{ $stage->description }}</p>
+                  </div>
+                  <div class="title-wrapper">
+                    <h1 class="section-title">Aptitudes demandées</h1>
+                  </div>
+                  <ul class="list-plus">
+                  @foreach ($stage->skills as $skill)
+                    <li>{{ $skill }}</li>
+                  @endforeach
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- details start -->
 
           <!-- contact area start  -->
           <section class="contact-area section-spacing">
@@ -201,48 +235,64 @@
                   </div>
                 </div>
                 <div class="contact-wrapper has_fade_anim">
-                  <form>
+                <form action="{{ route('submitStage', $stage->id) }}" method="POST" enctype="multipart/form-data">
+                  @csrf  
+                  @if (Session::has('success'))
+                  <div class="alert alert-success alert-dismissible" role="alert">
+                    {{ Session::get('success')}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                  </div>
+                  @elseif (Session::has('error'))
+                  <div class="alert alert-danger alert-dismissible" role="alert">
+                    {{ Session::get('error')}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                  </div>
+                  @endif
                     <div  class="wc-single-input">
                       <label style="color:#005151;"  for="name" class="wc-form-label">Nom et prénom</label>
-                      <input style="background-color:rgba(208, 235, 220, 0.9);" type="text" id="name">
+                      <input name='name' style="background-color:rgba(208, 235, 220, 0.9);" type="text" id="name" value="{{ old('name') }}">
+                      @error('name')
+                      <p class="text-danger">{{ $message }}</p>
+                      @enderror
                     </div>
                     <div class="wc-single-input">
                       <label style="color:#005151;" for="email" class="wc-form-label">Email</label>
-                      <input style="background-color:rgba(208, 235, 220, 0.9);" type="text" id="email">
+                      <input name="email" style="background-color:rgba(208, 235, 220, 0.9);" type="text" id="email" value="{{ old('email') }}">
+                      @error('email')
+                      <p class="text-danger">{{ $message }}</p>
+                      @enderror
                     </div>
                     <div class="wc-single-input">
                       <label style="color:#005151;" for="phone" class="wc-form-label">Numéro de téléphone</label>
-                      <input style="background-color:rgba(208, 235, 220, 0.9);" type="text" id="phone">
-                    </div>
-              <!--      <div class="wc-single-input">
-                      <label for="company" class="wc-form-label">Company</label>
-                      <input type="text" id="company">
-                    </div> -->
-              <!--      <div class="wc-single-input">
-                      <label for="website" class="wc-form-label">Website</label>
-                      <input type="text" id="website">
-                    </div> -->
-                    <div class="wc-single-input">
-                      <label style="color:#005151;" for="website" class="wc-form-label">Spécialité</label>
-                      <select style="background-color:rgba(208, 235, 220, 0.9);">
-                        <option style="color:#005151;"value="1" selected>Recruitement</option>
-                        <option style="color:#005151;" value="2">Formation</option>
-                        <option style="color:#005151;" value="3">Conseil</option>
-                        <option style="color:#005151;"value="4" selected>Ingénierie</option>
-                        <option style="color:#005151;"value="5" selected>Services & Events</option>
-                      </select>
-                    </div>
-                    <div class="wc-single-input">
-                      <label style="color:#005151;" for="message" class="wc-form-label">Message</label>
-                      <textarea style="background-color:rgba(208, 235, 220, 0.9);"  id="message" placeholder="Write your message here....."></textarea>
+                      <input name="phone" style="background-color:rgba(208, 235, 220, 0.9);" type="text" id="phone" value="{{ old('phone') }}">
+                      @error('phone')
+                      <p class="text-danger">{{ $message }}</p>
+                      @enderror
                     </div>
                     <div class="wc-single-input">
                       <label style="color:#005151;" for="company" class="wc-form-label">CV</label>
-                      <input style="background-color:rgba(208, 235, 220, 0.9);" type="file" id="company">
+                      <input name="cv" style="background-color:rgba(208, 235, 220, 0.9);" type="file" id="company">
+                      @error('cv')
+                      <p class="text-danger">{{ $message }}</p>
+                      @enderror
                     </div>
-                   
+                    <div class="wc-single-input">
+                      <label style="color:#005151;" for="phone" class="wc-form-label">Subject</label>
+                      <input name="subject" style="background-color:rgba(208, 235, 220, 0.9);" type="text" id="phone" value="{{ old('phone') }}">
+                      @error('subject')
+                      <p class="text-danger">{{ $message }}</p>
+                      @enderror
+                    </div>
+                    <div class="wc-single-input">
+                      <label style="color:#005151;" for="message" class="wc-form-label">Message</label>
+                      <textarea name="message" style="background-color:rgba(208, 235, 220, 0.9);"  id="message" placeholder="Write your message here....." >{{ old('message') }}</textarea>
+                      @error('message')
+                      <p class="text-danger">{{ $message }}</p>
+                      @enderror
+                    </div>
+                    <input type="hidden" name="internship_id" value="{{ $stage->id }}">
                     <div class="btn-wrapper">
-                      <button style="background-color:#005151;" type="submit" class="wc-btn-primary btn-text-flip"><span data-text="Soumettre ma candidature">Soumettre ma candidature</span> <i class="fa fa-caret-right"></i> </button>
+                      <button name='btn' style="background-color:#005151;" type="submit" class="wc-btn-primary btn-text-flip"><span data-text="Soumettre ma candidature">Soumettre ma candidature</span> <i class="fa fa-caret-right"></i> </button>
                     </div>
                   </form>
                 </div>

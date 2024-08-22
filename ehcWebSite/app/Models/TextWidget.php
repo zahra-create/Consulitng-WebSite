@@ -35,14 +35,21 @@ class TextWidget extends Model
 
         return $widget->content;
     }
-
-    public static function getImage(string $key): ?string
+    public static function getImage(string $key)
     {
-        $widget = self::where('key', $key)->first();
-           
-                if($widget && str_starts_with($widget->Image, 'http')){
-                  return $widget->Image;
-                }
-                return '/storage/'.$widget->Image;
-              }
+        $widget = Cache::remember('text-widget-image-' . $key, now()->addMinutes(10), function () use ($key) {
+            return self::where('key', $key)->first();
+        });
+
+        if (!$widget || !$widget->image) {
+            return null; 
+        }
+
+      
+        if (str_starts_with($widget->image, 'http')) {
+            return $widget->image;
+        }
+
+        return asset('storage/' . $widget->image);
+    }
 }

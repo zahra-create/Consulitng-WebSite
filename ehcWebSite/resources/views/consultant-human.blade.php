@@ -179,7 +179,8 @@
                    <div class="thumb-wrapper" style="display: grid;
   grid-template-columns: auto auto; gap: 20px;">
                       <div class="cf_thumb has_fade_anim" data-delay=".65" data-ease="slow(0.7,0.7,false)">
-                        <img src="{{ url('assets/imgs/gallery/img-r-3.png')}} " alt="gallary">
+                       <!-- <img src="{{ url('assets/imgs/gallery/img-r-3.png')}}  " alt="gallary">-->
+                        <img src="{{ \App\Models\TextWidget::getImage('Header-Home')}}" alt="gallary">
                       </div> 
                  
 

@@ -18,7 +18,8 @@ class StageResource extends Resource
 {
     protected static ?string $model = Stage::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-briefcase';
+    protected static ?string $navigationGroup = 'CARRIÈRE';
 
     public static function form(Form $form): Form
     {
@@ -61,7 +62,7 @@ class StageResource extends Resource
                 ->visibility('public'),
                 Forms\Components\TagsInput::make('skills') 
                 ->label('Skills')
-                ->placeholder('Entrez les compétences requises')
+                ->placeholder('Entrez les compétences requises pour ce stage')
                 ->reactive(),              
                                    
             ]);
