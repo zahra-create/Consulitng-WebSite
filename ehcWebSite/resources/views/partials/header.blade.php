@@ -43,7 +43,7 @@
         </div>
         <div class="header-right">
           <div class="header__meta d-none d-md-block">
-            <a href="contact.html" class="cf_btn wc-btn-primary btn-text-flip"><span data-text="Payer Prestations">Payer prestations</span> <img src="{{ url('assets/imgs/icon/icon-r-21.webp') }}" alt="arrow-icon"> </a>
+            <a href="{{ route('paiement') }}" class="cf_btn wc-btn-primary btn-text-flip"><span data-text="Payer Prestations">Payer prestations</span> <img src="{{ url('assets/imgs/icon/icon-r-21.webp') }}" alt="arrow-icon"> </a>
           </div>
           <div class="header__meta d-none d-md-block">
             <a href="{{ route('demande-devis') }}" class="cf_btn wc-btn-primary btn-text-flip"><span data-text="Demander devis">Demander devis

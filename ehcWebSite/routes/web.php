@@ -8,6 +8,8 @@ use App\Http\Controllers\DemandeDevisController;
 use App\Http\Controllers\StageController;
 use App\Http\Controllers\PodcastController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\PubliciteController;
+use App\Http\Controllers\AboutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -89,14 +91,10 @@ Route::get('/ingenierie', function () {
 
 
 //about page routes
-Route::get('/about', function () {
-    return view('about-page');
-})->name('about');
-//team-details
-Route::get('/team-details', function () {
-    return view('team-details');
-})->name('team-details');
 
+Route::get('/about',[AboutController::class, 'index'])->name('about');
+//team-details
+Route::get('/equipe/{id}', [AboutController::class, 'show'])->name('team-details');
 
 //blogs
 /*
@@ -117,7 +115,7 @@ Route::get('/search',[BlogController::class, 'search'])->name('search');
 //details-blogs
 Route::get('/blogs/{blog:slug}',[BlogController::class, 'show'])->name('blog-details');
 Route::get('/category/{category:slug}',[BlogController::class, 'byCategory'])->name('by-category');
-
+//Route::post('/blogs/{blog}/like', [BlogController::class, 'like'])->name('blog-details');
 
 
 //contact page routes
@@ -141,8 +139,14 @@ Route::get('/demande-devis', function () {
     return view('demande-devis');
 })->name('demande-devis');
 
+
 //form demande devis
 Route::post('/demande-devis/submitdevis', [DemandeDevisController::class, 'submitdevis'])->name('demande-devis.submitdevis');
+
+//Paiement
+Route::get('/paiement', function () {
+    return view('Paiement');
+})->name('paiement');
 
 //Podcasts
 /*
@@ -151,6 +155,7 @@ Route::get('/podcasts', function () {
 })->name('Podcasts');
 */
 Route::get('/podcasts',[PodcastController::class, 'index'])->name('Podcasts');
+Route::get('/podcasts/search',[PodcastController::class, 'search'])->name('search-podcast');
 
 
 //Page 2 Podcasts

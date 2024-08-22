@@ -8462,9 +8462,12 @@ p {
     margin-bottom: 38px;
   }
 }
+
 .blog-area .blog-area-inner {
-  display: grid;
-  grid-template-columns: auto 850px;
+  /*display: grid;
+  grid-template-columns: auto 850px;*/
+   margin-top: 40px;
+    margin-bottom: 40px;
 }
 @media only screen and (max-width: 1399px) {
   .blog-area .blog-area-inner {
@@ -8501,7 +8504,7 @@ p {
 }
 @media only screen and (max-width: 1199px) {
   .blog-area .newsletter-btn {
-    margin-top: 0;
+    margin-top: 20px;
     margin-bottom: 30px;
   }
 }

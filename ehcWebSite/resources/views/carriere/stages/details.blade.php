@@ -251,9 +251,7 @@
           </section>
           <!-- contact area end  -->
 
-          <!-- cta area start  -->
-     @include('partials.disponibility')
-          <!-- cta area end  -->
+
 
         </main>
 

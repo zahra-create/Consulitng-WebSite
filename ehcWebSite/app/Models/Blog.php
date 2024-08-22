@@ -33,4 +33,10 @@ public function getImage(){
   }
   return '/storage/'.$this->image;
 }
+
+public function likes()
+    {
+        return $this->hasMany(BlogLike::class, 'blog_id');
+    }
+
 }

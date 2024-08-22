@@ -229,16 +229,21 @@
 
               </div>
             </div>
-            <nav aria-label="Page navigation example">
-  <ul class="pagination">
+  <nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
   @if($prev) 
     <li class="page-item">
-    <a class="page-link" href="{{route('details-actualites',$prev)}}">
+    <a class=" btn btn-outline-success rounded-0 rounded-start" style="--bs-btn-hover-bg: #005151; --bs-btn-hover-border-color: #005151;" href="{{route('details-actualites',$prev)}}">
     Previous</a> 
+    @else
+    <div class="btn btn-primary no-outline no-hover rounded-0 rounded-start" style="--bs-btn-hover-bg: #005151;">
+    Previous</div> 
      </li>@endif
      @if($next)
-    <li class="page-item"><a class="page-link" href="{{route('details-actualites',$next)}}">Next</a>
-    </li>@endif
+    <li class="page-item"><a class="btn btn-outline-success rounded-0 rounded-end" href="{{route('details-actualites',$next)}}" style="--bs-btn-hover-bg: #005151; --bs-btn-hover-border-color: #005151;">Next</a></li>
+    @else
+    <li class="page-item"><div class="btn btn-primary no-outline no-hover rounded-0 rounded-end" style="--bs-btn-hover-bg: #005151; --bs-btn-hover-border-color: #005151;">Next</div></li>
+    @endif
   </ul>
 </nav>
 

@@ -10,7 +10,7 @@ class ManageCategoryPodcasts extends ManageRecords
 {
     protected static string $resource = CategoryPodcastResource::class;
 
-    protected function getActions(): array
+    protected function getHeaderActions(): array
     {
         return [
             Actions\CreateAction::make(),

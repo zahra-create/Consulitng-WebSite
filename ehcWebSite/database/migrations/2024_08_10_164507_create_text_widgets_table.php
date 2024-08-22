@@ -17,8 +17,11 @@ return new class extends Migration
             $table->id();
             $table->string('key')->unique();
             $table->string('image',2048)->nullable();
-            $table->string('title',2048);
+            $table->string('title',2048)->nullable();
+            $table->string('Subtitle',2048)->nullable();
             $table->longText('content')->nullable();
+            $table->string('Boutton',2048)->nullable();
+            $table->string('couleurBoutton')->nullable();
             $table->boolean('active');
             $table->timestamps();
         });
@@ -32,5 +35,6 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('text_widgets');
+
     }
 };

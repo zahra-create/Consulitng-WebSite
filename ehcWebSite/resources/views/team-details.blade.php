@@ -10,21 +10,21 @@
   <title>Binox Team Details</title>
 
   <!-- Fav Icon -->
-  <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.webp">
+  <link rel="icon" type="image/x-icon" href="{{ url('assets/imgs/logo/favicon.webp') }}">
 
 
 
 
 
   <!-- All CSS files -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/icomon.css">
-  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/progressbar.css">
-  <link rel="stylesheet" href="assets/css/meanmenu.min.css">
-  <link rel="stylesheet" href="assets/css/magnific-popup.css">
-  <link rel="stylesheet" href="assets/css/master-team-details.css">
+  <link rel="stylesheet" href="{{ url('assets/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/all.min.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/icomon.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/swiper-bundle.min.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/progressbar.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/meanmenu.min.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/magnific-popup.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/master-team-details.css') }}">
   <link rel="stylesheet" href="{{ url('assets/css/master-human.css') }}">
 
 
@@ -147,72 +147,26 @@
             <div class="container">
               <div class="team-details-wrapper">
                 <div class="team-content">
-                  <h2 class="title has_fade_anim">Ali <br> Benomar</h2>
+                  <h2 class="title has_fade_anim">{{$equipe->prenom}} <br> {{$equipe->nom}}</h2>
                   <ul class="social-icons has_fade_anim" data-delay=".35">
                     <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
                     <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
                     <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
                   </ul>
-                  <p class="text has_fade_anim">Ali Benomar est un ingénieur logiciel senior chez EHC, reconnu pour son expertise en développement de solutions 
-                    technologiques innovantes. Avec plus de dix ans d'expérience dans le domaine, Ali excelle dans la conception et l'implémentation de systèmes 
-                    logiciels robustes et évolutifs. Passionné par les nouvelles technologies, 
-                    il maîtrise plusieurs langages de programmation et possède une connaissance approfondie des architectures cloud.</p>
-                  <p class="text has_fade_anim">Ali est également un excellent mentor, toujours prêt à partager ses connaissances et à aider ses collègues à surmonter 
-                    les défis techniques. Son engagement envers l'excellence et son esprit d'équipe font de lui un atout précieux pour EHC. Grâce à sa compétence et à son dévouement, 
-                    Ali contribue significativement au succès et à la croissance de l'entreprise.</p>
+                  <p class="text has_fade_anim">{{$equipe->description}}</p>
                   <div class="btn-wrapper has_fade_anim" data-on-scroll="0">
-                    <a href="contact.html" class="wc-btn-primary btn-text-flip"> <span data-text="Contact Now">Contact
+                    <a href="{{ route('contact') }}" class="wc-btn-primary btn-text-flip"> <span data-text="Contact Now">Contact
                         Now</span> <i class="fa-solid fa-caret-right"></i></a>
                   </div>
                 </div>
                 <div class="team-thumb has_fade_anim" data-fade-from="right">
-                  <img src="assets/imgs/team/team-details-img.webp" alt="image">
+                  <img src="{{ $equipe->getImage() }}" alt="image">
                 </div>
               </div>
             </div>
           </section>
           <!-- /team details end  -->
 
-          <!-- newsletter start  -->
-          <section class="newsletter-area">
-            <div class="container">
-              <div class="newsletter-wrapper">
-                <div class="newsletter-content">
-                  <div class="section-heading">
-                    <div class="section-title-wrapper style-1">
-                      <div class="subtitle-wrapper has_fade_anim">
-                        <span class="section-subtitle">Newsletter</span>
-                      </div>
-                      <div class="title-wrapper has_fade_anim">
-                        <h1 class="section-title">Join the community</h1>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="newsletter-form has_fade_anim">
-                  <form action="#">
-                    <div class="input-field">
-                      <label for="name">Your name</label>
-                      <input type="text" id="name">
-                    </div>
-                    <div class="input-field">
-                      <label for="companyname">Company name</label>
-                      <input type="text" id="companyname">
-                    </div>
-                    <div class="input-field">
-                      <label for="email">Email address</label>
-                      <input type="text" id="email">
-                    </div>
-                    <div class="btn-wrapper">
-                      <button type="submit" class="wc-btn-primary btn-text-flip"> <span data-text="Submit now">Submit
-                          now</span> <i class="fa-solid fa-caret-right"></i></button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- /newsletter end  -->
 
           <!-- testimonial area start  -->
           <div class="testimonial-section section-spacing has_fade_anim">
@@ -225,56 +179,18 @@
                         <div class="content">
                           <div class="text-wrapper">
                             <div class="quote-icon-wrap">
-                              <img src="assets/imgs/icon/quote.webp" alt="Quote Icon" class="quote-icon">
+                              <img src="{{ url('assets/imgs/icon/quote.webp') }}" alt="Quote Icon" class="quote-icon">
                             </div>
-                            <p class="text">Grâce à l'accompagnement personnalisé de l'équipe EHC, notre organisation a pu naviguer avec succès à travers des projets
-                                complexes de transformation digitale. 
-                               Leur expertise et leur sens éthique ont été déterminants dans notre réussite.</p>
+                            <p class="text">{{$equipe->quote}}</p>
                           </div>
                           <div class="meta">
-                            <p class="name">Mark Henry</p>
-                            <p class="post">Developer, Oklavery</p>
+                            <p class="name">{{$equipe->prenom}} {{$equipe->nom}}</p>
+                            <p class="post">{{$equipe->poste}}, {{$equipe->entreprise}}</p>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="swiper-slide">
-                      <div class="testimonial-item style-2">
-                        <div class="content">
-                          <div class="text-wrapper">
-                            <div class="quote-icon-wrap">
-                              <img src="assets/imgs/icon/quote.webp" alt="Quote Icon" class="quote-icon">
-                            </div>
-                            <p class="text">'engagement et l'innovation démontrés par EHC ont surpassé nos attentes. 
-                                Leur approche sur mesure a permis de répondre précisément à nos besoins, 
-                                stimulant ainsi notre croissance et notre compétitivité.</p>
-                          </div>
-                          <div class="meta">
-                            <p class="name">Mark Henry</p>
-                            <p class="post">Developer, Oklavery</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="testimonial-item style-2">
-                        <div class="content">
-                          <div class="text-wrapper">
-                            <div class="quote-icon-wrap">
-                              <img src="assets/imgs/icon/quote.webp" alt="Quote Icon" class="quote-icon">
-                            </div>
-                            <p class="text">We’ve had bad experiences with call centers through binox. We hired my own
-                              remote
-                              team that I have complete control over the remote team that means work from home at
-                              anywhere</p>
-                          </div>
-                          <div class="meta">
-                            <p class="name">Mark Henry</p>
-                            <p class="post">Developer, Oklavery</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                   
                   </div>
                 </div>
                 <div class="swiper-button-next style-2"><span class="case-upper">Next</span></div>
@@ -284,9 +200,7 @@
           </div>
           <!-- testimonial area end  -->
 
-          <!-- cta area start  -->
-          @include('partials.disponibility')
-          <!-- cta area end  -->
+      
 
         </main>
 
@@ -301,21 +215,21 @@
 
 
   <!-- All JS files -->
-  <script src="assets/js/jquery-3.6.0.min.js"></script>
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="assets/js/swiper-bundle.min.js"></script>
-  <script src="assets/js/counter.js"></script>
-  <script src="assets/js/progressbar.js"></script>
-  <script src="assets/js/gsap.min.js"></script>
-  <script src="assets/js/ScrollSmoother.min.js"></script>
-  <script src="assets/js/ScrollTrigger.min.js"></script>
-  <script src="assets/js/jquery.meanmenu.min.js"></script>
-  <script src="assets/js/backToTop.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/error-handling.js"></script>
-  <script src="assets/js/wc-cursor.js"></script>
-  <script src="assets/js/offcanvas.js"></script>
+  <script src="{{ url('assets/js/jquery-3.6.0.min.js') }}"></script>
+  <script src="{{ url('assets/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url('assets/js/jquery.magnific-popup.min.js') }}"></script>
+  <script src="{{ url('assets/js/swiper-bundle.min.js') }}"></script>
+  <script src="{{ url('assets/js/counter.js') }}"></script>
+  <script src="{{ url('assets/js/progressbar.js') }}"></script>
+  <script src="{{ url('assets/js/gsap.min.js') }}"></script>
+  <script src="{{ url('assets/js/ScrollSmoother.min.js') }}"></script>
+  <script src="{{ url('assets/js/ScrollTrigger.min.js') }}"></script>
+  <script src="{{ url('assets/js/jquery.meanmenu.min.js') }}"></script>
+  <script src="{{ url('assets/js/backToTop.js') }}"></script>
+  <script src="{{ url('assets/js/main.js') }}"></script>
+  <script src="{{ url('assets/js/error-handling.js') }}"></script>
+  <script src="{{ url('assets/js/wc-cursor.js') }}"></script>
+  <script src="{{ url('assets/js/offcanvas.js') }}"></script>
 
 </body>
 

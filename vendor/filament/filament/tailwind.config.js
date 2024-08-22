@@ -8,6 +8,7 @@ module.exports = {
         './packages/notifications/resources/**/*.blade.php',
         './packages/support/resources/**/*.blade.php',
         './packages/tables/resources/**/*.blade.php',
+        './vendor/awcodes/filament-tiptap-editor/resources/**/*.blade.php'
     ],
     darkMode: 'class',
     theme: {

@@ -10,7 +10,7 @@ class ListEpisodes extends ListRecords
 {
     protected static string $resource = EpisodeResource::class;
 
-    protected function getActions(): array
+    protected function getHeaderActions(): array
     {
         return [
             Actions\CreateAction::make(),

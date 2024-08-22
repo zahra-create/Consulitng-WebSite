@@ -15,8 +15,9 @@ return [
     |
     */
 
+    //'class_namespace' => 'App\\Livewire', 
     'class_namespace' => 'App\\Http\\Livewire',
-
+   
     /*
     |--------------------------------------------------------------------------
     | View Path
@@ -27,7 +28,7 @@ return [
     |
     */
 
-    'view_path' => resource_path('views/livewire'),
+    //'view_path' => resource_path('views/livewire') ,
 
     /*
     |--------------------------------------------------------------------------
@@ -39,7 +40,7 @@ return [
     |
     */
 
-    'layout' => 'layouts.app',
+    'layout' => 'components.layouts.app',
 
     /*
     |--------------------------------------------------------------------------
@@ -54,7 +55,7 @@ return [
     |
     */
 
-    'asset_url' => null,
+    //'asset_url' => null,
 
     /*
     |--------------------------------------------------------------------------
@@ -68,7 +69,7 @@ return [
     |
     */
 
-    'app_url' => null,
+    //'app_url' => null,
 
     /*
     |--------------------------------------------------------------------------
@@ -81,7 +82,7 @@ return [
     |
     */
 
-    'middleware_group' => 'web',
+    //'middleware_group' => 'web',
 
     /*
     |--------------------------------------------------------------------------
@@ -122,7 +123,7 @@ return [
     |
     */
 
-    'manifest_path' => null,
+   // 'manifest_path' => null,
 
     /*
     |--------------------------------------------------------------------------
@@ -138,7 +139,7 @@ return [
     |
     */
 
-    'back_button_cache' => false,
+   // 'back_button_cache' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -154,5 +155,16 @@ return [
     */
 
     'render_on_redirect' => false,
+
+
+    'legacy_model_binding' => true,
+ 
+'inject_assets' => true,
+ 
+'inject_morph_markers' => true,
+ 
+'navigate' => false,
+ 
+'pagination_theme' => 'tailwind',
 
 ];

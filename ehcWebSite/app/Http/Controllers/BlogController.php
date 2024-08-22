@@ -6,6 +6,8 @@ use App\Models\Blog;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use App\Models\CategoryBlog;
+use App\Models\BlogView;
+use App\Models\BlogLike;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 
@@ -29,7 +31,7 @@ class BlogController extends Controller
         return view('medias.blog.blogs',compact('blogs','categories'));
     }
 
-    public function show(Blog $blog)
+    public function show(Blog $blog ,Request $request)
     {
         if(!$blog->active){
             throw new NotFoundHttpException();
@@ -51,7 +53,25 @@ class BlogController extends Controller
         ->limit(1)
         ->first();
 
-        return view('medias.blog.blog-details',compact('blog','prev','next' ));
+        $existingView = BlogView::where('ip_address', $request->ip())
+        ->where('user_agent', $request->userAgent())
+        ->where('blog_id', $blog->id)
+        ->first();
+    
+    if (!$existingView) {
+        // Créer une nouvelle vue si elle n'existe pas encore
+        BlogView::create([
+            'ip_address' => $request->ip(),
+            'user_agent' => $request->userAgent(),
+            'blog_id' => $blog->id
+        ]);
+    }
+
+    $viewCount = BlogView::where('blog_id', $blog->id)->count();
+
+
+
+        return view('medias.blog.blog-details',compact('blog','prev','next','viewCount' ));
     }
 
     public function byCategory(CategoryBlog $category){
@@ -77,7 +97,7 @@ class BlogController extends Controller
     public function search(Request $request)
     {
         $q = $request->get('q');
-
+        
         $blogs = Blog::query()
             ->where('active', '=', true)
             ->whereDate('date_publication', '<=', Carbon::now())
@@ -86,9 +106,26 @@ class BlogController extends Controller
                 $query->where('titre', 'like', "%$q%")
                     ->orWhere('corps', 'like', "%$q%");
             })
-            ->paginate(10);
+            ->paginate(8);
 
-        return view('medias.blog.searchblog', compact('blogs'));
+            $categories = CategoryBlog::query()
+            ->leftjoin('blog_category_blog', 'category_blogs.id', '=', 'blog_category_blog.category_blog_id')
+            ->select('category_blogs.titre', 'category_blogs.slug', DB::raw('count(*) as total'))
+            ->groupBy(['category_blogs.titre', 'category_blogs.slug'])
+            ->orderByDesc('total')
+            ->get();
+         
+        if (empty($q) || $blogs->isEmpty()) {
+         
+            return redirect()->back()->with('message', 'Aucun résultat n\'est trouvé');
+        
+        }
+        else{
+        
+            return view('medias.blog.searchblog', compact('blogs','categories')); 
+       
     }
+    
 
+}
 }

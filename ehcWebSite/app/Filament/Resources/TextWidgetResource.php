@@ -5,19 +5,22 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\TextWidgetResource\Pages;
 use App\Filament\Resources\TextWidgetResource\RelationManagers;
 use App\Models\TextWidget;
+use Filament\Forms\Form;
 use Filament\Forms;
-use Filament\Resources\Form;
 use Filament\Resources\Resource;
-use Filament\Resources\Table;
+use Filament\Tables\Table;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
+
 
 class TextWidgetResource extends Resource
 {
     protected static ?string $model = TextWidget::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     protected static ?string $navigationGroup = 'Contenu';  
 
@@ -30,9 +33,25 @@ class TextWidgetResource extends Resource
                     ->maxLength(255),
                 Forms\Components\FileUpload::make('image'),
                 Forms\Components\TextInput::make('title')
-                    ->required()
                     ->maxLength(2048),
-                Forms\Components\RichEditor::make('content'),
+
+                /* 
+                 Forms\Components\TextInput::make('Subtitle')
+                 ->maxLength(2048), 
+                 */
+    
+                TinyEditor::make('content')
+                ->profile('corps')
+                ,
+/*
+                Forms\Components\TextInput::make('Boutton')
+                ->maxLength(2048), 
+
+                Forms\Components\ColorPicker::make('couleurBoutton')
+                ->label('Button Color')
+                ->default('#005153'),
+*/
+
                 Forms\Components\Toggle::make('active')
                     ->required(),
             ])->columns(1);

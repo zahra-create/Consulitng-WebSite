@@ -28,13 +28,19 @@
   <link rel="stylesheet" href="{{ url('assets/css/master-human.css') }}">
 
   <style>
-  .navbar-nav .nav-link {
-    transition: color 0.3s, text-decoration 0.3s;
-  }
 
-  .navbar-nav .nav-link:hover {
-    background-color:rgb(0, 81, 81); 
-  }
+.nav-link {
+
+transition: all 0.2s;}
+
+.nav-link:hover h5 {
+  color: #198754 !important;}
+
+.nav-link:hover{
+border-bottom: 2px solid #198754;
+}
+
+
 </style>
 
 
@@ -153,42 +159,44 @@
               <div class="section-heading">
                 <div class="section-title-wrapper style-1">
                   <div class="subtitle-wrapper has_fade_anim">
-                    <span class="section-subtitle">EHC blog</span>
+                  <span class="section-subtitle">{{ \App\Models\TextWidget::getTitle('Blog-Header')}}</span>
                   </div>
                   <div class="title-wrapper has_fade_anim">
-                    <h2 class="section-title">Regard sur le journal de Groupe EHC</h2>
+                    <h2 class="section-title">{!! \App\Models\TextWidget::getContent('Blog-Header')!!}</h2>
                   </div>
 
                 </div>
               </div>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light w-100 sticky-top mb-4">
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-  <ul class="navbar-nav d-flex justify-content-around w-100">
-  <li class="nav-item active">
-    <div class="meta">
-      <a class="nav-link badge" href="{{route('blogs') }}" ><h5 class="tag" >All categories</h5></a></div>
-  </li>
-    @foreach($categories as $category)
-    <li class="nav-item active mr-3 mr-md-4">
-    <div class="meta" >
-    @if(request('category')?->slug === $category->slug)
-      <a class="nav-link" href="{{route('by-category', $category) }}" style=" background-color: rgb(0, 81, 81); color: white; "><h5 class="tag" >{{$category->titre}} ({{$category->total}})</h5></a></div>
-    @else
-    <a class="nav-link" href="{{route('by-category', $category) }}" ><h5 class="tag">{{$category->titre}} ({{$category->total}})</h5></a></div>
-   @endif
-    </li>
-    @endforeach
-  </ul>
-  <form class="form-inline d-flex my-2 my-lg-0" method="get" action="{{route('search')}}">
+              <nav class="navbar navbar-light bg-light justify-content-between w-100 mb-5">
+              <div class="container-fluid">
+ @foreach($categories as $category) 
+<li class="nav-item"> 
+<div class="meta">
+@if(request('category')?->slug === $category->slug)
+<a class="nav-link" href="{{route('by-category', $category) }}"  style=" border-bottom: 2px solid #198754;"><h5 class="tag" style="color: #198754; ">{{$category->titre}} ({{$category->total}})</h5></a>
+@else
+<a class="nav-link" href="{{route('by-category', $category) }}"><h5 class="tag">{{$category->titre}} ({{$category->total}})</h5></a>
+@endif
+</div></li>
+@endforeach
+
+<form class="form-inline d-flex my-2 my-lg-0" method="get" action="{{route('search')}}">
     <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search" name="q" value="{{request()->get('q')}}">
-    <button class="btn btn-outline-success" type="submit">Search</button>
+    <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
   </form>
-</div>
+              </div>
+              @if (session('message'))
+  <div class="d-flex justify-content-end mt-1 px-3" style="margin-left: auto;">
+            <div class="alert alert-info " id="no-results-message" role="alert">
+                {{ session('message') }}
+            </div>
+        </div>
+            @endif
+     
 </nav>
+
+
 
 
               <div class="blog-wrapper-area fix">
@@ -199,19 +207,19 @@
            @endforeach
            
                 </div>
-                <ul class="pagination style-1 has_fade_anim">
+
+                {{ $blogs->links() }}
+
+               <!-- <ul class="pagination style-1 has_fade_anim">
                   <li><a href="#">1</a></li>
                   <li><a class="current" href="#">2</a></li>
                   <li><a href="#">Next <img src="assets/imgs/icon/arrow-next-icon.webp" alt="arrow-icon"></a></li>
-                </ul>
+                </ul>-->
               </div>
             </div>
           </section>
           <!-- blog area end  -->
 
-          <!-- cta area start  -->
-          @include('partials.disponibility')
-          <!-- cta area end  -->
 
         </main>
 
@@ -242,6 +250,13 @@
   <script src="{{ url('assets/js/error-handling.js')}}"></script>
   <script src="{{ url('assets/js/wc-cursor.js')}}"></script>
   <script src="{{ url('assets/js/offcanvas.js')}}"></script>
+
+<script>    setTimeout(function() {
+        var messageElement = document.getElementById('no-results-message');
+        if (messageElement) {
+            messageElement.style.display = 'none';
+        }
+    }, 5000); </script>
 
 </body>
 

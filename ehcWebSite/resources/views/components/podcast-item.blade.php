@@ -1,5 +1,5 @@
 <a href="{{route('detail-podcast' , $podcast)}}">
-                        <article class="blog style-2">
+                        <article class="blog style-2" style="justify-content: center;">
                           <div class="author">
                             <div class="avatar"><img src="{{$podcast->getImage()}}" alt=""></div>
                             <div class="">

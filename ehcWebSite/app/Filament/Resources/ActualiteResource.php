@@ -5,10 +5,10 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\ActualiteResource\Pages;
 use App\Filament\Resources\ActualiteResource\RelationManagers;
 use App\Models\Actualite;
+use Filament\Forms\Form;
 use Filament\Forms;
-use Filament\Resources\Form;
 use Filament\Resources\Resource;
-use Filament\Resources\Table;
+use Filament\Tables\Table;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -20,6 +20,8 @@ use App\Filament\Resources\CategoryActualiteResource\RelationManagers\Actualites
 
 use Closure;
 use Illuminate\Support\Str;
+
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class ActualiteResource extends Resource
 {
@@ -42,25 +44,40 @@ class ActualiteResource extends Resource
                 ->required()
                 ->maxLength(2048)
                 ->reactive()
-                ->afterStateUpdated(function (Closure $get, Closure $set, ?string $state) {
+                ->afterStateUpdated(function (\Filament\Forms\Get $get, \Filament\Forms\Set $set, ?string $state) {
                     if (! $get('is_slug_changed_manually') && filled($state)) {
                         $set('slug', Str::slug($state));
                     }
                 }),
 
+               /* TinyEditor::make('titre')
+                ->maxLength(2048)
+                ->reactive()
+                ->afterStateUpdated(function (\Filament\Forms\Get $get, \Filament\Forms\Set $set, ?string $state) {
+                    if (! $get('is_slug_changed_manually') && filled($state)) {
+                        $set('slug', Str::slug($state));
+                    }
+                })
+                ->profile('titre')
+                ->required(), */
+
+
             Forms\Components\TextInput::make('slug')
                 ->required()
                 ->maxLength(2048)
-                ->afterStateUpdated(function (Closure $set) {
+                ->afterStateUpdated(function (\Filament\Forms\Set $set) {
                     $set('is_slug_changed_manually', true);
                 }), ]),
 
+
+            TinyEditor::make('corps')
+            ->profile('corps')
+            ->required(),
             
-            Forms\Components\RichEditor::make('corps')
-                ->required(),
+           
             Forms\Components\Toggle::make('active')
                 ->required(),
-            Forms\Components\DateTimePicker::make('date_publication')
+            Forms\Components\DatePicker::make('date_publication')
                 ->required(),
             Forms\Components\TextInput::make('Auteur')
                 ->required(),

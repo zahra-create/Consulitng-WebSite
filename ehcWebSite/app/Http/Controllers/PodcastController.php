@@ -110,4 +110,32 @@ class PodcastController extends Controller
     {
         //
     }
-}
+
+    public function search(Request $request)
+    {
+        $q = $request->get('q');
+
+        $podcasts =Podcast::query()
+            ->where('active', '=', true)
+            ->whereDate('date_publication', '<=', Carbon::now())
+            ->orderBy('date_publication', 'desc')
+            ->where(function ($query) use ($q) {
+                $query->where('titre', 'like', "%$q%")
+                    ->orWhere('description', 'like', "%$q%")
+                    ->orWhereHas('episodes', function ($query) use ($q) {
+                        $query->where('titre', 'like', "%$q%")
+                        ->orWhere('description', 'like', "%$q%");
+                    });
+            })
+            ->paginate(8);
+
+            if (empty($q) || $podcasts->isEmpty()) {
+         
+                return redirect()->back()->with('message', 'Aucun résultat n\'est trouvé');
+            
+            }
+            else{    
+
+        return view('medias.podcast.searchpodcast', compact('podcasts'));
+    }
+}}

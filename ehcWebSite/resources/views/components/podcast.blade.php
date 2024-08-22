@@ -166,6 +166,12 @@
   <script src="assets/js/wc-cursor.js"></script>
   <script src="assets/js/offcanvas.js"></script>
   <script src="assets/js/man.js"></script>
+  <script>    setTimeout(function() {
+        var messageElement = document.getElementById('no-results-message');
+        if (messageElement) {
+            messageElement.style.display = 'none';
+        }
+    }, 5000); </script>
 
 </body>
 

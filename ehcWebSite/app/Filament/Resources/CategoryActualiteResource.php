@@ -6,16 +6,18 @@ use App\Filament\Resources\CategoryActualiteResource\Pages;
 use App\Filament\Resources\CategoryActualiteResource\RelationManagers;
 use App\Filament\Resources\CategoryActualiteResource\RelationManagers\ActualitesRelationManager;
 use App\Models\CategoryActualite;
+use Filament\Forms\Form;
 use Filament\Forms;
-use Filament\Resources\Form;
 use Filament\Resources\Resource;
-use Filament\Resources\Table;
+use Filament\Tables\Table;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 use Closure;
 use Illuminate\Support\Str;
+
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 
 class CategoryActualiteResource extends Resource
@@ -34,7 +36,7 @@ class CategoryActualiteResource extends Resource
                     ->required()
                     ->maxLength(2048)
                     ->reactive()
-                    ->afterStateUpdated(function (Closure $get, Closure $set, ?string $state) {
+                    ->afterStateUpdated(function (\Filament\Forms\Get $get, \Filament\Forms\Set $set, ?string $state) {
                         if (! $get('is_slug_changed_manually') && filled($state)) {
                             $set('slug', Str::slug($state));
                         }
@@ -43,7 +45,7 @@ class CategoryActualiteResource extends Resource
                 Forms\Components\TextInput::make('slug')
                     ->required()
                     ->maxLength(2048)
-                    ->afterStateUpdated(function (Closure $set) {
+                    ->afterStateUpdated(function (\Filament\Forms\Set $set) {
                         $set('is_slug_changed_manually', true);
                     })
                     ->required(),
@@ -83,6 +85,6 @@ class CategoryActualiteResource extends Resource
     }    
 
     public static function getRealtions(){
-        return [ActualitesRelationManager::class];
+       // return [ActualitesRelationManager::class];
     }
 }

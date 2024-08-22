@@ -156,8 +156,7 @@
                       <span class="section-subtitle">à propos de nous</span>
                     </div>
                     <div class="title-wrapper has_fade_anim">
-                      <h2 class="section-title">EHC <br>
-                        Experts Human Capital</h2>
+                      <h2 class="section-title">{{ \App\Models\TextWidget::getTitle('Section1-About') }}</h2>
                     </div>
                   </div>
                 </div>
@@ -168,12 +167,20 @@
                   <div class="text-box-wrapper has_fade_anim" data-delay=".6">
                     <div class="text-box">
                       <div class="text-wrapper">
-                        <p class="text" style="text-align: justify;">Experts Human Capital est un groupe de conseil en ingénierie et services, dédié à accompagner les organisations dans leur stratégie de développement. 
-                          Grâce à l'expertise et au sens éthique de nos consultants, nous nous positionnons comme un partenaire privilégié dans divers domaines du management des organisations. 
-                          Nos valeurs d'engagement, d'innovation, d'agilité, d'expertise et d'excellence nous permettent de fournir des solutions sur mesure, 
-                          favorisant la croissance et l'innovation de nos clients. 
-                          En choisissant EHC, vous bénéficiez d'un accompagnement personnalisé et d'une expertise éprouvée pour propulser votre organisation vers de nouveaux sommets. 
-                          Ensemble, nous transformons vos défis en opportunités de succès.</p>
+                       <!-- <p class="text" >
+                        Experts Human Capital est un groupe de conseil en ingénierie et services,
+                         dédié à accompagner 
+                        les organisations dans leur stratégie de développement. 
+                        Grâce à l'expertise et au sens éthique de nos consultants, nous nous 
+                        positionnons comme un partenaire privilégié dans divers domaines du 
+                        management des organisations. Nos valeurs d'engagement, d'innovation, 
+                        d'agilité, d'expertise et d'excellence nous permettent de fournir des 
+                        solutions sur mesure, favorisant la croissance et l'innovation de nos clients.
+                        En choisissant EHC, vous bénéficiez d'un accompagnement personnalisé et d'une expertise éprouvée pour propulser votre organisation vers de nouveaux sommets. Ensemble, nous transformons vos défis en opportunités de succès.</p>-->
+                        <p class="text" >
+                        {!! \App\Models\TextWidget::getContent('Section1-About') !!}
+                       </p>
+                    
                       </div>
                       <div class="separator"></div>
                       <div class="scroll-btn btn-move">
@@ -203,9 +210,10 @@
                 <div class="container">
                   <div class="partner-award-text">
                     <img src="assets/imgs/shape/awards-logo-light.webp" class="has_fade_anim" alt="awards-logo">
-                    <p class="text has_fade_anim">Depuis sa création, EHC est reconnue pour offrir des solutions 
+                   <p class="text has_fade_anim">Depuis sa création, EHC est reconnue pour offrir des solutions 
                       innovantes et éthiques en ingénierie et services, favorisant un développement organisationnel durable.</p>
-                  </div>
+<!-- <p class="text has_fade_anim">{!! \App\Models\TextWidget::getContent('Section2-About') !!}</p>--> 
+                    </div>
                 </div>
               </div>
             </div>
@@ -271,58 +279,21 @@
                 </div>
               </div>
               <div class="team-wrapper style-2">
+                @foreach($Equipes as $equipe)
                 <div class="has_fade_anim" data-fade-from="left">
-                  <a href="{{route('team-details')}}">
+                  <a href="{{ route('team-details', ['id' => $equipe->id]) }}">
                     <div class="team style-2">
                       <div class="team-thumb">
-                        <img src="assets/imgs/team/team-1.webp" alt="team-image">
+                        <img src="{{ $equipe->getImage() }}" alt="team-image">
                       </div>
                       <div class="team-content">
-                        <h2 class="name">Aman Joey</h2>
-                        <p class="post">Co-Ordinator</p>
+                        <h2 class="name">{{ $equipe->prenom }} {{ $equipe->nom }}</h2>
+                        <p class="post">{{ $equipe->poste }}</p>
                       </div>
                     </div>
                   </a>
                 </div>
-                <div class="has_fade_anim" data-delay=".35" data-fade-from="left">
-                  <a href="{{route('team-details')}}">
-                    <div class="team style-2">
-                      <div class="team-thumb">
-                        <img src="assets/imgs/team/team-2.webp" alt="team-image">
-                      </div>
-                      <div class="team-content">
-                        <h2 class="name">Kamal Abraham</h2>
-                        <p class="post">Junior Executive</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="has_fade_anim" data-delay=".5" data-fade-from="left">
-                  <a href="{{route('team-details')}}">
-                    <div class="team style-2">
-                      <div class="team-thumb">
-                        <img src="assets/imgs/team/team-3.webp" alt="team-image">
-                      </div>
-                      <div class="team-content">
-                        <h2 class="name">Daniyel Joe</h2>
-                        <p class="post">Marketing Leader</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="has_fade_anim" data-delay=".65" data-fade-from="left">
-                  <a href="{{route('team-details')}}">
-                    <div class="team style-2">
-                      <div class="team-thumb">
-                        <img src="assets/imgs/team/team-4.webp" alt="team-image">
-                      </div>
-                      <div class="team-content">
-                        <h2 class="name">Halvam Alvida</h2>
-                        <p class="post">Merchandiser</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
+                @endforeach
               </div>
             </div>
           </section>
@@ -344,53 +315,31 @@
               <div class="testimonial-inner style-1 has_fade_anim" data-delay=".35">
                 <div class="swiper testimonial testimonial style-1">
                   <div class="swiper-wrapper">
+                 
+
+                  @foreach($Comments as $comment)
                     <div class="swiper-slide">
                       <div class="testimonial-item style-1">
                         <div class="image-wrapper">
-                          <img src="assets/imgs/gallery/testimonials-img_2.webp" alt="Testimonial Image" class="image">
+                          <img src="{{$comment->getImage()}}" alt="Testimonial Image" class="image">
                         </div>
                         <div class="content">
                           <div class="text-wrapper">
                             <div class="quote-icon-wrap">
                               <img src="assets/imgs/icon/quote.webp" alt="Quote Icon" class="quote-icon">
                             </div>
-                            <p class="text">Grâce à l'accompagnement personnalisé de l'équipe EHC, notre organisation a pu naviguer avec succès à travers des projets
-                               complexes de transformation digitale. 
-                              Leur expertise et leur sens éthique ont été déterminants dans notre réussite.</p>
+                            <p class="text">{!! $comment->commentaire !!}</p>
                           </div>
                           <div class="meta">
-                            <p class="name">Anna Henry</p>
-                            <p class="post">Developer, Oklavery</p>
+                            <p class="name">{{$comment->prenom}} {{$comment->nom}}</p>
+                            <p class="post">{{$comment->poste}} , {{$comment->entreprise}}</p>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="swiper-slide">
-                      <div class="testimonial-item style-1">
-                        <div class="image-wrapper">
-                          <img src="assets/imgs/gallery/testimonials-img_1.webp" alt="Testimonial Image" class="image">
-                        </div>
-                        <div class="content">
-                          <div class="text-wrapper">
-                            <div class="quote-icon-wrap">
-                              <img src="assets/imgs/icon/quote.webp" alt="Quote Icon" class="quote-icon">
-                            </div>
-                            <p class="text">L'engagement et l'innovation démontrés par EHC ont surpassé nos attentes. 
-                              Leur approche sur mesure a permis de répondre précisément à nos besoins, 
-                              stimulant ainsi notre croissance et notre compétitivité.</p>
-                          </div>
-                          <div class="meta">
-                            <p class="name">Mark Henry</p>
-                            <p class="post">Developer, Oklavery</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    
-                    
-                    
-                  </div>
+                   @endforeach
+ 
+                 </div>
                 </div>
                 <div class="swiper-button-next style-1"></div>
                 <div class="swiper-button-prev style-1"></div>
@@ -427,11 +376,7 @@
             </div>
           </section>
           <!-- client area end  -->
-
-          <!-- cta area start  -->
-          @include('partials.disponibility')
-          <!-- cta area end  -->
-
+       
         </main>
 
         @include('partials.footer')

@@ -10,7 +10,7 @@ class ViewBlog extends ViewRecord
 {
     protected static string $resource = BlogResource::class;
 
-    protected function getActions(): array
+    protected function getHeaderActions(): array
     {
         return [
             Actions\EditAction::make(),

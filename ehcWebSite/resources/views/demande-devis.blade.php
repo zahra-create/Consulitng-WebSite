@@ -149,7 +149,9 @@
                     <span class="section-subtitle">Demander devis</span>
                   </div> -->
                   <div class="title-wrapper has_fade_anim">
-                    <h2 class="section-title" style=" color:#005153;" >Bienvenue sur notre page de demande de devis.</h2>
+                  <!--  <h2 class="section-title" style=" color:#005153;" >Bienvenue sur notre page de demande de devis.</h2> -->
+                    <h2 class="section-title" style=" color:#005153;" >{{ \App\Models\TextWidget::getTitle('Devis-Header')}}</h2>
+                    
                   </div>
                 </div>
               </div>
@@ -167,7 +169,8 @@
                       <li><a href="#">+01-75-0660-605</a></li>
                       <li><a href="#">hello@binox-consultant.com</a></li>
                     </ul> -->
-                    <p class="text">En tant qu'experts en ressources humaines, nous sommes dédiés à vous fournir des solutions sur mesure pour répondre à vos besoins spécifiques.</p>
+                   <!-- <p class="text">En tant qu'experts en ressources humaines, nous sommes dédiés à vous fournir des solutions sur mesure pour répondre à vos besoins spécifiques.</p>
+-->    <p class="text">{!! \App\Models\TextWidget::getContent('Devis-Header')!!}</p>
                   </div>
                 </div>
               </div>
@@ -182,9 +185,8 @@
                 <div class="section-heading">
                   <div class="section-title-wrapper style-6">
                     <div class="title-wrapper has_fade_anim">
-                      <h2 class="section-title">Demander
-                        <span>un</span>
-                        devis 
+                      <h2 class="section-title">{{ \App\Models\TextWidget::getTitle('Devis-Form')}}
+                       
                       </h2>
                     </div>
                   </div>
@@ -194,9 +196,9 @@
                       <li><a href="mailto:inquiry@binox.com">LiveChat@binox.skype</a></li>
                     </ul>
                   </div> -->
-                  <div class="logo has_fade_anim">
+                 <!-- <div class="logo has_fade_anim">
                     <a href="#"><img src="assets/imgs/logo/logo.webp" alt="logo"></a>
-                  </div>
+                  </div> -->
                 </div>
                 <div class="contact-wrapper has_fade_anim">
                   <form action="/demande-devis/submitdevis" method="POST">
@@ -256,7 +258,6 @@
           <!-- contact area end  -->
 
 		
-          @include('partials.disponibility')
         </main>
 
         @include('partials.footer')

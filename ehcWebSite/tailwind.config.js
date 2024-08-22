@@ -3,7 +3,7 @@ import forms from '@tailwindcss/forms'
 import typography from '@tailwindcss/typography'
 
 export default {
-    content: ['./resources/**/*.blade.php', './vendor/filament/**/*.blade.php'],
+    content: ['./resources/**/*.blade.php', './vendor/filament/**/*.blade.php','./vendor/awcodes/filament-tiptap-editor/resources/**/*.blade.php'],
     theme: {
         extend: {
             colors: {

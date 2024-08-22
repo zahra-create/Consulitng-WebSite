@@ -10,7 +10,7 @@ class EditPodcast extends EditRecord
 {
     protected static string $resource = PodcastResource::class;
 
-    protected function getActions(): array
+    protected function getHeaderActions(): array
     {
         return [
             Actions\ViewAction::make(),

@@ -10,7 +10,7 @@ class ListStages extends ListRecords
 {
     protected static string $resource = StageResource::class;
 
-    protected function getActions(): array
+    protected function getHeaderActions(): array
     {
         return [
             Actions\CreateAction::make(),

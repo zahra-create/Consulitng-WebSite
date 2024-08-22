@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 use Carbon\Carbon;
-
+use App\Models\publicite;
 
 
 class ActualiteController extends Controller
@@ -126,9 +126,43 @@ class ActualiteController extends Controller
     {
         // Récupérer les actualités à afficher sur la page d'accueil
         $actualiteshome = Actualite::where('afficher_sur_accueil', true)->get();
+ 
+        $Header = Publicite::query()
+        ->where('status','=',1)
+        ->where('emplacement', 'header')
+        ->get()
+        ;
 
+    $AfterBU =Publicite::query()
+    ->where('status','=',1)
+    ->where('emplacement', 'After BU')
+    ->get()
+    ;
+    $AfterActu = Publicite::query()
+        ->where('status','=',1)
+        ->where('emplacement', 'After Actu')
+        ->get();
 
-        return view('consultant-human', ['actualiteshome' => $actualiteshome ]);
+    $BeforeActu = Publicite::query()
+    ->where('status','=',1)
+    ->where('emplacement', 'Before Actu')
+    ->get()
+    ;
+
+    $Beforefooter = Publicite::query()
+    ->where('status','=',1)
+    ->where('emplacement', 'Before footer')
+    ->get()
+    ;
+
+    
+
+        return view('consultant-human', ['actualiteshome' => $actualiteshome ,
+        'Header' => $Header,
+    'AfterBU' => $AfterBU,
+    'AfterActu' => $AfterActu,
+    'BeforeActu' => $BeforeActu,
+    'Beforefooter' => $Beforefooter]);
     }
 
 }

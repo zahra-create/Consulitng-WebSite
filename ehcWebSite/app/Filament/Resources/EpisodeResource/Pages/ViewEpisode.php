@@ -10,7 +10,7 @@ class ViewEpisode extends ViewRecord
 {
     protected static string $resource = EpisodeResource::class;
 
-    protected function getActions(): array
+    protected function getHeaderActions(): array
     {
         return [
             Actions\EditAction::make(),

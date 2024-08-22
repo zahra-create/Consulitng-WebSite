@@ -30,7 +30,7 @@
    
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-@livewireStyles
+@filamentStyles
 
       </head>
 
@@ -157,11 +157,11 @@
                     <div class="logo">
                     <!--<h3 class="title" style="font-size:50px;">Contactez-nous pour toute information ou assistance.</h3> -->
                     </div>
-					<h3 class="title" style="color: #005151;">Contactez-nous pour toute information ou assistance.</h3> 
-  
-					<h3 class="title" style="color: #005151;  font-weight: 800; font-size:30px;">
-					Nous sommes là pour vous aider ! 
-                    </h3>
+					<h3 class="title" style="color: #005151;">{{ \App\Models\TextWidget::getTitle('Contact-Header')}}</h3> 
+         <h3 class="title" style="color: #005151;  font-weight: 800; font-size:30px;">
+         {!! \App\Models\TextWidget::getContent('Contact-Header') !!} 
+                    </h3> 
+                  
                   </div>
                 </div>
               </div>
@@ -178,13 +178,9 @@
 				 <div class="line-vertical"></div>
                   <div class="section-title-wrapper style-6">
                     <div class="title-wrapper has_fade_anim">
-                      <h2 class="section-title" style="font-weight: 800; font-size:30px;"  >Nous 
-					    Sommes 
-                        là
-                        Pour 
-                        vous
-                        Aider !
-                      </h2>
+                <h2 class="section-title" style="font-weight: 800; font-size:30px;"  > {!! \App\Models\TextWidget::getTitle('ContactForm') !!} 
+                      </h2> 
+                  
                     </div>
                   </div>
                   <div class="line-vertical"></div>
@@ -277,15 +273,16 @@
               <div class="container">
                 <div class="location-info-wrapper has_fade_anim">
                   <div class="location-info">
-                    <div class="logo">
-                      <img src="assets/imgs/logo/logo.webp" alt="logo">
-                    </div>
-                    <h3 class="title">Contact info:</h3>
-                    <ul class="info-list">
+                  <!--  <div class="logo">
+                      <img src="\assets\imgs\logo\logoEHC.png" alt="logo">
+                    </div> -->
+                    <h3 class="title">{{\App\Models\TextWidget::getTitle('Contact-Info')}}</h3>
+                    <!--<ul class="info-list">
                       <li><a href="#">+212 6 63-80-85-01</a></li>
                       <li><a href="#">contact@expertshumancapital.com</a></li>
-                    </ul>
-                    <p class="text">Rue du Calvon Bv Abdelmoumen- Casablanca</p>
+                    </ul>--> 
+                    <ul class="info-list">{!! \App\Models\TextWidget::getContent('Contact-Info') !!}</ul>
+                    <!--<p class="text">Rue du Calvon Bv Abdelmoumen- Casablanca</p> -->
                   </div>
                 </div>
               </div>
@@ -293,7 +290,6 @@
           </section>
           <!-- contact intro end  -->
 		
-          @include('partials.disponibility')
         </main>
 
         @include('partials.footer')
@@ -337,7 +333,7 @@
   </script>
 
 
-@livewireScripts
+@filamentScripts
 
 </body>
 

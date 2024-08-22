@@ -6,10 +6,10 @@ use App\Filament\Resources\CategoryPodcastResource\RelationManagers\EpisodesRela
 use App\Filament\Resources\PodcastResource\Pages;
 use App\Filament\Resources\PodcastResource\RelationManagers;
 use App\Models\Podcast;
+use Filament\Forms\Form;
 use Filament\Forms;
-use Filament\Resources\Form;
 use Filament\Resources\Resource;
-use Filament\Resources\Table;
+use Filament\Tables\Table;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -17,6 +17,8 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Tables\Columns\BooleanColumn;
 use Closure;
 use Illuminate\Support\Str;
+
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 
 class PodcastResource extends Resource
@@ -40,7 +42,7 @@ class PodcastResource extends Resource
                 ->required()
                 ->maxLength(2048)
                 ->reactive()
-                ->afterStateUpdated(function (Closure $get, Closure $set, ?string $state) {
+                ->afterStateUpdated(function (\Filament\Forms\Get $get, \Filament\Forms\Set $set, ?string $state) {
                     if (! $get('is_slug_changed_manually') && filled($state)) {
                         $set('slug', Str::slug($state));
                     }
@@ -49,12 +51,13 @@ class PodcastResource extends Resource
             Forms\Components\TextInput::make('slug')
                 ->required()
                 ->maxLength(2048)
-                ->afterStateUpdated(function (Closure $set) {
+                ->afterStateUpdated(function (\Filament\Forms\Set $set) {
                     $set('is_slug_changed_manually', true);
                 }), ]),
 
             
-            Forms\Components\RichEditor::make('description')
+                TinyEditor::make('description')
+                ->profile('corps')
                 ->required(),
             Forms\Components\Toggle::make('active')
                 ->required(),
@@ -112,7 +115,7 @@ class PodcastResource extends Resource
     public static function getRelations(): array
     {
         return [
-            EpisodesRelationManager::class
+      //      EpisodesRelationManager::class
         ];
     }
     

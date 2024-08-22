@@ -10,7 +10,7 @@ class EditStage extends EditRecord
 {
     protected static string $resource = StageResource::class;
 
-    protected function getActions(): array
+    protected function getHeaderActions(): array
     {
         return [
             Actions\DeleteAction::make(),

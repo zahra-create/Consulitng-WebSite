@@ -17,6 +17,9 @@
 
 
   <!-- All CSS files -->
+  <link rel="stylesheet" href="{{ url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css') }}">
+
+
   <link rel="stylesheet" href="{{ url('assets/css/bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ url('assets/css/all.min.css') }}">
   <link rel="stylesheet" href="{{ url('assets/css/icomon.css') }}">
@@ -27,8 +30,7 @@
   <link rel="stylesheet" href="{{ url('assets/css/master-blog-details.css') }}">
   <link rel="stylesheet" href="{{ url('assets/css/master-human.css') }}">
 
-
-@livewireStyles
+  @livewireStyles
 
 </head>
 
@@ -169,22 +171,35 @@
                         <p class="text">{{$blog->getFormatedDate()}}</p>
                       </div>
                     </div>
-                    <div class="meta-box">
-                      <div class="icon">
-                        <img src="{{ url('assets/imgs/icon/comment-green.webp') }}"alt="">
-                      </div>
-                      <div class="content">
-                        <p class="title">Comments</p>
-                        <p class="text">4.2K</p>
-                      </div>
-                    </div>
                   </div>
 <!---->
                   <div class="thumb-main has_fade_anim" data-delay=".7">
                     <img src="{{ url('assets/imgs/blog/blog-details1.webp') }}"alt="blog image">
                   </div>
              
-                    <livewire:interactions />
+                  <div class="section-main-content">
+                    <div class="social-meta-box has_fade_anim">
+                      <div class="meta-item">
+                        <img src="{{ url('assets/imgs/icon/view-graph.webp')}}" alt="icon">
+                        <br>
+                        <p>{{ $viewCount }}</p>
+                      </div> 
+        
+@php
+    $ip_address = request()->ip(); 
+    $userAgent = request()->userAgent();
+@endphp
+
+
+                      <livewire:Likes :blog="$blog" :ip_address="$ip_address" :user-agent="$userAgent"/>
+
+                      <!-- 
+                      <ul class="social-icons">
+                        <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(request()->fullUrl()) }}"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="https://twitter.com/intent/tweet?url={{ urlencode(request()->fullUrl()) }}&text={{ urlencode($blog->titre) }}"><i class="fa-brands fa-dribbble"></i></a></li>
+                        <li><a href="https://api.whatsapp.com/send?text={{ urlencode($blog->titre . ' ' . request()->fullUrl()) }}"><i class="fa-brands fa-instagram"></i></a></li>
+                      </ul> -->
+                    </div> 
 <!---->
                     <div class="content-box-wrapper">
                       <div class="content-box">
@@ -200,7 +215,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="comment-box has_fade_anim">
+                      <!--<div class="comment-box has_fade_anim">
                         <h2 class="section-title">Leave a Comment</h2>
                         <div class="text-wrapper">
                           <p class="text">Your email address will not be published. Required fields are marked</p>
@@ -229,13 +244,33 @@
                                   Now</span><i class="fa-solid fa-caret-right"></i></button>
                             </div>
                           </form>
-                        </div>
-                      </div>
+                        </div> 
+                      </div>-->
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
+            <nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+  @if($prev) 
+    <li class="page-item">
+    <a class=" btn btn-outline-success rounded-0 rounded-start" style="--bs-btn-hover-bg: #005151; --bs-btn-hover-border-color: #005151;" href="{{route('blog-details',$prev)}}">
+    Previous</a> 
+    @else
+    <div class="btn btn-primary no-outline no-hover rounded-0 rounded-start" style="--bs-btn-hover-bg: #005151;">
+    Previous</div> 
+     </li>@endif
+     @if($next)
+    <li class="page-item"><a class="btn btn-outline-success rounded-0 rounded-end" href="{{route('blog-details',$next)}}" style="--bs-btn-hover-bg: #005151; --bs-btn-hover-border-color: #005151;">Next</a></li>
+    @else
+    <li class="page-item"><div class="btn btn-primary no-outline no-hover rounded-0 rounded-end" style="--bs-btn-hover-bg: #005151; --bs-btn-hover-border-color: #005151;">Next</div></li>
+    @endif
+  </ul>
+</nav>
+
+
           </section>
           <!-- blog details area end  -->
 
@@ -269,9 +304,7 @@
   <script src="{{ url('assets/js/wc-cursor.js')}}"></script>
   <script src="{{ url('assets/js/offcanvas.js')}}"></script>
 
-
-  @livewireScripts
-
+@livewireScripts
 </body>
 
 </html>

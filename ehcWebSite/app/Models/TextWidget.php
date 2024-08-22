@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Cache;
 class TextWidget extends Model
 {
     use HasFactory;
-    protected $fillable =['key','image','title','content','active'];
+    protected $fillable =['key','image','title','Subtitle','content','Boutton','couleurBoutton','active'];
 
     public static function getTitle(string $key): string
     {
@@ -35,4 +35,14 @@ class TextWidget extends Model
 
         return $widget->content;
     }
+
+    public static function getImage(string $key): ?string
+    {
+        $widget = self::where('key', $key)->first();
+           
+                if($widget && str_starts_with($widget->Image, 'http')){
+                  return $widget->Image;
+                }
+                return '/storage/'.$widget->Image;
+              }
 }
