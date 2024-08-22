@@ -17,7 +17,6 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Closure;
 use Illuminate\Support\Str;
 
-use Awcodes\FilamentTiptapEditor\TiptapEditor;
 
 class CategoryActualiteResource extends Resource
 {

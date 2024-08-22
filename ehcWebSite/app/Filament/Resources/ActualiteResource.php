@@ -15,6 +15,9 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 use Filament\Tables\Columns\BooleanColumn;
 
+use App\Filament\Resources\CategoryActualiteResource\RelationManagers\ActualitesRelationManager;
+
+
 use Closure;
 use Illuminate\Support\Str;
 
@@ -77,6 +80,7 @@ class ActualiteResource extends Resource
                 Forms\Components\Select::make('categories')
                 ->multiple()
                 ->relationship('categories','titre')
+        
                 ->required(),
             ])->columnSpan(4),
 
@@ -93,7 +97,10 @@ class ActualiteResource extends Resource
                 //Tables\Columns\TextColumn::make('slug'),
                 Tables\Columns\TextColumn::make('categories.titre')
                 ->sortable()
+                ->toggleable()
                 ->searchable(),
+                
+                
                 //Tables\Columns\TextColumn::make('corps'),
 
                 Tables\Columns\IconColumn::make('active')
@@ -119,12 +126,10 @@ class ActualiteResource extends Resource
             ]);
     }
     
-    public static function getRelations(): array
+    /*public static function getRelations(): array
     {
-        return [
-            //
-        ];
-    }
+       
+    } */
     
     public static function getPages(): array
     {
