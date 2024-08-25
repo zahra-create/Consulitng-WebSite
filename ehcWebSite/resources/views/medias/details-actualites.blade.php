@@ -177,7 +177,8 @@
                         {{$category->titre}}</a></p>
                     </div>
                   </div>
-                  <div class="thumb-main has_fade_anim" data-delay=".7">
+
+                <!--  <div class="thumb-main has_fade_anim" data-delay=".7">
                     <img src="{{$actualite->getImage()}}" alt="blog image">
                   </div>
                   <div class="section-main-content">
@@ -196,7 +197,27 @@
                         <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                      </ul>
+                      </ul> -->
+                      <div class="thumb-main has_fade_anim" data-delay=".7">
+                    <img src="{{ $actualite->getImage()}}"alt="blog image">
+                  </div>
+             
+                  <div class="section-main-content">
+                    <div class="social-meta-box has_fade_anim">
+                      <div class="meta-item">
+                        <img src="{{ url('assets/imgs/icon/view-graph.webp')}}" alt="icon">
+                        <br>
+                        <p>{{ $viewCount }}</p>
+                      </div> 
+        
+@php
+    $ip_address = request()->ip(); 
+    $userAgent = request()->userAgent();
+@endphp
+
+
+                    <livewire:ActualiteLikes :actualite="$actualite" :ip_address="$ip_address" :user-agent="$userAgent"/>
+
                     </div>
                     <div class="content-box-wrapper">
                       <div class="content-box">

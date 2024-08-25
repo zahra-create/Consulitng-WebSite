@@ -172,9 +172,17 @@
                       </div>
                     </div>
                   </div>
+<div class="meta has_fade_anim">
+                  <div class="tags-wrapper has_fade_anim">
+                          <div class="tags">
+                          @foreach($blog->categories as $category)
+                          <a href="{{route('by-category', $category) }}" class="tag">{{$category->titre}}</a>
+                        @endforeach  
+                          </div>
+                        </div> </div>
 <!---->
                   <div class="thumb-main has_fade_anim" data-delay=".7">
-                    <img src="{{ url('assets/imgs/blog/blog-details1.webp') }}"alt="blog image">
+                    <img src="{{ $blog->getImage()}}"alt="blog image">
                   </div>
              
                   <div class="section-main-content">

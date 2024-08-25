@@ -22,9 +22,14 @@ class BlogController extends Controller
         ->paginate(8);
 
         $categories = CategoryBlog::query()
-        ->leftjoin('blog_category_blog', 'category_blogs.id', '=', 'blog_category_blog.category_blog_id')
-        ->select('category_blogs.titre', 'category_blogs.slug', DB::raw('count(*) as total'))
+        ->leftJoin('blog_category_blog', function ($join) {
+            $join->on('category_blogs.id', '=', 'blog_category_blog.category_blog_id')
+                 ->join('blogs', 'blog_category_blog.blog_id', '=', 'blogs.id')
+                 ->where('blogs.active', '=', 1);
+        })
+        ->select('category_blogs.titre', 'category_blogs.slug', DB::raw('count(blog_category_blog.id) as total'))
         ->groupBy(['category_blogs.titre', 'category_blogs.slug'])
+        ->having(DB::raw('count(blog_category_blog.id)'), '>', 0) // Filtre les catégories avec au moins un blog actif
         ->orderByDesc('total')
         ->get();
 
@@ -85,9 +90,14 @@ class BlogController extends Controller
         ->paginate(10);
 
         $categories = CategoryBlog::query()
-        ->leftjoin('blog_category_blog', 'category_blogs.id', '=', 'blog_category_blog.category_blog_id')
-        ->select('category_blogs.titre', 'category_blogs.slug', DB::raw('count(*) as total'))
+        ->leftJoin('blog_category_blog', function ($join) {
+            $join->on('category_blogs.id', '=', 'blog_category_blog.category_blog_id')
+                 ->join('blogs', 'blog_category_blog.blog_id', '=', 'blogs.id')
+                 ->where('blogs.active', '=', 1);
+        })
+        ->select('category_blogs.titre', 'category_blogs.slug', DB::raw('count(blog_category_blog.id) as total'))
         ->groupBy(['category_blogs.titre', 'category_blogs.slug'])
+        ->having(DB::raw('count(blog_category_blog.id)'), '>', 0) // Filtre les catégories avec au moins un blog actif
         ->orderByDesc('total')
         ->get();
 
@@ -109,9 +119,14 @@ class BlogController extends Controller
             ->paginate(8);
 
             $categories = CategoryBlog::query()
-            ->leftjoin('blog_category_blog', 'category_blogs.id', '=', 'blog_category_blog.category_blog_id')
-            ->select('category_blogs.titre', 'category_blogs.slug', DB::raw('count(*) as total'))
+            ->leftJoin('blog_category_blog', function ($join) {
+                $join->on('category_blogs.id', '=', 'blog_category_blog.category_blog_id')
+                     ->join('blogs', 'blog_category_blog.blog_id', '=', 'blogs.id')
+                     ->where('blogs.active', '=', 1);
+            })
+            ->select('category_blogs.titre', 'category_blogs.slug', DB::raw('count(blog_category_blog.id) as total'))
             ->groupBy(['category_blogs.titre', 'category_blogs.slug'])
+            ->having(DB::raw('count(blog_category_blog.id)'), '>', 0) // Filtre les catégories avec au moins un blog actif
             ->orderByDesc('total')
             ->get();
          

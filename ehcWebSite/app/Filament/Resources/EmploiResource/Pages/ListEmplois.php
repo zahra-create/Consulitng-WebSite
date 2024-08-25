@@ -10,7 +10,7 @@ class ListEmplois extends ListRecords
 {
     protected static string $resource = EmploiResource::class;
 
-    protected function getActions(): array
+    protected function getHeaderActions(): array
     {
         return [
             Actions\CreateAction::make(),

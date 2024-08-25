@@ -12,6 +12,12 @@ class TextWidget extends Model
     use HasFactory;
     protected $fillable =['key','image','title','Subtitle','content','Boutton','couleurBoutton','active'];
 
+    protected $casts = [
+        'images' => 'array',
+        /*'title' => 'json',
+        'content' => 'json' */
+    ];
+
     public static function getTitle(string $key): string
     {
         $widget = TextWidget::query()->where('key', $key)->first();
@@ -40,16 +46,19 @@ class TextWidget extends Model
         $widget = Cache::remember('text-widget-image-' . $key, now()->addMinutes(10), function () use ($key) {
             return self::where('key', $key)->first();
         });
-
+    
         if (!$widget || !$widget->image) {
-            return null; 
+            return null;
         }
-
-      
-        if (str_starts_with($widget->image, 'http')) {
-            return $widget->image;
-        }
-
-        return asset('storage/' . $widget->image);
+    
+        $images = is_array($widget->image) ? $widget->image : [$widget->image];
+    
+        return array_map(function ($image) {
+            if (str_starts_with($image, 'http')) {
+                return $image;
+            }
+            return asset('storage/' . $image);
+        }, $images);
     }
+    
 }

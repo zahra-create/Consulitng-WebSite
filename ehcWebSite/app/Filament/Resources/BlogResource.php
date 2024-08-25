@@ -38,7 +38,7 @@ class BlogResource extends Resource
                     Forms\Components\Grid::make(2)
                     ->  schema([
                 
-                Forms\Components\TextInput::make('titre')
+           Forms\Components\TextInput::make('titre')
                 ->required()
                 ->maxLength(2048)
                 ->reactive()
@@ -64,7 +64,7 @@ class BlogResource extends Resource
             Forms\Components\Toggle::make('active')
                 ->required(),
             Forms\Components\DatePicker::make('date_publication')
-                ->required(),
+                ,
             Forms\Components\TextInput::make('Auteur')
                 ->required(),
 

@@ -38,7 +38,8 @@ class PodcastResource extends Resource
                     Forms\Components\Grid::make(2)
                     ->  schema([
                 
-                Forms\Components\TextInput::make('titre')
+               TinyEditor::make('titre')
+                ->profile('titre')
                 ->required()
                 ->maxLength(2048)
                 ->reactive()
@@ -61,9 +62,10 @@ class PodcastResource extends Resource
                 ->required(),
             Forms\Components\Toggle::make('active')
                 ->required(),
-            Forms\Components\DateTimePicker::make('date_publication')
+            Forms\Components\DatePicker::make('date_publication')
                 ->required(),
-            Forms\Components\TextInput::make('Proprietaire')
+                TinyEditor::make('Proprietaire')
+            ->profile('titre')
                 ->required(),
 
             ])->columnSpan(8),

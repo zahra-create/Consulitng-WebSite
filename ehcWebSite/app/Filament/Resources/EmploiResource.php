@@ -12,6 +12,7 @@ use Filament\Tables\Table;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class EmploiResource extends Resource
 {
@@ -33,7 +34,8 @@ class EmploiResource extends Resource
                 Forms\Components\TextInput::make('profil')
                 ->required()
                 ->maxLength(255),                
-                Forms\Components\Textarea::make('description')
+                TinyEditor::make('description')
+                ->profile('corps')
                 ->required(),
                 Forms\Components\TextInput::make('location')
                 ->required()

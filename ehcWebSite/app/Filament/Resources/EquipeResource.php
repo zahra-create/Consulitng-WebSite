@@ -12,6 +12,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class EquipeResource extends Resource
 {
@@ -24,11 +25,12 @@ class EquipeResource extends Resource
         return $form
             ->schema([
             Forms\Components\FileUpload::make('image')->label('Image')->required(),
-            Forms\Components\TextInput::make('nom')->required(),
-            Forms\Components\TextInput::make('prenom')->required(),
-            Forms\Components\TextInput::make('poste')->label('Poste')->required(),
-            Forms\Components\Textarea::make('description')->label('Description du parcours')->required(),
-            Forms\Components\Textarea::make('quote')->label('Citation')->nullable(),
+            TinyEditor::make('nom')->required()
+            ->profile('titre'),
+            TinyEditor::make('prenom')->required()->profile('titre'),
+            TinyEditor::make('poste')->label('Poste')->required()->profile('titre'),
+            TinyEditor::make('description')->label('Description du parcours')->required(),
+            TinyEditor::make('quote')->label('Citation')->nullable(),
             
             ]);
     }

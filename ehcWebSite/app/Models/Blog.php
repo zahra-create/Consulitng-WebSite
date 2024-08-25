@@ -19,7 +19,7 @@ class Blog extends Model
 }
 
 public function shortBody(){
-   return Str::words(strip_tags($this->corps),30);
+   return Str::words(($this->corps),30);
 }
 
 public function getFormatedDate(){

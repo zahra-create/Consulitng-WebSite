@@ -14,6 +14,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
+use Filament\Forms\Components\Repeater;
 
 
 class TextWidgetResource extends Resource
@@ -31,7 +32,10 @@ class TextWidgetResource extends Resource
                 Forms\Components\TextInput::make('key')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\FileUpload::make('image'),
+              Forms\Components\FileUpload::make('image')
+                ->multiple(),
+
+
                 Forms\Components\TextInput::make('title')
                     ->maxLength(2048),
 

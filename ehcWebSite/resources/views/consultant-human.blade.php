@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,6 +27,23 @@
   <link rel="stylesheet" href="{{ url('assets/css/master-financial.css') }}">
   <link rel="stylesheet" href="{{ url('assets/css/master-service-style-1.css') }}">
    
+
+
+<style>
+  .thumb {
+  width: 100%;
+  height: 300px;
+  overflow: hidden; /* Hide any overflow */
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the area properly */
+}
+</style>
+
+
   </head>
 
 
@@ -166,9 +184,9 @@
                 <div class="container container-large">
                   <div class="banner-content-wrapper">
                     <div class="content">
-					  <h2 class="title has_fade_anim">{{ \App\Models\TextWidget::getTitle('Header-Home')}}</h2>
+					  <h2 class="title has_fade_anim">Bienvenue chez EHC groupe</h2>
                       <div class="cf_text has_fade_anim" data-delay=".35">
-						<p class="text" style="font-size:30spx;">{!! \App\Models\TextWidget::getContent('Header-Home') !!}</p>
+						<p class="text" style="font-size:30spx;">Votre Partenaire pour le Succès en Ressources Humaines.</p>
                       </div>
                       <div class="btn-wrapper has_fade_anim" data-delay=".5">
                         <a href="{{ route('demande-devis') }}" class="cf_btn wc-btn-primary btn-text-flip"><span
@@ -179,8 +197,8 @@
                    <div class="thumb-wrapper" style="display: grid;
   grid-template-columns: auto auto; gap: 20px;">
                       <div class="cf_thumb has_fade_anim" data-delay=".65" data-ease="slow(0.7,0.7,false)">
-                       <!-- <img src="{{ url('assets/imgs/gallery/img-r-3.png')}}  " alt="gallary">-->
-                        <img src="{{ \App\Models\TextWidget::getImage('Header-Home')}}" alt="gallary">
+                      <img src="{{ url('assets/imgs/gallery/img-r-3.png')}}  " alt="gallary">
+                       
                       </div> 
                  
 
@@ -210,8 +228,8 @@ $cardsHeader = $Header->where('Type', 'Cards');
       </button>
       <div class="row">
         <div class="col-12 col-lg-6 pb-8 d-flex flex-column align-items-center justify-content-center text-center ">
-          <h6 class="mb-4 text-white">{{ $banner->Titre }}</h6>
-          <p class="mw-md mb-8 mb-lg-24 text-light">{{ $banner->SousTitre }}</p>
+          <h6 class="mb-4 text-white">{!! $banner->Titre !!}</h6>
+          <p class="mw-md mb-8 mb-lg-24 text-light">{!! $banner->SousTitre !!}</p>
           <div>
             <a class="btn btn-danger d-inline-flex align-items-center" style="background-color: {{ $banner->button_color }}; border-color: {{ $banner->button_color }}; " href="{{$banner->link}}">
               <span class="me-2">
@@ -222,7 +240,7 @@ $cardsHeader = $Header->where('Type', 'Cards');
                 </svg> 
                
               </span>
-              <span>{{ $banner->Boutton }}</span>
+              <span>{!! $banner->Boutton !!}</span>
             </a>
           </div>
         </div>
@@ -241,7 +259,7 @@ $cardsHeader = $Header->where('Type', 'Cards');
 <div class="card " style="width: 18rem;">
   <img src="{{$sidebar->getImage()}}" href="{{$sidebar->link}}" class="card-img-top" alt="pub" style="width: 100%; height: 80%;">
   <div class="card-body align-items-center justify-content-center text-center">
-  <h4 class="card-text">{{$sidebar->Titre }}</h4>
+  <h4 class="card-text">{!!$sidebar->Titre !!}</h4>
     <p class="card-text">{!! $sidebar->description !!}</p>
     <a href="{{$sidebar->link}}" class="btn btn-primary" style="background-color: {{ $sidebar->button_color }}; border-color: {{ $sidebar->button_color }}; ">{{$sidebar->Boutton}}</a>
   </div>
@@ -267,14 +285,14 @@ $cardsHeader = $Header->where('Type', 'Cards');
       <div class="row ">
         <div class="col-12 col-lg-12 pb-8 px-5 d-flex flex-column align-items-center justify-content-center ">
           <h2 class="display-5 mb-4 text-warning">
-            <span>{{$annonce->Titre}}</span>
-            <span class="text-white ">{{$annonce->SousTitre}}</span>
+            <span>{!! $annonce->Titre !!}</span>
+            <span class="text-white ">{!! $annonce->SousTitre !!}</span>
           </h2>
-          <p class="mw-md mb-8 mb-lg-24 text-light">{{$annonce->description}}</p>
+          <p class="mw-md mb-8 mb-lg-24 text-light">{!! $annonce->description !!}</p>
           @if(!empty($annonce->Boutton))
           <div>
             <a class="btn btn-danger d-inline-flex align-items-center" style="background-color: {{ $annonce->button_color }}; border-color: {{ $annonce->button_color }}; " href="{{ $annonce->link }}">
-              <span>{{$annonce->Boutton}}</span>
+              <span>{!! $annonce->Boutton !!}</span>
             </a>
           </div>
           @endif
@@ -341,7 +359,8 @@ $cardsHeader = $Header->where('Type', 'Cards');
                   <div class="section-title-wrapper">
                     <div class="title-wrapper has_fade_anim" >
                       <h2 class="section-title" style="color:rgb(0, 81, 81);" >
-                      {{ \App\Models\TextWidget::getTitle('Home-About-Section')}}</h2>
+                      Ayant en moyenne plus de 20 ans
+                        d'experience dans leurs domaines de competence</h2>
                     </div>
                   </div>
                   <div class="thumb-wrapper has_fade_anim" data-fade-from="left">
@@ -353,8 +372,8 @@ $cardsHeader = $Header->where('Type', 'Cards');
                     </div>
                   </div>
                   <div class="text-wrapper has_fade_anim">
-					  <p class="text">{!! \App\Models\TextWidget::getContent('Home-About-Section') !!}</p>
-                    <!--<p class="text">Avec une equipe d'experts en RH, nous offrons des solutions sur mesure pour optimiser vos processus et attirer les meilleurs talents.</p>-->
+					  <p class="text">Chez EHC, nous sommes dedies à transformer la gestion des ressources humaines en un atout strategique pour votre entreprise.</p>
+             <p class="text">Avec une equipe d'experts en RH, nous offrons des solutions sur mesure pour optimiser vos processus et attirer les meilleurs talents.</p>
                   </div>
                   <div class="btn-wrapper has_fade_anim">
                     <a href="{{ route('about')}}" class="wc-btn-primary btn-text-flip" style="background-color:rgb(0, 81, 81); border:rgb(0, 81, 81);" > <span data-text="Qui sommes-nous">Qui sommes-nous
@@ -388,10 +407,10 @@ $cardsHeader = $Header->where('Type', 'Cards');
               <div class="section-heading">
                 <div class="section-title-wrapper">
                   <div class="title-wrapper has_fade_anim">
-                    <h2 class="section-title" style="font-size: 60px; color:rgb(0, 81, 81); "><span>{{ \App\Models\TextWidget::getTitle('WHY-EHC')}}</span></h2>
+                    <h2 class="section-title" style="font-size: 60px; color:rgb(0, 81, 81); "><span>POURQUOI EHC ?</span></h2>
                   </div>
             	<div class="subtitle-wrapper has_fade_anim" data-delay=".35" >
-				  <p style="font-size: 25px; ">{!! \App\Models\TextWidget::getContent('WHY-EHC') !!}</p>
+				  <p style="font-size: 25px; ">Au coeur de ses valeurs, EHC place la satisfaction de ses partenaires au sommet de ses priorites</p>
                   </div>
                 </div>
               </div>
@@ -406,7 +425,7 @@ $cardsHeader = $Header->where('Type', 'Cards');
                   </div>
                   <div class="content">
                     <div class="cf_title">
-                      <h4 class="title" style="color:rgb(0, 81, 81);">{{ \App\Models\TextWidget::getTitle('Value1')}}</a></h4>
+                      <h4 class="title" style="color:rgb(0, 81, 81);">ENGAGEMENT</a></h4>
                     </div>
                   </div>
                 </div>
@@ -419,7 +438,7 @@ $cardsHeader = $Header->where('Type', 'Cards');
                   </div>
                   <div class="content">
                     <div class="cf_title">
-                      <h4 class="title" style="color:rgb(0, 81, 81);">{{ \App\Models\TextWidget::getTitle('Value2')}}</a></h4>
+                      <h4 class="title" style="color:rgb(0, 81, 81);">AGILITE</a></h4>
                     </div>
                   </div>
                 </div>
@@ -432,7 +451,7 @@ $cardsHeader = $Header->where('Type', 'Cards');
                   </div>
                   <div class="content">
                     <div class="cf_title">
-                      <h4 class="title" style="color:rgb(0, 81, 81);">{{ \App\Models\TextWidget::getTitle('Value3')}}</a></h4>
+                      <h4 class="title" style="color:rgb(0, 81, 81);">EXPERTISE</a></h4>
                     </div>
                   </div>
                 </div>
@@ -445,7 +464,7 @@ $cardsHeader = $Header->where('Type', 'Cards');
                   </div>
                   <div class="content">
                     <div class="cf_title">
-                      <h4 class="title" style="color:rgb(0, 81, 81);">{{ \App\Models\TextWidget::getTitle('Value4')}}</h4>
+                      <h4 class="title" style="color:rgb(0, 81, 81);">INNOVATION & EXCELLENCE</h4>
                     </div>
                   </div>
                 </div>
@@ -459,7 +478,7 @@ $cardsHeader = $Header->where('Type', 'Cards');
 
 <!-- BU start -->
 
-				<div class="section-title-wrapper style-2">
+<div class="section-title-wrapper style-2">
 				   		<div class="title-wrapper" style="text-align: center;">
                         <h2 class="section-title" style="text-decoration-line: none; color: rgb(0, 81, 81);">NOS BUSINESS UNITS</h2>
                       </div>
@@ -470,16 +489,16 @@ $cardsHeader = $Header->where('Type', 'Cards');
                 <div id="pinElement" class="section-heading pin__element">
                   <div class="thumb has_fade_anim">
                     <div class="btn-wrapper pos-center btn-move">
-                      <a class="cf_btn wc-btn-play light btn-item video-popup" href="{{ url('assets/video/team-planning.mp4') }}">
+                      <a class="cf_btn wc-btn-play light btn-item video-popup" href="assets/video/team-planning.mp4">
                         <i class="fa-solid fa-play"></i>
                       </a>
                     </div>
-                    <img src="{{ url('assets/imgs/gallery/img-s-1.png') }}" alt="image">
+                    <img src="assets/imgs/gallery/img-s-1.png" alt="image">
                   </div>
                   <div class="content has_fade_anim">
 
 
-                    <div class=" ">
+                    <div class="">
 
                      <!-- <div class="text-wrapper">
                         <p class="text">Nanotechnology immersion along the information highway will close the loop on
@@ -487,7 +506,7 @@ $cardsHeader = $Header->where('Type', 'Cards');
                         </p>
                       </div> -->
                       <div class="btn-wrapper" style="margin-bottom:20px;">
-                  <a href="{{ route('demande-devis') }}" class="cf_btn wc-btn-primary btn-text-flip" style="background-color:rgb(0, 81, 81); border:rgb(0, 81, 81);"><span data-text="Demander services">Demander services</span> <img src="{{ url('assets/imgs/icon/icon-r-21.webp') }}" alt="arrow-icon"> </a>
+                  <a href="{{ route('demande-devis') }}" class="cf_btn wc-btn-primary btn-text-flip" style="background-color:rgb(0, 81, 81); border:rgb(0, 81, 81);"><span data-text="Demander services">Demander services</span> <img src="assets/imgs/icon/icon-r-21.webp" alt="arrow-icon"> </a>
                       </div>
                     </div>
                   </div>
@@ -499,8 +518,8 @@ $cardsHeader = $Header->where('Type', 'Cards');
                         <span class="number" style="font-weight:700;color:rgb(0, 81, 81); font-size:30px;">01</span>
                         <div class="content-wrapper">
                           <div class="content" style="width:100vw;" >
-                            <h3 class="title" style="font-weight:600;color:rgb(0, 81, 81);" data-text="EHC Consulting">{{ \App\Models\TextWidget::getTitle('BU1')}}</h3>
-                            <p class="text" >{!! \App\Models\TextWidget::getContent('BU1')!!}</p>
+                            <h3 class="title" style="font-weight:600;color:rgb(0, 81, 81);" data-text="EHC Consulting">EHC Consulting</h3>
+                            <p class="text" >Votre partenaire stratégique pour une transformation intégrale et performance optimale, alliant expertise en management des organisation digitalisation.</p>
                           </div>
                           <div class="btn-wrapper">
                             <span class="cf_btn wc-btn-normal"><i class="fa-solid fa-caret-right"></i>
@@ -516,8 +535,8 @@ $cardsHeader = $Header->where('Type', 'Cards');
                         <span class="number" style="font-weight:700;color:rgb(0, 81, 81); font-size:30px;">02</span>
                         <div class="content-wrapper">
                           <div class="content">
-                            <h3 class="title" data-text="EHC Recruitment" style="font-weight:600;color:rgb(0, 81, 81);">{{ \App\Models\TextWidget::getTitle('BU2')}}</h3>
-                            <p class="text">{!! \App\Models\TextWidget::getContent('BU2')!!}</p>
+                            <h3 class="title" data-text="EHC Recruitment" style="font-weight:600;color:rgb(0, 81, 81);">EHC Recruitment</h3>
+                            <p class="text">Une BU dédiée pour recruter avec succès tout type de profil, avec des services sur mesure et un accompagnement intégral .</p>
                           </div>
                           <div class="btn-wrapper">
                             <span class="cf_btn wc-btn-normal"><i class="fa-solid fa-caret-right"></i>
@@ -533,8 +552,8 @@ $cardsHeader = $Header->where('Type', 'Cards');
                         <span class="number" style="font-weight:700;color:rgb(0, 81, 81); font-size:30px;">03</span>
                         <div class="content-wrapper">
                           <div class="content">
-                            <h3 class="title" data-text="EHC Learning" style="font-weight:600;color:rgb(0, 81, 81);">{{ \App\Models\TextWidget::getTitle('BU3')}}</h3>
-                            <p class="text">{!! \App\Models\TextWidget::getContent('BU3')!!}</p>
+                            <h3 class="title" data-text="EHC Learning" style="font-weight:600;color:rgb(0, 81, 81);">EHC Learning</h3>
+                            <p class="text">Spécialisée en formation sur mesure, de l'ingénierie à l'e-learning, avec un soutien complet pour maximiser vos investissements en matière de formation.</p>
                           </div>
                           <div class="btn-wrapper">
                             <span class="cf_btn wc-btn-normal"><i class="fa-solid fa-caret-right"></i>
@@ -550,8 +569,8 @@ $cardsHeader = $Header->where('Type', 'Cards');
                         <span class="number" style="font-weight:700;color:rgb(0, 81, 81); font-size:30px;">04</span>
                         <div class="content-wrapper">
                           <div class="content">
-                            <h3 class="title" data-text="EHC Services & Events" style="font-weight:600;color:rgb(0, 81, 81);">{{ \App\Models\TextWidget::getTitle('BU4')}}</h3>
-                            <p class="text">{!! \App\Models\TextWidget::getContent('BU4')!!}</p>
+                            <h3 class="title" data-text="EHC Services & Events" style="font-weight:600;color:rgb(0, 81, 81);">EHC Services & Events</h3>
+                            <p class="text">Votre solution tout-en-un en matière de service et d'évènementiel.</p>
                           </div>
                           <div class="btn-wrapper">
                             <span class="cf_btn wc-btn-normal"><i class="fa-solid fa-caret-right"></i>
@@ -567,8 +586,8 @@ $cardsHeader = $Header->where('Type', 'Cards');
                       <span class="number" style="font-weight:700;color:rgb(0, 81, 81); font-size:30px;">05</span>
                       <div class="content-wrapper">
                         <div class="content">
-                          <h3 class="title" data-text="EHC Engineering" style="font-weight:600;color:rgb(0, 81, 81);">{{ \App\Models\TextWidget::getTitle('BU5')}}</h3>
-                          <p class="text">{!! \App\Models\TextWidget::getContent('BU5')!!}</p>
+                          <h3 class="title" data-text="EHC Engineering" style="font-weight:600;color:rgb(0, 81, 81);">EHC Engineering</h3>
+                          <p class="text">Votre partenaire pour des solutions informatiques sur mesure, de la conception de module spécifique à la mise en place d'ERP intégrés.</p>
                         </div>
                         <div class="btn-wrapper">
                           <span class="cf_btn wc-btn-normal"><i class="fa-solid fa-caret-right"></i>
@@ -919,7 +938,7 @@ $cardsBeforeActu = $BeforeActu->where('Type', 'Cards');
               <div class="section-heading">
                 <div class="section-title-wrapper">
                   <div class="title-wrapper has_fade_anim">
-                    <h2 class="section-title" style="color:#005151; font-size: 40px;font-weight:900;">{{ \App\Models\TextWidget::getTitle('Home-Actualite') }}</h2>
+                    <h2 class="section-title" style="color:#005151; font-size: 40px;font-weight:900;">Nos ACTUALITES</h2>
                   </div>
                   <div class="subtitle-wrapper has_fade_anim" data-delay=".35" >
                     <a href="{{ route('Actualites') }}" class="section-subtitle" style="font-weight:900;">Voir Plus</a>

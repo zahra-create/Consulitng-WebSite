@@ -22,7 +22,7 @@ class Actualite extends Model
 }
 
 public function shortBody(){
-   return Str::words(strip_tags($this->corps),30);
+   return Str::words(($this->corps),30);
 }
 
 public function getFormatedDate(){
@@ -36,6 +36,9 @@ public function getImage(){
   }
   return '/storage/'.$this->image;
 }
-
+public function likes()
+    {
+        return $this->hasMany(actualiteLike::class, 'actualite_id');
+    }
 
 }

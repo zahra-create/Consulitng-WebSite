@@ -37,7 +37,32 @@ transition: all 0.2s;}
   color: #198754 !important;}
 
 .nav-link:hover{
-border-bottom: 2px solid #198754;
+border-bottom: 2px solid #198754;}
+
+.blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px; /* Set the same width for the whole blog card */
+  margin: 0 auto;
+}
+
+.thumb {
+  width: 100%;
+  height: 300px;
+  overflow: hidden; /* Hide any overflow */
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the area properly */
+}
+
+.content {
+  padding: 10px;
+ /* text-align: center; /* Center text */
+  width: 100%; /* Ensure content takes up the full width */
 }
 
 
@@ -159,10 +184,10 @@ border-bottom: 2px solid #198754;
               <div class="section-heading">
                 <div class="section-title-wrapper style-1">
                   <div class="subtitle-wrapper has_fade_anim">
-                  <span class="section-subtitle">{{ \App\Models\TextWidget::getTitle('Blog-Header')}}</span>
+                    <span class="section-subtitle">EHC blog</span>
                   </div>
                   <div class="title-wrapper has_fade_anim">
-                    <h2 class="section-title">{!! \App\Models\TextWidget::getContent('Blog-Header')!!}</h2>
+                    <h2 class="section-title">Regard sur le journal de Groupe EHC</h2>
                   </div>
 
                 </div>

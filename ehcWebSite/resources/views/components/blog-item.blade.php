@@ -9,7 +9,7 @@
                         @endforeach
                         <span class="date has-left-line">{{$blog->getFormatedDate()}}</span>
                       </div>
-                      <h3 class="title"><a href="{{route('blog-details', $blog)}}">{{$blog->titre}}</a></h3>
-                      <p class="text">{{$blog->shortBody()}}</p> 
+                      <h3 class="title"><a href="{{route('blog-details', $blog)}}">{!! $blog->titre !!}</a></h3>
+                      <p class="text">{!! $blog->shortBody() !!}</p> 
                       </div>
 </article>

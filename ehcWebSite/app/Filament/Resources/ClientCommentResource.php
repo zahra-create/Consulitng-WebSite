@@ -13,6 +13,8 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
+
 class ClientCommentResource extends Resource
 {
     protected static ?string $model = ClientComment::class;
@@ -28,7 +30,7 @@ class ClientCommentResource extends Resource
                 Forms\Components\TextInput::make('prenom')->required(),
                 Forms\Components\TextInput::make('poste')->label('Poste'),
                 Forms\Components\TextInput::make('entreprise')->label('Entreprise'),
-                Forms\Components\Textarea::make('commentaire')->label('Commentaire')->required(),
+                TinyEditor::make('commentaire')->label('Commentaire')->required()->profile('corps'),
             
             ]);
     }

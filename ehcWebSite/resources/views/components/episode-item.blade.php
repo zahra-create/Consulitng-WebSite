@@ -16,7 +16,7 @@
                               @endif 
                             </div>
                           </div>
-                          <audio src="{{ asset('storage/' . $episode->audio) }}" hidden ></audio>
+                          <audio src="{{ $episode->getAudio() }}" hidden ></audio>
                         </article>
 
 

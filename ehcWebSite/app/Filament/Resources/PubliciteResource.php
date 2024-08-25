@@ -12,6 +12,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
 
 class PubliciteResource extends Resource
 {
@@ -35,11 +36,14 @@ class PubliciteResource extends Resource
                 ->label('Emplacement')
                 ->placeholder('Select Emplacement'),
 
-                Forms\Components\TextInput::make('Titre')
+                TinyEditor::make('Titre')
+                ->profile('titre')
                 ->required()
                 ->maxLength(255),
 
-                Forms\Components\TextInput::make('SousTitre')
+
+                TinyEditor::make('SousTitre')
+                ->profile('titre')
                 ->required()
                 ->maxLength(255),
 
@@ -62,10 +66,11 @@ class PubliciteResource extends Resource
                 Forms\Components\TextInput::make('link')
                 ->required(),
 
-                Forms\Components\Textarea::make('description')
+                TinyEditor::make('description')
                 ->nullable(),
 
-                Forms\Components\TextInput::make('Boutton')
+                TinyEditor::make('Boutton')
+                ->profile('titre')
                 ->required()
                 ->maxLength(255),
 

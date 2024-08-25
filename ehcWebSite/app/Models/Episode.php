@@ -15,4 +15,12 @@ class Episode extends Model
     {
         return $this->belongsTo(Podcast::class, 'podcast_id');
     }
+
+    public function getAudio(){
+     
+        if(str_starts_with($this->audio, 'http')){
+          return $this->audio;
+        }
+        return '/storage/'.$this->audio;
+      }
 }

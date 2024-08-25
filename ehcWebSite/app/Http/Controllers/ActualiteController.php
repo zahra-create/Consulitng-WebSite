@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Actualite;
+use App\Models\ActualiteView;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
@@ -58,7 +59,7 @@ class ActualiteController extends Controller
      * @param  \App\Models\Actualite  $actualite
      * @return \Illuminate\Http\Response
      */
-    public function show(Actualite $actualite)
+    public function show(Actualite $actualite,Request $request)
     {
         if(!$actualite->active){
             throw new NotFoundHttpException();
@@ -80,9 +81,27 @@ class ActualiteController extends Controller
         ->limit(1)
         ->first();
 
+        $existingView = ActualiteView::where('ip_address', $request->ip())
+        ->where('user_agent', $request->userAgent())
+        ->where('actualite_id', $actualite->id)
+        ->first();
+    
+    if (!$existingView) {
+        // Créer une nouvelle vue si elle n'existe pas encore
+        ActualiteView::create([
+            'ip_address' => $request->ip(),
+            'user_agent' => $request->userAgent(),
+            'actualite_id' => $actualite->id
+        ]);
+    }
+
+    $viewCount = ActualiteView::where('actualite_id', $actualite->id)->count();
 
 
-        return view('medias.details-actualites',compact('actualite','prev','next' ));
+
+
+
+        return view('medias.details-actualites',compact('actualite','prev','next','viewCount' ));
     }
 
 
@@ -157,8 +176,10 @@ class ActualiteController extends Controller
 
     
 
-        return view('consultant-human', ['actualiteshome' => $actualiteshome ,
-        'Header' => $Header,
+     return view('consultant-human', ['actualiteshome' => $actualiteshome ,
+   // return view('components.filament-fabricator.layouts.home', ['actualiteshome' => $actualiteshome ,
+
+      'Header' => $Header,
     'AfterBU' => $AfterBU,
     'AfterActu' => $AfterActu,
     'BeforeActu' => $BeforeActu,

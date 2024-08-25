@@ -8,6 +8,9 @@ use App\Models\ClientComment;
 use Carbon\Carbon;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
+use Z3d0X\FilamentFabricator\Facades\FilamentFabricator;
+use Z3d0X\FilamentFabricator\Models\Contracts\Page;
+
 class AboutController extends Controller
 {
     public function index()
@@ -28,4 +31,5 @@ class AboutController extends Controller
 
         return view('team-details', compact('equipe'));
     }
+
 }

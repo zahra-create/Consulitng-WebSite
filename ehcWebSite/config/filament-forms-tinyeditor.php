@@ -65,7 +65,7 @@ return [
 
         'titre' => [
             'plugins' => 'advlist autoresize codesample directionality emoticons fullscreen hr image imagetools link lists media table toc wordcount',
-            'toolbar' => ' removeformat | formatselect fontsizeselect | bold italic | rtl ltr | alignjustify alignright aligncenter alignleft | forecolor backcolor ',
+            'toolbar' => ' formatselect fontsizeselect | bold italic | forecolor backcolor ',
             'custom_configs' => [
                 'allow_html_in_named_anchor' => true,
                 'link_default_target' => '_blank',

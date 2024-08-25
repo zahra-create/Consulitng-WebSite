@@ -8342,7 +8342,7 @@ p {
   display: flex;
   align-items: center;
   gap: 56px;
-  flex-basis: 67%;
+  //flex-basis: 67%;
   justify-content: space-between;
 }
 @media (max-width: 575px) {

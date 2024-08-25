@@ -31,7 +31,28 @@
   <link rel="stylesheet" href="{{ url('assets/css/master-financial.css') }}">
  
       
+<style>
+.team-thumb {
+  width: 100%;
+  height: 300px;
+  overflow: hidden; /* Hide any overflow */
+}
 
+.team-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the area properly */
+}
+
+
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the area properly */
+}
+
+</style>
 
 
 
@@ -156,7 +177,8 @@
                       <span class="section-subtitle">à propos de nous</span>
                     </div>
                     <div class="title-wrapper has_fade_anim">
-                      <h2 class="section-title">{{ \App\Models\TextWidget::getTitle('Section1-About') }}</h2>
+                      <h2 class="section-title">EHC
+                      Experts Human Capital</h2>
                     </div>
                   </div>
                 </div>
@@ -167,7 +189,7 @@
                   <div class="text-box-wrapper has_fade_anim" data-delay=".6">
                     <div class="text-box">
                       <div class="text-wrapper">
-                       <!-- <p class="text" >
+                       <p class="text" >
                         Experts Human Capital est un groupe de conseil en ingénierie et services,
                          dédié à accompagner 
                         les organisations dans leur stratégie de développement. 
@@ -176,10 +198,10 @@
                         management des organisations. Nos valeurs d'engagement, d'innovation, 
                         d'agilité, d'expertise et d'excellence nous permettent de fournir des 
                         solutions sur mesure, favorisant la croissance et l'innovation de nos clients.
-                        En choisissant EHC, vous bénéficiez d'un accompagnement personnalisé et d'une expertise éprouvée pour propulser votre organisation vers de nouveaux sommets. Ensemble, nous transformons vos défis en opportunités de succès.</p>-->
-                        <p class="text" >
-                        {!! \App\Models\TextWidget::getContent('Section1-About') !!}
-                       </p>
+                        En choisissant EHC, vous bénéficiez d'un accompagnement personnalisé et d'une 
+                        expertise éprouvée pour propulser votre organisation vers de nouveaux sommets. 
+                        Ensemble, nous transformons vos défis en opportunités de succès.</p>
+                       
                     
                       </div>
                       <div class="separator"></div>
