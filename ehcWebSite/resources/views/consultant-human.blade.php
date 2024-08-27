@@ -428,26 +428,8 @@ $cardsHeader = $Header->where('Type', 'Cards');
               </div>
               
               <div class="feature-wrapper" >
-@if($valeurs->isNotEmpty())
-@foreach($valeurs as $valeur)
-<div class="wcf_iconbox style-8 has_fade_anim">
-                  <div class="thumb">
-                    <div class="cf_image">
-                     <!-- <a href="service-details.html"><img src="{{ url('assets/imgs/gallery/img-r-33.webp') }}"
-                          alt="feature image"></a> -->
-                         <a href="service-details.html"><img src="{{ '/storage/'.$valeur->ImageValeur }}"
-                          alt="feature image"></a>
-                    </div>
-                  </div>
-                  <div class="content">
-                    <div class="cf_title">
-                      <h4 class="title" style="color:rgb(0, 81, 81);">{{$valeur->Valeur}}</a></h4>
-                    </div>
-                  </div>
-                </div>
-@endforeach
-@else
-               <div class="wcf_iconbox style-8 has_fade_anim">
+@if($valeurs->isEmpty())
+	 <div class="wcf_iconbox style-8 has_fade_anim">
                   <div class="thumb">
                     <div class="cf_image">
                       <a href="service-details.html"><img src="{{ url('assets/imgs/gallery/img-r-33.webp') }}"
@@ -499,6 +481,25 @@ $cardsHeader = $Header->where('Type', 'Cards');
                     </div>
                   </div>
                 </div>
+@else				
+@foreach($valeurs as $valeur)
+<div class="wcf_iconbox style-8 has_fade_anim">
+                  <div class="thumb">
+                    <div class="cf_image">
+                     <!-- <a href="service-details.html"><img src="{{ url('assets/imgs/gallery/img-r-33.webp') }}"
+                          alt="feature image"></a> -->
+                         <a href="service-details.html"><img src="{{ '/storage/'.$valeur->ImageValeur }}"
+                          alt="feature image"></a>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="cf_title">
+                      <h4 class="title" style="color:rgb(0, 81, 81);">{{$valeur->Valeur}}</a></h4>
+                    </div>
+                  </div>
+                </div>
+@endforeach
+              
 @endif				
               </div>
             </div>
@@ -521,7 +522,8 @@ $cardsHeader = $Header->where('Type', 'Cards');
                 <div id="pinElement" class="section-heading pin__element">
                   <div class="thumb has_fade_anim">
                     <div class="btn-wrapper pos-center btn-move">
-                      <a class="cf_btn wc-btn-play light btn-item video-popup" href="assets/video/team-planning.mp4">
+                      <a class="cf_btn wc-btn-play light btn-item video-popup" href="https://youtu.be/KwvaMqdfyas?si=m6gvHdogJiopNTHK
+">
                         <i class="fa-solid fa-play"></i>
                       </a>
                     </div>
