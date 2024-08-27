@@ -25,14 +25,35 @@ class EquipeResource extends Resource
         return $form
             ->schema([
             Forms\Components\FileUpload::make('image')->label('Image')->required(),
-            TinyEditor::make('nom')->required()
-            ->profile('titre'),
-            TinyEditor::make('prenom')->required()->profile('titre'),
-            TinyEditor::make('poste')->label('Poste')->required()->profile('titre'),
+            Forms\Components\TextInput::make('nom')->required()
+            ,
+            Forms\Components\TextInput::make('prenom')->required(),
+            Forms\Components\TextInput::make('poste')->label('Poste')->required(),
             TinyEditor::make('description')->label('Description du parcours')->required(),
             TinyEditor::make('quote')->label('Citation')->nullable(),
             
-            ]);
+            Forms\Components\Repeater::make('reseaux_sociaux')
+                ->label('Réseaux Sociaux')
+                ->schema([
+                    Forms\Components\Select::make('nom')
+                        ->label('Nom du réseau')
+                        ->options([
+                            'facebook' => 'Facebook',
+                            'twitter' => 'Twitter',
+                            'instagram' => 'Instagram',
+                            'linkedin' => 'LinkedIn',
+                            'youtube' => 'YouTube',
+                            'Email' => 'Email',
+                        ])
+                        ->required(),
+                    Forms\Components\TextInput::make('lien')
+                        ->label('Lien')
+                        ->required(),
+                ])
+                ->minItems(1)
+                ->maxItems(10)
+                ->required(),
+        ]);
     }
 
     public static function table(Table $table): Table

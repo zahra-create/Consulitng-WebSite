@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class FormPages extends Model
 {
     use HasFactory;
-    protected $fillable =['Page','Titre','SousTitre','Image','TitreIntro','SousTitreIntro','TitreForm','Button'];
+    protected $fillable =['Page','Titre','SousTitre','Image','TitreIntro','SousTitreIntro','TitreForm','Button','MapImage'];
 }

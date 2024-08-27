@@ -19,6 +19,7 @@ use App\Filament\Resources\CategoryActualiteResource\RelationManagers\Actualites
 
 
 use Closure;
+use Filament\Forms\Components\ColorPicker;
 use Illuminate\Support\Str;
 
 use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
@@ -92,6 +93,10 @@ class ActualiteResource extends Resource
                 Forms\Components\Checkbox::make('afficher_en_banniere')
                 ->label('Affiché en bannière')
                 ->default(false),
+
+               /* ColorPicker::make('Titre')
+                    ->label('Couleur du texte dans la bannière')
+                    ->visible(fn ($get) => $get('afficher_en_banniere')=== true), */
 
                 Forms\Components\FileUpload::make('image'),
                 Forms\Components\Select::make('categories')

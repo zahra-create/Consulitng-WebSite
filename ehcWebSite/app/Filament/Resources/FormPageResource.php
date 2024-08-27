@@ -28,11 +28,8 @@ class FormPageResource extends Resource
             ->schema([
                 Forms\Components\Select::make('Page')
                 ->options([
-                    'Offre d\'emploi' => 'Offre d\'emploi',
-                    'Stages' => 'Stages',
-                    'Blog' => 'Blog',
-                    'Podcast' => 'Podcast',
-                    'Vidéos' => 'Vidéos',
+                    'Contact' => 'Contact',
+                    'Demande Devis' => 'Demande Devis',
                 ]),
                 Forms\Components\TextInput::make('Titre')
                 ->required()
@@ -48,6 +45,8 @@ class FormPageResource extends Resource
                 ->maxLength(255),
             Forms\Components\TextInput::make('Button')
                 ->maxLength(255),
+            Forms\Components\FileUpload::make('MapImage'),
+
             ]);
     }
 

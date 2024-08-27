@@ -160,9 +160,9 @@
               <div  class="container">
                 <div   class="location-info-wrapper has_fade_anim">
                   <div class="location-info">
-                    <div class="logo">
+                 <!--   <div class="logo">
                       <img src="{{ url('assets/imgs/logo/logo.webp') }}" alt="logo">
-                    </div>
+                    </div> -->
             
                     <h3 style="color:#005151;" class="title">{!! $Titre1 !!} </h3> 
                    <ul class="info-list">
@@ -225,13 +225,13 @@
                     </div>
                   </div>
                   <div class="line-vertical"></div>
-                  <div class="meta-list has_fade_anim">
+              <!--    <div class="meta-list has_fade_anim">
                     <ul>
                       <li><a style="color:#005151;" href="mailto:inquiry@binox.com">contact@expertshumancapital.com</a></li>
                     </ul>
-                  </div>
+                  </div>-->
                   <div class="logo has_fade_anim">
-                    <a href="#"><img src="{{ url('assets/imgs/logo/logo.webp') }}" alt="logo"></a>
+                    <a href="#"><img src="{{ url('assets/imgs/logo/logoEHC.png') }}" alt="logo"></a>
                   </div>
                 </div>
                 <div class="contact-wrapper has_fade_anim">

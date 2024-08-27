@@ -147,13 +147,21 @@
             <div class="container">
               <div class="team-details-wrapper">
                 <div class="team-content">
-                  <h2 class="title has_fade_anim">{{$equipe->prenom}} <br> {{$equipe->nom}}</h2>
-                  <ul class="social-icons has_fade_anim" data-delay=".35">
-                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                  <h2 class="title has_fade_anim">{{ $equipe->prenom }} <br> {{ $equipe->nom }}</h2>
+                 <ul class="social-icons has_fade_anim" data-delay=".35">
+                    <!-- <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
                     <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                  </ul>
-                  <p class="text has_fade_anim">{{$equipe->description}}</p>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>-->
+                    @foreach($equipe->reseaux_sociaux as $reseau)
+        <li>
+            <a href="{{ $reseau['lien'] }}">
+                <i class="fa-brands fa-{{ $reseau['nom'] }}"></i>
+            </a>
+        </li>
+        @endforeach
+        </ul>
+  
+                  <p class="text has_fade_anim">{!! $equipe->description !!}</p>
                   <div class="btn-wrapper has_fade_anim" data-on-scroll="0">
                     <a href="{{ route('contact') }}" class="wc-btn-primary btn-text-flip"> <span data-text="Contact Now">Contact
                         Now</span> <i class="fa-solid fa-caret-right"></i></a>

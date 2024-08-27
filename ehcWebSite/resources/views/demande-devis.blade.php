@@ -223,12 +223,9 @@
                     <div class="wc-single-input">
                       <label for="website" class="wc-form-label">Service</label>
                       <select id="service" name="service" required>
-                      <option value="Conseil" selected>Conseil</option>
-                        <option value="Recrutement">Recrutement</option>
-                        <option value="Formation">Formation</option>
-						<option value="Evènement et Services aux entreprises" >Evènement et Services aux entreprises</option>
-                        <option value="Management de projet clé en main">Management de projet clé en main</option>
-                        <option value="Digitalisation">Digitalisation</option>
+                        @foreach($serviceoptions as $option)
+                        <option value="{{$option->TitreService}}" selected>{{$option->TitreService}}</option>
+                        @endforeach
                       </select>
                     </div>
                     <div class="wc-single-input">

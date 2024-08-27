@@ -522,12 +522,11 @@ $cardsHeader = $Header->where('Type', 'Cards');
                 <div id="pinElement" class="section-heading pin__element">
                   <div class="thumb has_fade_anim">
                     <div class="btn-wrapper pos-center btn-move">
-                      <a class="cf_btn wc-btn-play light btn-item video-popup" href="https://youtu.be/KwvaMqdfyas?si=m6gvHdogJiopNTHK
-">
+                      <a class="cf_btn wc-btn-play light btn-item video-popup" href="{{ $lienVideo }}">
                         <i class="fa-solid fa-play"></i>
                       </a>
                     </div>
-                    <img src="assets/imgs/gallery/img-s-1.png" alt="image">
+                    <img src="{{ asset('/storage/' .$ImageBU) }}" alt="image">
                   </div>
                   <div class="content has_fade_anim">
 

@@ -257,7 +257,7 @@ class ActualiteController extends Controller
             'IntroWHYEHC' => $home->IntroWHYEHC,
             'TitreBU' => $home->TitreBU,
             'ImageBU' => $home->ImageBU,
-            'lienVideo' => $home->lienVideo,
+            'lienVideo' => $home->getVideo(),
             'buttonBU' => $home->buttonBU,
             'ColorbuttonBU' => $home->ColorbuttonBU,
             'ImageChiffres' => $home->ImageChiffres,

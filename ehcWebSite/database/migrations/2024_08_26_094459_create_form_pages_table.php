@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('SousTitreIntro')->nullable();
             $table->string('TitreForm')->nullable();
             $table->string('Button')->nullable();
+            $table->string('MapImage')->nullable();
             $table->timestamps();
         });
     }

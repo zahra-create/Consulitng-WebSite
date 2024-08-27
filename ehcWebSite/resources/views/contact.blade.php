@@ -150,7 +150,9 @@
               </div> 
             </div> 
             <div class="location-thumb has_fade_anim" >
-              <img src="{{$Image}}" alt="contact">
+              <img src="{{asset('/storage/'.$Image)}}" alt="contact">
+			  
+ 
               <div class="container">
                 <div class="location-info-wrapper has_fade_anim">
                   <div class="location-info">
@@ -178,20 +180,12 @@
 				 <div class="line-vertical"></div>
                   <div class="section-title-wrapper style-6">
                     <div class="title-wrapper has_fade_anim">
-                      <h2 class="section-title" style="font-weight: 800; font-size:30px;"  >Nous 
+                      <h2 class="section-title" style="font-weight: 800; font-size:30px;"  >
 					    {!! $TitreForm !!}
                       </h2>
                     </div>
                   </div>
                   <div class="line-vertical"></div>
-                  <!-- <div class="meta-list has_fade_anim">
-                    <ul>
-                      <li><a href="mailto:inquiry@binox.com">LiveChat@binox.skype</a></li>
-                    </ul>
-                  </div> -->
-                  <!--<div class="logo has_fade_anim">
-                    <a href="#"><img src="assets/imgs/logo/logo.webp" alt="logo"></a>
-                  </div> -->
                 </div>
                 <div class="contact-wrapper has_fade_anim">
                   <form action="/contact/submit" method="POST">
@@ -269,19 +263,27 @@
         <section class="contact-intro">
 
 <div class="location-thumb has_fade_anim">
-  <img src="assets/imgs/gallery/map.webp" alt="location-image">
+  <img src="{{ asset('/storage/'.$MapImage) }}" alt="location-image">
+ 
   <div class="container">
     <div class="location-info-wrapper has_fade_anim">
       <div class="location-info">
     <!--    <div class="logo">
           <img src="assets/imgs/logo/logo.webp" alt="logo">
         </div> -->
-        <h3 class="title">Contact info:</h3>
+        <h3 class="title">Contact :</h3>
         <ul class="info-list">
-          <li><a href="#">+212 6 63-80-85-01</a></li>
-          <li><a href="#">contact@expertshumancapital.com</a></li>
+		@foreach($contacts as $contact)
+		@if($contact->nom === 'Numéro')
+          <li><a href="tel:{{$contact->lien}}">{{$contact->lien}}</a></li>
+	  @elseif($contact->nom === 'Email')
+          <li><a href="mailto:{{$contact->lien}}">{{$contact->lien}}</a></li>
+	  @endif
+		@endforeach
         </ul>
-        <p class="text">Rue du Calvon Bv Abdelmoumen- Casablanca</p>
+		@foreach($localisations as $localisation)
+        <p class="text">{{$localisation->lien}}</p>
+		@endforeach
       </div>
     </div>
   </div>
