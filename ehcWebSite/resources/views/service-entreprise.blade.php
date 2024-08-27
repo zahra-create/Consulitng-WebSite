@@ -150,57 +150,33 @@
                   <div id="pinElement" class="section-heading pin__element">
                     <div class="section-title-wrapper">
                       <div class="title-wrapper has_fade_anim">
-                        <h1 class="section-title">Bienvenue chez les services EHC</h1>
+                        <h1 class="section-title">{{$TitreIntroService}}</h1>
                       </div>
                       <div class="text-wrapper has_fade_anim">
-                        <p class="text">Profitez de solutions sur mesure pour optimiser votre performance et le développement de vos équipes.</p>
+                        <p class="text">{!!$IntroService!!}</p>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="services-list has_fade_anim">
-                  <div class="services-item">
-                    <p class="count">01</p>
+
+@php
+    $counter = 1;
+@endphp 
+@foreach($services as $serv)
+<div class="services-item">
+                    <p class="count">{{ str_pad($counter, 2, '0', STR_PAD_LEFT) }}</p>
                     <a href="{{ url('conseil') }}">
-                      <h2 class="title">Conseil</h2>
+                      <h2 class="title">{{$serv->TitreService}}</h2>
                     </a>
-                    <p class="text">Gérez efficacement vos ressources humaines et assurez une transfomation évolutive de votre entreprise.</p>
+                    <p class="text">{{$serv->DescriptionService}}</p>
                     <a href="{{ url('conseil') }}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
                   </div>
-                  <div class="services-item">
-                    <p class="count">02</p>
-                    <a href="{{ url('recruitement') }}">
-                      <h2 class="title">Recruitement</h2>
-                    </a>
-                    <p class="text">Recrutez des cadres dirigeants via concours publics et tests d'évaluation.</p>
-                    <a href="{{ url('recruitement') }}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
-                  </div>
-                  <div class="services-item">
-                    <p class="count">03</p>
-                    <a href="{{ url('formation') }}">
-                      <h2 class="title">Formation</h2>
-                    </a>
-                    <p class="text">Mise en place de plans de formation et accompagnement pour le remboursement des formations.</p>
-                    <a href="{{ url('formation') }}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
-                  </div>
-                  <div class="services-item">
-                    <p class="count">04</p>
-                    <a href="{{ url('event') }}">
-                      <h2 class="title">Evénements</h2>
-                    </a>
-                    <p class="text">Votre solution tout-en-un en matière de service et d’évènementiel.</p>
-                    <a href="{{ url('event') }}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
-                  </div>
-                  <div class="services-item">
-                    <p class="count">05</p>
-                    <a href="{{ url('ingenierie') }}">
-                      <h2 class="title">Ingénierie
-                      </h2>
-                    </a>
-                    <p class="text">Votre partenaire pour des solutions informatiques sur mesure, de la conception de modules spécifiques à l'intégration d'ERP et gestion de projets clé en main.</p>
-                    <a href="{{ url('ingenierie') }}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
-                  </div>
-                    
+@php
+    $counter++;
+@endphp
+@endforeach
+           
                 </div>
               </div>
             </div>
@@ -211,26 +187,25 @@
           <section class="specialization-area style-1">
             <div class="specialization-inner">
               <div class="specialization-thumb">
-                <img src="{{ url('assets/imgs/gallery/service-entreprise.jpg') }}" alt="faq-image">
+                <img src="{{ asset('storage/' .$Image) }}" alt="faq-image">
               </div>
               <div class="specialization-content section-spacing">
                 <div class="section-title-wrapper style-1 has_fade_anim">
                   <div class="subtitle-wrapper">
-                    <span class="section-subtitle">Notre mission</span>
+                    <span class="section-subtitle">{{$TitreService}}</span>
                   </div>
                   <div class="title-wrapper">
-                    <h1 class="section-title">EHC excelle dans l'accompagnement des entreprises vers l'excellence</h1>
+                    <h1 class="section-title">{!! $SousTitreService !!}</h1>
                   </div>
                   <div class="cf_text">
-                    <p class="text">Grâce à notre expertise, nous simplifions les projets complexes. Nous offrons un <span>soutien intégral</span> pour aider les
-                     entreprises à maximiser leur potentiel et à atteindre leurs objectifs stratégiques.</p>
+                    <p class="text">{!!$description!!}</p>
                     
                   </div>
-                  <ul class="list-plus">
+              <!--    <ul class="list-plus">
                     <li>Optimisation des processus de recrutement</li>
                     <li>Conduite de transformation vers la digitalisation</li>
                     <li>Développement personnel et professionnel</li>
-                  </ul>
+                  </ul> -->
                 </div>
               </div>
             </div>
@@ -242,13 +217,13 @@
               <div class="plan-area-inner ">
                 <div class="section-heading">
                   <div class="subtitle-wrapper has_fade_anim">
-                    <span class="section-subtitle">Entamez votre parcours de transformation ici</span>
+                    <span class="section-subtitle">{{$Titre}}</span>
                   </div>
                   <div class="title-wrapper has_fade_anim">
-                    <h2 class="section-title">Améliorez votre entreprise en gérant efficacement vos ressources et projets</h2>
+                    <h2 class="section-title">{{$SousTitre}}</h2>
                   </div>
                   <div class="btn-wrapper has_fade_anim">
-                    <a href="contact.html" class="wc-btn-primary btn-text-flip"><span data-text="Contactez-nous">Contactez-nous</span><i class="fa-solid fa-play"></i></a>
+                    <a href="contact.html" class="wc-btn-primary btn-text-flip"><span data-text="{{$Button}}">{{$Button}}</span><i class="fa-solid fa-play"></i></a>
                   </div>
                 </div>
               </div>

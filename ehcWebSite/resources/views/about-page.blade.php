@@ -174,22 +174,22 @@
                 <div class="section-heading">
                   <div class="section-title-wrapper">
                     <div class="subtitle-wrapper has_fade_anim" data-fade-from="left">
-                      <span class="section-subtitle">à propos de nous</span>
+                      <span class="section-subtitle">{{$TitreHeader}}</span>
                     </div>
                     <div class="title-wrapper has_fade_anim">
-                      <h2 class="section-title">EHC
-                      Experts Human Capital</h2>
+                      <h2 class="section-title">{{$SousTitreHeader}}
+                      </h2>
                     </div>
                   </div>
                 </div>
                 <div class="about-content">
                   <div class="thumb-first has_fade_anim" >
-                    <img src="assets/imgs/gallery/hero-img-1.webp" alt="about image">
+                    <img src="{{ '/storage/'.$Image1Header }}" alt="about image">
                   </div>
                   <div class="text-box-wrapper has_fade_anim" data-delay=".6">
                     <div class="text-box">
                       <div class="text-wrapper">
-                       <p class="text" >
+                      <!-- <p class="text" >
                         Experts Human Capital est un groupe de conseil en ingénierie et services,
                          dédié à accompagner 
                         les organisations dans leur stratégie de développement. 
@@ -200,11 +200,11 @@
                         solutions sur mesure, favorisant la croissance et l'innovation de nos clients.
                         En choisissant EHC, vous bénéficiez d'un accompagnement personnalisé et d'une 
                         expertise éprouvée pour propulser votre organisation vers de nouveaux sommets. 
-                        Ensemble, nous transformons vos défis en opportunités de succès.</p>
-                       
+                        Ensemble, nous transformons vos défis en opportunités de succès.</p>-->
+                        <p class="text" >{!!$ContentHeader!!}</p>
                     
                       </div>
-                      <div class="separator"></div>
+                   <!--   <div class="separator"></div>
                       <div class="scroll-btn btn-move">
                         <a href="#" class="circle-text btn-item">
                           <img src="assets/imgs/shape/scroll-down-text-2.webp" alt="image" class="show-dark text">
@@ -213,9 +213,9 @@
                           <img src="assets/imgs/shape/text-since.webp" alt="image" class="show-light icon">
                         </a>
                       </div>
-                    </div>
+                    </div> -->
                     <div class="thumb-second has_fade_anim">
-                      <img src="assets/imgs/gallery/about-img-2.webp" alt="about image">
+                      <img src="{{  '/storage/'.$Image2Header }}" alt="about image">
                     </div>
                   </div>
                 </div>
@@ -228,13 +228,13 @@
           <div class="partner-area" id="partnerarea">
             <div class="partner-wrapper">
               <div class="partner-thumb">
-                <img src="assets/imgs/gallery/about-div-img.webp" class="partner-logo" alt="partner-image">
+                <img src="{{  '/storage/'.$Image }}" class="partner-logo" alt="partner-image">
                 <div class="container">
                   <div class="partner-award-text">
-                    <img src="assets/imgs/shape/awards-logo-light.webp" class="has_fade_anim" alt="awards-logo">
-                   <p class="text has_fade_anim">Depuis sa création, EHC est reconnue pour offrir des solutions 
-                      innovantes et éthiques en ingénierie et services, favorisant un développement organisationnel durable.</p>
-<!-- <p class="text has_fade_anim">{!! \App\Models\TextWidget::getContent('Section2-About') !!}</p>--> 
+                    <img src="{{$Logo}}" class="has_fade_anim" alt="awards-logo">
+                <!--   <p class="text has_fade_anim">Depuis sa création, EHC est reconnue pour offrir des solutions 
+                      innovantes et éthiques en ingénierie et services, favorisant un développement organisationnel durable.</p> -->
+             <p class="text has_fade_anim">{!! $descriptionAbout !!}</p>
                     </div>
                 </div>
               </div>
@@ -248,15 +248,23 @@
               <div class="section-heading">
                 <div class="section-title-wrapper">
                   <div class="subtitle-wrapper has_fade_anim">
-                    <span class="section-subtitle">histoire de l'entreprise</span>
+                    <span class="section-subtitle">{{$TitreHistoire}}</span>
                   </div>
                   <div class="title-wrapper has_fade_anim" data-delay=".35">
-                    <h1 class="section-title">Nous travaillons pour un meilleur résultat de croissance étape par étape</h1>
+                    <h1 class="section-title">{{$SousTitreHistoire}}</h1>
                   </div>
                 </div>
               </div>
               <div class="working-step-wrapper">
-                <div class="working-step has_fade_anim" data-fade-from="left">
+@foreach($etapes as $etape)
+<div class="working-step has_fade_anim" data-fade-from="left">
+                  <span class="count">{{$etape->Date}}</span>
+                  <h2 class="title">{{$etape->Titre}}</h2>
+                  <p class="text">{!! $etape->Content !!}</p>
+                </div>
+@endforeach
+
+               <!-- <div class="working-step has_fade_anim" data-fade-from="left">
                   <span class="count">Jan-2010</span>
                   <h2 class="title">Fondation de l'équipe</h2>
                   <p class="text">EHC débute avec des solutions de conseil innovantes et éthiques.</p>
@@ -275,7 +283,7 @@
                   <span class="count">Aug-2024</span>
                   <h2 class="title">Leader reconnu</h2>
                   <p class="text">EHC devient une entreprise leader avec des solutions sur mesure et une grande expertise.</p>
-                </div>
+                </div> -->
               </div>
             </div>
           </section>
@@ -287,17 +295,16 @@
               <div class="feature-section-top">
                 <div class="section-title-wrapper style-5 has_fade_anim">
                   <div class="subtitle-wrapper">
-                    <span class="section-subtitle">notre équipe</span>
+                    <span class="section-subtitle">{{$TitreTeam}}</span>
                   </div>
-                  <h2 class="section-title">Rencontrer l'équipe de conseillers</h2>
+                  <h2 class="section-title">{{$SousTitreTeam}}</h2>
                 </div>
                 <div class="title-top-text has_fade_anim">
-                  <p class="text">L'équipe d'EHC, dynamique et innovante, combine expertise technique et collaboration. Passionnée 
-                    par la technologie, elle crée des solutions efficaces et robustes.</p>
+                  <p class="text">{!!$ContentTeam!!}</p>
                 </div>
                 <div class="btn-wrapper has_fade_anim" data-fade-from="right">
                   <a href="{{route('contact')}}" class="wc-btn-underline btn-text-flip"><span
-                      data-text="Join Our Team">Rejoindre notre équipe</span></a>
+                      data-text="{{$ButtonTeam}}">{{$ButtonTeam}}</span></a>
                 </div>
               </div>
               <div class="team-wrapper style-2">
@@ -327,10 +334,10 @@
               <div class="section-heading">
                 <div class="section-title-wrapper style-1">
                   <div class="subtitle-wrapper has_fade_anim">
-                    <h2 class="section-subtitle">TÉMOIGNAGES</h2>
+                    <h2 class="section-subtitle">{{$TemoignageTitre}}</h2>
                   </div>
                   <div class="title-wrapper has_fade_anim">
-                    <h1 class="section-title">Commentaires des clients</h1>
+                    <h1 class="section-title">{{$TemoignageSousTitre}}</h1>
                   </div>
                 </div>
               </div>
@@ -375,23 +382,23 @@
             <div class="container container-large">
               <div class="client-area-inner">
                 <div class="section-heading">
-                  <span class="section-subtitle has_fade_anim" data-fade-from="left">partenaires</span>
+                  <span class="section-subtitle has_fade_anim" data-fade-from="left">{{$TitrePartenaire}}</span>
                   <div class="section-title-wrapper style-2">
                     <div class="title-wrapper has_fade_anim">
-                      <h2 class="section-title">Nous sommes heureux d'avoir des partenaires réputés.</h2>
+                      <h2 class="section-title">{{$SousTitrePartenaire}}</h2>
                     </div>
                   </div>
                 </div>
                 <div class="content">
                   <div class="text-wrapper has_fade_anim">
-                    <p class="text">Nous croyons que l'humain est essentiel pour démarrer tout projet réussi et que c'est là qu'une splendide 
-                      émotion entre l'entreprise régénérée et l'homme se crée.
+                    <p class="text">{{$TextePartenaire}}
                     </p>
                   </div>
+                 
                   <div class="client-logos has_fade_anim">
-                    <img src="assets/imgs/brand/img-s-2.webp" alt="client logo">
-                    <img src="assets/imgs/brand/img-s-3.webp" alt="client logo">
-                    <img src="assets/imgs/brand/img-s-4.webp" alt="client logo">
+                  @foreach($partenaires->slice(0, 4) as $partenaire)
+                   <img src="{{$partenaire->Image}}" alt="client logo">
+                 @endforeach
                   </div>
                 </div>
               </div>

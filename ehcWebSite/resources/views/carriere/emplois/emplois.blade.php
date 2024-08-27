@@ -173,10 +173,10 @@
               <div class="section-heading">
                 <div class="section-title-wrapper style-1">
                   <div class="subtitle-wrapper has_fade_anim">
-                    <span style="color:#005151;" class="section-subtitle">Emplois</span>
+                    <span style="color:#005151;" class="section-subtitle">{{$Titre}}</span>
                   </div>
                   <div class="title-wrapper has_fade_anim">
-                    <h2 style="color:#005151;" class="section-title">Découvrez nos offres d'emploi</h2>
+                    <h2 style="color:#005151;" class="section-title">{{$SousTitre}}</h2>
                   </div>
                 </div>
               </div>

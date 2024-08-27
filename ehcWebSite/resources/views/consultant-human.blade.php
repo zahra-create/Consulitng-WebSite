@@ -41,6 +41,14 @@
   height: 100%;
   object-fit: cover; /* Ensure the image covers the area properly */
 }
+
+
+.brand-logo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
 </style>
 
 
@@ -184,20 +192,22 @@
                 <div class="container container-large">
                   <div class="banner-content-wrapper">
                     <div class="content">
-					  <h2 class="title has_fade_anim">Bienvenue chez EHC groupe</h2>
+					<!--  <h2 class="title has_fade_anim">Bienvenue chez EHC groupe</h2>-->
+          <h2 class="title has_fade_anim">{{$TitreHeader}}</h2>
                       <div class="cf_text has_fade_anim" data-delay=".35">
-						<p class="text" style="font-size:30spx;">Votre Partenaire pour le Succès en Ressources Humaines.</p>
-                      </div>
+						<!--<p class="text" style="font-size:30spx;">Votre Partenaire pour le Succès en Ressources Humaines.</p>-->
+            <p class="text" style="font-size:30spx;">{!! $ContentHeader !!}</p>           
+          </div>
                       <div class="btn-wrapper has_fade_anim" data-delay=".5">
                         <a href="{{ route('demande-devis') }}" class="cf_btn wc-btn-primary btn-text-flip"><span
-                            data-text="Demander services">Demander services </span> <img src="{{ url('assets/imgs/icon/icon-r-21.webp') }}" alt="arrow-icon"></a>
+                            data-text="Demander services">{{$ButtonHeader}}</span> <img src="{{ url('assets/imgs/icon/icon-r-21.webp') }}" alt="arrow-icon"></a>
                       </div>
                       <!--<a href="#" class="scroll-up-btn"> <span>Scroll</span> <i class="icon-wcf-arrow-down-1"></i> </a> -->
                     </div> 
                    <div class="thumb-wrapper" style="display: grid;
   grid-template-columns: auto auto; gap: 20px;">
                       <div class="cf_thumb has_fade_anim" data-delay=".65" data-ease="slow(0.7,0.7,false)">
-                      <img src="{{ url('assets/imgs/gallery/img-r-3.png')}}  " alt="gallary">
+                      <img src="{{ '/storage/'. $ImageHeader }}" alt="gallary">
                        
                       </div> 
                  
@@ -359,8 +369,7 @@ $cardsHeader = $Header->where('Type', 'Cards');
                   <div class="section-title-wrapper">
                     <div class="title-wrapper has_fade_anim" >
                       <h2 class="section-title" style="color:rgb(0, 81, 81);" >
-                      Ayant en moyenne plus de 20 ans
-                        d'experience dans leurs domaines de competence</h2>
+                      {!! $TitreAbout !!}</h2>
                     </div>
                   </div>
                   <div class="thumb-wrapper has_fade_anim" data-fade-from="left">
@@ -368,22 +377,24 @@ $cardsHeader = $Header->where('Type', 'Cards');
                       <span class="text" > </span>
                     </div>
                     <div class="react-thumb">
-                      <img src="{{ url('assets/imgs/gallery/img-r-14.png') }}" alt="about-image">
+                      <img src="{{ '/storage/'. $ImageAbout}}" alt="about-image">
                     </div>
                   </div>
                   <div class="text-wrapper has_fade_anim">
-					  <p class="text">Chez EHC, nous sommes dedies à transformer la gestion des ressources humaines en un atout strategique pour votre entreprise.</p>
-             <p class="text">Avec une equipe d'experts en RH, nous offrons des solutions sur mesure pour optimiser vos processus et attirer les meilleurs talents.</p>
+				<!--	  <p class="text">Chez EHC, nous sommes dedies à transformer la gestion des ressources humaines en un atout strategique pour votre entreprise.</p>
+             <p class="text">Avec une equipe d'experts en RH, nous offrons des solutions sur mesure pour optimiser vos processus et attirer les meilleurs talents.</p> -->
+             <p class="text">{!! $Paragraph1About !!}</p>
+             <p class="text">{!! $Paragraph2About !!}</p>
                   </div>
                   <div class="btn-wrapper has_fade_anim">
-                    <a href="{{ route('about')}}" class="wc-btn-primary btn-text-flip" style="background-color:rgb(0, 81, 81); border:rgb(0, 81, 81);" > <span data-text="Qui sommes-nous">Qui sommes-nous
+                    <a href="{{ route('about')}}" class="wc-btn-primary btn-text-flip" style="background-color:{{$ColorButtonAbout}}; border:{{$ColorButtonAbout}};" > <span data-text="{{ $ButtonAbout }}">{{ $ButtonAbout }}
                      </span> <img src="{{ url('assets/imgs/icon/icon-r-21.webp') }}" alt="arrow-icon"></a>
                   </div>
                 </div>
               </div>
             </div>
             <div class="area-thumb">
-              <img src="{{ url('assets/imgs/gallery/img-s-21.png') }}" alt="hero image">
+              <img src="{{ '/storage/'. $ImageHeroAbout}}" alt="hero image">
             </div>
           </section>
           <!-- about area end  -->
@@ -407,16 +418,36 @@ $cardsHeader = $Header->where('Type', 'Cards');
               <div class="section-heading">
                 <div class="section-title-wrapper">
                   <div class="title-wrapper has_fade_anim">
-                    <h2 class="section-title" style="font-size: 60px; color:rgb(0, 81, 81); "><span>POURQUOI EHC ?</span></h2>
+                    <h2 class="section-title" style="font-size: 60px; color:rgb(0, 81, 81); "><span>{!! $TitreWHYEHC !!}</span></h2>
                   </div>
             	<div class="subtitle-wrapper has_fade_anim" data-delay=".35" >
-				  <p style="font-size: 25px; ">Au coeur de ses valeurs, EHC place la satisfaction de ses partenaires au sommet de ses priorites</p>
-                  </div>
+				  <!--<p style="font-size: 25px; ">Au coeur de ses valeurs, EHC place la satisfaction de ses partenaires au sommet de ses priorites</p>-->
+          <p style="font-size: 25px; ">{!! $IntroWHYEHC !!}</p>
+        </div>
                 </div>
               </div>
               
               <div class="feature-wrapper" >
-                <div class="wcf_iconbox style-8 has_fade_anim">
+@if($valeurs->isNotEmpty())
+@foreach($valeurs as $valeur)
+<div class="wcf_iconbox style-8 has_fade_anim">
+                  <div class="thumb">
+                    <div class="cf_image">
+                     <!-- <a href="service-details.html"><img src="{{ url('assets/imgs/gallery/img-r-33.webp') }}"
+                          alt="feature image"></a> -->
+                         <a href="service-details.html"><img src="{{ '/storage/'.$valeur->ImageValeur }}"
+                          alt="feature image"></a>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="cf_title">
+                      <h4 class="title" style="color:rgb(0, 81, 81);">{{$valeur->Valeur}}</a></h4>
+                    </div>
+                  </div>
+                </div>
+@endforeach
+@else
+               <div class="wcf_iconbox style-8 has_fade_anim">
                   <div class="thumb">
                     <div class="cf_image">
                       <a href="service-details.html"><img src="{{ url('assets/imgs/gallery/img-r-33.webp') }}"
@@ -468,6 +499,7 @@ $cardsHeader = $Header->where('Type', 'Cards');
                     </div>
                   </div>
                 </div>
+@endif				
               </div>
             </div>
           </section>
@@ -483,7 +515,7 @@ $cardsHeader = $Header->where('Type', 'Cards');
                         <h2 class="section-title" style="text-decoration-line: none; color: rgb(0, 81, 81);">NOS BUSINESS UNITS</h2>
                       </div>
                     </div>
-            <section class="services-area section-spacing pin__area">
+           <section class="services-area section-spacing pin__area">
             <div class="container container-large">
               <div class="services-area-inner">
                 <div id="pinElement" class="section-heading pin__element">
@@ -500,11 +532,6 @@ $cardsHeader = $Header->where('Type', 'Cards');
 
                     <div class="">
 
-                     <!-- <div class="text-wrapper">
-                        <p class="text">Nanotechnology immersion along the information highway will close the loop on
-                          focusing solely on the bottom line.
-                        </p>
-                      </div> -->
                       <div class="btn-wrapper" style="margin-bottom:20px;">
                   <a href="{{ route('demande-devis') }}" class="cf_btn wc-btn-primary btn-text-flip" style="background-color:rgb(0, 81, 81); border:rgb(0, 81, 81);"><span data-text="Demander services">Demander services</span> <img src="assets/imgs/icon/icon-r-21.webp" alt="arrow-icon"> </a>
                       </div>
@@ -512,8 +539,36 @@ $cardsHeader = $Header->where('Type', 'Cards');
                   </div>
                 </div>
                 <div class="services-wrapper">
-                  <div class="has_fade_anim">
-                    <a href="{{ route('conseil') }}">
+
+@php
+    $counter = 1;
+@endphp               
+@foreach($bus as $bu)  
+<div class="has_fade_anim">
+              
+                      <div class="service-item " >
+                        <span class="number" style="font-weight:700;color:rgb(0, 81, 81); font-size:30px;">{{ str_pad($counter, 2, '0', STR_PAD_LEFT) }}</span>
+                        <div class="content-wrapper">
+                          <div class="content" style="width:100vw;" >
+                            <h3 class="title" style="font-weight:600;color:rgb(0, 81, 81);" data-text="{{$bu->BU}}">{{$bu->BU}}</h3>
+                            <p class="text" >{{$bu->DescriptionBU}}</p>
+                          </div>
+                          <div class="btn-wrapper">
+                           <!-- <span class="cf_btn wc-btn-normal"><i class="fa-solid fa-caret-right"></i>
+                            </span> -->
+                          </div>
+                        </div>
+                      </div>
+              <!--      </a> -->
+                  </div>
+
+   @php
+    $counter++;
+@endphp
+@endforeach
+
+            <!--      <div class="has_fade_anim">
+                   
                       <div class="service-item " >
                         <span class="number" style="font-weight:700;color:rgb(0, 81, 81); font-size:30px;">01</span>
                         <div class="content-wrapper">
@@ -530,7 +585,7 @@ $cardsHeader = $Header->where('Type', 'Cards');
                     </a>
                   </div>
                   <div class="has_fade_anim">
-                    <a href="{{ route('recruitement') }}">
+                  
                       <div class="service-item">
                         <span class="number" style="font-weight:700;color:rgb(0, 81, 81); font-size:30px;">02</span>
                         <div class="content-wrapper">
@@ -546,7 +601,7 @@ $cardsHeader = $Header->where('Type', 'Cards');
                       </div>
                     </a>
                   </div>
-                  <div class="{{ route('formation') }}">
+                 
                     <a href="service-details.html">
                       <div class="service-item">
                         <span class="number" style="font-weight:700;color:rgb(0, 81, 81); font-size:30px;">03</span>
@@ -564,7 +619,7 @@ $cardsHeader = $Header->where('Type', 'Cards');
                     </a>
                   </div>
                   <div class="has_fade_anim">
-                    <a href="{{ route('event') }}">
+                   
                       <div class="service-item">
                         <span class="number" style="font-weight:700;color:rgb(0, 81, 81); font-size:30px;">04</span>
                         <div class="content-wrapper">
@@ -581,7 +636,7 @@ $cardsHeader = $Header->where('Type', 'Cards');
                     </a>
                   </div>
                   <div class="has_fade_anim" >
-				  <a href="{{ route('ingenierie') }}">
+				  
                     <div class="service-item">
                       <span class="number" style="font-weight:700;color:rgb(0, 81, 81); font-size:30px;">05</span>
                       <div class="content-wrapper">
@@ -596,11 +651,11 @@ $cardsHeader = $Header->where('Type', 'Cards');
                       </div>
                     </div>
                     </a>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
-          </section>
+          </section> 
 		  
           <!-- BU end  -->
 <!--Start espace pub after BU-->
@@ -741,7 +796,7 @@ $cardsAfterBU = $AfterBU->where('Type', 'Cards');
           <section class="counter-area" style="margin-top:0px; padding-top:100px;">
 		            <div class="container" >
             <div class="counter-thumb">
-              <img src="https://crowdytheme.com/wp/binox/human-resource/wp-content/uploads/sites/6/2024/04/meetingImages.webp" alt="counter-thumb" >
+              <img src="{{ '/storage/'. $ImageChiffres}}" alt="counter-thumb" >
             </div>
           </div>
             <div class="shape-1">
@@ -750,20 +805,28 @@ $cardsAfterBU = $AfterBU->where('Type', 'Cards');
             <div class="container">
               <div class="counter-item-wrapper">
                 <div class="counter-item has_fade_anim" data-fade-from="left" >
-                  <h2 class="title" style="color: #005151; padding-right:35px; font-size:40px; font-weight: 700;">EHC En Chiffres</h2>  <!-- padding-top:20px; padding-right:35px; font-size:40px; font-weight: 700;-->
+                  <h2 class="title" style="color: #005151; padding-right:35px; font-size:40px; font-weight: 700;">{{$TitreChiffres}}</h2>  <!-- padding-top:20px; padding-right:35px; font-size:40px; font-weight: 700;-->
                 </div>
                 <div class="team-item" >   <!--style="padding-top:100px;"-->
                   <div class="cf_text has_fade_anim" >   <!--style="width:300px; margin-right:15px;"-->
-                    <p class="text" style="color: black; font-size: 18px">EHC mobilise pour vous une équipe de haut dirigeants et cadres exerçant dans les sphères des secteurs public et privé et ayant en moyenne plus de 20 ans d'expérience dans leurs domaines de compétence.</p>
+                   <!-- <p class="text" style="color: black; font-size: 18px">EHC mobilise pour vous une équipe de haut dirigeants et cadres exerçant dans les sphères des secteurs public et privé et ayant en moyenne plus de 20 ans d'expérience dans leurs domaines de compétence.</p>-->
+                   <p class="text" style="color: black; font-size: 18px">{!! $TexteChiffres !!}</p>
                   </div>
 				<div class="btn-wrapper" style="margin-top:50px; margin-right:15px;"  >
                       <a href="{{ route('about')}}" class="cf_btn wc-btn-primary btn-text-flip" style="background-color:rgb(0, 81, 81); border:rgb(0, 81, 81);"><span
-                          data-text="Découvrir Nos Experts">Découvrir Nos Experts</span> <img src="{{ url('assets/imgs/icon/icon-r-21.webp') }}" alt="arrow-icon"></a>
+                          data-text="{{$ButtonChiffres}}">{{$ButtonChiffres}}</span> <img src="{{ url('assets/imgs/icon/icon-r-21.webp') }}" alt="arrow-icon"></a>
                     </div>
                 </div>
                 <div class="counter-text has_fade_anim">
                   <ul class="counter-list">
-                    <li class="item">
+@foreach($chiffres as $chiffre)
+<li class="item">
+       <h2 class="section-title wc-counter">{{$chiffre->Chiffre}}</h2>
+        <p class="text">{{$chiffre->descriptionChiffre}}</p>
+        </li>
+@endforeach
+
+                   <!-- <li class="item">
                       <h2 class="section-title wc-counter">3.8x</h2>
                       <p class="text">Economical growth</p>
                     </li>
@@ -778,7 +841,7 @@ $cardsAfterBU = $AfterBU->where('Type', 'Cards');
                     <li class="item">
                       <h2 class="section-title wc-counter">70+</h2>
                       <p class="text">Team Members</p>
-                    </li>
+                    </li> -->
                   </ul>
                 </div>
               </div>
@@ -938,10 +1001,10 @@ $cardsBeforeActu = $BeforeActu->where('Type', 'Cards');
               <div class="section-heading">
                 <div class="section-title-wrapper">
                   <div class="title-wrapper has_fade_anim">
-                    <h2 class="section-title" style="color:#005151; font-size: 40px;font-weight:900;">Nos ACTUALITES</h2>
+                    <h2 class="section-title" style="color:#005151; font-size: 40px;font-weight:900;">{{$TitreActualites}}</h2>
                   </div>
                   <div class="subtitle-wrapper has_fade_anim" data-delay=".35" >
-                    <a href="{{ route('Actualites') }}" class="section-subtitle" style="font-weight:900;">Voir Plus</a>
+                    <a href="{{ route('Actualites') }}" class="section-subtitle" style="font-weight:900;">{{$ButtonActualites}}</a>
                   </div>
                 </div>
               </div>
@@ -973,13 +1036,22 @@ $cardsBeforeActu = $BeforeActu->where('Type', 'Cards');
               <div class="brand-inner">
                 <div class="brand-text">
                   <div class="brand-text-title-wrapper" >  <!--style="padding-top:50px;"-->
-                    <h2 class="title" style="font-weight:900; font-size:23px; color:rgb(0, 81, 81);">Nos partenaires</h2>
+                    <h2 class="title" style="font-weight:900; font-size:23px; color:rgb(0, 81, 81);">{{$TitrePartenaire}}</h2>
                   </div>
                 </div>
                 <div class="brand-logos">
                   <div class="swiper corporate-brand-slider-active">
                     <div class="swiper-wrapper">
-                      <div class="swiper-slide">
+
+                    @foreach($partenaires as $partenaire)
+                    <div class="swiper-slide">
+                        <div class="brand-logo">
+                          <img src="{{ '/storage/'.$partenaire->Image}}" alt="{{$partenaire->partenaire}}">
+                        </div>
+                      </div>
+                    @endforeach
+
+                     <!-- <div class="swiper-slide">
                         <div class="brand-logo">
                           <img src="{{ url('assets/imgs/brand/img-r-1.webp') }}" alt="partner-logo">
                         </div>
@@ -1013,7 +1085,7 @@ $cardsBeforeActu = $BeforeActu->where('Type', 'Cards');
                         <div class="brand-logo">
                           <img src="{{ url('assets/imgs/brand/img-r-5.webp') }}" alt="partner-logo">
                         </div>
-                      </div>
+                      </div> -->
                     </div>
                   </div>
                 </div>

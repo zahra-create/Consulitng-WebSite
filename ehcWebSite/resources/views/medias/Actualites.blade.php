@@ -1,7 +1,7 @@
 <x-actualite>
 
 <section class="banner-area p-relative fix zi-1 banner-1"  >
-            <div class="swiper baner-active-1" style=" height:60vh; ">
+            <div class="swiper baner-active-1" >
               <div class="swiper-wrapper">
 
 
@@ -20,11 +20,11 @@
             <div class="container container-large">
               <div class="section-heading">
                 <div class="section-title-wrapper style-1">
-                  <!--<div class="subtitle-wrapper has_fade_anim">
-                    <span class="section-subtitle">Binox blog</span>
-                  </div> -->
+                  <div class="subtitle-wrapper has_fade_anim">
+                    <span class="section-subtitle">{{$Titre}}</span>
+                  </div> 
                   <div class="title-wrapper has_fade_anim">
-                    <h2 class="section-title" style="color:#005151; font-size: 40px;font-weight:900;">{{ \App\Models\TextWidget::getTitle('Section-title-Actualites')}}</h2>
+                    <h2 class="section-title" style="color:#005151; font-size: 40px;font-weight:900;">{{$SousTitre}}</h2>
                   </div>
                 </div>
               </div>
