@@ -17,7 +17,15 @@ use App\Http\Controllers\EmploiController;
 use App\Http\Controllers\EmploiMailController;
 use App\Http\Controllers\VideoCategoryController;
 use App\Http\Controllers\VideoController;
+
+use App\Http\Controllers\StripeController;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Stripe\StripeClient;
+use Illuminate\Support\Facades\Hash;
+
 use App\Http\Controllers\ServiceController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -146,7 +154,7 @@ Route::get('/contact',[ContactController::class, 'index']
 )->name('contact');
 
 //contact form
-Route::post('/contact/submit', [ContactController::class, 'submit'])->name('contact.submit');
+Route::post('/contact/submit', [ContactMailController::class, 'sendContactEmail'])->name('submitContact');
 
 
 //video pages routes 
@@ -154,6 +162,7 @@ Route::post('/contact/submit', [ContactController::class, 'submit'])->name('cont
 Route::get('/playlists', [VideoCategoryController::class, 'index'])->name('playlists');
 Route::get('/video-category/{id}', [VideoCategoryController::class, 'show'])->name('video-category.show');
 Route::get('/category/{id}/videos', [VideoCategoryController::class, 'getCategoryVideos']);
+
 //demande devis
 /*
 Route::get('/demande-devis', function () {
@@ -164,12 +173,30 @@ Route::get('/demande-devis',[DemandeDevisController::class, 'index']
 )->name('demande-devis');
 
 //form demande devis
-Route::post('/demande-devis/submitdevis', [DemandeDevisController::class, 'submitdevis'])->name('demande-devis.submitdevis');
+Route::post('/demande-devis/submit', [DevisMailController::class, 'sendDevisEmail'])->name('submitDevis');
 
 //Paiement
-Route::get('/paiement', function () {
-    return view('Paiement');
-})->name('paiement');
+Route::get('/paiement', function (Request $request) {
+	$status = $request->query('status');
+	if ($status){
+	if ( $status === 'success') {
+
+		session()->flash('message', 'Paiement réussi!');
+		session()->flash('alert-class', 'alert-success');
+		
+	} else {
+		session()->flash('message', 'Paiement échoué! Ressayez.');
+		session()->flash('alert-class', 'alert-danger');
+	}
+	}
+	
+	return view('paiement');
+
+})->name('paiement'); 
+
+Route::post('/pay', [StripeController::class, 'pay'])->name('stripe.pay');
+
+
 
 //Podcasts
 /*

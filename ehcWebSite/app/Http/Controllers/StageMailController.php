@@ -24,7 +24,7 @@ class StageMailController extends Controller
           $fileName = time() . '.' . $request->file('cv')->getClientOriginalExtension();
           $request->file('cv')->move(public_path('attachment'), $fileName);
 
-          $RHemail = 'zahirakasmouti@gmail.com';
+          $RHemail = config('mail.recrutement_email');
           $stage = Stage::find($request->input('internship_id'));
           $stageName = $stage->title;
           $response = Mail::to($RHemail)->send(new StageSubmissionMail($request->all(),$fileName,$stageName));

@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Mail;
 class ContactController extends Controller
 {
 
+
     public function index()
     {
         $ContactPage = FormPages::where('Page', 'Contact')->first();

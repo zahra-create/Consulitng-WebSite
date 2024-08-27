@@ -2,6 +2,9 @@
 
 return [
 
+	'RHemail' => env('RH_EMAIL'),
+	'recrutement_email' => env('RECRUTEMENT_EMAIL'),
+
     /*
     |--------------------------------------------------------------------------
     | Default Mailer

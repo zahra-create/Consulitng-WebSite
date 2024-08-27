@@ -198,47 +198,68 @@
                   </div> -->
                 </div>
                 <div class="contact-wrapper has_fade_anim">
-                  <form action="/demande-devis/submitdevis" method="POST">
+                  <form action="{{ route('submitDevis') }}" method="POST" enctype="multipart/form-data">
                   @csrf
+                  @if (Session::has('success'))
+                  <div class="alert alert-success alert-dismissible" role="alert">
+                    {{ Session::get('success')}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                  </div>
+                  @elseif (Session::has('error'))
+                  <div class="alert alert-danger alert-dismissible" role="alert">
+                    {{ Session::get('error')}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                  </div>
+                  @endif
                     <div class="wc-single-input">
                       <label for="name" class="wc-form-label">Nom</label>
-                      <input type="text" id="name" name="nom" required>
+                      <input type="text" id="name" name="name" required>
+                      @error('name')
+                      <p class="text-danger">{{ $message }}</p>
+                      @enderror
                     </div>
                     <div class="wc-single-input">
-                      <label for="email" class="wc-form-label">Prénom</label>
+                      <label for="prenom" class="wc-form-label">Prénom</label>
                       <input type="text" id="prenom" name="prenom" required>
+                      @error('prenom')
+                      <p class="text-danger">{{ $message }}</p>
+                      @enderror
                     </div>
                     <div class="wc-single-input">
-                      <label for="phone" class="wc-form-label">Email</label>
+                      <label for="email" class="wc-form-label">Email</label>
                       <input type="email" id="email" name="email" required>
+                      @error('email')
+                      <p class="text-danger">{{ $message }}</p>
+                      @enderror
                     </div>
                     <div class="wc-single-input">
-                      <label for="company" class="wc-form-label">Téléphone</label>
+                      <label for="phone" class="wc-form-label">Téléphone</label>
                       <input type="text" id="phone" name="phone">
+                      @error('phone')
+                      <p class="text-danger">{{ $message }}</p>
+                      @enderror
                     </div>
                     <div class="wc-single-input">
-                      <label for="website" class="wc-form-label">Entreprise</label>
+                      <label for="company" class="wc-form-label">Entreprise</label>
                       <input type="text" id="company" name="company" required>
+                      @error('company')
+                      <p class="text-danger">{{ $message }}</p>
+                      @enderror
                     </div>
                     <div class="wc-single-input">
-                      <label for="website" class="wc-form-label">Service</label>
+                      <label for="service" class="wc-form-label">Service</label>
                       <select id="service" name="service" required>
                         @foreach($serviceoptions as $option)
                         <option value="{{$option->TitreService}}" selected>{{$option->TitreService}}</option>
                         @endforeach
                       </select>
+
                     </div>
                     <div class="wc-single-input">
                       <label for="message" class="wc-form-label">Description</label>
                       <textarea id="message" name="message" placeholder="Décrire votre besoin....." required></textarea>
                     </div>
 
-                    @if(Session('success_devis'))
-                    <div class="alert alert-success alert-dismissible fade in">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                        {{ Session('success_devis') }}
-                      </div>
-                    @endif
 
                     <div class="btn-wrapper">
                       <button type="submit" class="wc-btn-primary btn-text-flip"><span data-text="{!! $Button !!}">{!! $Button !!}

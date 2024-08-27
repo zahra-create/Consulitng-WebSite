@@ -5,57 +5,52 @@ namespace App\Mail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
-use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class Contact extends Mailable
-{
+class DevisSubmissionMail extends Mailable
+{   public $request;
     use Queueable, SerializesModels;
-    public $contactdata;
 
     /**
      * Create a new message instance.
-     *
-     * @return void
      */
-    public function __construct($contactdata)
+    public function __construct($request)
     {
-        $this->contactdata = $contactdata;
+        $this->request = $request;
     }
 
     /**
      * Get the message envelope.
-     *
-     * @return \Illuminate\Mail\Mailables\Envelope
      */
     public function envelope()
-    {
+    {  
         return new Envelope(
-            subject: 'Formulaire de Contact',
-            //from: new Address('')
-        );
+            from: new Address($this->request['email'], $this->request['name']),
+            replyTo: [
+                new Address($this->request['email'], $this->request['name'])
+            ],
+            subject: 'Demande de Devis'
+         );
     }
 
     /**
      * Get the message content definition.
-     *
-     * @return \Illuminate\Mail\Mailables\Content
      */
-    public function content()
+    public function content(): Content
     {
         return new Content(
-            markdown: 'emails.contact',
+            view: 'mails.devisMail',
         );
     }
 
     /**
      * Get the attachments for the message.
      *
-     * @return array
+     * @return array<int, \Illuminate\Mail\Mailables\Attachment>
      */
-    public function attachments()
+    public function attachments(): array
     {
         return [];
     }

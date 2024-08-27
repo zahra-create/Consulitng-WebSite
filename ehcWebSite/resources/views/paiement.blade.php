@@ -138,7 +138,7 @@
 
 
         <main>
-         		
+	
 
           <!-- contact intro start  -->
           <section class="contact-intro">
@@ -148,6 +148,11 @@
                   <!--<div class="subtitle-wrapper has_fade_anim">
                     <span class="section-subtitle">Demander devis</span>
                   </div> -->
+          @if (session('message'))
+		   <div class="alert {{ session('alert-class') }}">
+				{{ session('message') }}
+		   </div>
+	@endif
                   <div class="title-wrapper has_fade_anim">
                  <h2 class="section-title" style=" color:#005153;" >Bienvenue sur notre page de demande de paiement.</h2> 
                    
@@ -201,46 +206,45 @@
                   </div> -->
                 </div>
                 <div class="contact-wrapper has_fade_anim">
-                  <form >
+                  <form action="{{ route('stripe.pay') }}" method = "POST" >
                   @csrf
                     <div class="wc-single-input">
-                      <label for="name" class="wc-form-label">Nom</label>
-                      <input type="text" id="name" name="nom" required>
+                      <label for="nom" class="wc-form-label">Nom</label>
+                      <input type="text" id="nom" name="nom" required>
                     </div>
                     <div class="wc-single-input">
-                      <label for="email" class="wc-form-label">Prénom</label>
+                      <label for="prenom" class="wc-form-label">Prénom</label>
                       <input type="text" id="prenom" name="prenom" required>
                     </div>
                     <div class="wc-single-input">
-                      <label for="phone" class="wc-form-label">Email</label>
-                      <input type="email" id="email" name="email" required>
+                      <label for="montant" class="wc-form-label">Montant à payer</label>
+                      <input type="number" id="montant" name="montant" required>
                     </div>
                     <div class="wc-single-input">
-                      <label for="company" class="wc-form-label">Téléphone</label>
+                      <label for="phone" class="wc-form-label">Téléphone</label>
                       <input type="text" id="phone" name="phone">
-                    </div>
+                    </div> 
                     <div class="wc-single-input">
-                      <label for="website" class="wc-form-label">Entreprise</label>
+                      <label for="company" class="wc-form-label">Entreprise</label>
                       <input type="text" id="company" name="company" required>
                     </div>
+    <div class="wc-single-input">
+        <label for="devise" class="wc-form-label">Devise</label>
+        <select id="devise" name="devise" required>
+            <option value="usd" selected>USD - Dollar américain</option>
+            <option value="eur">EUR - Euro</option>
+            <option value="mad">MAD - Dirham Marocain</option>
+           
+        </select>
+    </div>
                     <div class="wc-single-input">
-                      <label for="website" class="wc-form-label">Service</label>
-                      <select id="service" name="service" required>
-                      <option value="Conseil" selected>Conseil</option>
-                        <option value="Recrutement">Recrutement</option>
-                        <option value="Formation">Formation</option>
-						<option value="Evènement et Services aux entreprises" >Evènement et Services aux entreprises</option>
-                        <option value="Management de projet clé en main">Management de projet clé en main</option>
-                        <option value="Digitalisation">Digitalisation</option>
-                      </select>
-                    </div>
-                    <div class="wc-single-input">
-                      <label for="message" class="wc-form-label">Description</label>
-                      <textarea id="message" name="message" placeholder="Décrire votre besoin....." required></textarea>
+                      <label for="service" class="wc-form-label">Service</label>
+		      <input type="text" id="service" name="service" required>
                     </div>
 
+
                     <div class="btn-wrapper">
-                      <button type="submit" class="wc-btn-primary btn-text-flip"><span data-text="Demander Devis">Confirmer
+                      <button type="submit" class="wc-btn-primary btn-text-flip"><span data-text="Payer">Confirmer
                          </span> <i class="fa fa-caret-right"></i> </button>
                     </div>
                   </form>

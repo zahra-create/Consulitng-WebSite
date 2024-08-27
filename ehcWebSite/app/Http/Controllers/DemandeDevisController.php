@@ -10,6 +10,9 @@ use App\Models\FormPages;
 class DemandeDevisController extends Controller
 {
 
+
+
+
     public function index()
     {
         $DevisPage = FormPages::where('Page', 'Demande Devis')->first();
@@ -37,4 +40,5 @@ class DemandeDevisController extends Controller
     'Button' => $DevisPage->Button,
      'serviceoptions' => $serviceoptions
      ]);}
+
 }
