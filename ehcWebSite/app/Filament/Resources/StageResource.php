@@ -40,6 +40,9 @@ class StageResource extends Resource
                 Forms\Components\TextInput::make('location')
                 ->required()
                 ->maxLength(255), 
+                Forms\Components\TextInput::make('pays')
+                ->required()
+                ->maxLength(255),
                 Forms\Components\DatePicker::make('date_debut')
                 ->required(),
                 Forms\Components\DatePicker::make('date_fin')
@@ -77,6 +80,7 @@ class StageResource extends Resource
                 Tables\Columns\TextColumn::make('entreprise'),
                 Tables\Columns\TextColumn::make('profil'),
                 Tables\Columns\TextColumn::make('location'),
+                Tables\Columns\TextColumn::make('pays'),
                 Tables\Columns\TextColumn::make('date_debut')
                     ->date('F j, Y'), 
                 Tables\Columns\TextColumn::make('date_fin')

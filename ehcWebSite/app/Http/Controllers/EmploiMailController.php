@@ -23,7 +23,7 @@ class EmploiMailController extends Controller
               $fileName = time() . '.' . $request->file('cv')->getClientOriginalExtension();
               $request->file('cv')->move(public_path('attachment'), $fileName);
     
-              $RHemail = 'zahirakasmouti@gmail.com';
+              $RHemail = config('mail.recrutement_email');
               $emploi = Emploi::find($request->input('emploi_id'));
               $emploiName = $emploi->title;
               $response = Mail::to($RHemail)->send(new EmploiSubmissionMail($request->all(),$fileName,$emploiName));
