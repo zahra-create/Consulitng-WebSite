@@ -199,7 +199,7 @@
             <p class="text" style="font-size:30spx;">{!! $ContentHeader !!}</p>           
           </div>
                       <div class="btn-wrapper has_fade_anim" data-delay=".5">
-                        <a href="{{ route('demande-devis') }}" class="cf_btn wc-btn-primary btn-text-flip"><span
+                        <a href="{{ route('demande-devis') }}" class="cf_btn wc-btn-primary btn-text-flip" style="background-color: {{$ColorButtonHeader}}; "><span
                             data-text="Demander services">{{$ButtonHeader}}</span> <img src="{{ url('assets/imgs/icon/icon-r-21.webp') }}" alt="arrow-icon"></a>
                       </div>
                       <!--<a href="#" class="scroll-up-btn"> <span>Scroll</span> <i class="icon-wcf-arrow-down-1"></i> </a> -->
@@ -387,7 +387,7 @@ $cardsHeader = $Header->where('Type', 'Cards');
              <p class="text">{!! $Paragraph2About !!}</p>
                   </div>
                   <div class="btn-wrapper has_fade_anim">
-                    <a href="{{ route('about')}}" class="wc-btn-primary btn-text-flip" style="background-color:{{$ColorButtonAbout}}; border:{{$ColorButtonAbout}};" > <span data-text="{{ $ButtonAbout }}">{{ $ButtonAbout }}
+                    <a href="{{ route('about')}}" class="wc-btn-primary btn-text-flip" style="background-color:{{$ColorButtonAbout}}; border:{{$ColorButtonAbout}};" > <span data-text="{{ $ButtonAbout }}" >{{ $ButtonAbout }}
                      </span> <img src="{{ url('assets/imgs/icon/icon-r-21.webp') }}" alt="arrow-icon"></a>
                   </div>
                 </div>

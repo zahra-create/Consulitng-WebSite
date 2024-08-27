@@ -30,6 +30,7 @@ class FormPageResource extends Resource
                 ->options([
                     'Contact' => 'Contact',
                     'Demande Devis' => 'Demande Devis',
+                    'Candidature spontannée' => 'Candidature spontannée',
                 ]),
                 Forms\Components\TextInput::make('Titre')
                 ->required()
