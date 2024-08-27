@@ -17,11 +17,16 @@ use App\Http\Controllers\EmploiController;
 use App\Http\Controllers\EmploiMailController;
 use App\Http\Controllers\VideoCategoryController;
 use App\Http\Controllers\VideoController;
+
 use App\Http\Controllers\StripeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Stripe\StripeClient;
 use Illuminate\Support\Facades\Hash;
+
+use App\Http\Controllers\ServiceController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,9 +51,14 @@ Route::get('/', [ActualiteController::class, 'AfficherAcceuil'])->name('home');
 
 
 /*----------------etudiant----------------------*/
-Route::get('/service-etudiant', function () {
+/*Route::get('/service-etudiant', function () {
     return view('service-etudiant');
-})->name('service-etudiant');
+})->name('service-etudiant');*/
+
+Route::get('/service-etudiant', [ServiceController::class, 'ServiceEtudiant'])->name('service-etudiant');
+
+
+/*
 Route::get('/cv_pro', function () {
     return view('cv_pro');
 })->name('cv_pro');
@@ -57,9 +67,12 @@ Route::get('/entretien_embauche', function () {
 })->name('entretien_embauche');
 Route::get('/coaching_emploi', function () {
     return view('coaching_emploi');
-})->name('coaching_emploi');
+})->name('coaching_emploi'); */
 
 /*----------------fonctionnaire----------------------*/
+
+Route::get('/service-salarie', [ServiceController::class, 'ServiceSalarie'])->name('service-salarie');
+/*
 Route::get('/service-fonctionnaire', function () {
     return view('service-fonctionnaire');
 })->name('service-fonctionnaire');
@@ -77,10 +90,13 @@ Route::get('/test_personnalite', function () {
 })->name('test_personnalite');
 Route::get('/formation_specifique', function () {
     return view('formation_specifique');
-})->name('formation_specifique');
+})->name('formation_specifique'); */
 
 /*----------------Entreprise----------------------*/
 
+Route::get('/service-entreprise', [ServiceController::class, 'ServiceEntreprise'])->name('service-entreprise');
+
+/*
 Route::get('/service-entreprise', function () {
     return view('service-entreprise');
 })->name('service-entreprise');
@@ -99,6 +115,10 @@ Route::get('/event', function () {
 Route::get('/ingenierie', function () {
     return view('ingenierie-details');
 })->name('ingenierie');
+*/
+
+//service-details
+Route::get('/détails-service/{serv}',[ServiceController::class, 'show'])->name('service-details');
 
 
 //about page routes
@@ -130,9 +150,9 @@ Route::get('/category/{category:slug}',[BlogController::class, 'byCategory'])->n
 
 
 //contact page routes
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
+Route::get('/contact',[ContactController::class, 'index'] 
+)->name('contact');
+
 //contact form
 Route::post('/contact/submit', [ContactMailController::class, 'sendContactEmail'])->name('submitContact');
 
@@ -144,10 +164,13 @@ Route::get('/video-category/{id}', [VideoCategoryController::class, 'show'])->na
 Route::get('/category/{id}/videos', [VideoCategoryController::class, 'getCategoryVideos']);
 
 //demande devis
+/*
 Route::get('/demande-devis', function () {
     return view('demande-devis');
-})->name('demande-devis');
+})->name('demande-devis');*/
 
+Route::get('/demande-devis',[DemandeDevisController::class, 'index'] 
+)->name('demande-devis');
 
 //form demande devis
 Route::post('/demande-devis/submit', [DevisMailController::class, 'sendDevisEmail'])->name('submitDevis');

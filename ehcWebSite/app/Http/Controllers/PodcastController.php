@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Podcast;
 use App\Models\Episode;
+use App\Models\otherPages;
 use Illuminate\Http\Request;
 
 use Carbon\Carbon;
@@ -26,7 +27,22 @@ class PodcastController extends Controller
         ->orderBy('date_publication','desc')
         ->paginate(8);
 
-        return view('medias.podcast.Podcasts',compact('podcasts'));
+        $PodcastPage = otherPages::where('Page', 'Podcast')->first();
+
+        if(!$PodcastPage) {
+            $PodcastPage = new otherPages([
+                'Page' =>'Podcast',
+                'Titre' => 'Ecoutez Nos Experts',
+                'SousTitre' => '',
+                'Description' => '',
+            ]);
+        }
+
+        $Titre=$PodcastPage->Titre;
+        $SousTitre=$PodcastPage->SousTitre;
+        $Description=$PodcastPage->Description;
+
+        return view('medias.podcast.Podcasts',compact('podcasts','Titre','SousTitre','Description'));
     
     }
 
@@ -72,7 +88,7 @@ class PodcastController extends Controller
 
        // $currentEpisode = $episodes->first();
     
-        return view('medias.podcast.detail-podcast', compact('podcast', 'episodes'));
+        return view('medias.podcast.detail-podcast', compact('podcast', 'episodes','Titre','SousTitre','Description'));
     }
     
     
@@ -129,6 +145,21 @@ class PodcastController extends Controller
             })
             ->paginate(8);
 
+            $PodcastPage = otherPages::where('Page', 'Podcast')->first();
+
+            if(!$PodcastPage) {
+                $PodcastPage = new otherPages([
+                    'Page' =>'Podcast',
+                    'Titre' => 'Ecoutez Nos Experts',
+                    'SousTitre' => '',
+                    'Description' => '',
+                ]);
+            }
+    
+            $Titre=$PodcastPage->Titre;
+            $SousTitre=$PodcastPage->SousTitre;
+            $Description=$PodcastPage->Description;
+
             if (empty($q) || $podcasts->isEmpty()) {
          
                 return redirect()->back()->with('message', 'Aucun résultat n\'est trouvé');
@@ -136,6 +167,6 @@ class PodcastController extends Controller
             }
             else{    
 
-        return view('medias.podcast.searchpodcast', compact('podcasts'));
+        return view('medias.podcast.searchpodcast', compact('podcasts','Titre','SousTitre','Description'));
     }
 }}

@@ -143,24 +143,24 @@
             <div class="container" >			
               <div class="section-heading">
                 <div class="section-title-wrapper">
-                 <!-- <div class="title-wrapper has_fade_anim">
-                    <h2 class="section-title" style="color: #005151; font-size:73px; font-weight: 700; padding-top: 20px; ">Contactez-nous pour toute information ou assistance.</h2>
-                  </div> -->
+                  <div class="title-wrapper has_fade_anim">
+                    <h2 class="section-title" style="color: #005151; font-size:73px; font-weight: 700; padding-top: 20px; ">{!!$Titre!!}</h2>
+                  </div> 
                 </div>
               </div> 
             </div> 
             <div class="location-thumb has_fade_anim" >
-              <img src="assets/imgs/gallery/img-r-17.webp" alt="contact">
+              <img src="{{$Image}}" alt="contact">
               <div class="container">
                 <div class="location-info-wrapper has_fade_anim">
                   <div class="location-info">
                     <div class="logo">
-                    <!--<h3 class="title" style="font-size:50px;">Contactez-nous pour toute information ou assistance.</h3> -->
+                <!--    <h3 class="title" style="font-size:50px;">Contactez-nous pour toute information ou assistance.</h3> -->
                     </div>
-					<h3 class="title" style="color: #005151;">Contactez-nous pour toute information ou assistance.</h3> 
+					<h3 class="title" style="color: #005151;">{!!$TitreIntro!!}</h3> 
   
 					<h3 class="title" style="color: #005151;  font-weight: 800; font-size:30px;">
-					Nous sommes là pour vous aider ! 
+					{!! $SousTitreIntro !!}
                     </h3>
                   </div>
                 </div>
@@ -179,11 +179,7 @@
                   <div class="section-title-wrapper style-6">
                     <div class="title-wrapper has_fade_anim">
                       <h2 class="section-title" style="font-weight: 800; font-size:30px;"  >Nous 
-					    Sommes 
-                        là
-                        Pour 
-                        vous
-                        Aider !
+					    {!! $TitreForm !!}
                       </h2>
                     </div>
                   </div>
@@ -259,7 +255,7 @@
                     {{ Session('success') }}
 </div>
 @endif 
-                      <button type="submit" class="wc-btn-primary btn-text-flip"><span data-text="Envoyer">Envoyer
+                      <button type="submit" class="wc-btn-primary btn-text-flip"><span data-text="{!! $Button !!}">{!! $Button !!}
                       </span> <i class="fa fa-caret-right"></i> </button>
                     </div>
                   </form>

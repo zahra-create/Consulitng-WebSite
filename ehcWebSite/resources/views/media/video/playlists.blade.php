@@ -178,14 +178,13 @@
                 <div class="section-heading">
                   <div class="section-title-wrapper">
                     <div class="subtitle-wrapper has_fade_anim" data-fade-from="left">
-                      <span style="color:#004E50;" class="section-subtitle">EHC playlists</span>
+                      <span style="color:#004E50;" class="section-subtitle">{{$Titre}}</span>
                     </div>
                     <div class="title-wrapper has_fade_anim">
-                      <h2 style="color:#004E50; " class="section-title large"> PLAYLISTS RECOMMANDÉE</h2>
+                      <h2 style="color:#004E50; " class="section-title large">{{$SousTitre}}</h2>
                     </div>
                     <div class="text-wrapper has_fade_anim">
-                      <p style="color:#4A7172;" class="text">Every decision make need answer the million dollar question how will this benefit
-                        our partner goal best we work to develop solution:</p>
+                      <p style="color:#4A7172;" class="text">{!! $Description!!}</p>
                     </div>
                   </div>
                 </div>

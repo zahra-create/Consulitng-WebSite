@@ -6,7 +6,7 @@
                       <div class="meta">
                         @foreach($actualite->categories as $category)
                         @endforeach
-					   <a href="#"><span class="tag">{{$category->titre}}</span></a>
+					             <span class="tag">{{$category->titre}}</span>
                         <span class="date has-left-line">{{$actualite->getFormatedDate()}}</span>
                       </div>
                       <h3 class="title"><a href="{{route('details-actualites',$actualite)}}">{{$actualite->titre}}</a></h3>
@@ -15,7 +15,7 @@
                         <a href="{{route('details-actualites',$actualite)}}">Lire Plus</a>
                       </div>
                       @else
-                      <p class="text">{{$actualite->shortBody()}}</p> 
+                      <p class="text">{!! $actualite->shortBody() !!}</p> 
                       @endif
                       </div>
                   </article>

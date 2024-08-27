@@ -158,11 +158,11 @@ border-bottom: 2px solid #198754;
             <div class="container container-large">
               <div class="section-heading">
                 <div class="section-title-wrapper style-1">
-                  <div class="subtitle-wrapper has_fade_anim">
-                  <span class="section-subtitle">{{ \App\Models\TextWidget::getTitle('Blog-Header')}}</span>
+                <div class="subtitle-wrapper has_fade_anim">
+                    <span class="section-subtitle">{{$Titre}}</span>
                   </div>
                   <div class="title-wrapper has_fade_anim">
-                    <h2 class="section-title">{!! \App\Models\TextWidget::getContent('Blog-Header')!!}</h2>
+                    <h2 class="section-title">{{$SousTitre}}</h2>
                   </div>
 
                 </div>

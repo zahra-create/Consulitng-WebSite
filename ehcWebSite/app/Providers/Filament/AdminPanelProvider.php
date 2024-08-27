@@ -58,7 +58,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->viteTheme('resources/css/filament/admin/theme.css')
             ->plugins([
-                FilamentFabricatorPlugin::make(),
+               
                 \Awcodes\Curator\CuratorPlugin::make()
                 ->label('Media')
                 ->pluralLabel('Media')

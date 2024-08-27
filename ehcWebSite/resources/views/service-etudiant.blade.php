@@ -150,10 +150,10 @@
                   <div id="pinElement" class="section-heading pin__element">
                     <div class="section-title-wrapper ">
                       <div class="title-wrapper has_fade_anim">
-                        <h1 class="section-title">Bienvenue, Cher Etudiant</h1>
+                        <h1 class="section-title">{!! $TitreIntroService !!}</h1>
                       </div>
                       <div class="text-wrapper has_fade_anim">
-                        <p class="text">Bénéficiez d'un accompagnement personnalisé pour votre développement professionnel et personnel.</p>
+                        <p class="text">{!! $IntroService !!}</p>
                       </div>
                   <!--    <div class="image-wrapper has_fade_anim">
                       <img src="{{ url('assets/imgs/gallery/service-etudiant2.jpg') }}" alt="image not found"  height="550">
@@ -162,70 +162,24 @@
                   </div>
                 </div>
                 <div class="services-list has_fade_anim">
-                  <div class="services-item">
-                    <p class="count">01</p>
-                    <a href="{{ route('cv_pro') }}">
-                      <h2 class="title">CV Professionnel</h2>
+
+@php
+    $counter = 1;
+@endphp 
+@foreach($services as $serv)
+<div class="services-item">
+                    <p class="count">{{ str_pad($counter, 2, '0', STR_PAD_LEFT) }}</p>
+                    <a href="{{route('service-details', $serv)}}">
+                      <h2 class="title">{{$serv->TitreService}}</h2>
                     </a>
-                    <p class="text">Créez un CV attractif et pertinent avec l'aide de spécialistes.</p>
-                    <a href="{{ route('cv_pro') }}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
+                    <p class="text">{{$serv->DescriptionService}}</p>
+                    <a href="{{route('service-details', $serv)}}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
                   </div>
-                  <div class="services-item">
-                    <p class="count">02</p>
-                    <a href="{{ route('entretien_embauche') }}">
-                      <h2 class="title">Entretien d'Embauche</h2>
-                    </a>
-                    <p class="text">Entraînez-vous pour réussir vos entretiens avec des conseils personnalisés.</p>
-                    <a href="{{ route('entretien_embauche') }}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
-                  </div>
-                  <div class="services-item">
-                    <p class="count">03</p>
-                    <a href="{{ route('carrière_coaching') }}">
-                      <h2 class="title">Coaching de Carrière</h2>
-                    </a>
-                    <p class="text">Explorez les secteurs et fonctions qui correspondent à votre profil avec des experts.</p>
-                    <a href="{{ route('carrière_coaching') }}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
-                  </div>
-                  <div class="services-item">
-                    <p class="count">04</p>
-                    <a href="{{ route('coaching_emploi') }}" >
-                      <h2 class="title">Coaching d'Emploi</h2>
-                    </a>
-                    <p class="text">Recevez des conseils pratiques pour la recherche d'emploi et l'adaptation en entreprise.</p>
-                    <a href="{{ route('coaching_emploi') }}"  class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
-                  </div>
-                  <div class="services-item">
-                    <p class="count">05</p>
-                    <a href="{{ route('personal_coaching') }}">
-                      <h2 class="title">Coaching Personnel
-                      </h2>
-                    </a>
-                    <p class="text">Surmontez vos défis personnels et professionnels avec l'aide de nos coachs.</p>
-                    <a href="{{ route('personal_coaching') }}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
-                  </div>
-                  <div class="services-item">
-                    <p class="count">06</p>
-                    <a href="{{ route('bilan_competences') }}">
-                      <h2 class="title">Bilan de Compétences</h2>
-                    </a>
-                    <p class="text">Évaluez et développez vos compétences avec un bilan complet.</p>
-                    <a href="{{ route('bilan_competences') }}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
-                  </div>                  <div class="services-item">
-                    <p class="count">07</p>
-                    <a href="{{ route('test_personnalite') }}">
-                      <h2 class="title">Test de Personnalité
-                      </h2>
-                    </a>
-                    <p class="text">Découvrez vos tendances et potentiels psychologiques.</p>
-                    <a href="{{ route('test_personnalite') }}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
-                  </div>                  <div class="services-item">
-                    <p class="count">08</p>
-                    <a href="{{ route('formation_specifique') }}">
-                      <h2 class="title">Formation Spécifique</h2>
-                    </a>
-                    <p class="text">Préparez-vous à une nouvelle fonction avec des séances one-to-one dirigées par des experts.</p>
-                    <a href="{{ route('formation_specifique') }}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
-                  </div>
+@php
+    $counter++;
+@endphp
+@endforeach
+              
                 </div>
               </div>
             </div>
@@ -236,24 +190,24 @@
           <section class="specialization-area style-1">
             <div class="specialization-inner">
               <div class="specialization-thumb">
-                <img src="{{ url('assets/imgs/gallery/graduation.jpg') }}" alt="faq-image">
+               <img src="{{ asset('storage/' .$Image) }}" alt="faq-image"> 
               </div>
               <div class="specialization-content section-spacing">
                 <div class="section-title-wrapper style-1 has_fade_anim">
                   <div class="subtitle-wrapper">
-                    <span class="section-subtitle">Notre mission</span>
+                    <span class="section-subtitle">{{$TitreService}}</span>
                   </div>
                   <div class="title-wrapper">
-                    <h1 class="section-title">EHC excelle dans le soutien des étudiants vers leur réussite</h1>
+                    <h1 class="section-title">{{$SousTitreService}}</h1>
                   </div>
                   <div class="cf_text">
-                    <p class="text">Les projets complexes deviennent plus accessibles grâce à notre expertise. Nous fournissons un <span>soutien complet</span> pour aider les étudiants à naviguer dans leur parcours académique et professionnel.</p>
+                    <p class="text">{!!$description!!}</p>
                   </div>
-                  <ul class="list-plus">
+              <!--    <ul class="list-plus">
                     <li>Accompagnement pour la recherche d'emploi</li>
                     <li>Assistance à l'intégration en entreprise</li>
                     <li>Développement personnel et professionnel</li>
-                  </ul>
+                  </ul> -->
                 </div>
               </div>
             </div>
@@ -265,13 +219,13 @@
               <div class="plan-area-inner ">
                 <div class="section-heading">
                   <div class="subtitle-wrapper has_fade_anim">
-                    <span class="section-subtitle">Votre avenir commence ici</span>
+                    <span class="section-subtitle">{{$Titre}}</span>
                   </div>
                   <div class="title-wrapper has_fade_anim">
-                    <h2 class="section-title">Facilitez votre transition du monde académique au professionnel</h2>
+                    <h2 class="section-title">{{$SousTitre}}</h2>
                   </div>
                   <div class="btn-wrapper has_fade_anim">
-                    <a href="contact.html" class="wc-btn-primary btn-text-flip"><span data-text="Contactez-nous">Contactez-nous</span><i class="fa-solid fa-play"></i></a>
+                    <a href="contact.html" class="wc-btn-primary btn-text-flip"><span data-text="{{$Button}}">{{$Button}}</span><i class="fa-solid fa-play"></i></a>
                   </div>
                 </div>
               </div>

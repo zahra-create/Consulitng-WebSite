@@ -145,7 +145,7 @@
               <div class="section-heading">
                 <div class="section-title-wrapper">
                   <div class="subtitle-wrapper has_fade_anim">
-                    <span style="color:#005151;" class="section-subtitle">Stage détails</span>
+                    <span style="color:#005151;" class="section-subtitle">{!! $Titre !!}</span>
                   </div>
                   <div class="title-wrapper has_fade_anim">
                     <h2 style="color:#005151;" class="section-title"> {{ $stage->title }} </h2>
@@ -164,7 +164,7 @@
                       <img src="{{ url('assets/imgs/logo/logo.webp') }}" alt="logo">
                     </div>
             
-                    <h3 style="color:#005151;" class="title">Profil de poste </h3> 
+                    <h3 style="color:#005151;" class="title">{!! $Titre1 !!} </h3> 
                    <ul class="info-list">
                       <li><a style="color:#005151;" href="#">{{ $stage->profil }}</a></li>
                     </ul> 
@@ -172,7 +172,7 @@
                     <br/>
                     <br/>
                     <br/>
-                    <p style="color:#005151;" class="text"><b>Location   </b>{{ $stage->location }}</p>
+                    <p style="color:#005151;" class="text"><b>{!! $Titre2 !!}</b>{{ $stage->location }}</p>
                   </div>
                 </div>
               </div>
@@ -191,14 +191,14 @@
               <div class="specialization-content section-spacing">
                 <div class="section-title-wrapper style-1 has_fade_anim">
                   <div class="subtitle-wrapper">
-                    <span class="section-subtitle">Qualifications</span>
+                    <span class="section-subtitle">{!! $Titredescription1 !!}</span>
                   </div>
                 
                   <div class="cf_text">
                     <p class="text">{{ $stage->description }}</p>
                   </div>
                   <div class="title-wrapper">
-                    <h1 class="section-title">Aptitudes demandées</h1>
+                    <h1 class="section-title">{!! $Titredescription2 !!}</h1>
                   </div>
                   <ul class="list-plus">
                   @foreach ($stage->skills as $skill)
@@ -219,8 +219,8 @@
                 <div class="section-heading">
                   <div class="section-title-wrapper style-6">
                     <div class="title-wrapper has_fade_anim">
-                      <h2 class="section-title">Postulez!
-                      
+                      <h2 class="section-title">
+                      {{$TitreForm}}
                       </h2>
                     </div>
                   </div>
@@ -292,7 +292,7 @@
                     </div>
                     <input type="hidden" name="internship_id" value="{{ $stage->id }}">
                     <div class="btn-wrapper">
-                      <button name='btn' style="background-color:#005151;" type="submit" class="wc-btn-primary btn-text-flip"><span data-text="Soumettre ma candidature">Soumettre ma candidature</span> <i class="fa fa-caret-right"></i> </button>
+                      <button name='btn' style="background-color:#005151;" type="submit" class="wc-btn-primary btn-text-flip"><span data-text="{{$Button}}">{{$Button}}</span> <i class="fa fa-caret-right"></i> </button>
                     </div>
                   </form>
                 </div>

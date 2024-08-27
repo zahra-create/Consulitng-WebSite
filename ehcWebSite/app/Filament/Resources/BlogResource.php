@@ -72,7 +72,9 @@ class BlogResource extends Resource
     
             Forms\Components\Card::make()
             ->schema([
-
+               /* Forms\Components\RichEditor::make('image')
+                ->toolbarButtons([
+                    'attachFiles', 'link']), */
                 Forms\Components\FileUpload::make('image'),
                 Forms\Components\Select::make('categories')
                 ->multiple()

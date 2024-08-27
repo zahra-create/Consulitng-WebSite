@@ -8,11 +8,14 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use App\Models\CategoryBlog;
 use App\Models\BlogView;
 use App\Models\BlogLike;
+use App\Models\otherPages;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 
 class BlogController extends Controller
 {
+   
+
     public function index()
     {
         $blogs = Blog::query()
@@ -33,7 +36,22 @@ class BlogController extends Controller
         ->orderByDesc('total')
         ->get();
 
-        return view('medias.blog.blogs',compact('blogs','categories'));
+        $blogPage = otherPages::where('Page', 'Blog')->first();
+
+        if(!$blogPage) {
+            $blogPage = new otherPages([
+                'Page' =>'Blog',
+                'Titre' => 'EHC BLOG',
+                'SousTitre' => 'Un regard sur le journal EHC',
+                'Description' => '',
+            ]);
+        }
+
+        $Titre=$blogPage->Titre;
+        $SousTitre=$blogPage->SousTitre;
+        $Description=$blogPage->Description;
+
+        return view('medias.blog.blogs',compact('blogs','categories','Titre','SousTitre','Description'));
     }
 
     public function show(Blog $blog ,Request $request)
@@ -101,7 +119,22 @@ class BlogController extends Controller
         ->orderByDesc('total')
         ->get();
 
-    return view('medias.blog.blogBycategory', compact('blogs','categories'));
+        $blogPage = otherPages::where('Page', 'Blog')->first();
+
+        if(!$blogPage) {
+            $blogPage = new otherPages([
+                'Page' =>'Blog',
+                'Titre' => 'EHC BLOG',
+                'SousTitre' => 'Un regard sur le journal EHC',
+                'Description' => '',
+            ]);
+        }
+
+        $Titre=$blogPage->Titre;
+        $SousTitre=$blogPage->SousTitre;
+        $Description=$blogPage->Description;
+
+    return view('medias.blog.blogBycategory', compact('blogs','categories','Titre','SousTitre','Description'));
     }
 
     public function search(Request $request)
@@ -129,6 +162,21 @@ class BlogController extends Controller
             ->having(DB::raw('count(blog_category_blog.id)'), '>', 0) // Filtre les catégories avec au moins un blog actif
             ->orderByDesc('total')
             ->get();
+
+            $blogPage = otherPages::where('Page', 'Blog')->first();
+
+            if(!$blogPage) {
+                $blogPage = new otherPages([
+                    'Page' =>'Blog',
+                    'Titre' => 'EHC BLOG',
+                    'SousTitre' => 'Un regard sur le journal EHC',
+                    'Description' => '',
+                ]);
+            }
+    
+            $Titre=$blogPage->Titre;
+            $SousTitre=$blogPage->SousTitre;
+            $Description=$blogPage->Description;
          
         if (empty($q) || $blogs->isEmpty()) {
          
@@ -137,7 +185,7 @@ class BlogController extends Controller
         }
         else{
         
-            return view('medias.blog.searchblog', compact('blogs','categories')); 
+            return view('medias.blog.searchblog', compact('blogs','categories','Titre','SousTitre','Description')); 
        
     }
     

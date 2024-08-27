@@ -149,28 +149,25 @@
                     <span class="section-subtitle">Demander devis</span>
                   </div> -->
                   <div class="title-wrapper has_fade_anim">
-                  <h2 class="section-title" style=" color:#005153;" >Bienvenue sur notre page de demande de devis.</h2> 
-                   <!-- <h2 class="section-title" style=" color:#005153;" >{{ \App\Models\TextWidget::getTitle('Devis-Header')}}</h2>-->
+                  <h2 class="section-title" style=" color:#005153;" >{!!$Titre!!}</h2> 
                     
                   </div>
                 </div>
               </div>
             </div>
             <div class="location-thumb has_fade_anim">
-              <img src="assets/imgs/gallery/devis.jpg" alt="demande-devis">
+              <img src="{{$Image}}" alt="demande-devis">
               <div class="container">
                 <div class="location-info-wrapper has_fade_anim">
-                  <div class="location-info">
-                   <!-- <div class="logo">
-                      <img src="assets/imgs/logo/logo.webp" alt="logo">
+                <div class="location-info">
+                    <div class="logo">
+                <!--    <h3 class="title" style="font-size:50px;">Contactez-nous pour toute information ou assistance.</h3> -->
                     </div>
-                    <h3 class="title">Bienvenue sur notre page de demande de devis</h3> -->
-                    <!--<ul class="info-list">
-                      <li><a href="#">+01-75-0660-605</a></li>
-                      <li><a href="#">hello@binox-consultant.com</a></li>
-                    </ul> -->
-                   <p class="text">En tant qu'experts en ressources humaines, nous sommes dédiés à vous fournir des solutions sur mesure pour répondre à vos besoins spécifiques.</p>
-                <!--<p class="text">{!! \App\Models\TextWidget::getContent('Devis-Header')!!}</p>--> 
+					<h3 class="title" style="color: #005151;">{!!$TitreIntro!!}</h3> 
+  
+					<h3 class="title" style="color: #005151;  font-weight: 800; font-size:30px;">
+					{!! $SousTitreIntro !!}
+                    </h3>
                   </div>
                 </div>
               </div>
@@ -185,7 +182,7 @@
                 <div class="section-heading">
                   <div class="section-title-wrapper style-6">
                     <div class="title-wrapper has_fade_anim">
-                      <h2 class="section-title">Demander Devis
+                      <h2 class="section-title"> {!! $TitreForm !!}
                        
                       </h2>
                     </div>
@@ -268,7 +265,7 @@
 
 
                     <div class="btn-wrapper">
-                      <button type="submit" class="wc-btn-primary btn-text-flip"><span data-text="Demander Devis">Demander Devis
+                      <button type="submit" class="wc-btn-primary btn-text-flip"><span data-text="{!! $Button !!}">{!! $Button !!}
                          </span> <i class="fa fa-caret-right"></i> </button>
                     </div>
                   </form>
