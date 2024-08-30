@@ -10,7 +10,7 @@
   <title>services entreprise</title>
 
   <!-- Fav Icon -->
-  <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.webp">
+  <link rel="icon" type="image/x-icon" href="{{ url('assets/imgs/logo/logoEHC.png') }}">
 
 
 

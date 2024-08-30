@@ -7,10 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Binox HTML5 Template">
 
-  <title>Binox blog details</title>
+  <title>Blog details</title>
 
   <!-- Fav Icon -->
-  <link rel="icon" type="image/x-icon" href="{{ url('assets/imgs/logo/favicon.webp') }}">
+  <link rel="icon" type="image/x-icon" href="{{ url('assets/imgs/logo/logoEHC.png') }}">
 
 
 

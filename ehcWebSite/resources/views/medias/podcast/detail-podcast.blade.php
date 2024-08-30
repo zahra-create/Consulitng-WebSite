@@ -7,10 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Binox HTML5 Template">
 
-  <title>EHC</title>
+  <title>EHC Podcast</title>
 
   <!-- Fav Icon -->
-  <link rel="icon" type="image/x-icon" href="{{ url('assets/imgs/logo/favicon.webp')}}">
+  <link rel="icon" type="image/x-icon" href="{{ url('assets/imgs/logo/logoEHC.png') }}">
 
 
   <!-- All CSS files -->
@@ -147,7 +147,7 @@
                <div class="now-playing"><p>Présenté par {{$podcast->Proprietaire}}</p></div>
                <!--<div class="track-art>--> <img class="track-art" id="track-art" src="{{$podcast->getImage()}}" alt="podcast"><!-- </div>-->
                <div class="track-name"><h3>{{$podcast->titre}}</h3></div>
-               <div class="track-artist"><p>{!! $podcast->description !!}</p></div>
+           <!--    <div class="track-artist"><p>{!! $podcast->description !!}</p></div> -->
            </div>
 		   
        </div>

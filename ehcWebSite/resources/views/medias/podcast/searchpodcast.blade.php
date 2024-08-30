@@ -9,10 +9,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Binox HTML5 Template">
 
-  <title>EHC</title>
+  <title>EHC Podcast</title>
 
   <!-- Fav Icon -->
-  <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.webp">
+  <link rel="icon" type="image/x-icon" href="{{ url('assets/imgs/logo/logoEHC.png') }}">
 
 
   <!-- All CSS files -->

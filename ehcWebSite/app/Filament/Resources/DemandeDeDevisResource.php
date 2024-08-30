@@ -61,7 +61,7 @@ class DemandeDeDevisResource extends Resource
                 Tables\Actions\ViewAction::make(),
                 Tables\Actions\DeleteAction::make(),
             ])
-            ->bulkActions([
+            ->groupedBulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }

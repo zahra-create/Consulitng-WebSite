@@ -1,5 +1,6 @@
 <?php
 
+
 return [
     /*
     |--------------------------------------------------------------------------
@@ -86,8 +87,28 @@ return [
 
         'corps' => [
             'plugins' => 'advlist autoresize codesample directionality emoticons fullscreen hr image imagetools link lists media table toc wordcount',
-            'toolbar' => 'undo redo removeformat | formatselect fontsizeselect | bold italic | rtl ltr | alignjustify alignright aligncenter alignleft | numlist bullist | forecolor backcolor | blockquote table hr | link emoticons | wordcount fullscreen',
+            'toolbar' => 'undo redo removeformat | formatselect fontselect fontsizeselect | bold italic | rtl ltr | alignjustify alignright aligncenter alignleft | numlist bullist | forecolor backcolor | blockquote table hr | link emoticons | wordcount fullscreen',
             'custom_configs' => [
+              'font_family_formats' => 
+              'Arial=arial,helvetica,sans-serif;' .
+                'Arial Black=arial black,avant garde;' .
+                'Calibri=calibri,sans-serif;' .
+                'Cambria=cambria,serif;' .
+                'Candara=candara,sans-serif;' .
+                'Comic Sans MS=comic sans ms,sans-serif;' .
+                'Consolas=consolas,monospace;' .
+                'Courier New=courier new,courier,monospace;' .
+                'Georgia=georgia,palatino,serif;' .
+                'Helvetica=helvetica,sans-serif;' .
+                'Impact=impact,sans-serif;' .
+                'Lucida Sans Unicode=lucida sans unicode,lucida grande,sans-serif;' .
+                'Palatino Linotype=palatino linotype,book antiqua,palatino,serif;' .
+                'Segoe UI=segoe ui,sans-serif;' .
+                'Tahoma=tahoma,arial,helvetica,sans-serif;' .
+                'Times New Roman=times new roman,times,serif;' .
+                'Trebuchet MS=trebuchet ms,geneva,sans-serif;' .
+                'Verdana=verdana,geneva,sans-serif;',
+
                 'allow_html_in_named_anchor' => true,
                 'link_default_target' => '_blank',
                 'codesample_global_prismjs' => true,
@@ -100,9 +121,13 @@ return [
                   [
                     'title' => 'Fluid',
                     'value' => 'img-fluid',
+                 //   'font_family' => 'Arial=arial,helvetica,sans-serif; Courier New=courier new,courier,monospace; Georgia=georgia,palatino; Tahoma=tahoma,arial,helvetica,sans-serif; Times New Roman=times new roman,times; Verdana=verdana,geneva,sans-serif',
                   ],
               ],
             ],
+
+           
+           
         ],
     ],
 

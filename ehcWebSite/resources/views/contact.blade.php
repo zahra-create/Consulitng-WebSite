@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,30 +8,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Binox HTML5 Template">
 
-  <title>EHC</title>
+  <title>EHC Contact</title>
 
   <!-- Fav Icon -->
-  <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.webp">
+  <link rel="icon" type="image/x-icon" href="{{ url('assets/imgs/logo/logoEHC.png') }}">
 
 
   <!-- All CSS files -->
-  <link rel="stylesheet" href="{{ url('assets/css/bootstrap.min.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/css/all.min.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/css/icomon.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/css/swiper-bundle.min.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/css/progressbar.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/css/meanmenu.min.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/css/magnific-popup.css') }}">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/icomon.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/progressbar.css">
+  <link rel="stylesheet" href="assets/css/meanmenu.min.css">
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/master-contact.css">
   <link rel="stylesheet" href="{{ url('assets/css/master-human.css') }}">
-  
-
   <link rel="stylesheet" href="{{ url('assets/css/master-financial.css') }}">
-      <link rel="stylesheet" href="{{ url('assets/css/master-service-style-1.css') }}">
-      <link rel="stylesheet" href="{{ url('assets/css/master-contact.css') }}">  
-   
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-@filamentStyles
+
+
 
       </head>
 
@@ -136,39 +133,45 @@
         <div class="overlay-switcher-close"></div>
 
 
+
         <main>
-         		
+
           <!-- contact intro start  -->
-          <section class="contact-intro" >
-            <div class="container" >			
+          <section class="contact-intro">
+            <div class="container">
               <div class="section-heading">
                 <div class="section-title-wrapper">
+                  <div class="subtitle-wrapper has_fade_anim">
+                    <span class="section-subtitle">{!!$Titre!!}</span>
+                  </div>
                   <div class="title-wrapper has_fade_anim">
-                    <h2 class="section-title" style="color: #005151; font-size:73px; font-weight: 700; padding-top: 20px; ">{!!$Titre!!}</h2>
-                  </div> 
-                </div>
-              </div> 
-            </div> 
-            <div class="location-thumb has_fade_anim" >
-              <img src="{{asset('/storage/'.$Image)}}" alt="contact">
-			  
- 
-              <div class="container">
-                <div class="location-info-wrapper has_fade_anim">
-                  <div class="location-info">
-                    <div class="logo">
-                <!--    <h3 class="title" style="font-size:50px;">Contactez-nous pour toute information ou assistance.</h3> -->
-                    </div>
-					<h3 class="title" style="color: #005151;">{!!$TitreIntro!!}</h3> 
-  
-					<h3 class="title" style="color: #005151;  font-weight: 800; font-size:30px;">
-					{!! $SousTitreIntro !!}
-                    </h3>
+                    <h2 class="section-title">{!!$TitreIntro!!}</h2>
                   </div>
                 </div>
               </div>
             </div>
-					
+            <div class="location-thumb has_fade_anim">
+              <img src="{{asset('/storage/'.$Image)}}" alt="location-image">
+              <div class="container">
+                <div class="location-info-wrapper has_fade_anim">
+                  <div class="location-info">
+                    <h3 class="title">Contact info:</h3>
+                    <ul class="info-list">
+                    @foreach($contacts as $contact)
+		@if($contact->nom === 'Numéro')
+          <li><a href="tel:{{$contact->lien}}">{{$contact->lien}}</a></li>
+	  @elseif($contact->nom === 'Email')
+          <li><a href="mailto:{{$contact->lien}}">{{$contact->lien}}</a></li>
+	  @endif
+		@endforeach
+        </ul>
+		@foreach($localisations as $localisation)
+        <p class="text">{{$localisation->lien}}</p>
+		@endforeach
+                  </div>
+                </div>
+              </div>
+            </div>
           </section>
           <!-- contact intro end  -->
 
@@ -177,18 +180,24 @@
             <div class="container">
               <div class="contact-area-inner">
                 <div class="section-heading">
-				 <div class="line-vertical"></div>
                   <div class="section-title-wrapper style-6">
                     <div class="title-wrapper has_fade_anim">
-                      <h2 class="section-title" style="font-weight: 800; font-size:30px;"  >
-					    {!! $TitreForm !!}
+                      <h2 class="section-title">{!! $TitreForm !!}
                       </h2>
                     </div>
                   </div>
                   <div class="line-vertical"></div>
+                  <div class="meta-list has_fade_anim">
+                  <!--  <ul>
+                      <li><a href="mailto:inquiry@binox.com">LiveChat@binox.skype</a></li>
+                    </ul> -->
+                  </div>
+                  <div class="logo has_fade_anim">
+                    <a href="#"><img src="assets/imgs/logo/logoEHC.png" alt="logo"></a>
+                  </div>
                 </div>
                 <div class="contact-wrapper has_fade_anim">
-                  <form action="{{ route('submitContact') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('submitContact') }}" method="POST" enctype="multipart/form-data">
                   @csrf  
                   @if (Session::has('success'))
                   <div class="alert alert-success alert-dismissible" role="alert">
@@ -259,66 +268,12 @@
           </section>
           <!-- contact area end  -->
 
-          <!-- cta area start  -->
-          <div class="cta-area style-1">
-            <div class="container container-large">
-              <div class="cta-area-wrapper">
-               <!-- <div class="cta-left">
-                  <ul class="cta-info">
-                    <li>
-                      <h3 class="title">Saturday - Thursday :</h3>
-                      <span>8:30 am - 10:45 pm</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="cta-right">
-                  <div class="btn-wrapper">
-                    <a class="cf_btn wc-btn-underline btn-text-flip" href="blog-style-1.html"><span
-                        data-text="Call for an appointment">Call for an appointment</span><img
-                        src="assets/imgs/icon/arrow-triangle.webp" alt=""></a>
-                  </div>
-                </div> -->
-              </div>
-            </div>
-          </div>
-          <!-- cta area end  -->
 
 
-        <!-- contact intro start  -->
-        <section class="contact-intro">
-
-<div class="location-thumb has_fade_anim">
-  <img src="{{ asset('/storage/'.$MapImage) }}" alt="location-image">
- 
-  <div class="container">
-    <div class="location-info-wrapper has_fade_anim">
-      <div class="location-info">
-    <!--    <div class="logo">
-          <img src="assets/imgs/logo/logo.webp" alt="logo">
-        </div> -->
-        <h3 class="title">Contact :</h3>
-        <ul class="info-list">
-		@foreach($contacts as $contact)
-		@if($contact->nom === 'Numéro')
-          <li><a href="tel:{{$contact->lien}}">{{$contact->lien}}</a></li>
-	  @elseif($contact->nom === 'Email')
-          <li><a href="mailto:{{$contact->lien}}">{{$contact->lien}}</a></li>
-	  @endif
-		@endforeach
-        </ul>
-		@foreach($localisations as $localisation)
-        <p class="text">{{$localisation->lien}}</p>
-		@endforeach
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-          <!-- contact intro end  -->
-		
         </main>
         @include('partials.chatboat')
         @include('partials.footer')
+  
       </div>
     </div>
   </div>
@@ -342,10 +297,6 @@
   <script src="assets/js/wc-cursor.js"></script>
   <script src="assets/js/offcanvas.js"></script>
 
-<!--scripts for alert-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
   <script>
     if ('.testimonial.style-1') {
       var testimonial_style_1 = new Swiper(".testimonial.style-1", {
@@ -357,9 +308,6 @@
       });
     }
   </script>
-
-
-@filamentScripts
 
 </body>
 

@@ -12,24 +12,36 @@
   <title>EHC</title>
 
   <!-- Fav Icon -->
-  <link rel="icon" type="image/x-icon" href="{{ url('assets/imgs/logo/favicon.webp') }}">
+  <link rel="icon" type="image/x-icon" href="{{ url('assets/imgs/logo/logoEHC.png') }}">
 
 
   <!-- All CSS files -->
-  <link rel="stylesheet" href="{{ url('assets/css/bootstrap.min.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/css/all.min.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/css/icomon.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/css/swiper-bundle.min.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/css/progressbar.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/css/meanmenu.min.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/css/magnific-popup.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/css/master-human.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/css/master-financial.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/css/master-service-style-1.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/all.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/icomon.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/swiper-bundle.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/progressbar.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/meanmenu.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/master-human.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/master-financial.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/master-service-style-1.css') }}">
    
 
 
 <style>
+ .area-thumb{
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+}
+
+.area-thumb img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
   .thumb {
   width: 100%;
   height: 300px;
@@ -42,6 +54,12 @@
   object-fit: cover; /* Ensure the image covers the area properly */
 }
 
+
+.brand-logo{
+  width: 100%;
+  height: 50px;
+  overflow: hidden; /* Hide any overflow */
+}
 
 .brand-logo img{
   width: 100%;
@@ -198,10 +216,24 @@
 						<!--<p class="text" style="font-size:30spx;">Votre Partenaire pour le Succès en Ressources Humaines.</p>-->
             <p class="text" style="font-size:30spx;">{!! $ContentHeader !!}</p>           
           </div>
-                      <div class="btn-wrapper has_fade_anim" data-delay=".5">
-                        <a href="{{ route('demande-devis') }}" class="cf_btn wc-btn-primary btn-text-flip" style="background-color: {{$ColorButtonHeader}}; "><span
-                            data-text="Demander services">{{$ButtonHeader}}</span> <img src="{{ url('assets/imgs/icon/icon-r-21.webp') }}" alt="arrow-icon"></a>
-                      </div>
+                <!--      <div class="btn-wrapper has_fade_anim" data-delay=".5">
+                       <a href="{{ route('demande-devis') }}" class="cf_btn wc-btn-primary btn-text-flip" style="background-color: {{$ColorButtonHeader}}; "><span
+                            data-text="Demander services">{{$ButtonHeader}}</span> <img src="{{ url('assets/imgs/icon/icon-r-21.webp') }}" alt="arrow-icon"></a> 
+                
+                      </div> -->
+
+  <div class="btn-wrapper has_fade_anim dropdown show" data-delay=".5">
+  <a href="#" class="cf_btn wc-btn-primary btn-text-flip dropdown-toggle " style="background-color: {{$ColorButtonHeader}}; " id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span data-text="Demander services">{{$ButtonHeader}}</span> 
+   <!-- <img src="{{ url('assets/imgs/icon/icon-r-21.webp') }}" alt="arrow-icon"> -->
+  </a>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" >
+    <a class="dropdown-item" href="{{ route('service-entreprise') }}">Services Entreprises</a>
+    <a class="dropdown-item" href="{{ route('service-salarie') }}">Services Salariés</a>
+    <a class="dropdown-item" href="{{ route('service-etudiant') }}">Services Etudiants</a>
+  </div>
+</div>
+   
                       <!--<a href="#" class="scroll-up-btn"> <span>Scroll</span> <i class="icon-wcf-arrow-down-1"></i> </a> -->
                     </div> 
                    <div class="thumb-wrapper" style="display: grid;
@@ -349,6 +381,7 @@ $cardsHeader = $Header->where('Type', 'Cards');
           <!-- end intro area -->
 
           <!-- about area start  -->
+
           <section id="triggeredSection" class="about-area section-spacing" >
             <div class="section-lines">
               <div class="container">
@@ -391,11 +424,17 @@ $cardsHeader = $Header->where('Type', 'Cards');
                      </span> <img src="{{ url('assets/imgs/icon/icon-r-21.webp') }}" alt="arrow-icon"></a>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="area-thumb">
+
+                <div class="area-thumb">
               <img src="{{ '/storage/'. $ImageHeroAbout}}" alt="hero image">
             </div>
+
+              </div>
+
+            </div>
+         <!--   <div class="area-thumb">
+              <img src="{{ '/storage/'. $ImageHeroAbout}}" alt="hero image">
+            </div> -->
           </section>
           <!-- about area end  -->
 		  
@@ -522,8 +561,8 @@ $cardsHeader = $Header->where('Type', 'Cards');
                 <div id="pinElement" class="section-heading pin__element">
                   <div class="thumb has_fade_anim">
                     <div class="btn-wrapper pos-center btn-move">
-                      <a class="cf_btn wc-btn-play light btn-item video-popup" href="{{ $lienVideo }}">
-                        <i class="fa-solid fa-play"></i>
+                   <!--   <a class="cf_btn wc-btn-play light btn-item video-popup" href="{{ $lienVideo }}"> -->
+                     <!--   <i class="fa-solid fa-play"></i> -->
                       </a>
                     </div>
                     <img src="{{ asset('/storage/' .$ImageBU) }}" alt="image">
@@ -1234,6 +1273,9 @@ $cardsBF = $Beforefooter->where('Type', 'Cards');
 
 
   <!-- All JS files -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
   <script src="{{ url('assets/js/jquery-3.6.0.min.js') }}"></script>
   <script src="{{ url('assets/js/bootstrap.bundle.min.js') }}"></script>
   <script src="{{ url('assets/js/jquery.magnific-popup.min.js') }}"></script>
@@ -1257,7 +1299,7 @@ $cardsBF = $Beforefooter->where('Type', 'Cards');
 
 
  // intro slider 
- if (('.baner-active-1').length) {
+ /*if (('.baner-active-1').length) {
       var baner_active = new Swiper(".baner-active-1", {
         pagination: {
           el: ".spagination-style-1",
@@ -1287,7 +1329,7 @@ $cardsBF = $Beforefooter->where('Type', 'Cards');
           prevEl: ".swiper-button-prev.style-1",
         }
       });
-    }
+    }  */
 
     // corporate_brand_slider_active
     if ('.corporate-brand-slider-active') {
@@ -1325,7 +1367,7 @@ $cardsBF = $Beforefooter->where('Type', 'Cards');
       });
     }
     // testimonial_style_1
-    if ('.testimonial.style-1') {
+  /*  if ('.testimonial.style-1') {
       var testimonial_style_1 = new Swiper(".testimonial.style-1", {
         slidesPerView: 1,
         navigation: {
@@ -1333,7 +1375,7 @@ $cardsBF = $Beforefooter->where('Type', 'Cards');
           prevEl: ".swiper-button-prev.style-3",
         }
       });
-    }
+    } */
 
 
   </script>

@@ -179,6 +179,7 @@
                     <h2 style="color:#005151;" class="section-title">{{$SousTitre}}</h2>
                   </div>
                 </div>
+
               </div>
               <div class="blog-wrapper-area fix">
                 <div class="blog-wrapper">

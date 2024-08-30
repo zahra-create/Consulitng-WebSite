@@ -92,7 +92,7 @@ class EmploiResource extends Resource
             ->actions([
                 Tables\Actions\EditAction::make(),
             ])
-            ->bulkActions([
+            ->groupedBulkActions([
                 Tables\Actions\DeleteBulkAction::make(),
             ]);
     }

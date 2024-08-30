@@ -1,5 +1,6 @@
 
-<link rel="stylesheet" href="{{ url('assets/css/master-financial.css') }}">
+<link rel="stylesheet" href="{{ url('assets/css/master-human.css') }}">
+
 <footer class="footer-area style-5">
     <div class="shape">
       <img src="{{ url('assets/imgs/shape/polygon.webp') }}" alt="polygon">
@@ -8,7 +9,7 @@
       <div class="footer-menu">
         <div class="logo-wrapper">
           <a href="#"><img src="{{ url('assets/imgs/logo/logoEHC.png') }}" alt="site-logo"></a>
-          <a href="#" class="scroll-up-btn"> <i class="icon-wcf-arrow-up-5"></i> <span>Go up</span> </a>
+        <!--  <a href="#" class="scroll-up-btn"> <i class="icon-wcf-arrow-up-5"></i> <span>Go up</span> </a> -->
         </div>
 
         <div class="widget-item">

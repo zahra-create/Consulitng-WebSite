@@ -52,7 +52,7 @@ class EquipeResource extends Resource
                 ])
                 ->minItems(1)
                 ->maxItems(10)
-                ->required(),
+                , 
         ]);
     }
 
@@ -66,16 +66,17 @@ class EquipeResource extends Resource
             Tables\Columns\TextColumn::make('poste')->label('Poste'),
             Tables\Columns\TextColumn::make('description')->label('Description')->limit(50),
             Tables\Columns\TextColumn::make('quote')->label('Citation')->limit(50),
-            Tables\Columns\TextColumn::make('reseaux_sociaux')->label('Réseaux Sociaux')
-                ->formatStateUsing(fn ($state) => json_encode($state)),
+          /*  Tables\Columns\TextColumn::make('reseaux_sociaux')->label('Réseaux Sociaux')
+                ->formatStateUsing(fn ($state) => json_encode($state)), */
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
-            ->bulkActions([
+            ->groupedBulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),
