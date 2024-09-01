@@ -15,6 +15,9 @@ use App\Http\Controllers\StageMailController;
 use App\Http\Controllers\CondidatureMailController;
 use App\Http\Controllers\EmploiController;
 use App\Http\Controllers\EmploiMailController;
+use App\Http\Controllers\DevisMailController;
+use App\Http\Controllers\ContactMailController;
+
 use App\Http\Controllers\VideoCategoryController;
 use App\Http\Controllers\VideoController;
 
