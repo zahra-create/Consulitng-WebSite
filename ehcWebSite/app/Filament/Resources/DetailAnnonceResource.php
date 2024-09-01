@@ -19,6 +19,8 @@ class DetailAnnonceResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    protected static ?string $navigationGroup = 'CMS'  ; 
+
     public static function form(Form $form): Form
     {
         return $form
@@ -32,8 +34,8 @@ class DetailAnnonceResource extends Resource
                 ]),
                 Forms\Components\TextInput::make('Titre')
                    ,
-                Forms\Components\TextInput::make('SousTitre')
-                    ->nullable(),
+                /*Forms\Components\TextInput::make('SousTitre')
+                    ->nullable(),*/
                 Forms\Components\TextInput::make('Titre1')
                     ->nullable(),
                 Forms\Components\TextInput::make('Titre2')
@@ -76,7 +78,7 @@ class DetailAnnonceResource extends Resource
             ->actions([
                 Tables\Actions\EditAction::make(),
             ])
-            ->bulkActions([
+            ->groupedBulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),

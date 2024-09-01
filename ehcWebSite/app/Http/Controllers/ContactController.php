@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\ContactMessage;
 use App\Mail\Contact;
+use App\Models\ContactInfo;
 use App\Models\FormPages;
 use App\Models\otherPages;
 use Illuminate\Support\Facades\Mail;
@@ -25,7 +26,8 @@ class ContactController extends Controller
             'TitreIntro' =>'Contactez-nous pour toute information ou assistance.',
     'SousTitreIntro' => 'Nous sommes là pour vous aider ! ',
             'TitreForm' => 'Nous Sommes là Pour vous Aider !',
-            'Button' => 'Envoyer',]);
+            'Button' => 'Envoyer',
+        'MapImage' => 'assets/video/team-planning.mp4']);
     }
     return view('contact', [
     'Titre' => $ContactPage->Titre,
@@ -35,5 +37,7 @@ class ContactController extends Controller
     'SousTitreIntro' => $ContactPage->SousTitreIntro,
     'TitreForm' => $ContactPage->TitreForm,
     'Button' => $ContactPage->Button,
+    'MapImage' => $ContactPage->MapImage,
      ]);}
+
 }

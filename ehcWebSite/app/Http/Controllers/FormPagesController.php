@@ -11,7 +11,7 @@ class FormPagesController extends Controller
     {
         $CondidaturePage = FormPages::where('Page', 'Candidature spontannée')->first();
         if (!$CondidaturePage) {
-        
+
             $CondidaturePage = new FormPages(['Page' => 'Candidature spontannée',
             'Titre' => 'Condidature spontanée',
             'SousTitre' => 'Rejoignez l\'équipe EHC et explorez de nouvelles opportunités professionnelles!',
@@ -33,7 +33,7 @@ class FormPagesController extends Controller
      {
          $CondidaturePage = FormPages::where('Page', 'Candidature spontannée')->first();
          if (!$CondidaturePage) {
-         
+
              $CondidaturePage = new FormPages(['Page' => 'Candidature spontannée',
              'Titre' => 'Condidature spontanée',
              'SousTitre' => 'Rejoignez l\'équipe EHC et explorez de nouvelles opportunités professionnelles!',

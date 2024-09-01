@@ -7,13 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Binox HTML5 Template">
 
-  <title>Binox Team Details</title>
+  <title>Equipe EHC</title>
 
   <!-- Fav Icon -->
-  <link rel="icon" type="image/x-icon" href="{{ url('assets/imgs/logo/favicon.webp') }}">
-
-
-
+  <link rel="icon" type="image/x-icon" href="{{ url('assets/imgs/logo/logoEHC.png') }}">
 
 
   <!-- All CSS files -->
@@ -42,11 +39,10 @@
       <div class="animation-preloader">
         <div class="spinner"></div>
         <div class="txt-loading">
-          <span data-text="B" class="characters">B</span>
-          <span data-text="I" class="characters">I</span>
-          <span data-text="N" class="characters">N</span>
-          <span data-text="O" class="characters">O</span>
-          <span data-text="X" class="characters">X</span>
+          <span data-text="B" class="characters">E</span>
+          <span data-text="I" class="characters">H</span>
+          <span data-text="N" class="characters">C</span>
+    
         </div>
       </div>
       <div class="loader-section section-left"></div>
@@ -147,13 +143,56 @@
             <div class="container">
               <div class="team-details-wrapper">
                 <div class="team-content">
-                  <h2 class="title has_fade_anim">{{$equipe->prenom}} <br> {{$equipe->nom}}</h2>
-                  <ul class="social-icons has_fade_anim" data-delay=".35">
-                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                  <h2 class="title has_fade_anim">{{ $equipe->prenom }} <br> {{ $equipe->nom }}</h2>
+                 <ul class="social-icons has_fade_anim" data-delay=".35">
+                    <!-- <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
                     <li><a href="#"><i class="fa-brands fa-dribbble"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                  </ul>
-                  <p class="text has_fade_anim">{{$equipe->description}}</p>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>-->
+       <!--@foreach($equipe->reseaux_sociaux as $reseau)
+        <li>
+            <a href="{{ $reseau['lien'] }}">
+                <i class="fa-brands fa-{{ $reseau['nom'] }}"></i>
+            </a>
+        </li>
+        @endforeach --> 
+        @foreach($equipe->reseaux_sociaux as $reseau)
+    @switch($reseau['nom'])
+        @case('Telephone')
+            <li>
+                <a href="tel:{{ $reseau['lien'] }}">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+            </li>
+            @break
+
+        @case('Email')
+            <li>
+                <a href="mailto:{{ $reseau['lien'] }}">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </li>
+            @break
+
+        @case('Whatsapp')
+            <li>
+                <a href="https://wa.me/{{ $reseau['lien'] }}">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </li>
+            @break
+
+        @default
+            <li>
+                <a href="{{ $reseau['lien'] }}">
+                    <i class="fa-brands fa-{{ strtolower(preg_replace('/[^a-z0-9]/', '-', $reseau['nom'])) }}"></i>
+                </a>
+            </li>
+    @endswitch
+@endforeach
+
+        </ul>
+  
+                  <p class="text has_fade_anim">{!! $equipe->description !!}</p>
                   <div class="btn-wrapper has_fade_anim" data-on-scroll="0">
                     <a href="{{ route('contact') }}" class="wc-btn-primary btn-text-flip"> <span data-text="Contact Now">Contact
                         Now</span> <i class="fa-solid fa-caret-right"></i></a>
@@ -181,7 +220,7 @@
                             <div class="quote-icon-wrap">
                               <img src="{{ url('assets/imgs/icon/quote.webp') }}" alt="Quote Icon" class="quote-icon">
                             </div>
-                            <p class="text">{{$equipe->quote}}</p>
+                            <p class="text">{!! $equipe->quote !!}</p>
                           </div>
                           <div class="meta">
                             <p class="name">{{$equipe->prenom}} {{$equipe->nom}}</p>
@@ -193,8 +232,8 @@
                    
                   </div>
                 </div>
-                <div class="swiper-button-next style-2"><span class="case-upper">Next</span></div>
-                <div class="swiper-button-prev style-2"><span class="prev-text case-upper">Prev</span></div>
+             <!--   <div class="swiper-button-next style-2"><span class="case-upper">Next</span></div>
+                <div class="swiper-button-prev style-2"><span class="prev-text case-upper">Prev</span></div>-->
               </div>
             </div>
           </div>

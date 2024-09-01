@@ -57,9 +57,9 @@ class HomeResource extends Resource
                             TextInput::make('ButtonHeader')
                                 ->default('Demander Services')
                                ,
-                         /*   ColorPicker::make('ColorButtonHeader')
+                           ColorPicker::make('ColorButtonHeader')
                                 ->default('rgb(0, 81, 81)')
-                                ->required(),  */
+                                ->required(),  
                         ]) 
                         ->visible(),
 
@@ -84,9 +84,9 @@ class HomeResource extends Resource
                             TextInput::make('ButtonAbout')
                                 ->default('Qui Sommes-Nous')
                                 ,
-                         /*   ColorPicker::make('ColorButtonAbout')
+                         ColorPicker::make('ColorButtonAbout')
                                 ->default('rgb(0, 81, 81)')
-                                ->required(),*/
+                                ->required(),
                         ])
                         ->visible(),
 
@@ -115,9 +115,9 @@ class HomeResource extends Resource
                             TextInput::make('buttonBU')
                                 ->default('Demander Services')
                                ,
-                           /* ColorPicker::make('ColorbuttonBU')
+                           ColorPicker::make('ColorbuttonBU')
                                 ->default('rgb(0, 81, 81)')
-                                ->required(), */
+                                ->required(),
                         ])
                         ->visible(),
 
@@ -135,9 +135,9 @@ class HomeResource extends Resource
                             TextInput::make('ButtonChiffres')
                                 ->default('Découvrir Nos Experts')
                                 ,
-                            /*ColorPicker::make('ColorChiffres')
+                            ColorPicker::make('ColorChiffres')
                                 ->default('rgb(0, 81, 81)')
-                                ->required(),*/
+                                ->required(),
                         ])
                         ->visible(),
 
@@ -192,7 +192,7 @@ class HomeResource extends Resource
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
             ])
-            ->bulkActions([
+            ->groupedBulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),

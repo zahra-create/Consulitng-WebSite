@@ -9,6 +9,9 @@ class Equipe extends Model
 {
     use HasFactory;
     protected $fillable=['image', 'nom','prenom','poste','description','quote','reseaux_sociaux'];
+    protected $casts = [
+      'reseaux_sociaux' => 'array',
+  ];
 
     public function getImage(){
      

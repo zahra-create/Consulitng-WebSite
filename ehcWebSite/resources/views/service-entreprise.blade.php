@@ -10,7 +10,7 @@
   <title>services entreprise</title>
 
   <!-- Fav Icon -->
-  <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.webp">
+  <link rel="icon" type="image/x-icon" href="{{ url('assets/imgs/logo/logoEHC.png') }}">
 
 
 
@@ -166,11 +166,11 @@
 @foreach($services as $serv)
 <div class="services-item">
                     <p class="count">{{ str_pad($counter, 2, '0', STR_PAD_LEFT) }}</p>
-                    <a href="{{ url('conseil') }}">
+                    <a href="{{route('service-details', $serv)}}">
                       <h2 class="title">{{$serv->TitreService}}</h2>
                     </a>
                     <p class="text">{{$serv->DescriptionService}}</p>
-                    <a href="{{ url('conseil') }}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
+                    <a href="{{route('service-details', $serv)}}" class="circle-btn"><i class="fa-solid fa-arrow-right-long"></i></a>
                   </div>
 @php
     $counter++;
@@ -223,16 +223,13 @@
                     <h2 class="section-title">{{$SousTitre}}</h2>
                   </div>
                   <div class="btn-wrapper has_fade_anim">
-                    <a href="contact.html" class="wc-btn-primary btn-text-flip"><span data-text="{{$Button}}">{{$Button}}</span><i class="fa-solid fa-play"></i></a>
+                    <a href="{{route('demande-devis')}}" class="wc-btn-primary btn-text-flip"><span data-text="{{$Button}}">{{$Button}}</span><i class="fa-solid fa-play"></i></a>
                   </div>
                 </div>
               </div>
             </div>
           </section>
 
-          <!-- cta area start  -->
-          @include('partials.disponibility')
-          <!-- cta area end  -->
 
         </main>
 

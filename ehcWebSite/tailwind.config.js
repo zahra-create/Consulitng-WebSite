@@ -1,9 +1,29 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
+
+
+import colors from 'tailwindcss/colors' 
+import forms from '@tailwindcss/forms'
+import typography from '@tailwindcss/typography' 
+ 
+export default {
+    content: [
+        './resources/**/*.blade.php',
+        './vendor/filament/**/*.blade.php', 
+        './vendor/awcodes/filament-curator/resources/**/*.blade.php'
+    ],
+    darkMode: 'class',
+    theme: {
+        extend: {
+            colors: { 
+                danger: colors.rose,
+                primary: colors.blue,
+                success: colors.green,
+                warning: colors.yellow,
+            }, 
+        },
+    },
+    plugins: [
+        forms, 
+        typography, 
+    ],
 }
 

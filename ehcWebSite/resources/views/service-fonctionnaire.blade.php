@@ -10,7 +10,7 @@
   <title>services fonctionnaires</title>
 
   <!-- Fav Icon -->
-  <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.webp">
+  <link rel="icon" type="image/x-icon" href="{{ url('assets/imgs/logo/logoEHC.png') }}">
 
 
 
@@ -222,16 +222,13 @@
                     <h2 class="section-title">{{$SousTitre}}</h2>
                   </div>
                   <div class="btn-wrapper has_fade_anim">
-                    <a href="contact.html" class="wc-btn-primary btn-text-flip"><span data-text="{{$Button}}">{{$Button}}</span><i class="fa-solid fa-play"></i></a>
+                    <a href="{{route('demande-devis')}}" class="wc-btn-primary btn-text-flip"><span data-text="{{$Button}}">{{$Button}}</span><i class="fa-solid fa-play"></i></a>
                   </div>
                 </div>
               </div>
             </div>
           </section>
 
-          <!-- cta area start  -->
-          @include('partials.disponibility')
-          <!-- cta area end  -->
 
         </main>
 

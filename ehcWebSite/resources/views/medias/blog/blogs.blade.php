@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Binox HTML5 Template">
 
-  <title>Binox Blog</title>
+  <title>Blogs</title>
 
   <!-- Fav Icon -->
   <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.webp">
@@ -17,17 +17,18 @@
 
 
   <!-- All CSS files -->
-  <link rel="stylesheet" href="{{ url('assets/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ url('assets/css/all.min.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/css/icomon.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/css/swiper-bundle.min.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/css/progressbar.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/css/meanmenu.min.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/css/magnific-popup.css') }}">
-  <link rel="stylesheet" href="{{ url('assets/css/master-blog.css') }}">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/icomon.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/progressbar.css">
+  <link rel="stylesheet" href="assets/css/meanmenu.min.css">
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/master-blog.css">
   <link rel="stylesheet" href="{{ url('assets/css/master-human.css') }}">
+  <link rel="stylesheet" href="{{ url('assets/css/master-financial.css') }}">
 
-  <style>
+<style>
 
 .nav-link {
 
@@ -39,6 +40,7 @@ transition: all 0.2s;}
 .nav-link:hover{
 border-bottom: 2px solid #198754;
 }
+
 
 
   .blog {
@@ -67,7 +69,6 @@ border-bottom: 2px solid #198754;
   width: 100%; /* Ensure content takes up the full width */
 }
   
-
 </style>
 
 
@@ -76,8 +77,8 @@ border-bottom: 2px solid #198754;
 
 <body class="font-heading-hkgrotesk-bold">
 
-<!-- Preloader -->
-<div id="preloader">
+  <!-- Preloader -->
+  <div id="preloader">
     <div id="container" class="container-preloader">
       <div class="animation-preloader">
         <div class="spinner"></div>
@@ -85,6 +86,7 @@ border-bottom: 2px solid #198754;
         <span data-text="E" class="characters">E</span>
         <span data-text="H" class="characters">H</span>
         <span data-text="C" class="characters">C</span>
+          
         </div>
       </div>
       <div class="loader-section section-left"></div>
@@ -105,7 +107,7 @@ border-bottom: 2px solid #198754;
   <!-- Switcher Area Start -->
   <div class="switcher__area">
     <div class="switcher__icon">
-      <button id="switcher_open"><i class="fa-solid fa-robot"></i></button>
+      <button id="switcher_open"><i class="fa-solid fa-gear"></i></button>
       <button id="switcher_close"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <div class="switcher__items">
@@ -142,7 +144,6 @@ border-bottom: 2px solid #198754;
     </div>
   </div>
   <!-- Switcher Area End -->
-
 
   <!-- offcanvas start  -->
   @include('partials.menu-bar')
@@ -186,15 +187,14 @@ border-bottom: 2px solid #198754;
               <div class="section-heading">
                 <div class="section-title-wrapper style-1">
                   <div class="subtitle-wrapper has_fade_anim">
-                    <span class="section-subtitle">{{$Titre}}</span>
+                    <span style="color:#005151;" class="section-subtitle">{{$Titre}}</span>
                   </div>
                   <div class="title-wrapper has_fade_anim">
-                    <h2 class="section-title">{{$SousTitre}}</h2>
+                    <h2 style="color:#005151;" class="section-title">{{$SousTitre}}</h2>
                   </div>
-
                 </div>
-              </div>
- <nav class="navbar navbar-light bg-light justify-content-between w-100 sticky-top mb-5">
+
+                <nav class="navbar navbar-light bg-light justify-content-between w-100 sticky-top mb-5">
  <div class="container-fluid">
  @foreach($categories as $category) 
 <li class="nav-item"> 
@@ -218,33 +218,52 @@ border-bottom: 2px solid #198754;
 </nav>
 
               </div>
-              <div class="blog-wrapper-area fix">
-                <div class="blog-wrapper">
-
-              @foreach($blogs as $blog)
-              <x-blog-item :blog="$blog"></x-blog-item>
-              @endforeach
            
-                </div>
-                
-                {{ $blogs->links() }}
+        
 
-<!-- <ul class="pagination style-1 has_fade_anim">
-   <li><a href="#">1</a></li>
-   <li><a class="current" href="#">2</a></li>
-   <li><a href="#">Next <img src="assets/imgs/icon/arrow-next-icon.webp" alt="arrow-icon"></a></li>
- </ul>-->
+             <!-- </div> -->
+              <div class="blog-wrapper-area fix">
+              <div class="blog-wrapper">
+
+ @foreach($blogs as $blog)
+              <article class="blog style-1 has_fade_anim">
+                    <div class="thumb">
+                      <a href="{{route('blog-details', $blog)}}"><img src="{{$blog->getImage()}}" alt="blog image"></a>
+                    </div>
+                    <div class="content">
+                      <div class="meta">
+                        @foreach($blog->categories as $category)
+					              <a href="{{route('by-category', $category) }}"><span class="tag">{{$category->titre}}</span></a>
+                        @endforeach
+                        <span class="date has-left-line">{{$blog->getFormatedDate()}}</span>
+                      </div>
+                      <h3 class="title"><a href="{{route('blog-details', $blog)}}">{!! $blog->titre !!}</a></h3>
+                      <p class="text">{!! $blog->shortBody() !!}</p> 
+                      </div>
+              </article>
+@endforeach
+
+</div>
+                {{ $blogs->links() }}
+              
+              <!--  <ul class="pagination style-1 has_fade_anim">
+                  <li><a href="#">1</a></li>
+                  <li><a class="current" href="#">2</a></li>
+                  <li><a href="#">Next <img src="assets/imgs/icon/arrow-next-icon.webp" alt="arrow-icon"></a></li>
+                </ul> -->
               </div>
             </div>
           </section>
           <!-- blog area end  -->
 
-
+          <!-- cta area start  -->
+       @include('partials.disponibility')
+          <!-- cta area end  -->
 
         </main>
 
         <!-- footer start  -->
-        @include('partials.footer')
+      @include('partials.footer')
         <!-- footer end  -->
 
       </div>
@@ -254,29 +273,21 @@ border-bottom: 2px solid #198754;
 
 
   <!-- All JS files -->
-  
-  <script src="{{ url('assets/js/jquery-3.6.0.min.js')}}"></script>
-  <script src="{{ url('assets/js/bootstrap.bundle.min.js')}}"></script>
-  <script src="{{ url('assets/js/jquery.magnific-popup.min.js')}}"></script>
-  <script src="{{ url('assets/js/swiper-bundle.min.js')}}"></script>
-  <script src="{{ url('assets/js/counter.js')}}"></script>
-  <script src="{{ url('assets/js/progressbar.js')}}"></script>
-  <script src="{{ url('assets/js/gsap.min.js')}}"></script>
-  <script src="{{ url('assets/js/ScrollSmoother.min.js')}}"></script>
-  <script src="{{ url('assets/js/ScrollTrigger.min.js')}}"></script>
-  <script src="{{ url('assets/js/jquery.meanmenu.min.js')}}"></script>
-  <script src="{{ url('assets/js/backToTop.js')}}"></script>
-  <script src="{{ url('assets/js/main.js')}}"></script>
-  <script src="{{ url('assets/js/error-handling.js')}}"></script>
-  <script src="{{ url('assets/js/wc-cursor.js')}}"></script>
-  <script src="{{ url('assets/js/offcanvas.js')}}"></script>
-
-  <script>    setTimeout(function() {
-        var messageElement = document.getElementById('no-results-message');
-        if (messageElement) {
-            messageElement.style.display = 'none';
-        }
-    }, 5000); </script>
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/progressbar.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/ScrollSmoother.min.js"></script>
+  <script src="assets/js/ScrollTrigger.min.js"></script>
+  <script src="assets/js/jquery.meanmenu.min.js"></script>
+  <script src="assets/js/backToTop.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/error-handling.js"></script>
+  <script src="assets/js/wc-cursor.js"></script>
+  <script src="assets/js/offcanvas.js"></script>
 
 </body>
 

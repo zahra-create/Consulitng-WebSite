@@ -7,10 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Binox HTML5 Template">
 
-  <title>EHC</title>
+  <title>EHC Demande-Devis</title>
 
   <!-- Fav Icon -->
-  <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.webp">
+  <link rel="icon" type="image/x-icon" href="{{ url('assets/imgs/logo/logoEHC.png') }}">
 
 
   <!-- All CSS files -->
@@ -249,12 +249,9 @@
                     <div class="wc-single-input">
                       <label for="service" class="wc-form-label">Service</label>
                       <select id="service" name="service" required>
-                      <option value="Conseil" selected>Conseil</option>
-                        <option value="Recrutement">Recrutement</option>
-                        <option value="Formation">Formation</option>
-						<option value="Evènement et Services aux entreprises" >Evènement et Services aux entreprises</option>
-                        <option value="Management de projet clé en main">Management de projet clé en main</option>
-                        <option value="Digitalisation">Digitalisation</option>
+                        @foreach($serviceoptions as $option)
+                        <option value="{{$option->TitreService}}" selected>{{$option->TitreService}}</option>
+                        @endforeach
                       </select>
 
                     </div>

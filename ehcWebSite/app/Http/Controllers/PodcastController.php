@@ -87,6 +87,21 @@ class PodcastController extends Controller
             ->paginate(8); 
 
        // $currentEpisode = $episodes->first();
+
+       $PodcastPage = otherPages::where('Page', 'Podcast')->first();
+
+       if(!$PodcastPage) {
+           $PodcastPage = new otherPages([
+               'Page' =>'Podcast',
+               'Titre' => 'Ecoutez Nos Experts',
+               'SousTitre' => '',
+               'Description' => '',
+           ]);
+       }
+
+       $Titre=$PodcastPage->Titre;
+       $SousTitre=$PodcastPage->SousTitre;
+       $Description=$PodcastPage->Description;
     
         return view('medias.podcast.detail-podcast', compact('podcast', 'episodes','Titre','SousTitre','Description'));
     }

@@ -10,7 +10,7 @@
   <title>EHC About</title>
 
   <!-- Fav Icon -->
-  <link rel="icon" type="image/x-icon" href="assets/imgs/logo/favicon.webp">
+  <link rel="icon" type="image/x-icon" href="assets/imgs/logo/logoEHC.png">
 
 
 
@@ -184,7 +184,7 @@
                 </div>
                 <div class="about-content">
                   <div class="thumb-first has_fade_anim" >
-                    <img src="{{ '/storage/'.$Image1Header }}" alt="about image">
+                    <img src="{{ asset('/storage/'.$Image1Header )}}" alt="about image">
                   </div>
                   <div class="text-box-wrapper has_fade_anim" data-delay=".6">
                     <div class="text-box">
@@ -215,7 +215,7 @@
                       </div>
                     </div> -->
                     <div class="thumb-second has_fade_anim">
-                      <img src="{{  '/storage/'.$Image2Header }}" alt="about image">
+                      <img src="{{asset('/storage/'.$Image2Header )}}" alt="about image">
                     </div>
                   </div>
                 </div>
@@ -231,7 +231,7 @@
                 <img src="{{  '/storage/'.$Image }}" class="partner-logo" alt="partner-image">
                 <div class="container">
                   <div class="partner-award-text">
-                    <img src="{{$Logo}}" class="has_fade_anim" alt="awards-logo">
+                    <img src="{{asset( '/storage/'.$Logo)}}" class="has_fade_anim" alt="awards-logo">
                 <!--   <p class="text has_fade_anim">Depuis sa création, EHC est reconnue pour offrir des solutions 
                       innovantes et éthiques en ingénierie et services, favorisant un développement organisationnel durable.</p> -->
              <p class="text has_fade_anim">{!! $descriptionAbout !!}</p>

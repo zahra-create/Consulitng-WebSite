@@ -27,14 +27,17 @@ class ContactInfoResource extends Resource
                 Forms\Components\TextInput::make('lien')
                     ->required()
                     ,
-                Forms\Components\Select::make('social_network')
-                  ->label('Réseau Social')
+                Forms\Components\Select::make('nom')
+                  ->label('Type de contact')
                   ->options([
-                    'facebook' => 'Facebook',
-                    'twitter' => 'Twitter',
-                     'linkedin' => 'LinkedIn',
-                    'instagram' => 'Instagram',
-                       'youtube' => 'YouTube',
+                    'WhatsApp' => 'WhatsApp',
+                    'Numéro' => 'Numéro',
+                    'Email' => 'Email',
+                    'facebook' => 'facebook',
+                    'twitter' => 'twitter',
+                     'linkedin' => 'linkedIn',
+                    'instagram' => 'instagram',
+                       'youtube' => 'youTube',
                        'Localisation' => 'Localisation'
     ])
     ->required()
@@ -46,7 +49,10 @@ class ContactInfoResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('nom')
+                ->label('Type de contact'),
+            Tables\Columns\TextColumn::make('lien')
+                ->label('Lien'),
             ])
             ->filters([
                 //
@@ -54,7 +60,7 @@ class ContactInfoResource extends Resource
             ->actions([
                 Tables\Actions\EditAction::make(),
             ])
-            ->bulkActions([
+            ->groupedBulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
                 ]),

@@ -12,9 +12,7 @@
               <li class="menu-item-has-no" style="width:111px; "><a href="{{route('about')}}">A propos</a></li>
               <li class="menu-item-has-children"><a href="service-style-4.html">Services</a>
                 <ul class="dp-menu">
-                 <!-- <li><a href="service-details.html">Services Entreprise</a></li>
-                  <li><a href="service-details.html">Services étudiant</a></li>
-                  <li><a href="service-details.html">Services Fonctionnaire</a></li> -->
+              
                   <li><a href="{{ route('service-entreprise') }}">Services Entreprises</a></li>
                 <li><a href="{{ route('service-salarie') }}">Services Salariés</a></li>
                 <li><a href="{{ route('service-etudiant') }}">Services Etudiants</a></li>
